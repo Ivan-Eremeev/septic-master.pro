@@ -1,0 +1,89 @@
+extends core/base.pug
+
+block title 
+  title Главная
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // welcome
+      .welcome
+        .container 
+          .row 
+            .col-lg-3 
+              ul.welcome__menu 
+                li 
+                  a(href="#") Малахит
+                    svg(class="icon-arrow-light")
+                      use(xlink:href="img/sprite.svg#arrow-light")
+                li 
+                  a(href="#") Топас топол Эко
+                    svg(class="icon-arrow-light")
+                      use(xlink:href="img/sprite.svg#arrow-light")
+                li 
+                  a(href="#") Топас-С топол Эко
+                    svg(class="icon-arrow-light")
+                      use(xlink:href="img/sprite.svg#arrow-light")
+                li 
+                  a(href="#") Топ Аэро топол Эко
+                    svg(class="icon-arrow-light")
+                      use(xlink:href="img/sprite.svg#arrow-light")
+                li 
+                  a(href="#") Астра Юнилос
+                    svg(class="icon-arrow-light")
+                      use(xlink:href="img/sprite.svg#arrow-light")
+                li 
+                  a(href="#") Евролос Био Евролос
+                    svg(class="icon-arrow-light")
+                      use(xlink:href="img/sprite.svg#arrow-light")
+                li 
+                  a(href="#") Евролос Грунт Евролос
+                    svg(class="icon-arrow-light")
+                      use(xlink:href="img/sprite.svg#arrow-light")
+                li 
+                  a(href="#") Тверь Classic
+                    svg(class="icon-arrow-light")
+                      use(xlink:href="img/sprite.svg#arrow-light")
+            .col-lg-9 
+              .welcome__slider 
+                #sliderWelcome 
+                  .swiper-wrapper 
+                    .swiper-slide 
+                      .welcome__item 
+                        .welcome__img 
+                          img(src="img/welcome-banner.jpg", alt="")
+                        .welcome__content 
+                          .welcome__title Септик под ключ в Москве и области за 1 день от 25 000 руб.
+                          .welcome__text Здесь текстовое описание которое дополняет заголовок
+                          .welcome__btn 
+                            .btn.btn--big.btn--white-border Получить консультацию
+                    .swiper-slide 
+                      .welcome__item 
+                        .welcome__img 
+                          img(src="img/welcome-banner.jpg", alt="")
+                        .welcome__content 
+                          .welcome__title Септик под ключ в Москве и области за 1 день от 25 000 руб.
+                          .welcome__text Здесь текстовое описание которое дополняет заголовок
+                          .welcome__btn 
+                            .btn.btn--big.btn--white-border Получить консультацию
+                    .swiper-slide 
+                      .welcome__item 
+                        .welcome__img 
+                          img(src="img/welcome-banner.jpg", alt="")
+                        .welcome__content 
+                          .welcome__title Септик под ключ в Москве и области за 1 день от 25 000 руб.
+                          .welcome__text Здесь текстовое описание которое дополняет заголовок
+                          .welcome__btn 
+                            .btn.btn--big.btn--white-border Получить консультацию
+                .welcome__controlls 
+                  .welcome__slider-arrow.welcome__slider-arrow--prev.swiper-button-prev
+                  .welcome__slider-arrow.welcome__slider-arrow--next.swiper-button-next
+                .welcome__pagination.swiper-pagination
+      // /welcome
+
+    include core/footer.pug

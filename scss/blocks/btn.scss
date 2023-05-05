@@ -1,0 +1,74 @@
+/* btn */
+.btn { 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+  &--big {
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &--blue {
+    background: $btn_gradient;
+    border: none;
+    color: #fff;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      border-radius: 4px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #42A1FC;
+      opacity: 0;
+      transition: .3s;
+    }
+    @include media-breakpoint-up(md) {
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+    &.disabled, &:disabled, &[disabled] {
+      opacity: 0.4;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+  &--white-border {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        background-color: #fff;
+        color: $text_color;
+        box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.35);
+      }
+    }
+    &.disabled, &:disabled, &[disabled] {
+      opacity: 0.6;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+  &__inner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+}
+/* /btn */

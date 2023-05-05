@@ -1,0 +1,82 @@
+// header
+header#headerSticky.header 
+  .header__top 
+    .container
+      .header__location 
+        svg(class="icon-mark")
+          use(xlink:href="img/sprite.svg#mark")
+        | Москва
+      a(href="#").header__email 
+        svg(class="icon-email")
+          use(xlink:href="img/sprite.svg#email")
+        | septic-master.pro@yandex.ru
+      .header__worktime 
+        svg(class="icon-clock")
+          use(xlink:href="img/sprite.svg#clock")
+        | пн-вс: 7:00 - 20:00  
+  .header__middle 
+    .container
+      a(href="#").header__logo 
+        img(src="img/logo.svg", alt="")
+      .header__sub Установка автономной канализации под ключ в Москве
+      form(action="#").header__search 
+        input(type="text" placeholder="Поиск по сайту") 
+        button(type="submit") 
+          svg(class="icon-search")
+            use(xlink:href="img/sprite.svg#search")
+      .header__social 
+        .header__social-row 
+          a(href="#") 
+            svg(class="icon-viber")
+              use(xlink:href="img/sprite.svg#viber")
+          a(href="#") 
+            svg(class="icon-telegram")
+              use(xlink:href="img/sprite.svg#telegram")
+          a(href="#") 
+            svg(class="icon-whatsapp")
+              use(xlink:href="img/sprite.svg#whatsapp")
+      .header__tels 
+        a(href="tel:+74994442196") +7 (499) 444-21-96
+        a(href="tel:+79773008989") +7 (977) 300-89-89
+      .header__btn 
+        .btn.btn--big.btn--blue 
+          .btn__inner Заказать звонок
+  .header__bottom 
+    .container
+      .header__catalog-btn 
+        .btn.btn--big.btn--blue 
+          .btn__inner 
+            .hamburger.hamburger--squeeze
+              .hamburger-box
+                .hamburger-inner
+            span Каталог товаров
+      nav.header__menu 
+        ul.header__menu-list 
+          li.header__menu-item 
+            a(href="#").header__menu-link Рассчитать стоимость
+          li.header__menu-item 
+            a(href="#").header__menu-link Производители
+              svg(class="icon-arrow")
+                use(xlink:href="img/sprite.svg#arrow-light")
+          li.header__menu-item 
+            a(href="#").header__menu-link О компании
+              svg(class="icon-arrow")
+                use(xlink:href="img/sprite.svg#arrow-light")
+          li.header__menu-item 
+            a(href="#").header__menu-link Услуги
+              svg(class="icon-arrow")
+                use(xlink:href="img/sprite.svg#arrow-light")
+          li.header__menu-item 
+            a(href="#").header__menu-link Покупателям
+              svg(class="icon-arrow")
+                use(xlink:href="img/sprite.svg#arrow-light")
+      .header__operation 
+        .header__operation-item 
+          svg(class="icon-chart")
+            use(xlink:href="img/sprite.svg#chart")
+          | Сравнение
+        .header__operation-item 
+          svg(class="icon-heart")
+            use(xlink:href="img/sprite.svg#heart")
+          | Избранное
+//	/header
