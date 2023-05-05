@@ -86,4 +86,44 @@ block content
                 .welcome__pagination.swiper-pagination
       // /welcome
 
+      // benefit
+      .benefit
+        .container 
+          .title Септик для дома под ключ в Москве
+          .benefit__slider 
+            #sliderBenefit 
+              .swiper-wrapper 
+                .swiper-slide 
+                  mixin benefit-item(imgUrl, title, link)
+                    if link 
+                      a(href="#").benefit__item.benefit__item--link
+                        .benefit__icon 
+                          img(src= imgUrl, alt="")
+                        .benefit__title!= title
+                    else 
+                      .benefit__item 
+                        .benefit__icon 
+                          img(src= imgUrl, alt="")
+                        .benefit__title!= title
+                  +benefit-item('img/benefit-icons/img1.svg', 'Монтаж <br>за 1 день')
+                .swiper-slide 
+                  +benefit-item('img/benefit-icons/img2.svg', 'Бесплатный выезд инженеров')
+                .swiper-slide 
+                  +benefit-item('img/benefit-icons/img3.svg', 'Гарантия 5 лет')
+                .swiper-slide 
+                  +benefit-item('img/benefit-icons/img4.svg', 'Обслуживание септиков', true)
+                .swiper-slide 
+                  +benefit-item('img/benefit-icons/img5.svg', 'Ремонт септиков', true)
+                .swiper-slide 
+                  +benefit-item('img/benefit-icons/img6.svg', 'Наращивание септиков', true)
+                .swiper-slide 
+                  +benefit-item('img/benefit-icons/img7.svg', 'Пайка септиков', true)
+                .swiper-slide 
+                  +benefit-item('img/benefit-icons/img8.svg', 'Откачка септиков', true)
+                .swiper-slide 
+                  +benefit-item('img/benefit-icons/img9.svg', 'Модернизация септиков', true)
+            .benefit__slider-arrow.benefit__slider-arrow--prev.swiper-button-prev
+            .benefit__slider-arrow.benefit__slider-arrow--next.swiper-button-next
+      // /benefit
+
     include core/footer.pug

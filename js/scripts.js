@@ -99,6 +99,17 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер "преимущества"
+  if ($('#sliderBenefit').length) {
+    const sliderBenefit = new Swiper('#sliderBenefit', {
+      slidesPerView: 'auto',
+      navigation: {
+        nextEl: '.benefit__slider-arrow--next',
+        prevEl: '.benefit__slider-arrow--prev',
+      },
+    });
+  }
+
   // // Air Datepicker | Календарь
   // new AirDatepicker('#airDatepicker', {
   //   position: 'right top',
