@@ -1,0 +1,39 @@
+/* brands */
+.brands { 
+  margin-bottom: 90px;
+  .title {
+    margin-bottom: 25px;
+  }
+  &__slider {
+    padding: 0 1px;
+    position: relative;
+    user-select: none;
+    #sliderBrands {
+      overflow: hidden;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 105px;
+    border: 1px solid $border_color;
+    border-radius: 4px;
+    padding: 24px 25px;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__slider-arrow {
+    &--prev {
+      left: -20px;
+    }
+    &--next {
+      right: -20px;
+    }
+  }
+  &__pagination {
+    bottom: -32px !important;
+  }
+}
+/* /brands */

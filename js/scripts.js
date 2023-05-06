@@ -149,6 +149,27 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер "производители"
+  if ($('#sliderBrands').length) {
+    const sliderBrands = new Swiper('#sliderBrands', {
+      slidesPerView: 6,
+      spaceBetween: 10,
+      pagination: {
+        el: '.brands__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.brands__slider-arrow--next',
+        prevEl: '.brands__slider-arrow--prev',
+      },
+      breakpoints: {
+        576: {
+          spaceBetween: 30,
+        },
+      }
+    });
+  }
+
   // // Air Datepicker | Календарь
   // new AirDatepicker('#airDatepicker', {
   //   position: 'right top',
