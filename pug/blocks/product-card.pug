@@ -1,0 +1,34 @@
+mixin product-card(imgUrl)
+  .product-card
+    .product-card__img 
+      img(src= imgUrl, alt="")
+    .product-card__content 
+      .product-card__description 
+        .product-card__head 
+          .product-card__art Артикул 234 454
+          .product-card__stars 
+        .product-card__title Септик Юнилос
+        ul.product-card__list 
+          li 
+            span Количество человек 
+            .product-card__num 2
+          li 
+            span Объем переработки (л/сутки)
+            .product-card__num 400
+          li 
+            span Объем септика, м3
+            .product-card__num 1.2
+      .product-card__prices 
+        .row
+          .col-md-6 
+            .product-card__price-old 542 290 ₽
+            .product-card__price 420 290 ₽
+            .product-card__price-text стоимость септика
+          .col-md-6 
+            .product-card__price-old 142 290 ₽
+            .product-card__price 12 290 ₽
+            .product-card__price-text монтаж под ключ
+      .product-card__buttons 
+        .btn.btn--small.btn--blue 
+          .btn__inner Заказать с установкой
+        .product-card__buy Купить

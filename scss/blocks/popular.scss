@@ -16,7 +16,7 @@
       visibility: hidden;
       &:checked {
         ~ span {
-          background-color: #ECF5FE;;
+          background-color: #D7EBFF;
         }
       }
     }
@@ -33,7 +33,7 @@
       transition: .1s;
       @include media-breakpoint-up(md) {
         &:hover {
-          background-color: #D7EBFF;
+          background-color: #ECF5FE;
         }
       }
     }
@@ -71,6 +71,18 @@
         &:hover {
           color: #42A1FC;
         }
+      }
+    }
+  }
+  &__cards {
+    .row {
+      margin-left: -3px;
+      margin-right: -3px;
+      margin-top: -6px;
+      > * {
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-top: 6px;
       }
     }
   }

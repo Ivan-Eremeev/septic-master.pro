@@ -1,0 +1,119 @@
+/* product-card */
+.product-card { 
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid $border_color;
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: 174px;
+    border-bottom: 1px solid $border_color;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px 20px 20px;
+  }
+  &__description {
+    
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  &__art {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    color: $text_gray_color;
+  }
+  &__stars {
+    
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $title_color;
+    margin-bottom: 5px;
+  }
+  &__list {
+    font-size: 13px;
+    line-height: 16px;
+    color: $text_gray_color;
+    padding-bottom: 27px;
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      span {
+
+      }
+    }
+  }
+  &__num {
+    margin-left: 5px;
+  }
+  &__prices {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid $border_color;
+    margin-bottom: 17px;
+    .row {
+      margin-left: -10px;
+      margin-right: -10px;
+      > * {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+  &__price-old {
+    font-size: 13px;
+    line-height: 16px;
+    color: #B2BFCF;
+  }
+  &__price {
+    font-size: 22px;
+    line-height: 27px;
+    color: $title_color;
+  }
+  &__price-text {
+    font-size: 13px;
+    line-height: 16px;
+    color: $text_gray_color;
+    white-space: nowrap;
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .btn {
+
+    }
+  }
+  &__buy {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: $link_color;
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+/* /product-card */

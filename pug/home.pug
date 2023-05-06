@@ -133,6 +133,7 @@ block content
       .popular
         .container 
           .title Популярные модели септиков
+
           form(action="#").popular__categories 
             #popularCategoriesSlider 
               .swiper-wrapper 
@@ -166,6 +167,7 @@ block content
                   +popular-categories-item('Для грунтовых вод')
                 .swiper-slide 
                   +popular-categories-item('Для дачи')
+
           form(action="#").popular__types 
             #popularTypesSlider 
               .swiper-wrapper
@@ -185,6 +187,30 @@ block content
                   +popular-types-item('Топас топол Эко')
                 .swiper-slide
                   +popular-types-item('Малахит')
+
+          .popular__cards 
+            include blocks/product-card.pug
+            .row.row-cols-5
+              .col
+                +product-card('img/products/img1.jpg')
+              .col
+                +product-card('img/products/img2.jpg')
+              .col
+                +product-card('img/products/img3.jpg')
+              .col
+                +product-card('img/products/img4.jpg')
+              .col
+                +product-card('img/products/img5.jpg')
+              .col
+                +product-card('img/products/img4.jpg')
+              .col
+                +product-card('img/products/img1.jpg')
+              .col
+                +product-card('img/products/img5.jpg')
+              .col
+                +product-card('img/products/img2.jpg')
+              .col
+                +product-card('img/products/img3.jpg')
       // /popular
 
     include core/footer.pug
