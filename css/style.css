@@ -6476,6 +6476,23 @@ body.lock {
   cursor: default;
   pointer-events: none;
 }
+.btn--blue-border {
+  background-color: #fff;
+  border: 1px solid #007AE7;
+  color: #3E444D;
+}
+@media (min-width: 768px) {
+  .btn--blue-border:hover {
+    background-color: #42A1FC;
+    border-color: #42A1FC;
+    color: #fff;
+  }
+}
+.btn--blue-border.disabled, .btn--blue-border:disabled, .btn--blue-border[disabled] {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
 .btn__inner {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -7247,6 +7264,9 @@ body.lock {
 
 /* /benefit */
 /* popular */
+.popular {
+  margin-bottom: 60px;
+}
 .popular .title {
   margin-bottom: 30px;
 }
@@ -7323,6 +7343,9 @@ body.lock {
     color: #42A1FC;
   }
 }
+.popular__cards {
+  margin-bottom: 30px;
+}
 .popular__cards .row {
   margin-left: -3px;
   margin-right: -3px;
@@ -7332,6 +7355,13 @@ body.lock {
   padding-left: 3px;
   padding-right: 3px;
   margin-top: 6px;
+}
+.popular__more {
+  text-align: center;
+}
+.popular__more .btn {
+  width: 100%;
+  max-width: 300px;
 }
 @media (max-width: 575.98px) {
   .popular {
@@ -7372,6 +7402,7 @@ body.lock {
   flex-shrink: 0;
   height: 174px;
   border-bottom: 1px solid #D9D9D9;
+  position: relative;
 }
 .product-card__img img {
   max-height: 100%;
@@ -7387,7 +7418,7 @@ body.lock {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  padding: 10px 20px 20px;
+  padding: 10px 20px 18px;
 }
 .product-card__head {
   display: -webkit-box;
@@ -7415,6 +7446,11 @@ body.lock {
   line-height: 22px;
   color: #062F61;
   margin-bottom: 5px;
+}
+@media (min-width: 768px) {
+  .product-card__title:hover {
+    color: #007AE7;
+  }
 }
 .product-card__list {
   font-size: 13px;
@@ -7489,6 +7525,100 @@ body.lock {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+@media (min-width: 768px) {
+  .product-card__buy:hover {
+    color: #42A1FC;
+  }
+}
+.product-card__stickers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  z-index: 2;
+}
+.product-card__sticker {
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+.product-card__sticker:last-child {
+  margin-bottom: 0;
+}
+.product-card__sticker--yellow {
+  background-color: #FAE631;
+  color: #3E444D;
+}
+.product-card__sticker--red {
+  background-color: #FA4931;
+  color: #fff;
+}
+.product-card__operations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  z-index: 2;
+}
+.product-card__operations-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+}
+.product-card__operations-icon input {
+  position: absolute;
+  visibility: hidden;
+}
+.product-card__operations-icon span {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.product-card__operations-icon--compare span {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 17.5L17.5 17.5' stroke='%230383FD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.9442 17.5L11.9442 7.5L15 7.5C15.46 7.5 15.8333 7.87333 15.8333 8.33333L15.8333 17.5L11.9442 17.5Z' stroke='%230383FD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.05579 17.5L8.05579 3.33333C8.05579 2.87333 8.42912 2.5 8.88912 2.5L11.1116 2.5C11.5716 2.5 11.945 2.87333 11.945 3.33333L11.945 17.5L8.05579 17.5Z' stroke='%230383FD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.16663 17.5L4.16663 5.83333C4.16663 5.37333 4.53996 5 4.99996 5L8.05579 5L8.05579 17.5L4.16663 17.5Z' stroke='%230383FD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-card__operations-icon--compare input:checked ~ span {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.9441 17.5L11.9441 7.5L14.9999 7.5C15.4599 7.5 15.8333 7.87333 15.8333 8.33333L15.8333 17.5L11.9441 17.5Z' fill='%230382FB' stroke='white' stroke-width='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.05591 17.5L8.05591 3.33333C8.05591 2.87333 8.42924 2.5 8.88924 2.5L11.1117 2.5C11.5717 2.5 11.9451 2.87333 11.9451 3.33333L11.9451 17.5L8.05591 17.5Z' fill='%230382FC' stroke='white' stroke-width='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.16675 17.5L4.16675 5.83333C4.16675 5.37333 4.54008 5 5.00008 5L8.05591 5L8.05591 17.5L4.16675 17.5Z' fill='%230382FC' stroke='white' stroke-width='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2.5 17.4998L17.5 17.4998' stroke='%230383FD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.product-card__operations-icon--favorite span {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.0833 3.33334C15.725 3.33334 17.5 5.81667 17.5 8.13334C17.5 12.825 10.1333 16.6667 10 16.6667C9.86667 16.6667 2.5 12.825 2.5 8.13334C2.5 5.81667 4.275 3.33334 6.91667 3.33334C8.43333 3.33334 9.425 4.09167 10 4.75834C10.575 4.09167 11.5667 3.33334 13.0833 3.33334Z' stroke='%230383FD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-card__operations-icon--favorite input:checked ~ span {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.0833 3.3335C15.725 3.3335 17.5 5.81683 17.5 8.1335C17.5 12.8252 10.1333 16.6668 10 16.6668C9.86667 16.6668 2.5 12.8252 2.5 8.1335C2.5 5.81683 4.275 3.3335 6.91667 3.3335C8.43333 3.3335 9.425 4.09183 10 4.7585C10.575 4.09183 11.5667 3.3335 13.0833 3.3335Z' fill='%230383FD' stroke='%230383FD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
 /* /product-card */

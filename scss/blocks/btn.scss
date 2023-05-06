@@ -69,6 +69,23 @@
       pointer-events: none;
     }
   }
+  &--blue-border {
+    background-color: #fff;
+    border: 1px solid $link_color;
+    color: $text_color;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        background-color: #42A1FC;
+        border-color: #42A1FC;
+        color: #fff;
+      }
+    }
+    &.disabled, &:disabled, &[disabled] {
+      opacity: 0.4;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
   &__inner {
     display: inline-flex;
     align-items: center;

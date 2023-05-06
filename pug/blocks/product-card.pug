@@ -2,12 +2,24 @@ mixin product-card(imgUrl)
   .product-card
     .product-card__img 
       img(src= imgUrl, alt="")
+      .product-card__stickers 
+        .product-card__sticker.product-card__sticker--yellow Распродажа 
+        .product-card__sticker.product-card__sticker--red Хит
+      form(action="#").product-card__operations 
+        .product-card__operations-icon.product-card__operations-icon--compare
+          label 
+            input(type="checkbox")
+            span 
+        .product-card__operations-icon.product-card__operations-icon--favorite
+          label 
+            input(type="checkbox")
+            span 
     .product-card__content 
       .product-card__description 
         .product-card__head 
           .product-card__art Артикул 234 454
           .product-card__stars 
-        .product-card__title Септик Юнилос
+        a(href="#").product-card__title Септик Юнилос
         ul.product-card__list 
           li 
             span Количество человек 
