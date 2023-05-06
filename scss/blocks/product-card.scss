@@ -12,8 +12,17 @@
     height: 174px;
     border-bottom: 1px solid $border_color;
     position: relative;
+    cursor: pointer;
+    user-select: none;
     img {
       max-height: 100%;
+    }
+    @include media-breakpoint-up(md) {
+      &:hover {
+        .product-card__overlay {
+          opacity: 1;
+        }
+      }
     }
   }
   &__content {
@@ -207,6 +216,32 @@
           }
         }
       }
+    }
+  }
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.95);
+    font-size: 14px;
+    line-height: 17px;
+    fill: $accent_color;
+    color: $accent_color;
+    opacity: 0;
+    transition: .3s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    svg {
+      width: 23px;
+      height: 23px;
+      margin-right: 5px;
+    }
+    span {
+      text-decoration: underline;
     }
   }
 }

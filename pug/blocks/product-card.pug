@@ -14,6 +14,10 @@ mixin product-card(imgUrl)
           label 
             input(type="checkbox")
             span 
+      .product-card__overlay 
+        svg(class="icon-eye")
+          use(xlink:href="img/sprite.svg#eye")
+        span Быстрый просмотр
     .product-card__content 
       .product-card__description 
         .product-card__head 
