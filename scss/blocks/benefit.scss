@@ -11,17 +11,33 @@
       border-radius: 4px;
     }
     .swiper-slide {
-      width: auto;
       height: auto;
+      &:first-child {
+        .benefit__item {
+          &:after {
+            display: none;
+          }
+        }
+      }
     }
   }
   &__item {
     display: block;
-    width: 170px;
     height: 100%;
     padding: 16px;
     background-color: #E7F0F9;
     color: $text_color;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      background-color: $border_color;
+      position: absolute;
+      top: 16px;
+      bottom: 16px;
+      left: 1px;
+    }
     &--link {
       text-decoration: underline;
       @include media-breakpoint-up(md) {
@@ -55,6 +71,17 @@
     }
     &--next {
       right: -20px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    &__slider-arrow {
+      display: none;
+    }
+    &__slider {
+      #sliderBenefit {
+        overflow: visible;
+      }
     }
   }
 }

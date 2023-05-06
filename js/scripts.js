@@ -102,11 +102,28 @@ window.onload = function () {
   // Swiper | Слайдер "преимущества"
   if ($('#sliderBenefit').length) {
     const sliderBenefit = new Swiper('#sliderBenefit', {
-      slidesPerView: 'auto',
+      slidesPerView: 2.1,
       navigation: {
         nextEl: '.benefit__slider-arrow--next',
         prevEl: '.benefit__slider-arrow--prev',
       },
+      breakpoints: {
+        576: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        992: {
+          slidesPerView: 5,
+        },
+        1200: {
+          slidesPerView: 7,
+        },
+        1400: {
+          slidesPerView: 9,
+        },
+      }
     });
   }
 
