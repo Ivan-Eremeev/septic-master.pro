@@ -92,13 +92,14 @@
     bottom: 45px;
   }
   &__slider-arrow {
-    position: static;
+    position: relative;
     margin-top: 0;
     &--prev {
       margin-right: 10px;
+      left: 0;
     }
     &--next {
-      
+      right: 0;
     }
   }
   &__pagination {

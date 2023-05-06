@@ -7159,11 +7159,15 @@ body.lock {
   bottom: 45px;
 }
 .welcome__slider-arrow {
-  position: static;
+  position: relative;
   margin-top: 0;
 }
 .welcome__slider-arrow--prev {
   margin-right: 10px;
+  left: 0;
+}
+.welcome__slider-arrow--next {
+  right: 0;
 }
 .welcome__pagination {
   bottom: -35px !important;
