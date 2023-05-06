@@ -7,8 +7,8 @@
   &__slider {
     position: relative;
     #sliderBenefit {
-      overflow: hidden;
-      border-radius: 4px;
+      margin-left: -1px;
+      margin-right: -1px;
     }
     .swiper-slide {
       height: auto;
@@ -20,6 +20,10 @@
         }
       }
     }
+  }
+  &__slider-inner {
+    overflow: hidden;
+    border-radius: 4px;
   }
   &__item {
     display: block;
@@ -36,7 +40,7 @@
       position: absolute;
       top: 16px;
       bottom: 16px;
-      left: 1px;
+      left: 0;
     }
     &--link {
       text-decoration: underline;
@@ -78,10 +82,8 @@
     &__slider-arrow {
       display: none;
     }
-    &__slider {
-      #sliderBenefit {
-        overflow: visible;
-      }
+    &__slider-inner {
+      overflow: visible;
     }
   }
 }

@@ -7158,14 +7158,18 @@ body.lock {
   position: relative;
 }
 .benefit__slider #sliderBenefit {
-  overflow: hidden;
-  border-radius: 4px;
+  margin-left: -1px;
+  margin-right: -1px;
 }
 .benefit__slider .swiper-slide {
   height: auto;
 }
 .benefit__slider .swiper-slide:first-child .benefit__item:after {
   display: none;
+}
+.benefit__slider-inner {
+  overflow: hidden;
+  border-radius: 4px;
 }
 .benefit__item {
   display: block;
@@ -7183,7 +7187,7 @@ body.lock {
   position: absolute;
   top: 16px;
   bottom: 16px;
-  left: 1px;
+  left: 0;
 }
 .benefit__item--link {
   text-decoration: underline;
@@ -7230,7 +7234,7 @@ body.lock {
   .benefit__slider-arrow {
     display: none;
   }
-  .benefit__slider #sliderBenefit {
+  .benefit__slider-inner {
     overflow: visible;
   }
 }
@@ -7239,6 +7243,90 @@ body.lock {
 /* popular */
 .popular .title {
   margin-bottom: 30px;
+}
+.popular__categories {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.popular__categories .swiper-slide {
+  width: auto;
+}
+.popular__categories-item input {
+  position: absolute;
+  visibility: hidden;
+}
+.popular__categories-item input:checked ~ span {
+  background-color: #ECF5FE;
+}
+.popular__categories-item span {
+  display: block;
+  padding: 10px 14px;
+  border: 1px solid #B2C5D8;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 13px;
+  line-height: 16px;
+  white-space: nowrap;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+@media (min-width: 768px) {
+  .popular__categories-item span:hover {
+    background-color: #D7EBFF;
+  }
+}
+.popular__types {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.popular__types .swiper-slide {
+  width: auto;
+}
+.popular__types-item input {
+  position: absolute;
+  visibility: hidden;
+}
+.popular__types-item input:checked ~ span {
+  color: #007AE7;
+  border-color: #007AE7;
+}
+.popular__types-item span {
+  display: block;
+  padding-bottom: 10px;
+  border-bottom: 1px solid transparent;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6D7680;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+@media (min-width: 768px) {
+  .popular__types-item span:hover {
+    color: #42A1FC;
+  }
+}
+@media (max-width: 575.98px) {
+  .popular {
+    overflow: hidden;
+  }
+  .popular__categories {
+    overflow: visible;
+  }
+  .popular__types {
+    overflow: visible;
+  }
 }
 
 /* /popular */

@@ -103,6 +103,8 @@ window.onload = function () {
   if ($('#sliderBenefit').length) {
     const sliderBenefit = new Swiper('#sliderBenefit', {
       slidesPerView: 2.1,
+      preventClicks: false,
+      preventClicksPropagation: false,
       navigation: {
         nextEl: '.benefit__slider-arrow--next',
         prevEl: '.benefit__slider-arrow--prev',
@@ -124,6 +126,26 @@ window.onload = function () {
           slidesPerView: 9,
         },
       }
+    });
+  }
+
+  // Swiper | Слайдер "популярные категории"
+  if ($('#popularCategoriesSlider').length) {
+    const popularCategoriesSlider = new Swiper('#popularCategoriesSlider', {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      preventClicks: false,
+      preventClicksPropagation: false,
+    });
+  }
+  
+  // Swiper | Слайдер "популярные типы"
+  if ($('#popularTypesSlider').length) {
+    const popularTypesSlider = new Swiper('#popularTypesSlider', {
+      slidesPerView: 'auto',
+      spaceBetween: 40,
+      preventClicks: false,
+      preventClicksPropagation: false,
     });
   }
 

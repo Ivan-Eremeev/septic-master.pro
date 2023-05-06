@@ -3,5 +3,85 @@
   .title {
     margin-bottom: 30px;
   }
+  &__categories {
+    margin-bottom: 30px;
+    overflow: hidden;
+    .swiper-slide {
+      width: auto;
+    }
+  }
+  &__categories-item {
+    input {
+      position: absolute;
+      visibility: hidden;
+      &:checked {
+        ~ span {
+          background-color: #ECF5FE;;
+        }
+      }
+    }
+    span {
+      display: block;
+      padding: 10px 14px;
+      border: 1px solid #B2C5D8;
+      border-radius: 20px;
+      cursor: pointer;
+      user-select: none;
+      font-size: 13px;
+      line-height: 16px;
+      white-space: nowrap;
+      transition: .1s;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          background-color: #D7EBFF;
+        }
+      }
+    }
+  }
+  &__types {
+    margin-bottom: 30px;
+    overflow: hidden;
+    .swiper-slide {
+      width: auto;
+    }
+  }
+  &__types-item {
+    input {
+      position: absolute;
+      visibility: hidden;
+      &:checked {
+        ~ span {
+          color: $link_color;
+          border-color: $link_color;
+        }
+      }
+    }
+    span {
+      display: block;
+      padding-bottom: 10px;
+      border-bottom: 1px solid transparent;
+      font-size: 18px;
+      line-height: 22px;
+      color: $text_gray_color;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+      transition: .1s;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          color: #42A1FC;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    &__categories {
+      overflow: visible;
+    }
+    &__types {
+      overflow: visible;
+    }
+  }
 }
 /* /popular */
