@@ -170,6 +170,25 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер "акции и скидки"
+  if ($('#sliderDiscount').length) {
+    const sliderDiscount = new Swiper('#sliderDiscount', {
+      slidesPerView: 4,
+      spaceBetween: 17,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      navigation: {
+        nextEl: '.discount__slider-arrow--next',
+        prevEl: '.discount__slider-arrow--prev',
+      },
+      breakpoints: {
+        576: {
+          spaceBetween: 30,
+        },
+      }
+    });
+  }
+
   // // Air Datepicker | Календарь
   // new AirDatepicker('#airDatepicker', {
   //   position: 'right top',
