@@ -1,0 +1,82 @@
+/* calc */
+.calc { 
+  margin-bottom: 80px;
+  .title {
+    margin-bottom: 35px;
+  }
+  &__container {
+    background-color: $background_color;
+    border-radius: 4px;
+  }
+  &__top {
+    padding: 30px 30px 36px;
+    .input {
+      flex-shrink: 0;
+      width: 150px;
+      input {
+        height: 40px;
+        color: $text_gray_color;
+      }
+    }
+    .select {
+      flex-shrink: 0;
+      width: 150px;
+      select {
+        height: 40px;
+        color: $text_gray_color;
+      }
+    }
+    .checkbox {
+      margin-right: 10px;
+    }
+  }
+  &__title {
+    height: 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $title_color;
+    white-space: nowrap;
+    margin-bottom: 14px;
+    &--mb20 {
+      margin-bottom: 20px;
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__text {
+    margin-right: 10px;
+    font-weight: 500;
+    opacity: 0.8;
+    line-height: 18px;
+  }
+  &__checkbox-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .calc__text {
+      margin-right: 0;
+    }
+  }
+  &__bottom {
+    padding: 30px;
+    border-top: 1px solid $border_color;
+    .input {
+      width: 100%;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+}
+/* /calc */

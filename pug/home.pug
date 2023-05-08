@@ -310,7 +310,7 @@ block content
       // types
       .types
         .container 
-          .row.row-cols-5 
+          .row.row-cols-xl-5.row-cols-md-3.row-cols-2.gy-3 
             .col 
               .types__item 
                 .types__img 
@@ -372,5 +372,114 @@ block content
                     li Диамант 5
                     li Диамант 5+
       // /types
+
+      // calc
+      .calc
+        .container 
+          .title Рассчитать стоимость
+          form(action="#").calc__container 
+            .calc__top 
+              .row
+
+                .col-xl-3
+                  .calc__title Основные параметры
+                  .calc__row 
+                    .calc__text Количество жильцов
+                    .input
+                      input(type="number") 
+                  .calc__row 
+                    .calc__text Тип грунта
+                    .select 
+                      select
+                        option(value="#") Песок
+                        option(value="#") Глина
+                  .calc__row 
+                    .calc__text Глубина залегания канал. трубы, до (см)
+                    .input
+                      input(type="number") 
+                  .calc__row 
+                    .calc__text Выброс очищенных вод из септика
+                    .select 
+                      select
+                        option(value="#") Самотечная
+                        option(value="#") Напорная
+
+                .col-xl-3
+                  .calc__title Сантехнические работы
+                  .calc__row 
+                    .calc__text Ванная (220л)
+                    .input
+                      input(type="number") 
+                  .calc__row 
+                    .calc__text Раковина (30 л.)
+                    .input
+                      input(type="number") 
+                  .calc__row 
+                    .calc__text Джакузи (400 л.)
+                    .input
+                      input(type="number") 
+                  .calc__row 
+                    .calc__text Биде (5 л.):
+                    .input
+                      input(type="number") 
+
+                .col-xl-3
+                  .calc__title 
+                  .calc__row 
+                    .calc__text Стиральная машина (50 л.):
+                    .input
+                      input(type="number") 
+                  .calc__row 
+                    .calc__text Посудомоечная машина (20 л.):
+                    .input
+                      input(type="number") 
+                  .calc__row 
+                    .calc__text Унитаз (10 л.):
+                    .input
+                      input(type="number") 
+                  .calc__row 
+                    .calc__text Душ (60 л.):
+                    .input
+                      input(type="number") 
+                  
+                .col-xl-3
+                  .calc__title.calc__title--mb20 Дополнительно
+                  .calc__checkbox-row 
+                    .checkbox 
+                      label
+                        input(type="checkbox")
+                        span 
+                    .calc__text Высокий уровень грунтовых вод
+                  .calc__checkbox-row 
+                    .checkbox 
+                      label
+                        input(type="checkbox")
+                        span 
+                    .calc__text Сезонное проживание
+                  .calc__checkbox-row 
+                    .checkbox 
+                      label
+                        input(type="checkbox")
+                        span 
+                    .calc__text Премиум
+                  .calc__checkbox-row 
+                    .checkbox 
+                      label
+                        input(type="checkbox")
+                        span 
+                    .calc__text Ультрафиолетовая очистка
+
+            .calc__bottom 
+              .row 
+                .col-xl-3
+                  .input.input--tel 
+                    input(type="text" placeholder="Ваш телефон")
+                .col-xl-6
+                  .input 
+                    input(type="text" placeholder="Дополнительные сведения")
+                .col-xl-3
+                  button(type="submit").btn.btn--big.btn--blue 
+                    .btn__inner Подобрать
+      // /calc
 
     include core/footer.pug

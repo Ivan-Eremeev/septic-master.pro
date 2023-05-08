@@ -1,0 +1,47 @@
+/* checkbox */
+.checkbox { 
+  display: inline-block;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border: 1px solid #A4B0CE;
+    border-radius: 2px;
+    cursor: pointer;
+    user-select: none;
+    &:after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.6564 2.90822C13.2177 2.34692 13.2177 1.43687 12.6564 0.875566C12.0951 0.314264 11.185 0.314265 10.6237 0.875567L5.59804 5.90127L3.09004 3.39327C2.52873 2.83196 1.61866 2.83196 1.05735 3.39327C0.49604 3.95458 0.49604 4.86465 1.05735 5.42596L4.57428 8.94289C4.57673 8.94537 4.57918 8.94784 4.58165 8.95031C5.14295 9.51161 6.05301 9.51161 6.61431 8.95031L6.61435 8.95027L12.6564 2.90822Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    @include media-breakpoint-up(md) {
+      &:hover {
+        border-color: #42A1FC;
+      }
+    }
+  }
+  input {
+    position: absolute;
+    visibility: hidden;
+    &:checked {
+      ~ span {
+        background-color: $accent_color;
+        border-color: $accent_color;
+        @include media-breakpoint-up(md) {
+          &:hover {
+            background-color: #42A1FC;
+            border-color: #42A1FC;
+          }
+        }
+      }
+    }
+  }
+}
+/* /checkbox */

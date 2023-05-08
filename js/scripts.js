@@ -185,6 +185,14 @@ window.onload = function () {
     });
   }
 
+  // Select2 | Стилизация селектов
+  $('.select select').select2({
+    minimumResultsForSearch: Infinity,
+  });
+
+  // Inputmask | Маска для ввода телефона
+  $('.input--tel input').inputmask("+7(999)-999-99-99");
+
   // // Air Datepicker | Календарь
   // new AirDatepicker('#airDatepicker', {
   //   position: 'right top',

@@ -9,6 +9,7 @@
 		<meta name="robots" content="noindex, nofollow">
 		<title>Главная</title>
 		<link rel="stylesheet" href="css/plugins/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/plugins/select2.min.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body> 
@@ -1176,7 +1177,7 @@
 				<!-- types-->
 				<div class="types">
 					<div class="container"> 
-						<div class="row row-cols-5"> 
+						<div class="row row-cols-xl-5 row-cols-md-3 row-cols-2 gy-3"> 
 							<div class="col"> 
 								<div class="types__item"> 
 									<div class="types__img"> <img src="img/types/img1.jpg" alt=""></div>
@@ -1256,13 +1257,169 @@
 					</div>
 				</div>
 				<!-- /types-->
+				<!-- calc-->
+				<div class="calc">
+					<div class="container"> 
+						<div class="title">Рассчитать стоимость</div>
+						<form class="calc__container" action="#"> 
+							<div class="calc__top"> 
+								<div class="row">
+									<div class="col-xl-3">
+										<div class="calc__title">Основные параметры</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Количество жильцов</div>
+											<div class="input">
+												<input type="number">
+											</div>
+										</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Тип грунта</div>
+											<div class="select"> 
+												<select>
+													<option value="#">Песок</option>
+													<option value="#">Глина</option>
+												</select>
+											</div>
+										</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Глубина залегания канал. трубы, до (см)</div>
+											<div class="input">
+												<input type="number">
+											</div>
+										</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Выброс очищенных вод из септика</div>
+											<div class="select"> 
+												<select>
+													<option value="#">Самотечная</option>
+													<option value="#">Напорная</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="calc__title">Сантехнические работы</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Ванная (220л)</div>
+											<div class="input">
+												<input type="number">
+											</div>
+										</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Раковина (30 л.)</div>
+											<div class="input">
+												<input type="number">
+											</div>
+										</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Джакузи (400 л.)</div>
+											<div class="input">
+												<input type="number">
+											</div>
+										</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Биде (5 л.):</div>
+											<div class="input">
+												<input type="number">
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="calc__title"> </div>
+										<div class="calc__row"> 
+											<div class="calc__text">Стиральная машина (50 л.):</div>
+											<div class="input">
+												<input type="number">
+											</div>
+										</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Посудомоечная машина (20 л.):</div>
+											<div class="input">
+												<input type="number">
+											</div>
+										</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Унитаз (10 л.):</div>
+											<div class="input">
+												<input type="number">
+											</div>
+										</div>
+										<div class="calc__row"> 
+											<div class="calc__text">Душ (60 л.):</div>
+											<div class="input">
+												<input type="number">
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="calc__title calc__title--mb20">Дополнительно</div>
+										<div class="calc__checkbox-row"> 
+											<div class="checkbox"> 
+												<label>
+													<input type="checkbox"><span> </span>
+												</label>
+											</div>
+											<div class="calc__text">Высокий уровень грунтовых вод</div>
+										</div>
+										<div class="calc__checkbox-row"> 
+											<div class="checkbox"> 
+												<label>
+													<input type="checkbox"><span> </span>
+												</label>
+											</div>
+											<div class="calc__text">Сезонное проживание</div>
+										</div>
+										<div class="calc__checkbox-row"> 
+											<div class="checkbox"> 
+												<label>
+													<input type="checkbox"><span> </span>
+												</label>
+											</div>
+											<div class="calc__text">Премиум</div>
+										</div>
+										<div class="calc__checkbox-row"> 
+											<div class="checkbox"> 
+												<label>
+													<input type="checkbox"><span> </span>
+												</label>
+											</div>
+											<div class="calc__text">Ультрафиолетовая очистка</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="calc__bottom"> 
+								<div class="row"> 
+									<div class="col-xl-3">
+										<div class="input input--tel"> 
+											<input type="text" placeholder="Ваш телефон">
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="input"> 
+											<input type="text" placeholder="Дополнительные сведения">
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<button class="btn btn--big btn--blue" type="submit"> 
+											<div class="btn__inner">Подобрать</div>
+										</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /calc-->
 			</div>
 			<!-- footer-->
 			<footer class="footer"></footer>
 			<!--	/footer-->
 		</div>
 		<script src="js/jquery.min.js"> </script>
+		<script src="js/plugins/jquery.inputmask.min.js"></script>
 		<script src="js/plugins/swiper-bundle.min.js"> </script>
+		<script src="js/plugins/select2.full.js"> </script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

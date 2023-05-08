@@ -8,7 +8,7 @@ $grid-columns: 12; // Колличество колонок
 $grid-breakpoints: ( // Брейкпоинты
   xs: 0,
   sm: 576px,
-  md: 768px,
+  md: 769px,
   lg: 992px,
   xl: 1200px,
   xxl: 1400px
@@ -167,7 +167,11 @@ $btn_gradient: linear-gradient(325.49deg, #017EFC 18.22%, #10D4FF 81.06%);
 @import 'hamburgers/hamburgers';
 @import 'blocks/btn';
 @import 'blocks/title';
+@import 'blocks/input';
+@import 'blocks/select';
+@import 'blocks/checkbox';
 @import 'blocks/swiper-custom';
+@import 'blocks/select2-custom';
 // @import 'blocks/template';
 // @import 'blocks/popup';
 // @import 'blocks/tabs';
@@ -182,5 +186,6 @@ $btn_gradient: linear-gradient(325.49deg, #017EFC 18.22%, #10D4FF 81.06%);
 @import 'blocks/brands';
 @import 'blocks/discount';
 @import 'blocks/types';
+@import 'blocks/calc';
 
 @import 'blocks/footer';
