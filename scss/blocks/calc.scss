@@ -73,6 +73,9 @@
     border-top: 1px solid $border_color;
     .input {
       width: 100%;
+      input {
+        color: $text_gray_color;
+      }
     }
     .btn {
       width: 100%;

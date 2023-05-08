@@ -1,0 +1,90 @@
+/* banner */
+.banner { 
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 4.86%, rgba(255, 255, 255, 0) 54.43%), #007AE7;
+  color: #fff;
+  margin-bottom: 60px;
+  position: relative;
+  .title {
+    max-width: 500px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  &__img {
+    width: 48%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__content {
+    width: 50%;
+    padding: 55px 0 70px;
+    position: relative;
+    z-index: 2;
+  }
+  &__lists {
+    margin-bottom: 48px;
+  }
+  &__list {
+    font-size: 16px;
+    line-height: 19px;
+    li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 100%;
+        position: absolute;
+        top: 10px;
+        left: 0;
+      }
+    }
+  }
+  &__btn {
+    .btn {
+      padding: 15px 22px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__content {
+      width: 60%;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__content {
+      width: 80%;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 300px;
+    &__img {
+      width: 80%;
+    }
+    &__content {
+      width: 100%;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 200px;
+    &__img {
+      width: 100%;
+    }
+    &__btn {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+/* /banner */
