@@ -103,8 +103,7 @@ window.onload = function () {
   if ($('#sliderBenefit').length) {
     const sliderBenefit = new Swiper('#sliderBenefit', {
       slidesPerView: 2.1,
-      preventClicks: false,
-      preventClicksPropagation: false,
+      threshold: 3,
       navigation: {
         nextEl: '.benefit__slider-arrow--next',
         prevEl: '.benefit__slider-arrow--prev',
@@ -134,8 +133,7 @@ window.onload = function () {
     const popularCategoriesSlider = new Swiper('#popularCategoriesSlider', {
       slidesPerView: 'auto',
       spaceBetween: 8,
-      preventClicks: false,
-      preventClicksPropagation: false,
+      threshold: 3,
     });
   }
   
@@ -144,8 +142,7 @@ window.onload = function () {
     const popularTypesSlider = new Swiper('#popularTypesSlider', {
       slidesPerView: 'auto',
       spaceBetween: 40,
-      preventClicks: false,
-      preventClicksPropagation: false,
+      threshold: 3,
     });
   }
 
@@ -175,8 +172,7 @@ window.onload = function () {
     const sliderDiscount = new Swiper('#sliderDiscount', {
       slidesPerView: 4,
       spaceBetween: 17,
-      preventClicks: false,
-      preventClicksPropagation: false,
+      threshold: 3,
       navigation: {
         nextEl: '.discount__slider-arrow--next',
         prevEl: '.discount__slider-arrow--prev',

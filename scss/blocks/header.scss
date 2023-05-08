@@ -5,6 +5,7 @@
   top: 0;
   left: 0;
   z-index: 10;
+  transition: .3s;
   &__top {
     padding: 7px 0;
     background-color: #D4E4F4;
@@ -322,11 +323,15 @@
 // stiky menu
 #headerSticky {
   &.sticky {
+    box-shadow: 0px 4px 31px rgba(106, 147, 189, 0.45);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     animation: showStyky 0.5s;
+    .header__top {
+      display: none;
+    }
   }
 }
 @keyframes showStyky {
