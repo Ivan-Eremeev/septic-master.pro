@@ -185,6 +185,28 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер "сертификаты"
+  if ($('#sliderSertificates').length) {
+    const sliderSertificates = new Swiper('#sliderSertificates', {
+      slidesPerView: 6,
+      spaceBetween: 20,
+      threshold: 3,
+      pagination: {
+        el: '.sertificates__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.sertificates__slider-arrow--next',
+        prevEl: '.sertificates__slider-arrow--prev',
+      },
+      breakpoints: {
+        576: {
+          spaceBetween: 30,
+        },
+      }
+    });
+  }
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,

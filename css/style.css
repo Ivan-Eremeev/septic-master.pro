@@ -8349,5 +8349,42 @@ input[type=number]:focus {
 }
 
 /* /about */
+/* sertificates */
+.sertificates {
+  margin-bottom: 50px;
+}
+.sertificates .title {
+  margin-bottom: 25px;
+}
+.sertificates__slider {
+  position: relative;
+}
+.sertificates__slider #sliderSertificates {
+  overflow: hidden;
+}
+.sertificates__slider .swiper-slide {
+  height: auto;
+}
+.sertificates__item {
+  height: 100%;
+  max-height: 283px;
+  padding: 20px 20px 15px;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+}
+.sertificates__item img {
+  max-height: 100%;
+}
+.sertificates__slider-arrow--prev {
+  left: -20px;
+}
+.sertificates__slider-arrow--next {
+  right: -20px;
+}
+.sertificates__pagination {
+  display: none;
+}
+
+/* /sertificates */
 /* footer */
 /* /footer */
