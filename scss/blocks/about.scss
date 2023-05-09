@@ -1,0 +1,51 @@
+/* about */
+.about { 
+  margin-bottom: 50px;
+  &__content {
+    
+  }
+  .title {
+    margin-bottom: 25px;
+  }
+  &__text {
+    margin-bottom: 30px;
+    p {
+      margin: 15px 0;
+    }
+  }
+  &__lists {
+
+  }
+  &__list {
+    li {
+      padding-left: 32px;
+      margin-bottom: 8px;
+      position: relative;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' fill='%231DCF84'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.7375 10.8115C17.0875 10.4615 17.0875 9.89403 16.7375 9.54401C16.3875 9.19399 15.82 9.19399 15.4699 9.54401L11.6673 13.3467L9.42812 11.1075C9.0781 10.7575 8.5106 10.7575 8.16059 11.1075C7.81057 11.4575 7.81057 12.025 8.16059 12.375L11.0336 15.2481C11.3837 15.5981 11.9512 15.5981 12.3012 15.2481C12.3052 15.2441 12.3091 15.2401 12.313 15.236L16.7375 10.8115Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  &__img {
+    margin-top: 10px;
+    border-radius: 4px 0 0 4px;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+/* /about */
