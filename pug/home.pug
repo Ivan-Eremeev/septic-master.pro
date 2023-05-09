@@ -641,4 +641,50 @@ block content
                   img(src="img/information.jpg", alt="")
       // /information
 
+      // faq
+      .faq
+        .faq__img 
+          img(src="img/faq.png", alt="")
+        .container
+          .row 
+            .col-lg-6 
+              .title Часто задаваемые вопросы
+              .faq__accordion.accordion.js-accordion
+                .faq__item.accordion__item
+                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_1") Сколько потребляет энергии септик?
+                    .faq__arrow 
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  #trigger_1.faq__content.accordion__content.js-accordion-content
+                    | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                .faq__item.accordion__item
+                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_2") Можно установить септик самому?
+                    .faq__arrow 
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  #trigger_2.faq__content.accordion__content.js-accordion-content
+                    | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                .faq__item.accordion__item
+                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_3") Что можно сливать в биосептик?
+                    .faq__arrow 
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  #trigger_3.faq__content.accordion__content.js-accordion-content
+                    | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                .faq__item.accordion__item
+                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_4") Как работает септик зимой?
+                    .faq__arrow 
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  #trigger_4.faq__content.accordion__content.js-accordion-content
+                    | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                .faq__item.accordion__item
+                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_5") Станция биологической очистки?
+                    .faq__arrow 
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  #trigger_5.faq__content.accordion__content.js-accordion-content
+                    | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+      // /faq
+
     include core/footer.pug
