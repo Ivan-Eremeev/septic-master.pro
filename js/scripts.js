@@ -207,6 +207,39 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер "наши работы"
+  if ($('#sliderPortfolio').length) {
+
+    let sliderPortfolio;
+    let init = false;
+    function sliderToggle() {
+      if ($(window).width() <= 768 && !init) {
+        init = true;
+        sliderPortfolio = new Swiper('#sliderPortfolio', {
+          slidesPerView: 1.2,
+          spaceBetween: 20,
+          speed: 1000,
+          pagination: false,
+          navigation: false,
+          breakpoints: {
+            576: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            }
+          }
+        });
+      } else if ($(window).width() > 768 && init) {
+        init = false;
+        sliderPortfolio.destroy();
+      }
+    };
+    sliderToggle();
+    $(window).resize(function () {
+      sliderToggle();
+    });
+
+  }
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,
