@@ -472,7 +472,7 @@ block content
             .calc__bottom 
               .row 
                 .col-xl-3
-                  .input.input--tel 
+                  .input.js-input-tel 
                     input(type="text" placeholder="Ваш телефон")
                 .col-xl-6
                   .input 
@@ -710,11 +710,11 @@ block content
               .title Часто задаваемые вопросы
               .faq__accordion.accordion.js-accordion
                 .faq__item.accordion__item
-                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_1") Сколько потребляет энергии септик?
+                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_1").active Сколько потребляет энергии септик?
                     .faq__arrow 
                       svg(class="icon-arrow-light")
                         use(xlink:href="img/sprite.svg#arrow-light")
-                  #trigger_1.faq__content.accordion__content.js-accordion-content
+                  #trigger_1.faq__content.accordion__content.js-accordion-content.open
                     | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
                 .faq__item.accordion__item
                   .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_2") Можно установить септик самому?
@@ -745,5 +745,43 @@ block content
                   #trigger_5.faq__content.accordion__content.js-accordion-content
                     | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
       // /faq
+
+      // callback
+      .callback
+        .container 
+          .title Отправьте заявку или позвоните +7 (958) 762 82 70
+          .row.gy-3
+            .col-xl-3 
+              ul.callback__list 
+                li Позвоним
+                li Зададим уточняющие вопросы
+                li Рассчитаем
+                li Рассчитаем предварительную стоимость
+                li Составим договор
+                li Выполним работы
+            .col-xl-9
+              .row.gy-3
+                .col-xl-5 
+                  .row.gy-3
+                    .col-12 
+                      .input 
+                        input(type="text" placeholder="Имя")
+                    .col-12 
+                      .input.js-input-tel 
+                        input(type="text" placeholder="Телефон")
+                .col-xl-7 
+                  .textarea 
+                    textarea(placeholder="Комментарий")
+                .col-xl-12.d-flex.align-items-center
+                  .callback__btn 
+                    button(type="submit").btn.btn--big.btn--blue 
+                      .btn__inner Отправить
+                  .callback__approval
+                    .checkbox 
+                      label
+                        input(type="checkbox")
+                        span 
+                    | Соглашаюсь с политикой конфендициальности
+      // /callback
 
     include core/footer.pug

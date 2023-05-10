@@ -271,7 +271,7 @@ window.onload = function () {
   });
 
   // Inputmask | Маска для ввода телефона
-  $('.input--tel input').inputmask("+7(999)-999-99-99");
+  $('.js-input-tel  input').inputmask("+7(999)-999-99-99");
 
   // // Air Datepicker | Календарь
   // new AirDatepicker('#airDatepicker', {
