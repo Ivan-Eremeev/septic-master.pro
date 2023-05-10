@@ -240,6 +240,31 @@ window.onload = function () {
 
   }
 
+  // Swiper | Слайдер "отзывы"
+  if ($('#sliderReviews').length) {
+    const sliderReviews = new Swiper('#sliderReviews', {
+      slidesPerView: 2,
+      spaceBetween: 15,
+      loop: true,
+      // autoplay: true,
+      speed: 2000,
+      threshold: 3,
+      pagination: {
+        el: '.reviews__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.reviews__slider-arrow--next',
+        prevEl: '.reviews__slider-arrow--prev',
+      },
+      breakpoints: {
+        576: {
+          spaceBetween: 30,
+        },
+      }
+    });
+  }
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,
@@ -327,7 +352,7 @@ window.onload = function () {
       })
     }
   }
-  accordion($('.js-accordion'), false);
+  accordion($('.js-accordion'), true);
 
   // // Sticky Sidebar | Липкий сайдбар
   // if ($('.js-sticky').length) {
