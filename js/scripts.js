@@ -265,6 +265,31 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер "статьи"
+  if ($('#sliderArticles').length) {
+    const sliderArticles = new Swiper('#sliderArticles', {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      loop: true,
+      // autoplay: true,
+      speed: 2000,
+      threshold: 3,
+      pagination: {
+        el: '.articles-slider__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.articles-slider__slider-arrow--next',
+        prevEl: '.articles-slider__slider-arrow--prev',
+      },
+      breakpoints: {
+        576: {
+          spaceBetween: 30,
+        },
+      }
+    });
+  }
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,

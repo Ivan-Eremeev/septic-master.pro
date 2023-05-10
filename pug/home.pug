@@ -784,4 +784,44 @@ block content
                     | Соглашаюсь с политикой конфендициальности
       // /callback
 
+      // articles-slider
+      .articles-slider
+        .container 
+          .title Статьи
+          .articles-slider__slider 
+            #sliderArticles 
+              .swiper-wrapper 
+                .swiper-slide 
+                  .articles-slider__item 
+                    .articles-slider__img 
+                      img(src="img/articles/img1.jpg", alt="")
+                    .articles-slider__content 
+                      .articles-slider__date 05 апреля 2023
+                      .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
+                .swiper-slide 
+                  .articles-slider__item 
+                    .articles-slider__img 
+                      img(src="img/articles/img2.jpg", alt="")
+                    .articles-slider__content 
+                      .articles-slider__date 05 апреля 2023
+                      .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
+                .swiper-slide 
+                  .articles-slider__item 
+                    .articles-slider__img 
+                      img(src="img/articles/img3.jpg", alt="")
+                    .articles-slider__content 
+                      .articles-slider__date 05 апреля 2023
+                      .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
+                .swiper-slide 
+                  .articles-slider__item 
+                    .articles-slider__img 
+                      img(src="img/articles/img4.jpg", alt="")
+                    .articles-slider__content 
+                      .articles-slider__date 05 апреля 2023
+                      .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
+            .articles-slider__slider-arrow.articles-slider__slider-arrow--prev.swiper-button-prev
+            .articles-slider__slider-arrow.articles-slider__slider-arrow--next.swiper-button-next
+            .articles-slider__pagination.swiper-pagination
+      // /articles-slider
+
     include core/footer.pug
