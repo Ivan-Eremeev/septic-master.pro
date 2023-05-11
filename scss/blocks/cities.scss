@@ -1,0 +1,43 @@
+/* cities */
+.cities { 
+  padding: 120px 0 160px;
+  position: relative;
+  .row {
+    margin-top: -17px;
+    > * {
+      margin-top: 17px;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+  .title {
+    margin-bottom: 35px;
+  }
+  &__list {
+    font-size: 16px;
+    line-height: 19px;
+    opacity: 0.8;
+    li {
+      margin-bottom: 17px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/* /cities */
