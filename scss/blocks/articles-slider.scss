@@ -53,5 +53,33 @@
   &__pagination {
     display: none;
   }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    .title {
+      margin-bottom: 20px;
+    }
+    &__img {
+      height: 200px;
+    }
+    &__content {
+      padding: 15px;
+    }
+    &__pagination {
+      display: block;
+      bottom: -30px !important;
+    }
+    &__slider-arrow {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    &__slider {
+      #sliderArticles {
+        overflow: visible;
+      }
+    }
+  }
 }
 /* /articles-slider */

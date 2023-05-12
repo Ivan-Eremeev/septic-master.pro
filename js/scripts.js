@@ -326,11 +326,11 @@ window.onload = function () {
   // Swiper | Слайдер "отзывы"
   if ($('#sliderReviews').length) {
     const sliderReviews = new Swiper('#sliderReviews', {
-      slidesPerView: 2,
+      slidesPerView: 1.1,
       spaceBetween: 15,
       loop: true,
       // autoplay: true,
-      speed: 2000,
+      speed: 1000,
       threshold: 3,
       pagination: {
         el: '.reviews__pagination',
@@ -342,7 +342,12 @@ window.onload = function () {
       },
       breakpoints: {
         576: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+        768: {
           spaceBetween: 30,
+          slidesPerView: 2,
         },
       }
     });
@@ -351,11 +356,11 @@ window.onload = function () {
   // Swiper | Слайдер "статьи"
   if ($('#sliderArticles').length) {
     const sliderArticles = new Swiper('#sliderArticles', {
-      slidesPerView: 4,
+      slidesPerView: 1.1,
       spaceBetween: 20,
       loop: true,
       // autoplay: true,
-      speed: 2000,
+      speed: 1000,
       threshold: 3,
       pagination: {
         el: '.articles-slider__pagination',
@@ -367,7 +372,24 @@ window.onload = function () {
       },
       breakpoints: {
         576: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+        769: {
           spaceBetween: 30,
+          slidesPerView: 2,
+        },
+        992: {
+          spaceBetween: 30,
+          slidesPerView: 3,
+        },
+        1200: {
+          spaceBetween: 30,
+          slidesPerView: 4,
+        },
+        1400: {
+          spaceBetween: 30,
+          slidesPerView: 4,
         },
       }
     });
@@ -424,6 +446,7 @@ window.onload = function () {
     if (accordion.length) {
       $('.js-accordion').each(function () {
         let currentAccordion = $(this);
+        let item = currentAccordion.find('.accordion__item');
         let trigger = currentAccordion.find('.js-accordion-trigger');
         let content = $('.js-accordion-content');
         let time = 300;
@@ -439,8 +462,10 @@ window.onload = function () {
                 }
               )
               trigger.removeClass('active');
+              item.removeClass('active');
             };
             currentTrigger.addClass('active');
+            currentTrigger.closest('.accordion__item').addClass('active');
             currentAccordion.find('#' + data).stop().slideDown(
               time,
               function () {
@@ -449,6 +474,7 @@ window.onload = function () {
             );
           } else {
             currentTrigger.removeClass('active');
+            currentTrigger.closest('.accordion__item').removeClass('active');
             currentAccordion.find('#' + data).stop().slideUp(
               time,
               function () {

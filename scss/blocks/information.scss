@@ -33,5 +33,11 @@
       object-fit: cover;
     }
   }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+    .title {
+      margin-bottom: 20px;
+    }
+  }
 }
 /* /information */

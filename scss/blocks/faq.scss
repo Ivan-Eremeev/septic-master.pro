@@ -24,17 +24,18 @@
     &:last-child {
       margin-bottom: 0;
     }
+    &.active {
+      box-shadow: 0px 125px 179px rgba(30, 52, 86, 0.0108423), 0px 55.2909px 73.411px rgba(30, 52, 86, 0.0179538), 0px 30.1007px 43.533px rgba(30, 52, 86, 0.0246622), 0px 17.3051px 28.7323px rgba(30, 52, 86, 0.0316983), 0px 9.79163px 19.0277px rgba(30, 52, 86, 0.0397168), 0px 5.06745px 11.6442px rgba(30, 52, 86, 0.0499811), 0px 2.0024px 5.47848px rgba(30, 52, 86, 0.07);
+    }
   }
   &__trigger {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px 10px 25px;
+    padding: 16px 70px 16px 25px;
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
     color: $title_color;
     fill: #9A9A9A;
+    position: relative;
     svg {
       transition: .3s;
     }
@@ -60,9 +61,32 @@
     height: 40px;
     border: 1px solid $border_color;
     border-radius: 100%;
+    position: absolute;
+    top: 10px;
+    right: 15px;
     svg {
       width: 12px;
       height: 12px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__img {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+    .title {
+      margin-bottom: 20px;
+    }
+    &__item {
+      margin-bottom: 10px;
+    }
+    &__trigger {
+      padding: 13px 70px 13px 15px;
+    }
+    &__content {
+      padding: 0 15px 15px;
     }
   }
 }

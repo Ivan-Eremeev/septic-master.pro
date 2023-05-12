@@ -5,6 +5,15 @@
   margin-bottom: 80px;
   .title {
     margin-bottom: 50px;
+    a {
+      color: $title_color;
+      white-space: nowrap;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          color: $link_color;
+        }
+      }
+    }
   }
   .row {
     margin-left: -10px;
@@ -46,10 +55,55 @@
     }
   }
   &__approval {
-    display: flex;
-    align-items: center;
     .checkbox {
       margin-right: 10px;
+    }
+    .checkbox__text {
+      opacity: 0.8;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 40px;
+    .row {
+      margin-top: -15px;
+      > * {
+        margin-top: 15px;
+      }
+    }
+    &__container {
+      padding: 30px 15px 30px;
+      background-color: $background_color;
+      border-radius: 4px;
+    }
+    .title {
+      margin-bottom: 20px;
+    }
+    &__list {
+      margin-bottom: 5px;
+    }
+    &__btn {
+      margin-bottom: 10px;
+      max-width: none;
+      .btn {
+        height: 50px;
+      }
+    }
+    .textarea {
+      height: 132px;
+    }
+    &__approval {
+      .checkbox {
+        span {
+          width: 18px;
+          height: 18px;
+        }
+      }
+      .checkbox__text {
+        font-size: 13px;
+        line-height: 16px;
+      }
     }
   }
 }
