@@ -50,5 +50,22 @@
       margin: 5px 0;
     }
   }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+    &__item {
+      min-height: 177px;
+      padding: 15px 15px 10px;
+    }
+    &__title {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    .row {
+      margin-top: -10px;
+      > * {
+        margin-top: 10px;
+      }
+    }
+  }
 }
 /* /types */

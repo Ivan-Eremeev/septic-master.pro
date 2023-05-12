@@ -31,7 +31,6 @@
     }
   }
   &__title {
-    height: 24px;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
@@ -58,14 +57,13 @@
     line-height: 18px;
   }
   &__checkbox-row {
-    display: flex;
-    align-items: center;
     margin-bottom: 15px;
+    .checkbox__text {
+      opacity: 0.8;
+      font-weight: 500;
+    }
     &:last-child {
       margin-bottom: 0;
-    }
-    .calc__text {
-      margin-right: 0;
     }
   }
   &__bottom {
@@ -77,8 +75,54 @@
         color: $text_gray_color;
       }
     }
+    .textarea {
+      textarea {
+        height: 50px;
+        padding: 11px 16px;
+        color: $text_gray_color;
+      }
+    }
     .btn {
       width: 100%;
+    }
+  }
+  &__group {
+    .row {
+      margin-top: -10px;
+      > * {
+        margin-top: 10px;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+    .title {
+      margin-bottom: 20px;
+    }
+    &__top {
+      padding: 30px 15px 17px;
+    }
+    &__bottom {
+      padding: 20px 15px 30px;
+      .textarea {
+        textarea {
+          height: 132px;
+        }
+      }
+    }
+    &__title {
+      font-size: 16px;
+      line-height: 19px;
+      &--mb20 {
+        margin-bottom: 15px;
+      }
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &__checkbox-row {
+      margin-bottom: 12px;
     }
   }
 }

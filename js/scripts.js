@@ -1,21 +1,21 @@
 window.onload = function () {
 
   // Липкое меню.
-  function stikyMenu(header) {
-    let headerTop = header.offset().top;
-    headerToggleClass();
-    $(window).scroll(function () {
-      headerToggleClass();
-    });
-    function headerToggleClass() {
-      if ($(window).scrollTop() > headerTop + 250) {
-        header.addClass('sticky');
-      } else if ($(window).scrollTop() <= headerTop) {
-        header.removeClass('sticky');
-      }
-    }
-  };
-  stikyMenu($('#headerSticky'));
+  // function stikyMenu(header) {
+  //   let headerTop = header.offset().top;
+  //   headerToggleClass();
+  //   $(window).scroll(function () {
+  //     headerToggleClass();
+  //   });
+  //   function headerToggleClass() {
+  //     if ($(window).scrollTop() > headerTop + 250) {
+  //       header.addClass('sticky');
+  //     } else if ($(window).scrollTop() <= headerTop) {
+  //       header.removeClass('sticky');
+  //     }
+  //   }
+  // };
+  // stikyMenu($('#headerSticky'));
 
   // Выпадайки при клике по кнопке
   // Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
@@ -88,6 +88,12 @@ window.onload = function () {
     const sliderWelcome = new Swiper('#sliderWelcome', {
       slidesPerView: 1,
       spaceBetween: 30,
+      effect: 'fade',
+      loop: true,
+      speed: 500,
+      autoplay: {
+        delay: 5000
+      },
       pagination: {
         el: '.welcome__pagination',
         clickable: true,
@@ -104,6 +110,9 @@ window.onload = function () {
     const sliderBenefit = new Swiper('#sliderBenefit', {
       slidesPerView: 2.1,
       threshold: 3,
+      loop: true,
+      autoplay: true,
+      speed: 1000,
       navigation: {
         nextEl: '.benefit__slider-arrow--next',
         prevEl: '.benefit__slider-arrow--prev',
@@ -112,7 +121,7 @@ window.onload = function () {
         576: {
           slidesPerView: 3,
         },
-        768: {
+        769: {
           slidesPerView: 4,
         },
         992: {
@@ -141,16 +150,24 @@ window.onload = function () {
   if ($('#popularTypesSlider').length) {
     const popularTypesSlider = new Swiper('#popularTypesSlider', {
       slidesPerView: 'auto',
-      spaceBetween: 40,
+      spaceBetween: 0,
       threshold: 3,
+      breakpoints: {
+        768: {
+          spaceBetween: 40,
+        },
+      }
     });
   }
 
   // Swiper | Слайдер "производители"
   if ($('#sliderBrands').length) {
     const sliderBrands = new Swiper('#sliderBrands', {
-      slidesPerView: 6,
+      slidesPerView: 2.1,
       spaceBetween: 10,
+      loop: true,
+      autoplay: true,
+      speed: 1000,
       pagination: {
         el: '.brands__pagination',
         clickable: true,
@@ -161,6 +178,23 @@ window.onload = function () {
       },
       breakpoints: {
         576: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        1200: {
+          slidesPerView: 5,
+          spaceBetween: 30,
+        },
+        1400: {
+          slidesPerView: 6,
           spaceBetween: 30,
         },
       }
@@ -170,16 +204,40 @@ window.onload = function () {
   // Swiper | Слайдер "акции и скидки"
   if ($('#sliderDiscount').length) {
     const sliderDiscount = new Swiper('#sliderDiscount', {
-      slidesPerView: 4,
+      slidesPerView: 1.6,
       spaceBetween: 17,
       threshold: 3,
+      loop: true,
+      autoplay: true,
+      speed: 1000,
+      pagination: {
+        el: '.discount__pagination',
+        clickable: true,
+      },
       navigation: {
         nextEl: '.discount__slider-arrow--next',
         prevEl: '.discount__slider-arrow--prev',
       },
       breakpoints: {
         576: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+        769: {
           spaceBetween: 30,
+          slidesPerView: 2,
+        },
+        992: {
+          spaceBetween: 30,
+          slidesPerView: 3,
+        },
+        1200: {
+          spaceBetween: 30,
+          slidesPerView: 4,
+        },
+        1400: {
+          spaceBetween: 30,
+          slidesPerView: 4,
         },
       }
     });

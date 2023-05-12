@@ -62,5 +62,43 @@
       right: -20px;
     }
   }
+  &__pagination {
+    display: none;
+  }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 30px;
+    margin-bottom: 25px;
+    .title {
+      margin-bottom: 15px;
+    }
+    &__item {
+      min-height: 180px;
+    }
+    &__content {
+      padding: 15px;
+    }
+    &__title {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &__text {
+      font-size: 9px;
+    }
+    &__slider-arrow {
+      display: none;
+    }
+    &__pagination {
+      display: block;
+      bottom: -30px !important;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    &__slider {
+      #sliderDiscount {
+        overflow: visible;
+      }
+    }
+  }
 }
 /* /discount */

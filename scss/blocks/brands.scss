@@ -35,5 +35,27 @@
   &__pagination {
     bottom: -32px !important;
   }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+    .title {
+      margin-bottom: 20px;
+    }
+    &__item {
+      height: 75px;
+      padding: 15px;
+    }
+    &__slider-arrow {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    &__slider {
+      #sliderBrands {
+        overflow: visible;
+      }
+    }
+  }
 }
 /* /brands */

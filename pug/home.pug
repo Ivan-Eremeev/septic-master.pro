@@ -7,7 +7,7 @@ block content
 
   .page 
 
-    include core/header.pug
+    //- include core/header.pug
 
     .content 
 
@@ -15,7 +15,7 @@ block content
       .welcome
         .container 
           .row 
-            .col-lg-3 
+            .col-xl-3.col-md-4.d-none.d-lg-block
               ul.welcome__menu 
                 li 
                   a(href="#") Малахит
@@ -49,14 +49,16 @@ block content
                   a(href="#") Тверь Classic
                     svg(class="icon-arrow-light")
                       use(xlink:href="img/sprite.svg#arrow-light")
-            .col-lg-9 
+            .col-xl-9.col-lg-8
               .welcome__slider 
                 #sliderWelcome 
                   .swiper-wrapper 
                     .swiper-slide 
                       .welcome__item 
                         .welcome__img 
-                          img(src="img/welcome-banner.jpg", alt="")
+                          picture 
+                            source(media="(max-width: 768px)", srcset="img/welcome-banner-mobile.jpg")
+                            img(src="img/welcome-banner.jpg", alt="")
                         .welcome__content 
                           .welcome__title Септик под ключ в Москве и области за 1 день от 25 000 руб.
                           .welcome__text Здесь текстовое описание которое дополняет заголовок
@@ -65,18 +67,22 @@ block content
                     .swiper-slide 
                       .welcome__item 
                         .welcome__img 
-                          img(src="img/welcome-banner.jpg", alt="")
+                          picture 
+                            source(media="(max-width: 768px)", srcset="img/welcome-banner-mobile.jpg")
+                            img(src="img/welcome-banner.jpg", alt="")
                         .welcome__content 
-                          .welcome__title Септик под ключ в Москве и области за 1 день от 25 000 руб.
-                          .welcome__text Здесь текстовое описание которое дополняет заголовок
+                          .welcome__title Септик под ключ в Москве и области за 3 дня от 20 000 руб.
+                          .welcome__text Далеко-далеко за словесными горами в стране гласных.
                           .welcome__btn 
                             .btn.btn--big.btn--white-border Получить консультацию
                     .swiper-slide 
                       .welcome__item 
                         .welcome__img 
-                          img(src="img/welcome-banner.jpg", alt="")
+                          picture 
+                            source(media="(max-width: 768px)", srcset="img/welcome-banner-mobile.jpg")
+                            img(src="img/welcome-banner.jpg", alt="")
                         .welcome__content 
-                          .welcome__title Септик под ключ в Москве и области за 1 день от 25 000 руб.
+                          .welcome__title Септик под ключ в Москве и области за 2 дня от 30 000 руб.
                           .welcome__text Здесь текстовое описание которое дополняет заголовок
                           .welcome__btn 
                             .btn.btn--big.btn--white-border Получить консультацию
@@ -190,7 +196,7 @@ block content
 
           .popular__cards 
             include blocks/product-card.pug
-            .row.row-cols-5
+            .row.row-cols-xxl-5.row-cols-xl-4.row-cols-md-3.row-cols-2
               .col
                 +product-card('img/products/img1.jpg')
               .col
@@ -199,17 +205,17 @@ block content
                 +product-card('img/products/img3.jpg')
               .col
                 +product-card('img/products/img4.jpg')
-              .col
+              .col.d-none.d-md-block 
                 +product-card('img/products/img5.jpg')
-              .col
+              .col.d-none.d-md-block 
                 +product-card('img/products/img4.jpg')
-              .col
+              .col.d-none.d-md-block 
                 +product-card('img/products/img1.jpg')
-              .col
+              .col.d-none.d-md-block 
                 +product-card('img/products/img5.jpg')
-              .col
+              .col.d-none.d-md-block 
                 +product-card('img/products/img2.jpg')
-              .col
+              .col.d-none.d-md-block 
                 +product-card('img/products/img3.jpg')
           .popular__more 
             a(href="#").btn.btn--big.btn--blue-border Посмотреть все септики
@@ -240,15 +246,6 @@ block content
                 .swiper-slide 
                   .brands__item 
                     img(src="img/brands/img6.jpg", alt="")
-                .swiper-slide 
-                  .brands__item 
-                    img(src="img/brands/img1.jpg", alt="")
-                .swiper-slide 
-                  .brands__item 
-                    img(src="img/brands/img2.jpg", alt="")
-                .swiper-slide 
-                  .brands__item 
-                    img(src="img/brands/img3.jpg", alt="")
             .brands__slider-arrow.brands__slider-arrow--prev.swiper-button-prev
             .brands__slider-arrow.brands__slider-arrow--next.swiper-button-next
             .brands__pagination.swiper-pagination
@@ -305,12 +302,13 @@ block content
                       .discount__text Аварийная сигнализация устанавливается бесплатно при заказе монтажа септика под ключ.
             .discount__slider-arrow.discount__slider-arrow--prev.swiper-button-prev
             .discount__slider-arrow.discount__slider-arrow--next.swiper-button-next
+            .discount__pagination.swiper-pagination
       // /discount
 
       // types
       .types
         .container 
-          .row.row-cols-xl-5.row-cols-md-3.row-cols-2.gy-3 
+          .row.row-cols-xl-5.row-cols-lg-4.row-cols-md-3.row-cols-2.gy-3 
             .col 
               .types__item 
                 .types__img 
@@ -379,9 +377,9 @@ block content
           .title Рассчитать стоимость
           form(action="#").calc__container 
             .calc__top 
-              .row
-
-                .col-xl-3
+              .row.gy-3
+              
+                .col-xxl-3.col-md-6.order-xxl-1.order-md-1
                   .calc__title Основные параметры
                   .calc__row 
                     .calc__text Количество жильцов
@@ -404,426 +402,427 @@ block content
                         option(value="#") Самотечная
                         option(value="#") Напорная
 
-                .col-xl-3
-                  .calc__title Сантехнические работы
-                  .calc__row 
-                    .calc__text Ванная (220л)
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Раковина (30 л.)
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Джакузи (400 л.)
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Биде (5 л.):
-                    .input
-                      input(type="number") 
-
-                .col-xl-3
-                  .calc__title 
-                  .calc__row 
-                    .calc__text Стиральная машина (50 л.):
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Посудомоечная машина (20 л.):
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Унитаз (10 л.):
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Душ (60 л.):
-                    .input
-                      input(type="number") 
+                .col-xxl-6.order-xxl-2.order-md-3
+                  .calc__group 
+                    .calc__title Сантехнические работы
+                    .row
+                      .col-md-6
+                        .calc__row 
+                          .calc__text Ванная (220л)
+                          .input
+                            input(type="number") 
+                        .calc__row 
+                          .calc__text Раковина (30 л.)
+                          .input
+                            input(type="number") 
+                        .calc__row 
+                          .calc__text Джакузи (400 л.)
+                          .input
+                            input(type="number") 
+                        .calc__row 
+                          .calc__text Биде (5 л.):
+                          .input
+                            input(type="number") 
+                      .col-md-6
+                        .calc__row 
+                          .calc__text Стиральная машина (50 л.):
+                          .input
+                            input(type="number") 
+                        .calc__row 
+                          .calc__text Посудомоечная машина (20 л.):
+                          .input
+                            input(type="number") 
+                        .calc__row 
+                          .calc__text Унитаз (10 л.):
+                          .input
+                            input(type="number") 
+                        .calc__row 
+                          .calc__text Душ (60 л.):
+                          .input
+                            input(type="number") 
                   
-                .col-xl-3
+                .col-xxl-3.col-md-6.order-xxl-3.order-md-2
                   .calc__title.calc__title--mb20 Дополнительно
                   .calc__checkbox-row 
                     .checkbox 
                       label
                         input(type="checkbox")
                         span 
-                    .calc__text Высокий уровень грунтовых вод
+                        .checkbox__text Высокий уровень грунтовых вод
                   .calc__checkbox-row 
                     .checkbox 
                       label
                         input(type="checkbox")
                         span 
-                    .calc__text Сезонное проживание
+                        .checkbox__text Сезонное проживание
                   .calc__checkbox-row 
                     .checkbox 
                       label
                         input(type="checkbox")
                         span 
-                    .calc__text Премиум
+                        .checkbox__text Премиум
                   .calc__checkbox-row 
                     .checkbox 
                       label
                         input(type="checkbox")
                         span 
-                    .calc__text Ультрафиолетовая очистка
+                        .checkbox__text Ультрафиолетовая очистка
 
             .calc__bottom 
-              .row 
-                .col-xl-3
+              .row.gy-1.gx-1.gx-lg-3
+                .col-lg-3.col-md-6
                   .input.js-input-tel 
                     input(type="text" placeholder="Ваш телефон")
-                .col-xl-6
-                  .input 
-                    input(type="text" placeholder="Дополнительные сведения")
-                .col-xl-3
+                .col-lg-6.col-md-6
+                  .textarea 
+                    textarea(placeholder="Дополнительные сведения")
+                .col-lg-3.col-md-12
                   button(type="submit").btn.btn--big.btn--blue 
                     .btn__inner Подобрать
       // /calc
 
-      // banner
-      .banner
-        .container 
-          .banner__content 
-            .title Какие услуги включает в себя «Септик под ключ»
-            .banner__lists 
-              .row 
-                .col-md-6 
-                  ul.banner__list 
-                    li Стоимость септика
-                    li Доставка, разгрузка и погрузка септика
-                    li Обустройство котлована
-                .col-md-6 
-                  ul.banner__list 
-                    li Монтаж септика и подключение подводящихи отводящих магистрале
-                    li Засыпка септика и пусконаладочные работы
-            .banner__btn 
-              .btn.btn--big.btn--white-border Заказать под ключ
-          .banner__img 
-            picture 
-              source(media="(max-width: 768px)", srcset="img/banner-mobile.png")
-              img(src="img/banner.png", alt="")
-      // /banner
+    //-   // banner
+    //-   .banner
+    //-     .container 
+    //-       .banner__content 
+    //-         .title Какие услуги включает в себя «Септик под ключ»
+    //-         .banner__lists 
+    //-           .row 
+    //-             .col-md-6 
+    //-               ul.banner__list 
+    //-                 li Стоимость септика
+    //-                 li Доставка, разгрузка и погрузка септика
+    //-                 li Обустройство котлована
+    //-             .col-md-6 
+    //-               ul.banner__list 
+    //-                 li Монтаж септика и подключение подводящихи отводящих магистрале
+    //-                 li Засыпка септика и пусконаладочные работы
+    //-         .banner__btn 
+    //-           .btn.btn--big.btn--white-border Заказать под ключ
+    //-       .banner__img 
+    //-         picture 
+    //-           source(media="(max-width: 768px)", srcset="img/banner-mobile.png")
+    //-           img(src="img/banner.png", alt="")
+    //-   // /banner
 
-      // steps
-      .steps
-        .container 
-          .title Как заказать септик
-          .steps__items 
-            .row.row-cols-lg-4.row-cols-sm-2.row.cols-1.gy-3
-              .col
-                .steps__item 
-                  .steps__icon 
-                    img(src="img/steps-icons/img1.svg", alt="")
-                  .steps__title Получаем заявку
-              .col
-                .steps__item 
-                  .steps__icon 
-                    img(src="img/steps-icons/img2.svg", alt="")
-                  .steps__title Отправляем замерщика
-              .col
-                .steps__item 
-                  .steps__icon 
-                    img(src="img/steps-icons/img3.svg", alt="")
-                  .steps__title Начинаем работу согластно договору
-              .col
-                .steps__item 
-                  .steps__icon 
-                    img(src="img/steps-icons/img4.svg", alt="")
-                  .steps__title Завершаем работу и сдаем объект
-      // /steps
+    //-   // steps
+    //-   .steps
+    //-     .container 
+    //-       .title Как заказать септик
+    //-       .steps__items 
+    //-         .row.row-cols-lg-4.row-cols-sm-2.row.cols-1.gy-3
+    //-           .col
+    //-             .steps__item 
+    //-               .steps__icon 
+    //-                 img(src="img/steps-icons/img1.svg", alt="")
+    //-               .steps__title Получаем заявку
+    //-           .col
+    //-             .steps__item 
+    //-               .steps__icon 
+    //-                 img(src="img/steps-icons/img2.svg", alt="")
+    //-               .steps__title Отправляем замерщика
+    //-           .col
+    //-             .steps__item 
+    //-               .steps__icon 
+    //-                 img(src="img/steps-icons/img3.svg", alt="")
+    //-               .steps__title Начинаем работу согластно договору
+    //-           .col
+    //-             .steps__item 
+    //-               .steps__icon 
+    //-                 img(src="img/steps-icons/img4.svg", alt="")
+    //-               .steps__title Завершаем работу и сдаем объект
+    //-   // /steps
 
-      // about
-      .about
-        .container 
-          .row 
-            .col-lg-7 
-              .about__content 
-              .title О компании Септик-мастер.pro
-              .about__text 
-                p Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры в значительной степени обуславливает создание модели развития. 
-                p Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации дальнейших направлений развития.
-                p Таким образом постоянный количественный рост и сфера нашей активности требуют от нас анализа существенных финансовых и административных условий. Разнообразный и богатый опыт новая модель организационной деятельности требуют определения и уточнения модели развития. 
-              .about__lists 
-                .row 
-                  .col-md-6 
-                    ul.about__list 
-                      li Более 6 лет на рынке
-                      li Официальные дилеры лучших производителей
-                      li Мультибрендовая компания
-                      li Сертифицированные септики
-                      li Конкурентные цены
-                  .col-md-6 
-                    ul.about__list 
-                      li Установлено более 2 700 септиков
-                      li Более 8 бригад по сервису
-                      li Более 7 бригад по монтажу
-                      li Более 45 сотрудников
-            .col-lg-5 
-              .about__img 
-                img(src="img/about.jpg", alt="")
-      // /about
+    //-   // about
+    //-   .about
+    //-     .container 
+    //-       .row 
+    //-         .col-lg-7 
+    //-           .about__content 
+    //-           .title О компании Септик-мастер.pro
+    //-           .about__text 
+    //-             p Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры в значительной степени обуславливает создание модели развития. 
+    //-             p Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации дальнейших направлений развития.
+    //-             p Таким образом постоянный количественный рост и сфера нашей активности требуют от нас анализа существенных финансовых и административных условий. Разнообразный и богатый опыт новая модель организационной деятельности требуют определения и уточнения модели развития. 
+    //-           .about__lists 
+    //-             .row 
+    //-               .col-md-6 
+    //-                 ul.about__list 
+    //-                   li Более 6 лет на рынке
+    //-                   li Официальные дилеры лучших производителей
+    //-                   li Мультибрендовая компания
+    //-                   li Сертифицированные септики
+    //-                   li Конкурентные цены
+    //-               .col-md-6 
+    //-                 ul.about__list 
+    //-                   li Установлено более 2 700 септиков
+    //-                   li Более 8 бригад по сервису
+    //-                   li Более 7 бригад по монтажу
+    //-                   li Более 45 сотрудников
+    //-         .col-lg-5 
+    //-           .about__img 
+    //-             img(src="img/about.jpg", alt="")
+    //-   // /about
 
-      // sertificates
-      .sertificates
-        .container 
-          .title Сертификаты
+    //-   // sertificates
+    //-   .sertificates
+    //-     .container 
+    //-       .title Сертификаты
 
-          .sertificates__slider 
+    //-       .sertificates__slider 
 
-            #sliderSertificates 
-              .swiper-wrapper 
-                .swiper-slide 
-                  .sertificates__item 
-                    img(src="img/sertificates/img1.jpg", alt="")
-                .swiper-slide 
-                  .sertificates__item 
-                    img(src="img/sertificates/img2.jpg", alt="")
-                .swiper-slide 
-                  .sertificates__item 
-                    img(src="img/sertificates/img3.jpg", alt="")
-                .swiper-slide 
-                  .sertificates__item 
-                    img(src="img/sertificates/img4.jpg", alt="")
-                .swiper-slide 
-                  .sertificates__item 
-                    img(src="img/sertificates/img5.jpg", alt="")
-                .swiper-slide 
-                  .sertificates__item 
-                    img(src="img/sertificates/img6.jpg", alt="")
-                .swiper-slide 
-                  .sertificates__item 
-                    img(src="img/sertificates/img1.jpg", alt="")
+    //-         #sliderSertificates 
+    //-           .swiper-wrapper 
+    //-             .swiper-slide 
+    //-               .sertificates__item 
+    //-                 img(src="img/sertificates/img1.jpg", alt="")
+    //-             .swiper-slide 
+    //-               .sertificates__item 
+    //-                 img(src="img/sertificates/img2.jpg", alt="")
+    //-             .swiper-slide 
+    //-               .sertificates__item 
+    //-                 img(src="img/sertificates/img3.jpg", alt="")
+    //-             .swiper-slide 
+    //-               .sertificates__item 
+    //-                 img(src="img/sertificates/img4.jpg", alt="")
+    //-             .swiper-slide 
+    //-               .sertificates__item 
+    //-                 img(src="img/sertificates/img5.jpg", alt="")
+    //-             .swiper-slide 
+    //-               .sertificates__item 
+    //-                 img(src="img/sertificates/img6.jpg", alt="")
+    //-             .swiper-slide 
+    //-               .sertificates__item 
+    //-                 img(src="img/sertificates/img1.jpg", alt="")
 
-            .sertificates__slider-arrow.sertificates__slider-arrow--prev.swiper-button-prev
-            .sertificates__slider-arrow.sertificates__slider-arrow--next.swiper-button-next
-            .sertificates__pagination.swiper-pagination
-      // /sertificates
+    //-         .sertificates__slider-arrow.sertificates__slider-arrow--prev.swiper-button-prev
+    //-         .sertificates__slider-arrow.sertificates__slider-arrow--next.swiper-button-next
+    //-         .sertificates__pagination.swiper-pagination
+    //-   // /sertificates
 
-      // portfolio
-      .portfolio
-        .container 
-          .title Наши работы
-          .portfolio__slider 
-            #sliderPortfolio 
-              .swiper-wrapper.portfolio__grid 
-                .swiper-slide.portfolio__col-1
-                  .portfolio__img 
-                    img(src="img/portfolio/img1.jpg", alt="")
-                .swiper-slide.portfolio__col-2
-                  .portfolio__img 
-                    img(src="img/portfolio/img2.jpg", alt="")
-                .swiper-slide.portfolio__col-3
-                  .portfolio__img 
-                    img(src="img/portfolio/img3.jpg", alt="")
-                .swiper-slide.portfolio__col-4
-                  .portfolio__img 
-                    img(src="img/portfolio/img4.jpg", alt="")
-                .swiper-slide.portfolio__col-5
-                  .portfolio__img 
-                    img(src="img/portfolio/img5.jpg", alt="")
-      // /portfolio
+    //-   // portfolio
+    //-   .portfolio
+    //-     .container 
+    //-       .title Наши работы
+    //-       .portfolio__slider 
+    //-         #sliderPortfolio 
+    //-           .swiper-wrapper.portfolio__grid 
+    //-             .swiper-slide.portfolio__col-1
+    //-               .portfolio__img 
+    //-                 img(src="img/portfolio/img1.jpg", alt="")
+    //-             .swiper-slide.portfolio__col-2
+    //-               .portfolio__img 
+    //-                 img(src="img/portfolio/img2.jpg", alt="")
+    //-             .swiper-slide.portfolio__col-3
+    //-               .portfolio__img 
+    //-                 img(src="img/portfolio/img3.jpg", alt="")
+    //-             .swiper-slide.portfolio__col-4
+    //-               .portfolio__img 
+    //-                 img(src="img/portfolio/img4.jpg", alt="")
+    //-             .swiper-slide.portfolio__col-5
+    //-               .portfolio__img 
+    //-                 img(src="img/portfolio/img5.jpg", alt="")
+    //-   // /portfolio
 
-      // information
-      .information
-        .container 
-          .information__container 
-            .row.gy-3
-              .col-xl-8 
-                .information__content 
-                  .title Септик под ключ в Москве
-                  .information__text 
-                    p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
-                    p Для детальной оценки, стоит согласовать выезд на объект инженера-замерщика для проведения расчетов и подготовки оптимального предложения.
-              .col-xl-4 
-                .information__img 
-                  img(src="img/information.jpg", alt="")
-      // /information
+    //-   // information
+    //-   .information
+    //-     .container 
+    //-       .information__container 
+    //-         .row.gy-3
+    //-           .col-xl-8 
+    //-             .information__content 
+    //-               .title Септик под ключ в Москве
+    //-               .information__text 
+    //-                 p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+    //-                 p Для детальной оценки, стоит согласовать выезд на объект инженера-замерщика для проведения расчетов и подготовки оптимального предложения.
+    //-           .col-xl-4 
+    //-             .information__img 
+    //-               img(src="img/information.jpg", alt="")
+    //-   // /information
 
-      // reviews
-      .reviews
-        .container 
-          .title Отзывы о нашей работе
-          .reviews__slider 
-            #sliderReviews
-              .swiper-wrapper 
-                .swiper-slide 
-                  .reviews__item 
-                    .reviews__img 
-                      img(src="img/reviews/img1.jpg", alt="")
-                    .reviews__content 
-                      .reviews__title Консультация
-                      .reviews__info-items  
-                        .reviews__info-items-row 
-                          .reviews__info-item 
-                            svg(class="icon-mark")
-                              use(xlink:href="img/sprite.svg#mark")
-                            | Дмитров
-                          .reviews__info-item 
-                            svg(class="icon-user")
-                              use(xlink:href="img/sprite.svg#user")
-                            | Митрахович Максим
-                        .reviews__info-items-row 
-                          .reviews__info-item 
-                            svg(class="icon-user")
-                              use(xlink:href="img/sprite.svg#user")
-                            | Услуга: отвод сточных вод
-                      .reviews__text 
-                        p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
-                        p Для детальной оценки, стоит согласовать выезд на объект инженера-замерщика для проведения расчетов и...
-                .swiper-slide 
-                  .reviews__item 
-                    .reviews__img 
-                      img(src="img/reviews/img2.jpg", alt="")
-                    .reviews__content 
-                      .reviews__title Консультация
-                      .reviews__info-items 
-                        .reviews__info-items-row 
-                          .reviews__info-item 
-                            svg(class="icon-mark")
-                              use(xlink:href="img/sprite.svg#mark")
-                            | Дмитров
-                          .reviews__info-item 
-                            svg(class="icon-user")
-                              use(xlink:href="img/sprite.svg#user")
-                            | Митрахович Максим
-                        .reviews__info-items-row 
-                          .reviews__info-item 
-                            svg(class="icon-user")
-                              use(xlink:href="img/sprite.svg#user")
-                            | Услуга: отвод сточных вод
-                      .reviews__text 
-                        p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
-            .reviews__slider-arrow.reviews__slider-arrow--prev.swiper-button-prev
-            .reviews__slider-arrow.reviews__slider-arrow--next.swiper-button-next
-            .reviews__pagination.swiper-pagination
-      // /reviews
+    //-   // reviews
+    //-   .reviews
+    //-     .container 
+    //-       .title Отзывы о нашей работе
+    //-       .reviews__slider 
+    //-         #sliderReviews
+    //-           .swiper-wrapper 
+    //-             .swiper-slide 
+    //-               .reviews__item 
+    //-                 .reviews__img 
+    //-                   img(src="img/reviews/img1.jpg", alt="")
+    //-                 .reviews__content 
+    //-                   .reviews__title Консультация
+    //-                   .reviews__info-items  
+    //-                     .reviews__info-items-row 
+    //-                       .reviews__info-item 
+    //-                         svg(class="icon-mark")
+    //-                           use(xlink:href="img/sprite.svg#mark")
+    //-                         | Дмитров
+    //-                       .reviews__info-item 
+    //-                         svg(class="icon-user")
+    //-                           use(xlink:href="img/sprite.svg#user")
+    //-                         | Митрахович Максим
+    //-                     .reviews__info-items-row 
+    //-                       .reviews__info-item 
+    //-                         svg(class="icon-user")
+    //-                           use(xlink:href="img/sprite.svg#user")
+    //-                         | Услуга: отвод сточных вод
+    //-                   .reviews__text 
+    //-                     p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+    //-                     p Для детальной оценки, стоит согласовать выезд на объект инженера-замерщика для проведения расчетов и...
+    //-             .swiper-slide 
+    //-               .reviews__item 
+    //-                 .reviews__img 
+    //-                   img(src="img/reviews/img2.jpg", alt="")
+    //-                 .reviews__content 
+    //-                   .reviews__title Консультация
+    //-                   .reviews__info-items 
+    //-                     .reviews__info-items-row 
+    //-                       .reviews__info-item 
+    //-                         svg(class="icon-mark")
+    //-                           use(xlink:href="img/sprite.svg#mark")
+    //-                         | Дмитров
+    //-                       .reviews__info-item 
+    //-                         svg(class="icon-user")
+    //-                           use(xlink:href="img/sprite.svg#user")
+    //-                         | Митрахович Максим
+    //-                     .reviews__info-items-row 
+    //-                       .reviews__info-item 
+    //-                         svg(class="icon-user")
+    //-                           use(xlink:href="img/sprite.svg#user")
+    //-                         | Услуга: отвод сточных вод
+    //-                   .reviews__text 
+    //-                     p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+    //-         .reviews__slider-arrow.reviews__slider-arrow--prev.swiper-button-prev
+    //-         .reviews__slider-arrow.reviews__slider-arrow--next.swiper-button-next
+    //-         .reviews__pagination.swiper-pagination
+    //-   // /reviews
 
-      // faq
-      .faq
-        .faq__img 
-          img(src="img/faq.png", alt="")
-        .container
-          .row 
-            .col-lg-6 
-              .title Часто задаваемые вопросы
-              .faq__accordion.accordion.js-accordion
-                .faq__item.accordion__item
-                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_1").active Сколько потребляет энергии септик?
-                    .faq__arrow 
-                      svg(class="icon-arrow-light")
-                        use(xlink:href="img/sprite.svg#arrow-light")
-                  #trigger_1.faq__content.accordion__content.js-accordion-content.open
-                    | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
-                .faq__item.accordion__item
-                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_2") Можно установить септик самому?
-                    .faq__arrow 
-                      svg(class="icon-arrow-light")
-                        use(xlink:href="img/sprite.svg#arrow-light")
-                  #trigger_2.faq__content.accordion__content.js-accordion-content
-                    | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
-                .faq__item.accordion__item
-                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_3") Что можно сливать в биосептик?
-                    .faq__arrow 
-                      svg(class="icon-arrow-light")
-                        use(xlink:href="img/sprite.svg#arrow-light")
-                  #trigger_3.faq__content.accordion__content.js-accordion-content
-                    | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
-                .faq__item.accordion__item
-                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_4") Как работает септик зимой?
-                    .faq__arrow 
-                      svg(class="icon-arrow-light")
-                        use(xlink:href="img/sprite.svg#arrow-light")
-                  #trigger_4.faq__content.accordion__content.js-accordion-content
-                    | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
-                .faq__item.accordion__item
-                  .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_5") Станция биологической очистки?
-                    .faq__arrow 
-                      svg(class="icon-arrow-light")
-                        use(xlink:href="img/sprite.svg#arrow-light")
-                  #trigger_5.faq__content.accordion__content.js-accordion-content
-                    | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
-      // /faq
+    //-   // faq
+    //-   .faq
+    //-     .faq__img 
+    //-       img(src="img/faq.png", alt="")
+    //-     .container
+    //-       .row 
+    //-         .col-lg-6 
+    //-           .title Часто задаваемые вопросы
+    //-           .faq__accordion.accordion.js-accordion
+    //-             .faq__item.accordion__item
+    //-               .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_1").active Сколько потребляет энергии септик?
+    //-                 .faq__arrow 
+    //-                   svg(class="icon-arrow-light")
+    //-                     use(xlink:href="img/sprite.svg#arrow-light")
+    //-               #trigger_1.faq__content.accordion__content.js-accordion-content.open
+    //-                 | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+    //-             .faq__item.accordion__item
+    //-               .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_2") Можно установить септик самому?
+    //-                 .faq__arrow 
+    //-                   svg(class="icon-arrow-light")
+    //-                     use(xlink:href="img/sprite.svg#arrow-light")
+    //-               #trigger_2.faq__content.accordion__content.js-accordion-content
+    //-                 | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+    //-             .faq__item.accordion__item
+    //-               .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_3") Что можно сливать в биосептик?
+    //-                 .faq__arrow 
+    //-                   svg(class="icon-arrow-light")
+    //-                     use(xlink:href="img/sprite.svg#arrow-light")
+    //-               #trigger_3.faq__content.accordion__content.js-accordion-content
+    //-                 | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+    //-             .faq__item.accordion__item
+    //-               .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_4") Как работает септик зимой?
+    //-                 .faq__arrow 
+    //-                   svg(class="icon-arrow-light")
+    //-                     use(xlink:href="img/sprite.svg#arrow-light")
+    //-               #trigger_4.faq__content.accordion__content.js-accordion-content
+    //-                 | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+    //-             .faq__item.accordion__item
+    //-               .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_5") Станция биологической очистки?
+    //-                 .faq__arrow 
+    //-                   svg(class="icon-arrow-light")
+    //-                     use(xlink:href="img/sprite.svg#arrow-light")
+    //-               #trigger_5.faq__content.accordion__content.js-accordion-content
+    //-                 | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+    //-   // /faq
 
-      // callback
-      .callback
-        .container 
-          .title Отправьте заявку или позвоните +7 (958) 762 82 70
-          .row.gy-3
-            .col-xl-3 
-              ul.callback__list 
-                li Позвоним
-                li Зададим уточняющие вопросы
-                li Рассчитаем
-                li Рассчитаем предварительную стоимость
-                li Составим договор
-                li Выполним работы
-            .col-xl-9
-              .row.gy-3
-                .col-xl-5 
-                  .row.gy-3
-                    .col-12 
-                      .input 
-                        input(type="text" placeholder="Имя")
-                    .col-12 
-                      .input.js-input-tel 
-                        input(type="text" placeholder="Телефон")
-                .col-xl-7 
-                  .textarea 
-                    textarea(placeholder="Комментарий")
-                .col-xl-12.d-flex.align-items-center
-                  .callback__btn 
-                    button(type="submit").btn.btn--big.btn--blue 
-                      .btn__inner Отправить
-                  .callback__approval
-                    .checkbox 
-                      label
-                        input(type="checkbox")
-                        span 
-                    | Соглашаюсь с политикой конфендициальности
-      // /callback
+    //-   // callback
+    //-   .callback
+    //-     .container 
+    //-       .title Отправьте заявку или позвоните +7 (958) 762 82 70
+    //-       .row.gy-3
+    //-         .col-xl-3 
+    //-           ul.callback__list 
+    //-             li Позвоним
+    //-             li Зададим уточняющие вопросы
+    //-             li Рассчитаем
+    //-             li Рассчитаем предварительную стоимость
+    //-             li Составим договор
+    //-             li Выполним работы
+    //-         .col-xl-9
+    //-           .row.gy-3
+    //-             .col-xl-5 
+    //-               .row.gy-3
+    //-                 .col-12 
+    //-                   .input 
+    //-                     input(type="text" placeholder="Имя")
+    //-                 .col-12 
+    //-                   .input.js-input-tel 
+    //-                     input(type="text" placeholder="Телефон")
+    //-             .col-xl-7 
+    //-               .textarea 
+    //-                 textarea(placeholder="Комментарий")
+    //-             .col-xl-12.d-flex.align-items-center
+    //-               .callback__btn 
+    //-                 button(type="submit").btn.btn--big.btn--blue 
+    //-                   .btn__inner Отправить
+    //-               .callback__approval
+    //-                 .checkbox 
+    //-                   label
+    //-                     input(type="checkbox")
+    //-                     span 
+    //-                 | Соглашаюсь с политикой конфендициальности
+    //-   // /callback
 
-      // articles-slider
-      .articles-slider
-        .container 
-          .title Статьи
-          .articles-slider__slider 
-            #sliderArticles 
-              .swiper-wrapper 
-                .swiper-slide 
-                  .articles-slider__item 
-                    .articles-slider__img 
-                      img(src="img/articles/img1.jpg", alt="")
-                    .articles-slider__content 
-                      .articles-slider__date 05 апреля 2023
-                      .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
-                .swiper-slide 
-                  .articles-slider__item 
-                    .articles-slider__img 
-                      img(src="img/articles/img2.jpg", alt="")
-                    .articles-slider__content 
-                      .articles-slider__date 05 апреля 2023
-                      .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
-                .swiper-slide 
-                  .articles-slider__item 
-                    .articles-slider__img 
-                      img(src="img/articles/img3.jpg", alt="")
-                    .articles-slider__content 
-                      .articles-slider__date 05 апреля 2023
-                      .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
-                .swiper-slide 
-                  .articles-slider__item 
-                    .articles-slider__img 
-                      img(src="img/articles/img4.jpg", alt="")
-                    .articles-slider__content 
-                      .articles-slider__date 05 апреля 2023
-                      .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
-            .articles-slider__slider-arrow.articles-slider__slider-arrow--prev.swiper-button-prev
-            .articles-slider__slider-arrow.articles-slider__slider-arrow--next.swiper-button-next
-            .articles-slider__pagination.swiper-pagination
-      // /articles-slider
+    //-   // articles-slider
+    //-   .articles-slider
+    //-     .container 
+    //-       .title Статьи
+    //-       .articles-slider__slider 
+    //-         #sliderArticles 
+    //-           .swiper-wrapper 
+    //-             .swiper-slide 
+    //-               .articles-slider__item 
+    //-                 .articles-slider__img 
+    //-                   img(src="img/articles/img1.jpg", alt="")
+    //-                 .articles-slider__content 
+    //-                   .articles-slider__date 05 апреля 2023
+    //-                   .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
+    //-             .swiper-slide 
+    //-               .articles-slider__item 
+    //-                 .articles-slider__img 
+    //-                   img(src="img/articles/img2.jpg", alt="")
+    //-                 .articles-slider__content 
+    //-                   .articles-slider__date 05 апреля 2023
+    //-                   .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
+    //-             .swiper-slide 
+    //-               .articles-slider__item 
+    //-                 .articles-slider__img 
+    //-                   img(src="img/articles/img3.jpg", alt="")
+    //-                 .articles-slider__content 
+    //-                   .articles-slider__date 05 апреля 2023
+    //-                   .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
+    //-             .swiper-slide 
+    //-               .articles-slider__item 
+    //-                 .articles-slider__img 
+    //-                   img(src="img/articles/img4.jpg", alt="")
+    //-                 .articles-slider__content 
+    //-                   .articles-slider__date 05 апреля 2023
+    //-                   .articles-slider__text Здесь будет заголовок статьи который может быть разной длинны и высоты
+    //-         .articles-slider__slider-arrow.articles-slider__slider-arrow--prev.swiper-button-prev
+    //-         .articles-slider__slider-arrow.articles-slider__slider-arrow--next.swiper-button-next
+    //-         .articles-slider__pagination.swiper-pagination
+    //-   // /articles-slider
 
-      include blocks/cities.pug
+    //-   include blocks/cities.pug
 
-    include core/footer.pug
+    //- include core/footer.pug

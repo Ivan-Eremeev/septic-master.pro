@@ -77,11 +77,20 @@
       right: -20px;
     }
   }
-  @include media-breakpoint-down(sm) {
-    overflow: hidden;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+    .title {
+      margin-bottom: 20px;
+    }
+    &__item {
+      padding: 16px 16px 23px;
+    }
     &__slider-arrow {
       display: none;
     }
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
     &__slider-inner {
       overflow: visible;
     }

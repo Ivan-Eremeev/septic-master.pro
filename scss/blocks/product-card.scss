@@ -49,7 +49,18 @@
     color: $text_gray_color;
   }
   &__stars {
-    
+    display: flex;
+  }
+  &__stars-icon {
+    width: 16px;
+    height: 15px;
+    margin-left: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.12885 0.545576C7.51136 -0.133069 8.48864 -0.13307 8.87115 0.545575L10.6319 3.66947C10.7746 3.92265 11.0204 4.10122 11.3053 4.1587L14.8204 4.86794C15.584 5.02202 15.886 5.95147 15.3588 6.52497L12.9319 9.16489C12.7352 9.37884 12.6413 9.66777 12.6747 9.95648L13.0864 13.5187C13.1758 14.2926 12.3852 14.867 11.6768 14.5428L8.41616 13.0505C8.1519 12.9295 7.8481 12.9295 7.58384 13.0505L4.32318 14.5428C3.61482 14.867 2.82419 14.2926 2.91362 13.5187L3.32532 9.95648C3.35869 9.66777 3.26481 9.37884 3.06812 9.16489L0.641221 6.52497C0.113994 5.95147 0.415988 5.02202 1.17962 4.86794L4.69473 4.1587C4.97961 4.10122 5.22539 3.92265 5.36809 3.66947L7.12885 0.545576Z' fill='%23E7F0F9'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    &--fill {
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.12885 0.545576C7.51136 -0.133069 8.48864 -0.13307 8.87115 0.545575L10.6319 3.66947C10.7746 3.92265 11.0204 4.10122 11.3053 4.1587L14.8204 4.86794C15.584 5.02202 15.886 5.95147 15.3588 6.52497L12.9319 9.16489C12.7352 9.37884 12.6413 9.66777 12.6747 9.95648L13.0864 13.5187C13.1758 14.2926 12.3852 14.867 11.6768 14.5428L8.41616 13.0505C8.1519 12.9295 7.8481 12.9295 7.58384 13.0505L4.32318 14.5428C3.61482 14.867 2.82419 14.2926 2.91362 13.5187L3.32532 9.95648C3.35869 9.66777 3.26481 9.37884 3.06812 9.16489L0.641221 6.52497C0.113994 5.95147 0.415988 5.02202 1.17962 4.86794L4.69473 4.1587C4.97961 4.10122 5.22539 3.92265 5.36809 3.66947L7.12885 0.545576Z' fill='%230383FD'/%3E%3C/svg%3E%0A");
+    }
   }
   &__title {
     font-weight: 500;
@@ -91,9 +102,11 @@
     .row {
       margin-left: -10px;
       margin-right: -10px;
+      margin-top: -15px;
       > * {
         padding-left: 10px;
         padding-right: 10px;
+        margin-top: 15px;
       }
     }
   }
@@ -101,11 +114,13 @@
     font-size: 13px;
     line-height: 16px;
     color: #B2BFCF;
+    white-space: nowrap;
   }
   &__price {
     font-size: 22px;
     line-height: 27px;
     color: $title_color;
+    white-space: nowrap;
   }
   &__price-text {
     font-size: 13px;
@@ -118,7 +133,7 @@
     align-items: center;
     justify-content: space-between;
     .btn {
-
+      margin-right: 10px;
     }
   }
   &__buy {
@@ -242,6 +257,110 @@
     }
     span {
       text-decoration: underline;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    &__price-text {
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__buttons {
+      .btn {
+        padding: 12px 10px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &__buttons {
+      flex-wrap: wrap;
+      .btn {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 12px;
+      }
+    }
+    &__head {
+      flex-wrap: wrap;
+    }
+    &__buy {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__art {
+      order: 1;
+    }
+    &__stars {
+      margin-bottom: 10px;
+    }
+    &__stars-icon {
+      
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__img {
+      height: 130px;
+    }
+    &__content {
+      padding: 9px 10px 15px;
+    }
+    &__head {
+      margin-bottom: 12px;
+    }
+    &__art {
+      font-size: 10px;
+      line-height: 12px;
+    }
+    &__stars {
+      
+    }
+    &__title {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    &__list {
+      font-size: 12px;
+      line-height: 15px;
+      padding-bottom: 10px;
+      li {
+        margin-bottom: 8px;
+      }
+    }
+    &__num {
+      font-weight: 500;
+    }
+    &__prices {
+      padding-top: 15px;
+      margin-bottom: 16px;
+    }
+    &__price-old {
+      font-size: 12px;
+      line-height: 15px;
+    }
+    &__price {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__sticker {
+      padding: 6px 10px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+    &__operations {
+      
+    }
+    &__operations-icon {
+      width: 24px;
+      height: 24px;
+      margin-left: 2px;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &__buttons {
+      .btn {
+        padding: 8px 10px;
+      }
     }
   }
 }
