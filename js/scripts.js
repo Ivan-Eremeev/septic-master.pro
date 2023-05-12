@@ -246,9 +246,12 @@ window.onload = function () {
   // Swiper | Слайдер "сертификаты"
   if ($('#sliderSertificates').length) {
     const sliderSertificates = new Swiper('#sliderSertificates', {
-      slidesPerView: 6,
+      slidesPerView: 2.07,
       spaceBetween: 20,
       threshold: 3,
+      loop: true,
+      autoplay: true,
+      speed: 1000,
       pagination: {
         el: '.sertificates__pagination',
         clickable: true,
@@ -259,7 +262,24 @@ window.onload = function () {
       },
       breakpoints: {
         576: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+        769: {
           spaceBetween: 30,
+          slidesPerView: 3,
+        },
+        992: {
+          spaceBetween: 30,
+          slidesPerView: 4,
+        },
+        1200: {
+          spaceBetween: 30,
+          slidesPerView: 5,
+        },
+        1400: {
+          spaceBetween: 30,
+          slidesPerView: 6,
         },
       }
     });
@@ -274,15 +294,20 @@ window.onload = function () {
       if ($(window).width() <= 768 && !init) {
         init = true;
         sliderPortfolio = new Swiper('#sliderPortfolio', {
-          slidesPerView: 1.2,
-          spaceBetween: 20,
+          slidesPerView: 1.22,
+          spaceBetween: 15,
+          loop: true,
+          autoplay: true,
           speed: 1000,
-          pagination: false,
           navigation: false,
+          pagination: {
+            el: '.portfolio__pagination',
+            clickable: true,
+          },
           breakpoints: {
             576: {
               slidesPerView: 2,
-              spaceBetween: 15,
+              spaceBetween: 20,
             }
           }
         });

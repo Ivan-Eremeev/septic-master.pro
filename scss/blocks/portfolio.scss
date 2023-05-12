@@ -5,6 +5,10 @@
     margin-bottom: 35px;
   }
   &__slider {
+    position: relative;
+    #sliderPortfolio {
+      overflow: hidden;
+    }
     .swiper-slide {
       position: relative;
     }
@@ -39,6 +43,9 @@
   &__col-4 { grid-area: portfolio__col-4; }
   &__col-5 { grid-area: portfolio__col-5; }
   &__col-1 { grid-area: portfolio__col-1; }
+  &__pagination {
+    display: none;
+  }
   @include media-breakpoint-down(lg) {
     &__grid {  display: grid;
       height: 1000px;
@@ -58,7 +65,11 @@
     &__col-5 { grid-area: portfolio__col-5; }
   }
   @include media-breakpoint-down(md) {
-    overflow: hidden;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    .title {
+      margin-bottom: 20px;
+    }
     &__grid {
       display: flex;
       height: auto;
@@ -67,6 +78,18 @@
     &__img {
       height: 222px;
       position: static;
+    }
+    &__pagination {
+      display: block;
+      bottom: -32px !important;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    &__slider {
+      #sliderPortfolio {
+        overflow: visible;
+      }
     }
   }
 }

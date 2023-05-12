@@ -1,6 +1,12 @@
 /* about */
 .about { 
   margin-bottom: 50px;
+  .row {
+    margin-top: -10px;
+    > * {
+      margin-top: 10px;
+    }
+  }
   &__content {
     
   }
@@ -14,7 +20,12 @@
     }
   }
   &__lists {
-
+    .row {
+      margin-top: -8px;
+      > * {
+        margin-top: 8px;
+      }
+    }
   }
   &__list {
     li {
@@ -45,6 +56,15 @@
     img {
       display: block;
       width: 100%;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+    .title {
+      margin-bottom: 20px;
+    }
+    &__text {
+      margin-bottom: 20px;
     }
   }
 }
