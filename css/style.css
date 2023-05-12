@@ -8619,6 +8619,9 @@ input[type=number]:focus {
   }
 }
 @media (max-width: 768.98px) {
+  .banner {
+    margin-bottom: 40px;
+  }
   .banner__img {
     width: 80%;
   }
@@ -8695,6 +8698,25 @@ input[type=number]:focus {
   }
   .steps__item {
     padding: 20px 15px;
+  }
+}
+@media (max-width: 991.98px) {
+  .steps__item {
+    padding: 24px 30px;
+  }
+}
+@media (max-width: 768.98px) {
+  .steps {
+    margin-bottom: 40px;
+  }
+  .steps .title {
+    margin-bottom: 20px;
+  }
+  .steps__items .row {
+    margin-top: -10px;
+  }
+  .steps__items .row > * {
+    margin-top: 10px;
   }
 }
 
