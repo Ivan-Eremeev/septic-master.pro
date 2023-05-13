@@ -33,6 +33,9 @@
     }
   }
   &__location {
+    position: relative;
+  }
+  &__location-head {
     display: flex;
     align-items: center;
     padding-right: 15px;
@@ -66,6 +69,80 @@
       &:hover {
         color: #42A1FC;
       }
+    }
+  }
+  &__location-drop {
+    padding: 15px 30px 15px 20px;
+    background-color: $accent_color;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0,10px);
+    transition: .3s;
+    &:after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 7px;
+      background: linear-gradient(to right bottom, transparent 49.5%, $accent_color 50%) left / 50.025% 100% no-repeat, linear-gradient(to left bottom, transparent 49.5%, $accent_color 50%) right / 50.025% 100% no-repeat;
+      position: absolute;
+      bottom: 100%;
+      left: 30px;
+    }
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(0,0);
+    }
+  }
+  &__location-title {
+    margin-bottom: 10px;
+    span {
+      font-weight: bold;
+    }
+  }
+  &__location-row {
+    display: flex;
+    margin-left: -15px;
+  }
+  &__location-link {
+    font-weight: bold;
+    text-decoration: underline;
+    white-space: nowrap;
+    margin-left: 15px;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+  }
+  &__location-close {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    user-select: none;
+    &:after,&:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    &:after {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &:before {
+      transform: translate(-50%,-50%) rotate(-45deg);
     }
   }
   &__email {
@@ -497,6 +574,15 @@
       }
       .header__menu-item {
         margin-left: 40px;
+      }
+      .header__catalog {
+        max-height: calc(100vh - 100px);
+      }
+      .header__catalog-container {
+        max-height: calc(100vh - 100px);
+      }
+      .header__catalog-menu {
+        max-height: calc(100vh - 100px);
       }
     }
   }

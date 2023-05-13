@@ -6973,6 +6973,9 @@ input[type=number]:focus {
   justify-content: space-between;
 }
 .header__location {
+  position: relative;
+}
+.header__location-head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6994,14 +6997,14 @@ input[type=number]:focus {
   -o-transition: 0.1s;
   transition: 0.1s;
 }
-.header__location svg {
+.header__location-head svg {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 20px;
   height: 20px;
   margin-right: 5px;
 }
-.header__location:after {
+.header__location-head:after {
   content: "";
   display: block;
   width: 8px;
@@ -7014,9 +7017,103 @@ input[type=number]:focus {
   right: 0;
 }
 @media (min-width: 769px) {
-  .header__location:hover {
+  .header__location-head:hover {
     color: #42A1FC;
   }
+}
+.header__location-drop {
+  padding: 15px 30px 15px 20px;
+  background-color: #0383FD;
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #fff;
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translate(0, 10px);
+  -ms-transform: translate(0, 10px);
+  transform: translate(0, 10px);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.header__location-drop:after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 7px;
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(49.5%, transparent), color-stop(50%, #0383FD)) left/50.025% 100% no-repeat, -webkit-gradient(linear, right top, left bottom, color-stop(49.5%, transparent), color-stop(50%, #0383FD)) right/50.025% 100% no-repeat;
+  background: -o-linear-gradient(left top, transparent 49.5%, #0383FD 50%) left/50.025% 100% no-repeat, -o-linear-gradient(right top, transparent 49.5%, #0383FD 50%) right/50.025% 100% no-repeat;
+  background: linear-gradient(to right bottom, transparent 49.5%, #0383FD 50%) left/50.025% 100% no-repeat, linear-gradient(to left bottom, transparent 49.5%, #0383FD 50%) right/50.025% 100% no-repeat;
+  position: absolute;
+  bottom: 100%;
+  left: 30px;
+}
+.header__location-drop.open {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.header__location-title {
+  margin-bottom: 10px;
+}
+.header__location-title span {
+  font-weight: bold;
+}
+.header__location-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -15px;
+}
+.header__location-link {
+  font-weight: bold;
+  text-decoration: underline;
+  white-space: nowrap;
+  margin-left: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+}
+.header__location-close {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.header__location-close:after, .header__location-close:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.header__location-close:after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.header__location-close:before {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .header__email {
   display: -webkit-box;
@@ -7510,6 +7607,15 @@ input[type=number]:focus {
   }
   #headerSticky.sticky .header__menu-item {
     margin-left: 40px;
+  }
+  #headerSticky.sticky .header__catalog {
+    max-height: calc(100vh - 100px);
+  }
+  #headerSticky.sticky .header__catalog-container {
+    max-height: calc(100vh - 100px);
+  }
+  #headerSticky.sticky .header__catalog-menu {
+    max-height: calc(100vh - 100px);
   }
 }
 

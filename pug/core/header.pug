@@ -3,9 +3,18 @@ header#headerSticky.header
   .header__top 
     .container
       .header__location 
-        svg(class="icon-mark")
-          use(xlink:href="img/sprite.svg#mark")
-        | Москва
+        .header__location-head 
+          svg(class="icon-mark")
+            use(xlink:href="img/sprite.svg#mark")
+          | Москва
+        .header__location-drop
+          .header__location-title 
+            | Ваш город - 
+            span Москва?
+          .header__location-row 
+            .header__location-link Да, верно
+            .header__location-link Нет, выбрать другой
+          .header__location-close
       a(href="#").header__email 
         svg(class="icon-email")
           use(xlink:href="img/sprite.svg#email")
