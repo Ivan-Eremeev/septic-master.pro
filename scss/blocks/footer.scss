@@ -29,12 +29,14 @@
     }
   }
   &__tels {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 7px;
     a {
-      display: block;
       color: #fff;
       margin-bottom: 5px;
     }
@@ -178,6 +180,107 @@
     max-width: 100px;
     margin-left: 20px;
     margin-top: 20px;
+  }
+  @include media-breakpoint-down(md) {
+    overflow: hidden;
+    &__top {
+      padding: 14px 0 15px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__middle {
+      padding: 0;
+      .row {
+        margin-top: 0;
+        > * {
+          margin-top: 0;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          position: relative;
+          &:after {
+            content: '';
+            display: block;
+            width: 1000px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, .15);
+            position: absolute;
+            bottom: 0;
+            left: -30px;
+          }
+        }
+      }
+    }
+    &__bottom {
+      padding: 20px 0 30px;
+      border: none;
+      .row {
+        margin-top: -20px;
+        > * {
+          margin-top: 20px;
+        }
+      }
+    }
+    &__btn1 {
+      margin-bottom: 20px;
+      .btn {
+        width: 100%;
+      }
+    }
+    &__logo {
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        width: 1000px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, .15);
+        position: absolute;
+        bottom: 0;
+        left: -30px;
+      }
+    }
+    &__tels {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 24px;
+      line-height: 29px;
+      a {
+        margin-right: 20px;
+        margin-bottom: 10px;
+      }
+    }
+    &__subtitle {
+      margin-bottom: 11px;
+    }
+    &__input {
+      margin-bottom: 16px;
+    }
+    &__social-row {
+      margin-left: -20px;
+    }
+    &__social-icon {
+      width: 52px;
+      height: 52px;
+      margin-left: 20px;
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    &__address {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &__text {
+      font-size: 13px;
+      line-height: 18px;
+      p {
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 /* /footer */
