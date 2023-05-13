@@ -1,21 +1,56 @@
 window.onload = function () {
 
   // Липкое меню.
-  // function stikyMenu(header) {
-  //   let headerTop = header.offset().top;
-  //   headerToggleClass();
-  //   $(window).scroll(function () {
-  //     headerToggleClass();
-  //   });
-  //   function headerToggleClass() {
-  //     if ($(window).scrollTop() > headerTop + 250) {
-  //       header.addClass('sticky');
-  //     } else if ($(window).scrollTop() <= headerTop) {
-  //       header.removeClass('sticky');
-  //     }
-  //   }
-  // };
-  // stikyMenu($('#headerSticky'));
+  function stikyMenu(header) {
+    let headerTop = header.offset().top;
+    headerToggleClass();
+    $(window).scroll(function () {
+      headerToggleClass();
+    });
+    function headerToggleClass() {
+      if ($(window).scrollTop() > headerTop + 250) {
+        header.addClass('sticky');
+      } else if ($(window).scrollTop() <= headerTop) {
+        header.removeClass('sticky');
+      }
+    }
+  };
+  stikyMenu($('#headerSticky'));
+
+  // Меню в хедере
+  function headerMenu() {
+    let link = $('.js-menu-toggle');
+    let sublist = $('.header__menu-sublist');
+    link.on('click', function (e) {
+      e.preventDefault();
+      let currentLink = $(this);
+      let currentSublist = currentLink.siblings('.header__menu-sublist');
+      if (!currentLink.hasClass('active')) {
+        link.removeClass('active');
+        currentLink.addClass('active');
+        sublist.removeClass('open');
+        currentSublist.addClass('open');
+        if ($(window).width() <= 768) {
+          
+        }
+      }else {
+        currentLink.removeClass('active');
+        currentSublist.removeClass('open');
+      }
+    });
+    if ($(window).width() > 768) {
+      $(document).mouseup(function (e) {
+        if (!link.is(e.target)
+          && link.has(e.target).length === 0
+          && !sublist.is(e.target)
+          && sublist.has(e.target).length === 0) {
+          link.removeClass('active');
+          sublist.removeClass('open');
+        }
+      });
+    }
+  }
+  headerMenu();
 
   // Выпадайки при клике по кнопке
   // Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока

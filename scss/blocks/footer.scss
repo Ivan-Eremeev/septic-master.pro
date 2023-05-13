@@ -39,6 +39,11 @@
     a {
       color: #fff;
       margin-bottom: 5px;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          color: $link_color;
+        }
+      }
     }
   }
   &__worktime {

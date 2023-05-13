@@ -253,6 +253,7 @@
   }
   &__menu-item {
     margin-left: 60px;
+    position: relative;
   }
   &__menu-link {
     display: flex;
@@ -274,6 +275,50 @@
       &:hover {
         color: #42A1FC;
         fill: #42A1FC;
+      }
+    }
+  }
+  &__menu-sublist {
+    padding: 12px 16px 16px;
+    background-color: #fff;
+    box-shadow: 0px 11px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    position: absolute;
+    top: calc(100% + 15px);
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(0,10px);
+    transition: .3s;
+    &:after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 7px;
+      background: linear-gradient(to right bottom, transparent 49.5%, #fff 50%) left / 50.025% 100% no-repeat, linear-gradient(to left bottom, transparent 49.5%, #fff 50%) right / 50.025% 100% no-repeat;
+      position: absolute;
+      bottom: 100%;
+      left: 30px;
+    }
+    @include media-breakpoint-up(md) {
+      &.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+  &__menu-subitem {
+    margin-bottom: 17px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__menu-sublink {
+    white-space: nowrap;
+    color: $text_color;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        color: $link_color;
       }
     }
   }
@@ -318,6 +363,19 @@
       }
     }
   }
+  &__logo-stick {
+    display: none;
+    max-width: 200px;
+    img {
+      display: block;
+    }
+  }
+  &__btn-stick {
+    display: none;
+    .btn {
+      padding: 10px 16px;
+    }
+  }
 }
 
 // stiky menu
@@ -329,8 +387,31 @@
     left: 0;
     width: 100%;
     animation: showStyky 0.5s;
-    .header__top {
-      display: none;
+    @include media-breakpoint-up(md) {
+      .header__top {
+        display: none;
+      }
+      .header__middle {
+        display: none;
+      }
+      .header__bottom {
+        padding: 15px 0;
+      }
+      .header__catalog-btn {
+        display: none;
+      }
+      .header__logo-stick {
+        display: block;
+      }
+      .header__btn-stick {
+        display: block;
+      }
+      .header__menu-list {
+        margin-left: -40px;
+      }
+      .header__menu-item {
+        margin-left: 40px;
+      }
     }
   }
 }

@@ -43,6 +43,8 @@ header#headerSticky.header
           .btn__inner Заказать звонок
   .header__bottom 
     .container
+      a(href="#").header__logo-stick 
+        img(src="img/logo.svg", alt="")
       .header__catalog-btn 
         .btn.btn--big.btn--blue 
           .btn__inner 
@@ -55,21 +57,108 @@ header#headerSticky.header
           li.header__menu-item 
             a(href="#").header__menu-link Рассчитать стоимость
           li.header__menu-item 
-            a(href="#").header__menu-link Производители
+            a(href="#").header__menu-link.js-menu-toggle Производители
               svg(class="icon-arrow")
                 use(xlink:href="img/sprite.svg#arrow-light")
+            ul.header__menu-sublist 
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Установка
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Сервисное обслуживание
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Ремонт септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Наращивание септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Пайка септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Консервация
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Модернизация
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Отвод воды
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Запасные части
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Наши объекты
           li.header__menu-item 
-            a(href="#").header__menu-link О компании
+            a(href="#").header__menu-link.js-menu-toggle О компании
               svg(class="icon-arrow")
                 use(xlink:href="img/sprite.svg#arrow-light")
+            ul.header__menu-sublist 
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Установка
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Сервисное обслуживание
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Ремонт септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Наращивание септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Пайка септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Консервация
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Модернизация
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Отвод воды
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Запасные части
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Наши объекты
           li.header__menu-item 
-            a(href="#").header__menu-link Услуги
+            a(href="#").header__menu-link.js-menu-toggle Услуги
               svg(class="icon-arrow")
                 use(xlink:href="img/sprite.svg#arrow-light")
+            ul.header__menu-sublist 
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Установка
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Сервисное обслуживание
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Ремонт септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Наращивание септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Пайка септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Консервация
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Модернизация
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Отвод воды
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Запасные части
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Наши объекты
           li.header__menu-item 
-            a(href="#").header__menu-link Покупателям
+            a(href="#").header__menu-link.js-menu-toggle Покупателям
               svg(class="icon-arrow")
                 use(xlink:href="img/sprite.svg#arrow-light")
+            ul.header__menu-sublist 
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Установка
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Сервисное обслуживание
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Ремонт септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Наращивание септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Пайка септиков
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Консервация
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Модернизация
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Отвод воды
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Запасные части
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Наши объекты
+      .header__btn-stick 
+        .btn.btn--big.btn--blue 
+          .btn__inner Заказать звонок
       .header__operation 
         .header__operation-item 
           svg(class="icon-chart")
