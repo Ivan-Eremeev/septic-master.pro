@@ -57,7 +57,7 @@ window.onload = function () {
     let btn = $('#catalogBtn');
     let catalog = $('#catalogMenu');
     let body = $('body');
-    let hamburger = $('.hamburger');
+    let hamburger = btn.find('.hamburger');
     btn.on('click', function () {
       btn.toggleClass('active');
       catalog.toggleClass('open');

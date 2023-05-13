@@ -1,6 +1,6 @@
 // header
 header#headerSticky.header 
-  .header__top 
+  .header__top.d-none.d-md-block
     .container
       .header__location 
         .header__location-head 
@@ -23,11 +23,11 @@ header#headerSticky.header
         svg(class="icon-clock")
           use(xlink:href="img/sprite.svg#clock")
         | пн-вс: 7:00 - 20:00  
-  .header__middle 
+  .header__middle.d-none.d-md-block
     .container
       a(href="#").header__logo 
         img(src="img/logo.svg", alt="")
-      .header__sub Установка автономной канализации под ключ в Москве
+      .header__sub.d-none.d-xxl-block Установка автономной канализации под ключ в Москве
       form(action="#").header__search 
         input(type="text" placeholder="Поиск по сайту") 
         button(type="submit") 
@@ -44,7 +44,7 @@ header#headerSticky.header
           a(href="#") 
             svg(class="icon-whatsapp")
               use(xlink:href="img/sprite.svg#whatsapp")
-      .header__tels 
+      .header__tels.d-none.d-xl-block
         a(href="tel:+74994442196") +7 (499) 444-21-96
         a(href="tel:+79773008989") +7 (977) 300-89-89
       .header__btn 
@@ -61,6 +61,10 @@ header#headerSticky.header
               .hamburger-box
                 .hamburger-inner
             span Каталог товаров
+      .header__menu-btn 
+        .hamburger.hamburger--squeeze
+          .hamburger-box
+            .hamburger-inner
       nav.header__menu 
         ul.header__menu-list 
           li.header__menu-item 
@@ -168,19 +172,19 @@ header#headerSticky.header
       .header__btn-stick 
         .btn.btn--big.btn--blue 
           .btn__inner Заказать звонок
-      .header__operation 
+      .header__operation.d-none.d-md-flex
         .header__operation-item 
           svg(class="icon-chart")
             use(xlink:href="img/sprite.svg#chart")
-          | Сравнение
+          span Сравнение
         .header__operation-item 
           svg(class="icon-heart")
             use(xlink:href="img/sprite.svg#heart")
-          | Избранное
+          span Избранное
   .header__catalog.container#catalogMenu
     .header__catalog-container 
       .row 
-        .col-lg-3
+        .col-xl-3.col-4
           ul.header__catalog-menu 
             li 
               a(href="#") По производителю
@@ -214,10 +218,10 @@ header#headerSticky.header
               a(href="#") Распродажа
                 svg(class="icon-arrow-light")
                   use(xlink:href="img/sprite.svg#arrow-light")
-        .col-lg-9 
+        .col-xl-9.col-8
           .header__catalog-lists 
             .row 
-              .col-md-4
+              .col-xl-4.col-6
                 ul.header__catalog-list 
                   li 
                     a(href="#") Для частного дома
@@ -237,7 +241,7 @@ header#headerSticky.header
                     a(href="#") Для дачи
                   li 
                     a(href="#") Для коттеджа
-              .col-md-4
+              .col-xl-4.col-6
                 ul.header__catalog-list 
                   li 
                     a(href="#") Под высокие грунтовые воды
