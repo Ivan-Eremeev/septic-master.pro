@@ -58,7 +58,8 @@ window.onload = function () {
     let catalog = $('#catalogMenu');
     let body = $('body');
     let hamburger = btn.find('.hamburger');
-    btn.on('click', function () {
+    btn.on('click', function (e) {
+      e.preventDefault;
       btn.toggleClass('active');
       catalog.toggleClass('open');
       body.toggleClass('overlay');
@@ -86,7 +87,8 @@ window.onload = function () {
         drop = undefined,
         close = $('.js-drop-close'),
         body = $('body');
-    btn.on('click', function () {
+    btn.on('click', function (e) {
+      e.preventDefault;
       let $this = $(this);
       let drop = $('#' + $this.data('drop'));
       let scrollWidth = (window.innerWidth - $(window).width());
