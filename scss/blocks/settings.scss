@@ -17,8 +17,31 @@ body {
   font-family: "Inter", Arial, sans-serif;
   font-size: 16px;
   line-height: 25px;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    background-color: rgba(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+  }
   &.lock {
     overflow: hidden;
+  }
+  &.overlay {
+    &:after {
+      content: '';
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 *:-webkit-autofill {

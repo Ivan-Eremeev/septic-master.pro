@@ -221,6 +221,17 @@
     .hamburger {
       padding: 0;
       margin-right: 12px;
+      &.is-active {
+        .hamburger-inner {
+          background-color: #fff;
+          &:before {
+            background-color: #fff;
+          }
+          &:after {
+            background-color: #fff;
+          }
+        }
+      }
     }
     .hamburger-box {
       width: 22px;
@@ -256,8 +267,6 @@
     position: relative;
   }
   &__menu-link {
-    display: flex;
-    align-items: center;
     color: $text_color;
     fill: $text_color;
     white-space: nowrap;
@@ -376,12 +385,88 @@
       padding: 10px 16px;
     }
   }
+  &__catalog {
+    max-height: calc(100vh - 190px);
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%,10px);
+    transition: .3s;
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-50%,0);
+    }
+  }
+  &__catalog-container {
+    max-height: calc(100vh - 190px);
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  &__catalog-menu {
+    max-height: calc(100vh - 190px);
+    padding: 25px 25px 40px;
+    border-right: 1px solid $border_color;
+    font-weight: 500;
+    overflow-y: auto;
+    li {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        display: block;
+        color: $text_color;
+        position: relative;
+        fill: #9A9A9A;
+        svg {
+          width: 12px;
+          height: 12px;
+          transform: rotate(-90deg);
+          position: absolute;
+          top: 10px;
+          right: 0;
+        }
+        @include media-breakpoint-up(md) {
+          &:hover {
+            color: $link_color;
+            fill: $link_color;
+          }
+        }
+      }
+    }
+  }
+  &__catalog-lists {
+    max-height: calc(100vh - 190px);
+    padding: 25px 25px 40px 0;
+    overflow-y: auto;
+  }
+  &__catalog-list {
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    li {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      a {
+        color: $text_color;
+        @include media-breakpoint-up(md) {
+          &:hover {
+            color: $link_color;
+          }
+        }
+      }
+    }
+  }
 }
 
 // stiky menu
 #headerSticky {
   &.sticky {
-    box-shadow: 0px 4px 31px rgba(106, 147, 189, 0.45);
     position: fixed;
     top: 0;
     left: 0;
@@ -396,6 +481,7 @@
       }
       .header__bottom {
         padding: 15px 0;
+        box-shadow: 0px 4px 31px rgba(106, 147, 189, 0.45);
       }
       .header__catalog-btn {
         display: none;

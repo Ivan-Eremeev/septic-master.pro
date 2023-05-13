@@ -45,7 +45,7 @@ header#headerSticky.header
     .container
       a(href="#").header__logo-stick 
         img(src="img/logo.svg", alt="")
-      .header__catalog-btn 
+      .header__catalog-btn#catalogBtn
         .btn.btn--big.btn--blue 
           .btn__inner 
             .hamburger.hamburger--squeeze
@@ -168,4 +168,76 @@ header#headerSticky.header
           svg(class="icon-heart")
             use(xlink:href="img/sprite.svg#heart")
           | Избранное
+  .header__catalog.container#catalogMenu
+    .header__catalog-container 
+      .row 
+        .col-lg-3
+          ul.header__catalog-menu 
+            li 
+              a(href="#") По производителю
+                svg(class="icon-arrow-light")
+                  use(xlink:href="img/sprite.svg#arrow-light")
+            li 
+              a(href="#") По назначению
+                svg(class="icon-arrow-light")
+                  use(xlink:href="img/sprite.svg#arrow-light")
+            li 
+              a(href="#") По принципу работы
+                svg(class="icon-arrow-light")
+                  use(xlink:href="img/sprite.svg#arrow-light")
+            li 
+              a(href="#") По количеству человек
+                svg(class="icon-arrow-light")
+                  use(xlink:href="img/sprite.svg#arrow-light")
+            li 
+              a(href="#") По материалу
+                svg(class="icon-arrow-light")
+                  use(xlink:href="img/sprite.svg#arrow-light")
+            li 
+              a(href="#") По способу отвода
+                svg(class="icon-arrow-light")
+                  use(xlink:href="img/sprite.svg#arrow-light")
+            li 
+              a(href="#") По объему переработки
+                svg(class="icon-arrow-light")
+                  use(xlink:href="img/sprite.svg#arrow-light")
+            li 
+              a(href="#") Распродажа
+                svg(class="icon-arrow-light")
+                  use(xlink:href="img/sprite.svg#arrow-light")
+        .col-lg-9 
+          .header__catalog-lists 
+            .row 
+              .col-md-4
+                ul.header__catalog-list 
+                  li 
+                    a(href="#") Для частного дома
+                  li 
+                    a(href="#") Для бани
+                  li 
+                    a(href="#") Для туалета
+                  li 
+                    a(href="#") Для постоянного проживания
+                  li 
+                    a(href="#") Для загородного дома
+                  li 
+                    a(href="#") Для промышленных предприятий
+                  li 
+                    a(href="#") Для кухни
+                  li 
+                    a(href="#") Для дачи
+                  li 
+                    a(href="#") Для коттеджа
+              .col-md-4
+                ul.header__catalog-list 
+                  li 
+                    a(href="#") Под высокие грунтовые воды
+                  li 
+                    a(href="#") Для непостоянного проживания
+                  li 
+                    a(href="#") Для сезонного проживания
+                  li 
+                    a(href="#") Для гостиниц
+                  li 
+                    a(href="#") Для поселка
 //	/header

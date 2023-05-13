@@ -52,6 +52,32 @@ window.onload = function () {
   }
   headerMenu();
 
+  // Каталог в хедере
+  function catalogMenu() {
+    let btn = $('#catalogBtn');
+    let catalog = $('#catalogMenu');
+    let body = $('body');
+    let hamburger = $('.hamburger');
+    btn.on('click', function () {
+      btn.toggleClass('active');
+      catalog.toggleClass('open');
+      body.toggleClass('overlay');
+      hamburger.toggleClass('is-active');
+    });
+    $(document).mouseup(function (e) {
+      if (!btn.is(e.target)
+        && btn.has(e.target).length === 0
+        && !catalog.is(e.target)
+        && catalog.has(e.target).length === 0) {
+        btn.removeClass('active');
+        catalog.removeClass('open');
+        body.removeClass('overlay');
+        hamburger.removeClass('is-active');
+      }
+    });
+  }
+  catalogMenu();
+
   // Выпадайки при клике по кнопке
   // Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
   // Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
