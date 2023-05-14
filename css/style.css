@@ -6261,6 +6261,7 @@ body.overlay:after {
   -ms-flex-positive: 1;
   flex-grow: 1;
   padding-top: 175px;
+  overflow: hidden;
 }
 @media (max-width: 991.98px) {
   .content {
@@ -6638,6 +6639,9 @@ input[type=number]:focus {
   border-radius: 4px;
   outline: none;
 }
+.select .select2 {
+  width: 100% !important;
+}
 
 /* /select */
 /* checkbox */
@@ -6914,10 +6918,13 @@ input[type=number]:focus {
   position: relative;
   background: #FFF;
   width: auto;
-  max-width: 810px;
+  max-width: 480px;
   margin: 20px auto;
   border-radius: 15px;
   overflow: hidden;
+}
+.popup--discount {
+  max-width: 810px;
 }
 
 /* overlay at start */
@@ -6970,6 +6977,31 @@ input[type=number]:focus {
   opacity: 1;
 }
 
+@media (min-width: 576px) {
+  .popup--full {
+    max-width: 510px;
+  }
+}
+@media (min-width: 769px) {
+  .popup--full {
+    max-width: 690px;
+  }
+}
+@media (min-width: 992px) {
+  .popup--full {
+    max-width: 930px;
+  }
+}
+@media (min-width: 1200px) {
+  .popup--full {
+    max-width: 1110px;
+  }
+}
+@media (min-width: 1400px) {
+  .popup--full {
+    max-width: 1520px;
+  }
+}
 /* /popup */
 /* accordion */
 .accordion__trigger {
@@ -10402,6 +10434,13 @@ input[type=number]:focus {
 }
 
 /* /cities */
+/* popup-calc */
+.popup-calc .title {
+  padding: 36px 30px 0;
+  background-color: #E7F0F9;
+}
+
+/* /popup-calc */
 /* footer */
 .footer {
   background-color: #11356A;

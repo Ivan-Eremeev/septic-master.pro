@@ -112,7 +112,7 @@
 								<div class="header__menu-close js-drop-close d-none d-md-block d-lg-none" data-drop="menu"></div>
 								<div class="header__menu-close js-drop-close d-block d-md-none" data-drop="menuMobile"></div>
 								<ul class="header__menu-list"> 
-									<li class="header__menu-item"> <a class="header__menu-link" href="#">Рассчитать стоимость</a></li>
+									<li class="header__menu-item"> <a class="header__menu-link js-open-popup" href="#popupCalc">Рассчитать стоимость</a></li>
 									<li class="header__menu-item d-block d-lg-none"><a class="header__menu-link js-menu-toggle" href="#">Виды септиков
 											<svg class="icon-arrow">
 												<use xlink:href="img/sprite.svg#arrow-light"></use>
@@ -321,6 +321,165 @@
 				</div>
 			</header>
 			<!--	/header-->
+			<!-- popup-calc-->
+			<div class="popup popup--full mfp-hide" id="popupCalc">
+				<div class="popup-calc"> 
+					<div class="title">Рассчитать стоимость</div>
+					<form class="calc__container" action="#"> 
+						<div class="calc__top"> 
+							<div class="row gy-3">
+								<div class="col-xxl-3 col-md-6 order-xxl-1 order-md-1">
+									<div class="calc__title">Основные параметры</div>
+									<div class="calc__row"> 
+										<div class="calc__text">Количество жильцов</div>
+										<div class="input">
+											<input type="number">
+										</div>
+									</div>
+									<div class="calc__row"> 
+										<div class="calc__text">Тип грунта</div>
+										<div class="select"> 
+											<select>
+												<option value="#">Песок</option>
+												<option value="#">Глина</option>
+											</select>
+										</div>
+									</div>
+									<div class="calc__row"> 
+										<div class="calc__text">Глубина залегания канал. трубы, до (см)</div>
+										<div class="input">
+											<input type="number">
+										</div>
+									</div>
+									<div class="calc__row"> 
+										<div class="calc__text">Выброс очищенных вод из септика</div>
+										<div class="select"> 
+											<select>
+												<option value="#">Самотечная</option>
+												<option value="#">Напорная</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-6 order-xxl-2 order-md-3">
+									<div class="calc__group"> 
+										<div class="calc__title">Сантехнические работы</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="calc__row"> 
+													<div class="calc__text">Ванная (220л)</div>
+													<div class="input">
+														<input type="number">
+													</div>
+												</div>
+												<div class="calc__row"> 
+													<div class="calc__text">Раковина (30 л.)</div>
+													<div class="input">
+														<input type="number">
+													</div>
+												</div>
+												<div class="calc__row"> 
+													<div class="calc__text">Джакузи (400 л.)</div>
+													<div class="input">
+														<input type="number">
+													</div>
+												</div>
+												<div class="calc__row"> 
+													<div class="calc__text">Биде (5 л.):</div>
+													<div class="input">
+														<input type="number">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="calc__row"> 
+													<div class="calc__text">Стиральная машина (50 л.):</div>
+													<div class="input">
+														<input type="number">
+													</div>
+												</div>
+												<div class="calc__row"> 
+													<div class="calc__text">Посудомоечная машина (20 л.):</div>
+													<div class="input">
+														<input type="number">
+													</div>
+												</div>
+												<div class="calc__row"> 
+													<div class="calc__text">Унитаз (10 л.):</div>
+													<div class="input">
+														<input type="number">
+													</div>
+												</div>
+												<div class="calc__row"> 
+													<div class="calc__text">Душ (60 л.):</div>
+													<div class="input">
+														<input type="number">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xxl-3 col-md-6 order-xxl-3 order-md-2">
+									<div class="calc__title calc__title--mb20">Дополнительно</div>
+									<div class="calc__checkbox-row"> 
+										<div class="checkbox"> 
+											<label>
+												<input type="checkbox"><span> </span>
+												<div class="checkbox__text">Высокий уровень грунтовых вод</div>
+											</label>
+										</div>
+									</div>
+									<div class="calc__checkbox-row"> 
+										<div class="checkbox"> 
+											<label>
+												<input type="checkbox"><span> </span>
+												<div class="checkbox__text">Сезонное проживание</div>
+											</label>
+										</div>
+									</div>
+									<div class="calc__checkbox-row"> 
+										<div class="checkbox"> 
+											<label>
+												<input type="checkbox"><span> </span>
+												<div class="checkbox__text">Премиум</div>
+											</label>
+										</div>
+									</div>
+									<div class="calc__checkbox-row"> 
+										<div class="checkbox"> 
+											<label>
+												<input type="checkbox"><span> </span>
+												<div class="checkbox__text">Ультрафиолетовая очистка</div>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="calc__bottom"> 
+							<div class="row gy-1 gx-1 gx-lg-3">
+								<div class="col-lg-3 col-md-6">
+									<div class="input js-input-tel"> 
+										<input type="text" placeholder="Ваш телефон">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="textarea"> 
+										<textarea placeholder="Дополнительные сведения"></textarea>
+									</div>
+								</div>
+								<div class="col-lg-3 col-md-12">
+									<button class="btn btn--big btn--blue" type="submit"> 
+										<div class="btn__inner">Подобрать</div>
+									</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- /popup-calc-->
 			<div class="content"> 
 				<!-- welcome-->
 				<div class="welcome">
@@ -1382,13 +1541,13 @@
 						<div class="discount__slider"> 
 							<div id="sliderDiscount"> 
 								<div class="swiper-wrapper"> 
-									<div class="swiper-slide"> <a class="discount__item open-popup-link" href="#discountPopup_0">
+									<div class="swiper-slide"> <a class="discount__item js-open-popup" href="#discountPopup_0">
 											<div class="discount__img"> <img src="img/discount/img1.jpg" alt=""></div>
 											<div class="discount__content"> 
 												<div class="discount__title">Вместе выгоднее!</div>
 												<div class="discount__text">Приведи друга и получи скидку!</div>
 											</div>
-											<div class="popup mfp-hide" id="discountPopup_0">
+											<div class="popup popup--discount mfp-hide" id="discountPopup_0">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img1.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
@@ -1407,13 +1566,13 @@
 													</div>
 												</div>
 											</div></a></div>
-									<div class="swiper-slide"> <a class="discount__item open-popup-link" href="#discountPopup_1"> 
+									<div class="swiper-slide"> <a class="discount__item js-open-popup" href="#discountPopup_1"> 
 											<div class="discount__img"> <img src="img/discount/img2.jpg" alt=""></div>
 											<div class="discount__content"> 
 												<div class="discount__title">До 5000 руб. на телефон за отзыв!</div>
 												<div class="discount__text">Посмотрите подробные условия</div>
 											</div>
-											<div class="popup mfp-hide" id="discountPopup_1">
+											<div class="popup popup--discount mfp-hide" id="discountPopup_1">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img2.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
@@ -1439,13 +1598,13 @@
 													</div>
 												</div>
 											</div></a></div>
-									<div class="swiper-slide"> <a class="discount__item open-popup-link" href="#discountPopup_2"> 
+									<div class="swiper-slide"> <a class="discount__item js-open-popup" href="#discountPopup_2"> 
 											<div class="discount__img"> <img src="img/discount/img3.jpg" alt=""></div>
 											<div class="discount__content"> 
 												<div class="discount__title">Скидка до 30%</div>
 												<div class="discount__text">На монтаж и доставку до 30 мая.</div>
 											</div>
-											<div class="popup mfp-hide" id="discountPopup_2">
+											<div class="popup popup--discount mfp-hide" id="discountPopup_2">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img3.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
@@ -1465,13 +1624,13 @@
 													</div>
 												</div>
 											</div></a></div>
-									<div class="swiper-slide"> <a class="discount__item open-popup-link" href="#discountPopup_3"> 
+									<div class="swiper-slide"> <a class="discount__item js-open-popup" href="#discountPopup_3"> 
 											<div class="discount__img"> <img src="img/discount/img5.jpg" alt=""></div>
 											<div class="discount__content"> 
 												<div class="discount__title">Дополнительная скидка после выезда инженера</div>
 												<div class="discount__text">Посмотрите подробные условия</div>
 											</div>
-											<div class="popup mfp-hide" id="discountPopup_3">
+											<div class="popup popup--discount mfp-hide" id="discountPopup_3">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img5.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
@@ -1490,13 +1649,13 @@
 													</div>
 												</div>
 											</div></a></div>
-									<div class="swiper-slide"> <a class="discount__item open-popup-link" href="#discountPopup_4"> 
+									<div class="swiper-slide"> <a class="discount__item js-open-popup" href="#discountPopup_4"> 
 											<div class="discount__img"> <img src="img/discount/img4.jpg" alt=""></div>
 											<div class="discount__content"> 
 												<div class="discount__title">Скидка 20% на фильтрующий колодец</div>
 												<div class="discount__text">При покупки и установке септика под ключ</div>
 											</div>
-											<div class="popup mfp-hide" id="discountPopup_4">
+											<div class="popup popup--discount mfp-hide" id="discountPopup_4">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img4.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
@@ -1515,13 +1674,13 @@
 													</div>
 												</div>
 											</div></a></div>
-									<div class="swiper-slide"> <a class="discount__item open-popup-link" href="#discountPopup_5"> 
+									<div class="swiper-slide"> <a class="discount__item js-open-popup" href="#discountPopup_5"> 
 											<div class="discount__img"> <img src="img/discount/img6.jpg" alt=""></div>
 											<div class="discount__content"> 
 												<div class="discount__title">Аварийная сигнализация бесплатно!</div>
 												<div class="discount__text">Аварийная сигнализация устанавливается бесплатно при заказе монтажа септика под ключ.</div>
 											</div>
-											<div class="popup mfp-hide" id="discountPopup_5">
+											<div class="popup popup--discount mfp-hide" id="discountPopup_5">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img6.jpg" alt=""></div>
 													<div class="discount__popup-content"> 

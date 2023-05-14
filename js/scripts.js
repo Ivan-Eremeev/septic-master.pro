@@ -481,7 +481,7 @@ window.onload = function () {
   // });
 
   // Magnific Popup | Попап окна
-  $('.open-popup-link').magnificPopup({
+  $('.js-open-popup').magnificPopup({
     mainClass: 'mfp-fade'
   });
 
