@@ -1,292 +1,286 @@
 // header
 header#headerSticky.header 
-  .header__top.d-none.d-md-block
-    .container
-      .header__location 
-        .header__location-head 
-          svg(class="icon-mark")
-            use(xlink:href="img/sprite.svg#mark")
-          | Москва
-        .header__location-drop
-          .header__location-title 
-            | Ваш город - 
-            span Москва?
-          .header__location-row 
-            .header__location-link Да, верно
-            .header__location-link Нет, выбрать другой
-          .header__location-close
-      a(href="#").header__email 
-        svg(class="icon-email")
-          use(xlink:href="img/sprite.svg#email")
-        | septic-master.pro@yandex.ru
-      .header__worktime 
-        svg(class="icon-clock")
-          use(xlink:href="img/sprite.svg#clock")
-        | пн-вс: 7:00 - 20:00  
-  .header__middle.d-none.d-md-block
-    .container
+  .header__mobile.d-block.d-md-none
+    .container 
       a(href="#").header__logo 
         img(src="img/logo.svg", alt="")
-      .header__sub.d-none.d-xxl-block Установка автономной канализации под ключ в Москве
-      form(action="#").header__search 
-        input(type="text" placeholder="Поиск по сайту") 
-        button(type="submit") 
-          svg(class="icon-search")
-            use(xlink:href="img/sprite.svg#search")
-      .header__social 
-        .header__social-row 
-          a(href="#") 
-            svg(class="icon-viber")
-              use(xlink:href="img/sprite.svg#viber")
-          a(href="#") 
-            svg(class="icon-telegram")
-              use(xlink:href="img/sprite.svg#telegram")
-          a(href="#") 
-            svg(class="icon-whatsapp")
-              use(xlink:href="img/sprite.svg#whatsapp")
-      .header__tels.d-none.d-xl-block
-        a(href="tel:+74994442196") +7 (499) 444-21-96
-        a(href="tel:+79773008989") +7 (977) 300-89-89
-      .header__btn 
-        .btn.btn--big.btn--blue 
-          .btn__inner Заказать звонок
-  .header__bottom 
-    .container
-      a(href="#").header__logo-stick 
-        img(src="img/logo.svg", alt="")
-      .header__catalog-btn#catalogBtn
-        .btn.btn--big.btn--blue 
-          .btn__inner 
-            .hamburger.hamburger--squeeze
-              .hamburger-box
-                .hamburger-inner
-            span Каталог товаров
-      .header__menu-btn.js-drop-menu(data-drop="menu")
-        .hamburger.hamburger--squeeze
+      .header__menu-btn
+        .hamburger.hamburger--squeeze.js-drop-menu(data-drop="menuMobile")
           .hamburger-box
             .hamburger-inner
-      nav.header__menu#menu
-        .header__menu-close.js-drop-close(data-drop="menu")
-        .header__menu-top 
-          .header__location 
-            .header__location-head 
-              svg(class="icon-mark")
-                use(xlink:href="img/sprite.svg#mark")
-              | Москва
-          a(href="#").header__email 
-            svg(class="icon-email")
-              use(xlink:href="img/sprite.svg#email")
-            | septic-master.pro@yandex.ru
-          .header__worktime 
-            svg(class="icon-clock")
-              use(xlink:href="img/sprite.svg#clock")
-            | пн-вс: 7:00 - 20:00  
-        ul.header__menu-list 
-          li.header__menu-item 
-            a(href="#").header__menu-link Рассчитать стоимость
-          li.header__menu-item.d-block.d-lg-none
-            a(href="#").header__menu-link.js-menu-toggle Виды септиков
-              svg(class="icon-arrow")
-                use(xlink:href="img/sprite.svg#arrow-light")
-            ul.header__menu-sublist 
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Малахит
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Топас топол эко
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Топас-с топол эко
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Топ Аэро топол эко
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Астра Юнилос
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Евролос Био Евролос
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Евролос Грунт Евролос
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Тверь Classic
-          li.header__menu-item 
-            a(href="#").header__menu-link.js-menu-toggle Производители
-              svg(class="icon-arrow")
-                use(xlink:href="img/sprite.svg#arrow-light")
-            ul.header__menu-sublist 
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Установка
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Сервисное обслуживание
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Ремонт септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Наращивание септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Пайка септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Консервация
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Модернизация
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Отвод воды
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Запасные части
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Наши объекты
-          li.header__menu-item 
-            a(href="#").header__menu-link.js-menu-toggle О компании
-              svg(class="icon-arrow")
-                use(xlink:href="img/sprite.svg#arrow-light")
-            ul.header__menu-sublist 
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Установка
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Сервисное обслуживание
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Ремонт септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Наращивание септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Пайка септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Консервация
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Модернизация
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Отвод воды
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Запасные части
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Наши объекты
-          li.header__menu-item 
-            a(href="#").header__menu-link.js-menu-toggle Услуги
-              svg(class="icon-arrow")
-                use(xlink:href="img/sprite.svg#arrow-light")
-            ul.header__menu-sublist 
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Установка
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Сервисное обслуживание
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Ремонт септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Наращивание септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Пайка септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Консервация
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Модернизация
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Отвод воды
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Запасные части
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Наши объекты
-          li.header__menu-item 
-            a(href="#").header__menu-link.js-menu-toggle Покупателям
-              svg(class="icon-arrow")
-                use(xlink:href="img/sprite.svg#arrow-light")
-            ul.header__menu-sublist 
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Установка
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Сервисное обслуживание
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Ремонт септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Наращивание септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Пайка септиков
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Консервация
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Модернизация
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Отвод воды
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Запасные части
-              li.header__menu-subitem 
-                a.header__menu-sublink(href="#") Наши объекты
-      .header__btn-stick 
-        .btn.btn--big.btn--blue 
-          .btn__inner Заказать звонок
-      .header__operation.d-none.d-md-flex
-        .header__operation-item 
-          svg(class="icon-chart")
-            use(xlink:href="img/sprite.svg#chart")
-          span Сравнение
-        .header__operation-item 
-          svg(class="icon-heart")
-            use(xlink:href="img/sprite.svg#heart")
-          span Избранное
-  .header__catalog.container#catalogMenu
-    .header__catalog-container 
-      .row 
-        .col-xl-3.col-4
-          ul.header__catalog-menu 
-            li 
-              a(href="#") По производителю
-                svg(class="icon-arrow-light")
+  .header__container#menuMobile
+    .header__top
+      .container
+        .header__location 
+          .header__location-head 
+            svg(class="icon-mark")
+              use(xlink:href="img/sprite.svg#mark")
+            | Москва
+          .header__location-drop
+            .header__location-title 
+              | Ваш город - 
+              span Москва?
+            .header__location-row 
+              .header__location-link Да, верно
+              .header__location-link Нет, выбрать другой
+            .header__location-close
+        a(href="#").header__email 
+          svg(class="icon-email")
+            use(xlink:href="img/sprite.svg#email")
+          | septic-master.pro@yandex.ru
+        .header__worktime 
+          svg(class="icon-clock")
+            use(xlink:href="img/sprite.svg#clock")
+          | пн-вс: 7:00 - 20:00  
+    .header__middle
+      .container
+        a(href="#").header__logo.d-none.d-md-block
+          img(src="img/logo.svg", alt="")
+        .header__sub.d-block.d-md-none.d-xxl-block Установка автономной канализации под ключ в Москве
+        form(action="#").header__search 
+          input(type="text" placeholder="Поиск по сайту") 
+          button(type="submit") 
+            svg(class="icon-search")
+              use(xlink:href="img/sprite.svg#search")
+        .header__social
+          .header__social-row 
+            a(href="#") 
+              svg(class="icon-viber")
+                use(xlink:href="img/sprite.svg#viber")
+            a(href="#") 
+              svg(class="icon-telegram")
+                use(xlink:href="img/sprite.svg#telegram")
+            a(href="#") 
+              svg(class="icon-whatsapp")
+                use(xlink:href="img/sprite.svg#whatsapp")
+        .header__tels.d-block.d-md-none.d-xl-block
+          a(href="tel:+74994442196") +7 (499) 444-21-96
+          a(href="tel:+79773008989") +7 (977) 300-89-89
+        .header__btn 
+          .btn.btn--big.btn--blue 
+            .btn__inner Заказать звонок
+    .header__bottom 
+      .container
+        .header__catalog-btn#catalogBtn
+          .btn.btn--big.btn--blue 
+            .btn__inner 
+              .hamburger.hamburger--squeeze
+                .hamburger-box
+                  .hamburger-inner
+              span Каталог товаров
+        .header__menu-btn.d-none.d-md-block.d-lg-none
+          .hamburger.hamburger--squeeze.js-drop-menu(data-drop="menu")
+            .hamburger-box
+              .hamburger-inner
+        nav.header__menu#menu
+          .header__menu-close.js-drop-close(data-drop="menu").d-none.d-md-block.d-lg-none
+          .header__menu-close.js-drop-close(data-drop="menuMobile").d-block.d-md-none
+          ul.header__menu-list 
+            li.header__menu-item 
+              a(href="#").header__menu-link Рассчитать стоимость
+            li.header__menu-item.d-block.d-lg-none
+              a(href="#").header__menu-link.js-menu-toggle Виды септиков
+                svg(class="icon-arrow")
                   use(xlink:href="img/sprite.svg#arrow-light")
-            li 
-              a(href="#") По назначению
-                svg(class="icon-arrow-light")
+              ul.header__menu-sublist 
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Малахит
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Топас топол эко
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Топас-с топол эко
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Топ Аэро топол эко
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Астра Юнилос
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Евролос Био Евролос
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Евролос Грунт Евролос
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Тверь Classic
+            li.header__menu-item 
+              a(href="#").header__menu-link.js-menu-toggle Производители
+                svg(class="icon-arrow")
                   use(xlink:href="img/sprite.svg#arrow-light")
-            li 
-              a(href="#") По принципу работы
-                svg(class="icon-arrow-light")
+              ul.header__menu-sublist 
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Установка
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Сервисное обслуживание
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Ремонт септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Наращивание септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Пайка септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Консервация
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Модернизация
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Отвод воды
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Запасные части
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Наши объекты
+            li.header__menu-item 
+              a(href="#").header__menu-link.js-menu-toggle О компании
+                svg(class="icon-arrow")
                   use(xlink:href="img/sprite.svg#arrow-light")
-            li 
-              a(href="#") По количеству человек
-                svg(class="icon-arrow-light")
+              ul.header__menu-sublist 
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Установка
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Сервисное обслуживание
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Ремонт септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Наращивание септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Пайка септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Консервация
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Модернизация
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Отвод воды
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Запасные части
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Наши объекты
+            li.header__menu-item 
+              a(href="#").header__menu-link.js-menu-toggle Услуги
+                svg(class="icon-arrow")
                   use(xlink:href="img/sprite.svg#arrow-light")
-            li 
-              a(href="#") По материалу
-                svg(class="icon-arrow-light")
+              ul.header__menu-sublist 
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Установка
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Сервисное обслуживание
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Ремонт септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Наращивание септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Пайка септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Консервация
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Модернизация
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Отвод воды
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Запасные части
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Наши объекты
+            li.header__menu-item 
+              a(href="#").header__menu-link.js-menu-toggle Покупателям
+                svg(class="icon-arrow")
                   use(xlink:href="img/sprite.svg#arrow-light")
-            li 
-              a(href="#") По способу отвода
-                svg(class="icon-arrow-light")
-                  use(xlink:href="img/sprite.svg#arrow-light")
-            li 
-              a(href="#") По объему переработки
-                svg(class="icon-arrow-light")
-                  use(xlink:href="img/sprite.svg#arrow-light")
-            li 
-              a(href="#") Распродажа
-                svg(class="icon-arrow-light")
-                  use(xlink:href="img/sprite.svg#arrow-light")
-        .col-xl-9.col-8
-          .header__catalog-lists 
-            .row 
-              .col-xl-4.col-6
-                ul.header__catalog-list 
-                  li 
-                    a(href="#") Для частного дома
-                  li 
-                    a(href="#") Для бани
-                  li 
-                    a(href="#") Для туалета
-                  li 
-                    a(href="#") Для постоянного проживания
-                  li 
-                    a(href="#") Для загородного дома
-                  li 
-                    a(href="#") Для промышленных предприятий
-                  li 
-                    a(href="#") Для кухни
-                  li 
-                    a(href="#") Для дачи
-                  li 
-                    a(href="#") Для коттеджа
-              .col-xl-4.col-6
-                ul.header__catalog-list 
-                  li 
-                    a(href="#") Под высокие грунтовые воды
-                  li 
-                    a(href="#") Для непостоянного проживания
-                  li 
-                    a(href="#") Для сезонного проживания
-                  li 
-                    a(href="#") Для гостиниц
-                  li 
-                    a(href="#") Для поселка
+              ul.header__menu-sublist 
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Установка
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Сервисное обслуживание
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Ремонт септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Наращивание септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Пайка септиков
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Консервация
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Модернизация
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Отвод воды
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Запасные части
+                li.header__menu-subitem 
+                  a.header__menu-sublink(href="#") Наши объекты
+        .header__btn-stick 
+          .btn.btn--big.btn--blue 
+            .btn__inner Заказать звонок
+        .header__operation
+          .header__operation-item 
+            svg(class="icon-chart")
+              use(xlink:href="img/sprite.svg#chart")
+            span Сравнение
+          .header__operation-item 
+            svg(class="icon-heart")
+              use(xlink:href="img/sprite.svg#heart")
+            span Избранное
+    .header__catalog.container#catalogMenu
+      .header__catalog-container 
+        .row 
+          .col-xl-3.col-4
+            ul.header__catalog-menu 
+              li 
+                a(href="#") По производителю
+                  svg(class="icon-arrow-light")
+                    use(xlink:href="img/sprite.svg#arrow-light")
+              li 
+                a(href="#") По назначению
+                  svg(class="icon-arrow-light")
+                    use(xlink:href="img/sprite.svg#arrow-light")
+              li 
+                a(href="#") По принципу работы
+                  svg(class="icon-arrow-light")
+                    use(xlink:href="img/sprite.svg#arrow-light")
+              li 
+                a(href="#") По количеству человек
+                  svg(class="icon-arrow-light")
+                    use(xlink:href="img/sprite.svg#arrow-light")
+              li 
+                a(href="#") По материалу
+                  svg(class="icon-arrow-light")
+                    use(xlink:href="img/sprite.svg#arrow-light")
+              li 
+                a(href="#") По способу отвода
+                  svg(class="icon-arrow-light")
+                    use(xlink:href="img/sprite.svg#arrow-light")
+              li 
+                a(href="#") По объему переработки
+                  svg(class="icon-arrow-light")
+                    use(xlink:href="img/sprite.svg#arrow-light")
+              li 
+                a(href="#") Распродажа
+                  svg(class="icon-arrow-light")
+                    use(xlink:href="img/sprite.svg#arrow-light")
+          .col-xl-9.col-8
+            .header__catalog-lists 
+              .row 
+                .col-xl-4.col-6
+                  ul.header__catalog-list 
+                    li 
+                      a(href="#") Для частного дома
+                    li 
+                      a(href="#") Для бани
+                    li 
+                      a(href="#") Для туалета
+                    li 
+                      a(href="#") Для постоянного проживания
+                    li 
+                      a(href="#") Для загородного дома
+                    li 
+                      a(href="#") Для промышленных предприятий
+                    li 
+                      a(href="#") Для кухни
+                    li 
+                      a(href="#") Для дачи
+                    li 
+                      a(href="#") Для коттеджа
+                .col-xl-4.col-6
+                  ul.header__catalog-list 
+                    li 
+                      a(href="#") Под высокие грунтовые воды
+                    li 
+                      a(href="#") Для непостоянного проживания
+                    li 
+                      a(href="#") Для сезонного проживания
+                    li 
+                      a(href="#") Для гостиниц
+                    li 
+                      a(href="#") Для поселка
 //	/header

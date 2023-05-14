@@ -36,7 +36,7 @@
     position: relative;
   }
   &__location-head {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     padding-right: 15px;
     position: relative;
@@ -733,15 +733,117 @@
     &__logo-stick {
       max-width: 170px;
     }
-    &__bottom {
+    &__mobile {
+      background-color: #E7F0F9;
       padding: 14px 0;
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
-    &__menu-top {
+    &__container {
+      width: 100%;
+      max-width: 400px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,.3);
+      overflow-y: auto;
+      position: fixed;
+      left: -800px;
+      top: 0;
+      bottom: 0;
+      transition: 0.5s;
+      &.open {
+        left: 0;
+      }
+    }
+    &__top {
+      padding: 18px 80px 18px 15px;
+      .container {
+        padding: 0;
+        flex-wrap: wrap;
+      }
+    }
+    &__middle {
+      padding: 20px 15px;
+      .container {
+        padding: 0;
+        flex-wrap: wrap;
+      }
+    }
+    &__bottom {
+      padding: 0;
+      .container {
+        padding: 0;
+        flex-direction: column;
+      }
+    }
+    &__menu {
+      padding: 0;
+      position: static;
+      box-shadow: none;
+    }
+    &__email {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 17px;
+      order: 1;
+    }
+    &__sub {
+      width: 50%;
+      margin-right: 0;
+    }
+    &__social {
+      width: 50%;
+    }
+    &__social-row {
+      margin-right: 0;
+      justify-content: flex-end;
+    }
+    &__tels {
+      width: 50%;
+      margin-top: 15px;
+      margin-right: 0;
+    }
+    &__btn {
+      width: 50%;
+      margin-top: 15px;
+      .btn {
+        width: 100%;
+      }
+    }
+    &__search {
+      width: 100%;
+      margin-top: 20px;
+      margin-right: 0;
+      order: 1; 
+    }
+    &__menu {
+      order: 1;
+    }
+    &__operation {
+      width: 100%;
+      background-color: #fff;
+    }
+    &__operation-item {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      padding: 18px 15px;
-      background-color: #D4E4F4;
+      justify-content: center;
+      width: 50%;
+      padding: 25px 10px 20px;
+      &:not(:last-child) {
+        margin-right: 0;
+        padding-right: 10px;
+        &:after {
+          height: 30px;
+          background-color: $border_color;
+          top: 50%;
+          transform: translate(0,-50%);
+        }
+      }
+      span {
+        display: block;
+      }
     }
   }
 }
@@ -804,6 +906,11 @@
     @include media-breakpoint-down(xl) {
       .header__btn-stick {
         display: none;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .header__mobile {
+        box-shadow: 0px 4px 31px rgba(106, 147, 189, 0.45);
       }
     }
   }
