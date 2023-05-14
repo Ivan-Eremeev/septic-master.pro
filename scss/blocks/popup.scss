@@ -2,10 +2,11 @@
 .popup {
   position: relative;
   background: #FFF;
-  padding: 20px;
   width: auto;
-  max-width: 500px;
+  max-width: 810px;
   margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
 }
 /* overlay at start */
 .mfp-fade.mfp-bg {
@@ -17,7 +18,7 @@
 }
 /* overlay animate in */
 .mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.8;
+  opacity: 0.4;
 }
 /* overlay animate out */
 .mfp-fade.mfp-bg.mfp-removing {
@@ -38,5 +39,9 @@
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
   transform: translate(0, 50px);
+}
+.mfp-close-btn-in .mfp-close {
+  color: $text_gray_color;
+  opacity: 1;
 }
 /* /popup */

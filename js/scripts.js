@@ -280,7 +280,7 @@ window.onload = function () {
       spaceBetween: 17,
       threshold: 3,
       loop: true,
-      autoplay: true,
+      // autoplay: true,
       speed: 1000,
       pagination: {
         el: '.discount__pagination',
@@ -480,10 +480,10 @@ window.onload = function () {
   //   position: 'right top',
   // });
 
-  // // Magnific Popup | Попап окна
-  // $('.open-popup-link').magnificPopup({
-  //   mainClass: 'mfp-fade'
-  // });
+  // Magnific Popup | Попап окна
+  $('.open-popup-link').magnificPopup({
+    mainClass: 'mfp-fade'
+  });
 
   // // Табы
 	// function tabs() {
