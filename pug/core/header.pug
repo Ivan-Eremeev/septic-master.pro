@@ -68,6 +68,8 @@ header#headerSticky.header
                 .hamburger-box
                   .hamburger-inner
               span Каталог товаров
+        a(href="#").header__logo-stick 
+          img(src="img/logo.svg", alt="")
         .header__menu-btn.d-none.d-md-block.d-lg-none
           .hamburger.hamburger--squeeze.js-drop-menu(data-drop="menu")
             .hamburger-box
@@ -211,6 +213,34 @@ header#headerSticky.header
             svg(class="icon-heart")
               use(xlink:href="img/sprite.svg#heart")
             span Избранное
+        .header__subscribe
+          .header__subscribe-subtitle Подписаться на рассылку
+          form(action="#") 
+            .header__subscribe-input 
+              .input 
+                input(type="text" placeholder="Введите e-mail")
+            .header__subscribe-btn 
+              button(type="submit").btn.btn--big.btn--blue 
+                .btn__inner Подписаться
+            .footer__address 
+              span Адрес доставки корреспондеции
+              | Москва, ул. Дорогобужская, 14
+        .header__info 
+          .header__info-text 
+            p Вы принимаете условия по политики в отношении обработки персональных данных и пользовательского соглашения каждый раз когда оставляете свои данные в любой форма обратной связи на сайте Септик-мастер ПРО
+            p 2005-2023 - Септик Мастер ПРО
+          .header__info-payment 
+            .header__info-payment-row 
+              .header__info-payment-item 
+                img(src="img/payment/img1.jpg", alt="")
+              .header__info-payment-item 
+                img(src="img/payment/img2_v2.svg", alt="")
+              .header__info-payment-item 
+                img(src="img/payment/img3.svg", alt="")
+              .header__info-payment-item 
+                img(src="img/payment/img4.svg", alt="")
+              .header__info-payment-item 
+                img(src="img/payment/img5_v2.svg", alt="")
     .header__catalog.container#catalogMenu
       .header__catalog-container 
         .row 
