@@ -5,7 +5,6 @@
   top: 0;
   left: 0;
   z-index: 10;
-  transition: .3s;
   &__top {
     padding: 7px 0;
     background-color: #D4E4F4;
@@ -37,7 +36,7 @@
     position: relative;
   }
   &__location-head {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding-right: 15px;
     position: relative;
@@ -281,6 +280,7 @@
   &__btn {
     .btn {
       padding: 10px 7px;
+      white-space: nowrap;
     }
   } 
   &__catalog-btn {
@@ -290,6 +290,7 @@
       font-size: 14px;
       font-weight: 600;
       line-height: 17px;
+      white-space: nowrap;
       span {
         display: block;
         margin-top: -2px;
@@ -298,6 +299,7 @@
     .hamburger {
       padding: 0;
       margin-right: 12px;
+      flex-shrink: 0;
       &.is-active {
         .hamburger-inner {
           background-color: #fff;
@@ -385,7 +387,7 @@
       bottom: 100%;
       left: 30px;
     }
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       &.open {
         visibility: visible;
         opacity: 1;
@@ -460,6 +462,7 @@
     display: none;
     .btn {
       padding: 10px 16px;
+      white-space: nowrap;
     }
   }
   &__catalog {
@@ -542,6 +545,12 @@
   &__menu-btn {
     display: none;
   }
+  &__menu-top {
+    display: none;
+  }
+  &__menu-close {
+    display: none;
+  }
   @include media-breakpoint-down(xxl) {
     &__menu-list {
       margin-left: -15px;
@@ -562,8 +571,23 @@
         display: none;
       }
     }
+    &__menu-item {
+      &:last-child {
+        .header__menu-sublist {
+          left: auto;
+          right: 0;
+          &:after {
+            left: auto;
+            right: 30px;
+          }
+        }
+      }
+    }
   }
   @include media-breakpoint-down(lg) {
+    &__bottom {
+      padding: 5px 0;
+    }
     &__catalog {
       display: none !important;
     }
@@ -572,6 +596,9 @@
     }
     &__menu-btn {
       display: block;
+      .hamburger {
+        display: block;
+      }
       .hamburger-box {
         display: block;
       }
@@ -595,10 +622,21 @@
     &__menu {
       width: 100%;
       max-width: 400px;
+      padding: 60px 0 20px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,.3);
+      overflow-y: auto;
       position: fixed;
       left: -800px;
       top: 0;
       bottom: 0;
+      transition: 0.5s;
+      &.open {
+        left: 0;
+      }
+    }
+    &__menu-list {
+      display: block;
     }
     &__social {
       a {
@@ -613,6 +651,64 @@
     }
     &__social-row {
       margin-left: -10px;
+    }
+    &__menu-list {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+    }
+    &__menu-item {
+      border-bottom: 1px solid $border_color;
+      &:first-child {
+        border-top: 1px solid $border_color;
+      }
+    }
+    &__menu-link {
+      display: block;
+      padding: 20px 15px;
+    }
+    &__menu-sublist {
+      display: none;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      box-shadow: none;
+      text-transform: none;
+      border-radius: 0;
+      background: transparent;
+      color: $text_gray_color;
+      position: static;
+      transition: none;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0,0);
+    }
+    &__menu-close {
+      display: block;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 10px;
+      right: 3px;
+      cursor: pointer;
+      user-select: none;
+      &:after,&:before {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 2px;
+        background-color: $text_color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      &:after {
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+      &:before {
+        transform: translate(-50%,-50%) rotate(-45deg);
+      }
     }
   }
   @include media-breakpoint-down(md) {
@@ -633,6 +729,19 @@
     }
     &__social-row {
       margin-left: -16px;
+    }
+    &__logo-stick {
+      max-width: 170px;
+    }
+    &__bottom {
+      padding: 14px 0;
+    }
+    &__menu-top {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 18px 15px;
+      background-color: #D4E4F4;
     }
   }
 }
@@ -690,6 +799,11 @@
       }
       .header__menu-item {
         margin-left: 15px;
+      }
+    }
+    @include media-breakpoint-down(xl) {
+      .header__btn-stick {
+        display: none;
       }
     }
   }

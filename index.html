@@ -88,16 +88,49 @@
 								</div>
 							</div>
 						</div>
-						<div class="header__menu-btn"> 
+						<div class="header__menu-btn js-drop-menu" data-drop="menu">
 							<div class="hamburger hamburger--squeeze">
 								<div class="hamburger-box">
 									<div class="hamburger-inner"></div>
 								</div>
 							</div>
 						</div>
-						<nav class="header__menu"> 
+						<nav class="header__menu" id="menu">
+							<div class="header__menu-close js-drop-close" data-drop="menu"></div>
+							<div class="header__menu-top"> 
+								<div class="header__location"> 
+									<div class="header__location-head"> 
+										<svg class="icon-mark">
+											<use xlink:href="img/sprite.svg#mark"></use>
+										</svg>Москва
+									</div>
+								</div><a class="header__email" href="#"> 
+									<svg class="icon-email">
+										<use xlink:href="img/sprite.svg#email"></use>
+									</svg>septic-master.pro@yandex.ru</a>
+								<div class="header__worktime"> 
+									<svg class="icon-clock">
+										<use xlink:href="img/sprite.svg#clock"></use>
+									</svg>пн-вс: 7:00 - 20:00  
+								</div>
+							</div>
 							<ul class="header__menu-list"> 
 								<li class="header__menu-item"> <a class="header__menu-link" href="#">Рассчитать стоимость</a></li>
+								<li class="header__menu-item d-block d-lg-none"><a class="header__menu-link js-menu-toggle" href="#">Виды септиков
+										<svg class="icon-arrow">
+											<use xlink:href="img/sprite.svg#arrow-light"></use>
+										</svg></a>
+									<ul class="header__menu-sublist"> 
+										<li class="header__menu-subitem"> <a class="header__menu-sublink" href="#">Малахит</a></li>
+										<li class="header__menu-subitem"> <a class="header__menu-sublink" href="#">Топас топол эко</a></li>
+										<li class="header__menu-subitem"> <a class="header__menu-sublink" href="#">Топас-с топол эко</a></li>
+										<li class="header__menu-subitem"> <a class="header__menu-sublink" href="#">Топ Аэро топол эко</a></li>
+										<li class="header__menu-subitem"> <a class="header__menu-sublink" href="#">Астра Юнилос</a></li>
+										<li class="header__menu-subitem"> <a class="header__menu-sublink" href="#">Евролос Био Евролос</a></li>
+										<li class="header__menu-subitem"> <a class="header__menu-sublink" href="#">Евролос Грунт Евролос</a></li>
+										<li class="header__menu-subitem"> <a class="header__menu-sublink" href="#">Тверь Classic</a></li>
+									</ul>
+								</li>
 								<li class="header__menu-item"> <a class="header__menu-link js-menu-toggle" href="#">Производители
 										<svg class="icon-arrow">
 											<use xlink:href="img/sprite.svg#arrow-light"></use>

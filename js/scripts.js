@@ -30,15 +30,19 @@ window.onload = function () {
         currentLink.addClass('active');
         sublist.removeClass('open');
         currentSublist.addClass('open');
-        if ($(window).width() <= 768) {
-          
+        if ($(window).width() <= 991) {
+          sublist.stop().slideUp();
+          currentSublist.stop().slideDown();
         }
       }else {
         currentLink.removeClass('active');
         currentSublist.removeClass('open');
+        if ($(window).width() <= 991) {
+          currentSublist.stop().slideUp();
+        }
       }
     });
-    if ($(window).width() > 768) {
+    if ($(window).width() > 991) {
       $(document).mouseup(function (e) {
         if (!link.is(e.target)
           && link.has(e.target).length === 0
@@ -49,6 +53,11 @@ window.onload = function () {
         }
       });
     }
+    $(window).resize(function () {
+      if ($(window).width() > 991) {
+        sublist.attr('style', '');
+      }
+    });
   }
   headerMenu();
 

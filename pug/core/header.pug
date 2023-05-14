@@ -61,14 +61,50 @@ header#headerSticky.header
               .hamburger-box
                 .hamburger-inner
             span Каталог товаров
-      .header__menu-btn 
+      .header__menu-btn.js-drop-menu(data-drop="menu")
         .hamburger.hamburger--squeeze
           .hamburger-box
             .hamburger-inner
-      nav.header__menu 
+      nav.header__menu#menu
+        .header__menu-close.js-drop-close(data-drop="menu")
+        .header__menu-top 
+          .header__location 
+            .header__location-head 
+              svg(class="icon-mark")
+                use(xlink:href="img/sprite.svg#mark")
+              | Москва
+          a(href="#").header__email 
+            svg(class="icon-email")
+              use(xlink:href="img/sprite.svg#email")
+            | septic-master.pro@yandex.ru
+          .header__worktime 
+            svg(class="icon-clock")
+              use(xlink:href="img/sprite.svg#clock")
+            | пн-вс: 7:00 - 20:00  
         ul.header__menu-list 
           li.header__menu-item 
             a(href="#").header__menu-link Рассчитать стоимость
+          li.header__menu-item.d-block.d-lg-none
+            a(href="#").header__menu-link.js-menu-toggle Виды септиков
+              svg(class="icon-arrow")
+                use(xlink:href="img/sprite.svg#arrow-light")
+            ul.header__menu-sublist 
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Малахит
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Топас топол эко
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Топас-с топол эко
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Топ Аэро топол эко
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Астра Юнилос
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Евролос Био Евролос
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Евролос Грунт Евролос
+              li.header__menu-subitem 
+                a.header__menu-sublink(href="#") Тверь Classic
           li.header__menu-item 
             a(href="#").header__menu-link.js-menu-toggle Производители
               svg(class="icon-arrow")

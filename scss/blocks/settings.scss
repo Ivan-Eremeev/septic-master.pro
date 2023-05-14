@@ -59,6 +59,9 @@ body {
 .content {
   flex-grow: 1;
   padding-top: 175px;
+  @include media-breakpoint-down(lg) {
+    padding-top: 170px;
+  }
   @include media-breakpoint-down(md) {
     padding-top: 70px;
   }
