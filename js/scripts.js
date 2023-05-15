@@ -280,7 +280,7 @@ window.onload = function () {
       spaceBetween: 17,
       threshold: 3,
       loop: true,
-      // autoplay: true,
+      autoplay: true,
       speed: 1000,
       pagination: {
         el: '.discount__pagination',
