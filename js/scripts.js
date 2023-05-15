@@ -401,7 +401,7 @@ window.onload = function () {
       slidesPerView: 1.1,
       spaceBetween: 15,
       loop: true,
-      // autoplay: true,
+      autoplay: true,
       speed: 1000,
       threshold: 3,
       pagination: {
@@ -431,7 +431,7 @@ window.onload = function () {
       slidesPerView: 1.1,
       spaceBetween: 20,
       loop: true,
-      // autoplay: true,
+      autoplay: true,
       speed: 1000,
       threshold: 3,
       pagination: {
