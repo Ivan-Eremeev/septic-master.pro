@@ -46,6 +46,7 @@
     cursor: pointer;
     user-select: none;
     transition: .1s;
+    color: $text_color;
     svg {
       flex-shrink: 0;
       width: 20px;
@@ -215,6 +216,9 @@
       }
     }
     button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 40px;
       height: 100%;
       position: absolute;
@@ -227,6 +231,7 @@
       cursor: pointer;
       user-select: none;
       svg {
+        display: block;
         width: 20px;
         height: 20px;
       }

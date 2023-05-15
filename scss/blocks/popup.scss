@@ -7,11 +7,14 @@
   margin: 20px auto;
   border-radius: 15px;
   overflow: hidden;
-  &--discount {
+  &--w810 {
     max-width: 810px;
   }
 }
 /* overlay at start */
+.mfp-bg {
+  opacity: 0.4;
+}
 .mfp-fade.mfp-bg {
   opacity: 0;
 

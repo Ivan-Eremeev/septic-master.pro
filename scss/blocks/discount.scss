@@ -141,11 +141,15 @@
       display: block;
       .input {
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 14px;
       }
       .btn {
         width: 100%;
       }
+    }
+    &__popup-title {
+      font-size: 24px;
+      line-height: 29px;
     }
   }
   @include media-breakpoint-down(sm) {
@@ -157,6 +161,15 @@
     }
     &__popup {
       display: block;
+      ~ .mfp-close {
+        color: #fff;
+      }
+    }
+    &__popup-content {
+      padding: 30px 15px;
+    }
+    &__popup-text {
+      margin-bottom: 20px;
     }
     &__popup-img {
       width: 100%;

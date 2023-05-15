@@ -1,0 +1,35 @@
+/* popup-offer */
+.popup-offer { 
+  padding: 40px 30px;
+  .title {
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 154.02%;
+    margin-bottom: 26px;
+  }
+  &__inputs {
+    display: flex;
+    margin-bottom: 20px;
+    .row {
+      margin-left: -10px;
+      margin-right: -10px;
+      margin-top: -10px;
+      > * {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+  &__btn {
+    .btn {
+      width: 100%;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 30px 15px;
+  }
+}
+/* /popup-offer */

@@ -481,9 +481,23 @@ window.onload = function () {
   // });
 
   // Magnific Popup | Попап окна
-  $('.js-open-popup').magnificPopup({
-    mainClass: 'mfp-fade'
-  });
+  if ($('.js-open-popup').length) {
+    $('.js-open-popup').magnificPopup({
+      mainClass: 'mfp-fade'
+    });
+  }
+
+  //  Magnific Popup || Попап "специальное предложение"
+  if ($('#offerPopup').length) {
+    setTimeout(function () {
+      $.magnificPopup.open({
+        items: {
+          src: '#offerPopup'
+        },
+        type: 'inline'
+      });
+    }, 5000);
+  }
 
   // // Табы
 	// function tabs() {

@@ -12,17 +12,17 @@ header#headerSticky.header
     .header__top
       .container
         .header__location 
-          .header__location-head 
+          a(href="#citiesPopup").js-open-popup.header__location-head 
             svg(class="icon-mark")
               use(xlink:href="img/sprite.svg#mark")
             | Москва
-          .header__location-drop
+          .header__location-drop.open
             .header__location-title 
               | Ваш город - 
               span Москва?
             .header__location-row 
               .header__location-link Да, верно
-              .header__location-link Нет, выбрать другой
+              a(href="#citiesPopup").js-open-popup.header__location-link Нет, выбрать другой
             .header__location-close
         a(href="#").header__email 
           svg(class="icon-email")
@@ -424,3 +424,63 @@ header#headerSticky.header
             button(type="submit").btn.btn--big.btn--blue 
               .btn__inner Подобрать
 // /popup-calc
+
+// popup-offer
+.popup.mfp-hide#offerPopup
+  .popup-offer
+    .title Получите персональное предложение
+    .popup-offer__text Скидки на работы и комплексный подход до 20%
+    .popup-offer__inputs 
+      .row 
+        .col-sm-6 
+          .input 
+            input(type="text" placeholder="Введите имя")
+        .col-sm-6
+          .input.js-input-tel 
+            input(type="text" placeholder="Введите номер")
+    .popup-offer__btn 
+      .btn.btn--big.btn--blue 
+        .btn__inner Получить скидку
+// /popup-offer
+
+// popup-cities
+.popup.popup--w810.mfp-hide#citiesPopup
+  .popup-cities
+    .title Выберите город
+    form(action="#").popup-cities__search 
+      input(type="text" placeholder="Ваш город")
+      button(type="submit")
+        svg(class="icon-search")
+          use(xlink:href="img/sprite.svg#search")
+    ul.popup-cities__list 
+      li 
+        a(href="#") Москва
+      li 
+        a(href="#") Санкт-Петербург
+      li 
+        a(href="#") Екатеринбург
+      li 
+        a(href="#") Воронеж
+      li 
+        a(href="#") Казань
+      li 
+        a(href="#") Краснодар
+      li 
+        a(href="#") Нижний Новгород
+      li 
+        a(href="#") Новосибирск
+      li 
+        a(href="#") Омск
+      li 
+        a(href="#") Пермь
+      li 
+        a(href="#") Ростов-на-Дону
+      li 
+        a(href="#") Самара
+      li 
+        a(href="#") Саратов
+      li 
+        a(href="#") Уфа
+      li 
+        a(href="#") Челябинск
+// /popup-cities

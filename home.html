@@ -31,18 +31,15 @@
 				<div class="header__container" id="menuMobile">
 					<div class="header__top">
 						<div class="container">
-							<div class="header__location"> 
-								<div class="header__location-head"> 
+							<div class="header__location"> <a class="js-open-popup header__location-head" href="#citiesPopup"> 
 									<svg class="icon-mark">
 										<use xlink:href="img/sprite.svg#mark"></use>
-									</svg>Москва
-								</div>
-								<div class="header__location-drop">
+									</svg>Москва</a>
+								<div class="header__location-drop open">
 									<div class="header__location-title">
 										 Ваш город - <span>Москва?</span></div>
 									<div class="header__location-row"> 
-										<div class="header__location-link">Да, верно</div>
-										<div class="header__location-link">Нет, выбрать другой</div>
+										<div class="header__location-link">Да, верно</div><a class="js-open-popup header__location-link" href="#citiesPopup">Нет, выбрать другой</a>
 									</div>
 									<div class="header__location-close"></div>
 								</div>
@@ -480,6 +477,65 @@
 				</div>
 			</div>
 			<!-- /popup-calc-->
+			<!-- popup-offer-->
+			<div class="popup mfp-hide" id="offerPopup">
+				<div class="popup-offer">
+					<div class="title">Получите персональное предложение</div>
+					<div class="popup-offer__text">Скидки на работы и комплексный подход до 20%</div>
+					<div class="popup-offer__inputs"> 
+						<div class="row"> 
+							<div class="col-sm-6"> 
+								<div class="input"> 
+									<input type="text" placeholder="Введите имя">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="input js-input-tel"> 
+									<input type="text" placeholder="Введите номер">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popup-offer__btn"> 
+						<div class="btn btn--big btn--blue"> 
+							<div class="btn__inner">Получить скидку</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /popup-offer-->
+			<!-- popup-cities-->
+			<div class="popup popup--w810 mfp-hide" id="citiesPopup">
+				<div class="popup-cities">
+					<div class="title">Выберите город</div>
+					<form class="popup-cities__search" action="#"> 
+						<input type="text" placeholder="Ваш город">
+						<button type="submit">
+							<svg class="icon-search">
+								<use xlink:href="img/sprite.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+					<ul class="popup-cities__list"> 
+						<li> <a href="#">Москва</a></li>
+						<li> <a href="#">Санкт-Петербург</a></li>
+						<li> <a href="#">Екатеринбург</a></li>
+						<li> <a href="#">Воронеж</a></li>
+						<li> <a href="#">Казань</a></li>
+						<li> <a href="#">Краснодар</a></li>
+						<li> <a href="#">Нижний Новгород</a></li>
+						<li> <a href="#">Новосибирск</a></li>
+						<li> <a href="#">Омск</a></li>
+						<li> <a href="#">Пермь</a></li>
+						<li> <a href="#">Ростов-на-Дону</a></li>
+						<li> <a href="#">Самара</a></li>
+						<li> <a href="#">Саратов</a></li>
+						<li> <a href="#">Уфа</a></li>
+						<li> <a href="#">Челябинск</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /popup-cities-->
 			<div class="content"> 
 				<!-- welcome-->
 				<div class="welcome">
@@ -1547,7 +1603,7 @@
 												<div class="discount__title">Вместе выгоднее!</div>
 												<div class="discount__text">Приведи друга и получи скидку!</div>
 											</div>
-											<div class="popup popup--discount mfp-hide" id="discountPopup_0">
+											<div class="popup popup--w810 mfp-hide" id="discountPopup_0">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img1.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
@@ -1572,7 +1628,7 @@
 												<div class="discount__title">До 5000 руб. на телефон за отзыв!</div>
 												<div class="discount__text">Посмотрите подробные условия</div>
 											</div>
-											<div class="popup popup--discount mfp-hide" id="discountPopup_1">
+											<div class="popup popup--w810 mfp-hide" id="discountPopup_1">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img2.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
@@ -1604,7 +1660,7 @@
 												<div class="discount__title">Скидка до 30%</div>
 												<div class="discount__text">На монтаж и доставку до 30 мая.</div>
 											</div>
-											<div class="popup popup--discount mfp-hide" id="discountPopup_2">
+											<div class="popup popup--w810 mfp-hide" id="discountPopup_2">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img3.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
@@ -1630,7 +1686,7 @@
 												<div class="discount__title">Дополнительная скидка после выезда инженера</div>
 												<div class="discount__text">Посмотрите подробные условия</div>
 											</div>
-											<div class="popup popup--discount mfp-hide" id="discountPopup_3">
+											<div class="popup popup--w810 mfp-hide" id="discountPopup_3">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img5.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
@@ -1655,7 +1711,7 @@
 												<div class="discount__title">Скидка 20% на фильтрующий колодец</div>
 												<div class="discount__text">При покупки и установке септика под ключ</div>
 											</div>
-											<div class="popup popup--discount mfp-hide" id="discountPopup_4">
+											<div class="popup popup--w810 mfp-hide" id="discountPopup_4">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img4.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
@@ -1680,7 +1736,7 @@
 												<div class="discount__title">Аварийная сигнализация бесплатно!</div>
 												<div class="discount__text">Аварийная сигнализация устанавливается бесплатно при заказе монтажа септика под ключ.</div>
 											</div>
-											<div class="popup popup--discount mfp-hide" id="discountPopup_5">
+											<div class="popup popup--w810 mfp-hide" id="discountPopup_5">
 												<div class="discount__popup"> 
 													<div class="discount__popup-img"> <img src="img/discount/img6.jpg" alt=""></div>
 													<div class="discount__popup-content"> 
