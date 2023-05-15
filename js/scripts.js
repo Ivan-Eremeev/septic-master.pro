@@ -238,8 +238,11 @@ window.onload = function () {
       slidesPerView: 2.1,
       spaceBetween: 10,
       loop: true,
-      autoplay: true,
-      speed: 1000,
+      autoplay: {
+        anabled: true,
+        delay: 1,
+      },
+      speed: 4000,
       pagination: {
         el: '.brands__pagination',
         clickable: true,
@@ -586,6 +589,9 @@ window.onload = function () {
     }
   }
   accordion($('.js-accordion'), true);
+
+  // Fancybox | галлереи
+  // Fancybox.bind("[data-fancybox]");
 
   // // Sticky Sidebar | Липкий сайдбар
   // if ($('.js-sticky').length) {

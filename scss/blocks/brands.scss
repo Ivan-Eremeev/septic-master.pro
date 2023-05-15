@@ -11,6 +11,9 @@
     #sliderBrands {
       overflow: hidden;
     }
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
   }
   &__item {
     display: flex;

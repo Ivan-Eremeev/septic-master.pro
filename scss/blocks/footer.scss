@@ -170,6 +170,15 @@
         margin-bottom: 0;
       }
     }
+    a {
+      color: $link_color;
+      text-decoration: underline;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
   }
   &__payment {
     

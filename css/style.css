@@ -7355,9 +7355,9 @@ input[type=number]:focus {
   width: 40px;
   height: 40px;
   margin-left: 16px;
-  border: 1px solid #B1CEEA;
+  border: 1px solid #0383FD;
   border-radius: 100%;
-  fill: #B1CEEA;
+  fill: #0383FD;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -7368,8 +7368,8 @@ input[type=number]:focus {
 }
 @media (min-width: 769px) {
   .header__social a:hover {
-    fill: #8FBDEA;
-    border-color: #8FBDEA;
+    fill: #42A1FC;
+    border-color: #42A1FC;
   }
 }
 .header__social-row {
@@ -9034,6 +9034,11 @@ input[type=number]:focus {
 .brands__slider #sliderBrands {
   overflow: hidden;
 }
+.brands__slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
 .brands__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9744,6 +9749,7 @@ input[type=number]:focus {
   height: auto;
 }
 .sertificates__item {
+  display: block;
   height: 100%;
   max-height: 283px;
   padding: 20px 20px 20px;
@@ -10794,6 +10800,15 @@ input[type=number]:focus {
 }
 .footer__text p:last-child {
   margin-bottom: 0;
+}
+.footer__text a {
+  color: #007AE7;
+  text-decoration: underline;
+}
+@media (min-width: 769px) {
+  .footer__text a:hover {
+    color: #fff;
+  }
 }
 .footer__payment-row {
   display: -webkit-box;

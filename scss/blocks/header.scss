@@ -245,9 +245,9 @@
       width: 40px;
       height: 40px;
       margin-left: 16px;
-      border: 1px solid #B1CEEA;
+      border: 1px solid $accent_color;
       border-radius: 100%;
-      fill: #B1CEEA;
+      fill: $accent_color;
       transition: .3s;
       svg {
         width: 20px;
@@ -255,8 +255,8 @@
       }
       @include media-breakpoint-up(md) {
         &:hover {
-          fill: #8FBDEA;
-          border-color: #8FBDEA;
+          fill: #42A1FC;
+          border-color: #42A1FC;
         }
       }
     }

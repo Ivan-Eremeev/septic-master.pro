@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="css/plugins/swiper-bundle.min.css">
 		<link rel="stylesheet" href="css/plugins/select2.min.css">
 		<link rel="stylesheet" href="css/plugins/magnific-popup.css">
+		<link rel="stylesheet" href="css/plugins/fancybox.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -67,14 +68,14 @@
 							</form>
 							<div class="header__social">
 								<div class="header__social-row"> <a href="#"> 
+										<svg class="icon-whatsapp">
+											<use xlink:href="img/sprite.svg#whatsapp"></use>
+										</svg></a><a href="#"> 
 										<svg class="icon-viber">
 											<use xlink:href="img/sprite.svg#viber"></use>
 										</svg></a><a href="#"> 
 										<svg class="icon-telegram">
 											<use xlink:href="img/sprite.svg#telegram"></use>
-										</svg></a><a href="#"> 
-										<svg class="icon-whatsapp">
-											<use xlink:href="img/sprite.svg#whatsapp"></use>
 										</svg></a></div>
 							</div>
 							<div class="header__tels d-block d-md-none d-xl-block"><a href="tel:+74994442196">+7 (499) 444-21-96</a><a href="tel:+79773008989">+7 (977) 300-89-89</a></div>
@@ -1828,7 +1829,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col"> 
+							<div class="col d-none d-md-block">
 								<div class="types__item"> 
 									<div class="types__img"> <img src="img/types/img5.jpg" alt=""></div>
 									<div class="types__content"> 
@@ -2123,27 +2124,12 @@
 						<div class="sertificates__slider"> 
 							<div id="sliderSertificates"> 
 								<div class="swiper-wrapper"> 
-									<div class="swiper-slide"> 
-										<div class="sertificates__item"> <img src="img/sertificates/img1.jpg" alt=""></div>
-									</div>
-									<div class="swiper-slide"> 
-										<div class="sertificates__item"> <img src="img/sertificates/img2.jpg" alt=""></div>
-									</div>
-									<div class="swiper-slide"> 
-										<div class="sertificates__item"> <img src="img/sertificates/img3.jpg" alt=""></div>
-									</div>
-									<div class="swiper-slide"> 
-										<div class="sertificates__item"> <img src="img/sertificates/img4.jpg" alt=""></div>
-									</div>
-									<div class="swiper-slide"> 
-										<div class="sertificates__item"> <img src="img/sertificates/img5.jpg" alt=""></div>
-									</div>
-									<div class="swiper-slide"> 
-										<div class="sertificates__item"> <img src="img/sertificates/img6.jpg" alt=""></div>
-									</div>
-									<div class="swiper-slide"> 
-										<div class="sertificates__item"> <img src="img/sertificates/img1.jpg" alt=""></div>
-									</div>
+									<div class="swiper-slide"> <a class="sertificates__item" href="img/sertificates/img1.jpg" data-fancybox="sertificates"> <img src="img/sertificates/img1.jpg" alt=""></a></div>
+									<div class="swiper-slide"> <a class="sertificates__item" href="img/sertificates/img2.jpg" data-fancybox="sertificates"> <img src="img/sertificates/img2.jpg" alt=""></a></div>
+									<div class="swiper-slide"> <a class="sertificates__item" href="img/sertificates/img3.jpg" data-fancybox="sertificates"> <img src="img/sertificates/img3.jpg" alt=""></a></div>
+									<div class="swiper-slide"> <a class="sertificates__item" href="img/sertificates/img4.jpg" data-fancybox="sertificates"> <img src="img/sertificates/img4.jpg" alt=""></a></div>
+									<div class="swiper-slide"> <a class="sertificates__item" href="img/sertificates/img5.jpg" data-fancybox="sertificates"> <img src="img/sertificates/img5.jpg" alt=""></a></div>
+									<div class="swiper-slide"> <a class="sertificates__item" href="img/sertificates/img6.jpg" data-fancybox="sertificates"> <img src="img/sertificates/img6.jpg" alt=""></a></div>
 								</div>
 							</div>
 							<div class="sertificates__slider-arrow sertificates__slider-arrow--prev swiper-button-prev"></div>
@@ -2653,7 +2639,7 @@
 						<div class="row gy-3 justify-content-between align-items-center">
 							<div class="col-lg-7 order-2 order-md-1">
 								<div class="footer__text"> 
-									<p>Вы принимаете условия по политики в отношении обработки персональных данных и пользовательского соглашения каждый раз когда оставляете свои данные в любой форма обратной связи на сайте Септик-мастер ПРО</p>
+									<p>Вы принимаете <a href=""> условия по политики </a>в отношении обработки персональных данных и пользовательского соглашения каждый раз когда оставляете свои данные в любой форма обратной связи на сайте Септик-мастер ПРО</p>
 									<p>2005-2023 - Септик Мастер ПРО</p>
 								</div>
 							</div>
@@ -2679,6 +2665,7 @@
 		<script src="js/plugins/swiper-bundle.min.js"> </script>
 		<script src="js/plugins/select2.full.js"> </script>
 		<script src="js/plugins/jquery.magnific-popup.min.js"> </script>
+		<script src="js/plugins/fancybox.umd.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
