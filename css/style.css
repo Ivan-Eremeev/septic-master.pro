@@ -10599,6 +10599,11 @@ input[type=number]:focus {
   .popup-cities .title {
     margin-bottom: 25px;
   }
+  .popup-cities__list {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+  }
 }
 
 /* /popup-cities */

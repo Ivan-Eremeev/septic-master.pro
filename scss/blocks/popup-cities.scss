@@ -64,6 +64,9 @@
     .title {
       margin-bottom: 25px;
     }
+    &__list {
+      columns: 2;
+    }
   }
 }
 /* /popup-cities */
