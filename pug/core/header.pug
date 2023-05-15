@@ -16,14 +16,14 @@ header#headerSticky.header
             svg(class="icon-mark")
               use(xlink:href="img/sprite.svg#mark")
             | Москва
-          .header__location-drop.open
+          .header__location-drop.open#locationDrop
             .header__location-title 
               | Ваш город - 
               span Москва?
             .header__location-row 
-              .header__location-link Да, верно
-              a(href="#citiesPopup").js-open-popup.header__location-link Нет, выбрать другой
-            .header__location-close
+              .header__location-link.js-drop-close(data-drop="locationDrop") Да, верно
+              a(href="#citiesPopup").js-open-popup.header__location-link.js-drop-close(data-drop="locationDrop") Нет, выбрать другой
+            .header__location-close.js-drop-close(data-drop="locationDrop")
         a(href="#").header__email 
           svg(class="icon-email")
             use(xlink:href="img/sprite.svg#email")
