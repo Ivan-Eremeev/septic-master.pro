@@ -483,7 +483,18 @@ window.onload = function () {
   // Magnific Popup | Попап окна
   if ($('.js-open-popup').length) {
     $('.js-open-popup').magnificPopup({
-      mainClass: 'mfp-fade'
+      mainClass: 'mfp-fade',
+      callbacks: {
+        beforeOpen: function () {
+          let documentWidth = parseInt(document.documentElement.clientWidth);
+          let windowsWidth = parseInt(window.innerWidth);
+          let scrollbarWidth = windowsWidth - documentWidth;
+          $('.header').css('padding-right', scrollbarWidth);
+        },
+        close: function () {
+          $('.header').css('padding-right', 0);
+        }
+      }
     });
   }
 
