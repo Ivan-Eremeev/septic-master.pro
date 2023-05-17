@@ -10490,6 +10490,9 @@ input[type=number]:focus {
   margin-bottom: 35px;
 }
 .cities__list {
+  -webkit-columns: 6;
+  -moz-columns: 6;
+  columns: 6;
   font-size: 16px;
   line-height: 19px;
   opacity: 0.8;
@@ -10500,12 +10503,24 @@ input[type=number]:focus {
 .cities__list li:last-child {
   margin-bottom: 0;
 }
+@media (max-width: 1199.98px) {
+  .cities__list {
+    -webkit-columns: 4;
+    -moz-columns: 4;
+    columns: 4;
+  }
+}
 @media (max-width: 768.98px) {
   .cities {
     padding: 30px 0;
   }
   .cities .title {
     margin-bottom: 23px;
+  }
+  .cities__list {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
   }
   .cities__list li {
     margin-bottom: 14px;
