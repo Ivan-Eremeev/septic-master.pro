@@ -18,6 +18,8 @@
     align-items: center;
     margin-right: 20px;
     padding-left: 20px;
+    font-size: 14px;
+    line-height: 17px;
     flex-grow: 1;
     color: $title_color;
     fill: $accent-color;
@@ -30,6 +32,9 @@
   .btn {
     width: 50%;
     flex-shrink: 0;
+    padding: 12px 10px;
+    font-size: 14px;
+    line-height: 17px;
   }
   @include media-breakpoint-down(md) {
     display: block;
