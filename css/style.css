@@ -7917,6 +7917,7 @@ input[type=number]:focus {
   .header__container {
     width: 100%;
     max-width: 400px;
+    padding-bottom: 50px;
     background-color: #fff;
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -10690,9 +10691,6 @@ input[type=number]:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 .sticker__link {
   display: -webkit-box;
