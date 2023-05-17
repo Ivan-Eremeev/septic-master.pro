@@ -6312,6 +6312,10 @@ input[type=number]:focus {
   -moz-appearance: textfield;
 }
 
+.fancybox__container {
+  --fancybox-bg: rgba(24, 24, 27, 0.6);
+}
+
 /* /settings */
 /*!
  * Hamburgers
@@ -8210,6 +8214,8 @@ input[type=number]:focus {
   padding: 25px 25px 35px;
   border-radius: 4px;
   border: 1px solid #D9D9D9;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -8462,10 +8468,20 @@ input[type=number]:focus {
 }
 .popular__categories {
   margin-bottom: 30px;
+  position: relative;
+}
+.popular__categories #popularCategoriesSlider {
   overflow: hidden;
 }
 .popular__categories .swiper-slide {
   width: auto;
+  margin-top: 8px !important;
+  margin-right: 8px !important;
+}
+.popular__categories .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 .popular__categories-item input {
   position: absolute;
@@ -8553,6 +8569,12 @@ input[type=number]:focus {
   width: 100%;
   max-width: 300px;
 }
+.popular__slider-arrow--prev {
+  left: -20px;
+}
+.popular__slider-arrow--next {
+  right: -20px;
+}
 @media (max-width: 768.98px) {
   .popular {
     margin-bottom: 42px;
@@ -8590,6 +8612,9 @@ input[type=number]:focus {
   .popular__cards {
     margin-bottom: 20px;
   }
+  .popular__slider-arrow {
+    display: none;
+  }
 }
 @media (max-width: 575.98px) {
   .popular {
@@ -8604,6 +8629,9 @@ input[type=number]:focus {
   .popular__more .btn {
     padding: 8px 20px;
     max-width: none;
+  }
+  .popular__categories #popularCategoriesSlider {
+    overflow: visible;
   }
 }
 
@@ -10342,12 +10370,21 @@ input[type=number]:focus {
   height: auto;
 }
 .articles-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   height: 100%;
   border-radius: 4px;
   overflow: hidden;
 }
 .articles-slider__img {
   height: 265px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 .articles-slider__img img {
   width: 100%;
@@ -10356,6 +10393,9 @@ input[type=number]:focus {
   object-fit: cover;
 }
 .articles-slider__content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   padding: 15px 15px 20px;
   border: 1px solid #D9D9D9;
   border-top: none;
@@ -10370,6 +10410,11 @@ input[type=number]:focus {
   font-size: 16px;
   line-height: 19px;
   color: #062F61;
+}
+@media (min-width: 769px) {
+  .articles-slider__text:hover {
+    color: #007AE7;
+  }
 }
 .articles-slider__slider-arrow--prev {
   left: -20px;
@@ -10613,6 +10658,59 @@ input[type=number]:focus {
 }
 
 /* /popup-cities */
+/* sticker */
+.sticker {
+  display: none;
+  width: 100%;
+  padding: 7px 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.sticker .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.sticker__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 20px;
+  padding-left: 20px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  color: #062F61;
+  fill: #0383FD;
+}
+.sticker__link svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+.sticker .btn {
+  width: 50%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+@media (max-width: 768.98px) {
+  .sticker {
+    display: block;
+  }
+}
+
+/* /sticker */
 /* footer */
 .footer {
   background-color: #11356A;

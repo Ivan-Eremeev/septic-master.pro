@@ -106,4 +106,8 @@ input[type="number"]:focus {
   appearance: none;
   -moz-appearance: textfield;
 }
+
+.fancybox__container {
+  --fancybox-bg: rgba(24, 24, 27, 0.6);
+}
 /* /settings */

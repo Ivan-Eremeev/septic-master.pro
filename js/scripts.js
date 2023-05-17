@@ -183,7 +183,10 @@ window.onload = function () {
       slidesPerView: 2.1,
       threshold: 3,
       loop: true,
-      autoplay: true,
+      autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       speed: 1000,
       navigation: {
         nextEl: '.benefit__slider-arrow--next',
@@ -213,8 +216,20 @@ window.onload = function () {
   if ($('#popularCategoriesSlider').length) {
     const popularCategoriesSlider = new Swiper('#popularCategoriesSlider', {
       slidesPerView: 'auto',
-      spaceBetween: 8,
+      autoplay: {
+        anabled: true,
+        delay: 1,
+      },
+      speed: 4000,
+      navigation: {
+        nextEl: '.popular__slider-arrow--next',
+        prevEl: '.popular__slider-arrow--prev',
+      },
       threshold: 3,
+      grid: {
+        fill: 'row',
+        rows: 2,
+      },
     });
   }
   
@@ -283,7 +298,10 @@ window.onload = function () {
       spaceBetween: 17,
       threshold: 3,
       loop: true,
-      autoplay: true,
+      autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       speed: 1000,
       pagination: {
         el: '.discount__pagination',
@@ -325,7 +343,10 @@ window.onload = function () {
       spaceBetween: 20,
       threshold: 3,
       loop: true,
-      autoplay: true,
+      autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       speed: 1000,
       pagination: {
         el: '.sertificates__pagination',
@@ -372,7 +393,10 @@ window.onload = function () {
           slidesPerView: 1.22,
           spaceBetween: 15,
           loop: true,
-          autoplay: true,
+          autoplay: {
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
           speed: 1000,
           navigation: false,
           pagination: {
@@ -404,7 +428,10 @@ window.onload = function () {
       slidesPerView: 1.1,
       spaceBetween: 15,
       loop: true,
-      autoplay: true,
+      autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       speed: 1000,
       threshold: 3,
       pagination: {
@@ -434,7 +461,10 @@ window.onload = function () {
       slidesPerView: 1.1,
       spaceBetween: 20,
       loop: true,
-      autoplay: true,
+      autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
       speed: 1000,
       threshold: 3,
       pagination: {
@@ -591,7 +621,7 @@ window.onload = function () {
   accordion($('.js-accordion'), true);
 
   // Fancybox | галлереи
-  // Fancybox.bind("[data-fancybox]");
+  Fancybox.bind("[data-fancybox]");
 
   // // Sticky Sidebar | Липкий сайдбар
   // if ($('.js-sticky').length) {

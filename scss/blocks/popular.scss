@@ -6,9 +6,17 @@
   }
   &__categories {
     margin-bottom: 30px;
-    overflow: hidden;
+    position: relative;
+    #popularCategoriesSlider {
+      overflow: hidden;
+    }
     .swiper-slide {
       width: auto;
+      margin-top: 8px !important;
+      margin-right: 8px !important;
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear;
     }
   }
   &__categories-item {
@@ -95,6 +103,14 @@
       max-width: 300px;
     }
   }
+  &__slider-arrow {
+    &--prev {
+      left: -20px;
+    }
+    &--next {
+      right: -20px;
+    }
+  }
   @include media-breakpoint-down(md) {
     margin-bottom: 42px;
     .title {
@@ -140,6 +156,9 @@
     &__cards {
       margin-bottom: 20px;
     }
+    &__slider-arrow {
+      display: none;
+    }
   }
   @include media-breakpoint-down(sm) {
     overflow: hidden;
@@ -153,6 +172,11 @@
       .btn {
         padding: 8px 20px;
         max-width: none;
+      }
+    }
+    &__categories {
+      #popularCategoriesSlider {
+        overflow: visible;
       }
     }
   }
