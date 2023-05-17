@@ -1,6 +1,6 @@
-mixin product-card(imgUrl)
+mixin product-card(imgUrl, id)
   .product-card
-    .product-card__img 
+    a(href= '#' + id).product-card__img.js-open-popup 
       img(src= imgUrl, alt="")
       .product-card__stickers 
         .product-card__sticker.product-card__sticker--yellow Распродажа 
@@ -50,6 +50,85 @@ mixin product-card(imgUrl)
             .product-card__price 12 290 ₽
             .product-card__price-text монтаж под ключ
       .product-card__buttons 
-        .btn.btn--small.btn--blue 
+        a(href="#").btn.btn--small.btn--blue 
           .btn__inner Заказать с установкой
-        .product-card__buy Купить
+        a(href="#").product-card__buy Купить
+
+  // product-popup
+  .popup.popup--full.mfp-hide(id= id)
+    .product-popup
+      .product-popup__slider 
+        .sliderProductPopup 
+          .swiper-wrapper 
+            .swiper-slide 
+              .product-popup__img 
+                img(src="img/products/img1.jpg", alt="")
+            .swiper-slide 
+              .product-popup__img 
+                img(src="img/products/img2.jpg", alt="")
+            .swiper-slide 
+              .product-popup__img 
+                img(src="img/products/img3.jpg", alt="")
+            .swiper-slide 
+              .product-popup__img 
+                img(src="img/products/img4.jpg", alt="")
+            .swiper-slide 
+              .product-popup__img 
+                img(src="img/products/img5.jpg", alt="")
+        .thumbProductPopup 
+          .swiper-wrapper 
+            .swiper-slide 
+              .product-popup__thumb 
+                img(src="img/products/img1.jpg", alt="")
+            .swiper-slide 
+              .product-popup__thumb 
+                img(src="img/products/img2.jpg", alt="")
+            .swiper-slide 
+              .product-popup__thumb 
+                img(src="img/products/img3.jpg", alt="")
+            .swiper-slide 
+              .product-popup__thumb 
+                img(src="img/products/img4.jpg", alt="")
+            .swiper-slide 
+              .product-popup__thumb 
+                img(src="img/products/img5.jpg", alt="")
+      .product-popup__content 
+        .title Септик Юнилос
+        .product-popup__row 
+          .product-popup__info 
+            .product-popup__art Артикул 234 454
+            .product-popup__title Модификации
+            .product-popup__version 
+            table.product-popup__table  
+              tr  
+                td Количество пользователей 
+                td 
+                  b до 75 человек
+              tr 
+                td Производительность
+                td 
+                  b до 12 м³ в сутки
+              tr 
+                td Тип очистного устройства
+                td 
+                  b аэрационная усановка
+              tr 
+                td Способ очищения воды
+                td 
+                    b принудительный
+            .product-popup__items 
+              .product-popup__items-row 
+                .product-popup__item 
+                  span 
+                    svg(class="icon-printer")
+                      use(xlink:href="img/sprite.svg#printer")
+                  | Распечатать
+                .product-popup__item 
+                  span 
+                    svg(class="icon-links")
+                      use(xlink:href="img/sprite.svg#links")
+                  | Поделится
+            .product-popup__more 
+              a(href="#").btn.btn--big.btn--blue-border Детальнее в карточке товара
+          .product-popup__block 
+  // /product-popup

@@ -8648,6 +8648,8 @@ input[type=number]:focus {
   flex-direction: column;
   height: 100%;
   border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .product-card__img {
   display: -webkit-box;
@@ -8777,10 +8779,25 @@ input[type=number]:focus {
   margin-top: 15px;
 }
 .product-card__price-old {
+  display: inline-block;
   font-size: 13px;
   line-height: 16px;
   color: #B2BFCF;
   white-space: nowrap;
+  position: relative;
+}
+.product-card__price-old:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #B2BFCF;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
 }
 .product-card__price {
   font-size: 22px;
@@ -10729,6 +10746,170 @@ input[type=number]:focus {
 }
 
 /* /sticker */
+/* product-popup */
+.product-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 20px 40px 40px;
+}
+.product-popup__slider {
+  width: 604px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.product-popup__slider .sliderProductPopup {
+  margin-bottom: 20px;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.product-popup__slider .thumbProductPopup .swiper-slide {
+  opacity: 0.4;
+}
+.product-popup__slider .thumbProductPopup .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.product-popup__img {
+  height: 462px;
+}
+.product-popup__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.product-popup__thumb {
+  height: 116px;
+  padding: 5px;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.product-popup__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.product-popup__content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 30px;
+}
+.product-popup .title {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D9D9D9;
+  margin-bottom: 18px;
+}
+.product-popup__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.product-popup__info {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-right: 30px;
+}
+.product-popup__art {
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: #6D7680;
+  margin-bottom: 18px;
+}
+.product-popup__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 12px;
+}
+.product-popup__version {
+  margin-bottom: 16px;
+}
+.product-popup__table {
+  width: 100%;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6D7680;
+  margin-bottom: 28px;
+}
+.product-popup__table td {
+  padding: 6px 0;
+}
+.product-popup__table b {
+  color: #3E444D;
+}
+.product-popup__items {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 40px;
+}
+.product-popup__items-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -40px;
+}
+.product-popup__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 40px;
+}
+.product-popup__item span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: 1px solid #D9D9D9;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 10px;
+  fill: #0383FD;
+}
+.product-popup__item span svg {
+  width: 20px;
+  height: 20px;
+}
+.product-popup__more .btn {
+  background-color: #E7F0F9;
+  font-weight: 500;
+  color: #007AE7;
+}
+@media (min-width: 769px) {
+  .product-popup__more .btn:hover {
+    background-color: #42A1FC;
+    color: #fff;
+  }
+}
+.product-popup__block {
+  width: 338px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+/* /product-popup */
 /* footer */
 .footer {
   background-color: #11356A;

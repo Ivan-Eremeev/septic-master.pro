@@ -4,6 +4,8 @@
   flex-direction: column;
   height: 100%;
   border: 1px solid $border_color;
+  border-radius: 4px;
+  overflow: hidden;
   &__img {
     display: flex;
     justify-content: center;
@@ -111,10 +113,23 @@
     }
   }
   &__price-old {
+    display: inline-block;
     font-size: 13px;
     line-height: 16px;
     color: #B2BFCF;
     white-space: nowrap;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #B2BFCF;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: rotate(-10deg);
+    }
   }
   &__price {
     font-size: 22px;

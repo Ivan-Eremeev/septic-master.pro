@@ -500,6 +500,21 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер в попап окне товара
+  const Swipers = Array.from(document.querySelectorAll('.product-popup__slider'), n => {
+    const thumbProductPopup = new Swiper(n.querySelector('.thumbProductPopup'), {
+      spaceBetween: 20,
+      slidesPerView: 4,
+      watchSlidesProgress: true,
+    });
+    const sliderProductPopup = new Swiper(n.querySelector('.sliderProductPopup'), {
+      spaceBetween: 20,
+      thumbs: {
+        swiper: thumbProductPopup,
+      },
+    });
+  });
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,
