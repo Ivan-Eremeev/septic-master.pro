@@ -1,0 +1,37 @@
+/* modal */
+
+.modal-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  user-select: none;
+  &:after,&:before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  &:after {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  &:before {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+}
+
+@each $breakpoint,
+$container-max-width in $container-max-widths {
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    .modal-dialog--full {
+      max-width: $container-max-width - $grid-gutter-width;
+    }
+  }
+}
+/* /modal */

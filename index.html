@@ -110,7 +110,9 @@
 								<div class="header__menu-close js-drop-close d-none d-md-block d-lg-none" data-drop="menu"></div>
 								<div class="header__menu-close js-drop-close d-block d-md-none" data-drop="menuMobile"></div>
 								<ul class="header__menu-list"> 
-									<li class="header__menu-item"> <a class="header__menu-link js-open-popup js-drop-close" href="#popupCalc" data-drop="menuMobile">Рассчитать стоимость</a></li>
+									<li class="header__menu-item"> 
+										<div class="header__menu-link" data-bs-toggle="modal" data-bs-target="#popupCalc">Рассчитать стоимость</div>
+									</li>
 									<li class="header__menu-item d-block d-lg-none"><a class="header__menu-link js-menu-toggle" href="#">Виды септиков
 											<svg class="icon-arrow">
 												<use xlink:href="img/sprite.svg#arrow-light"></use>
@@ -320,161 +322,166 @@
 			</header>
 			<!--	/header-->
 			<!-- popup-calc-->
-			<div class="popup popup--full mfp-hide" id="popupCalc">
-				<div class="popup-calc"> 
-					<div class="title">Рассчитать стоимость</div>
-					<form class="calc__container" action="#"> 
-						<div class="calc__top"> 
-							<div class="row gy-3">
-								<div class="col-xxl-3 col-md-6 order-xxl-1 order-md-1">
-									<div class="calc__title">Основные параметры</div>
-									<div class="calc__row"> 
-										<div class="calc__text">Количество жильцов</div>
-										<div class="input">
-											<input type="number">
-										</div>
-									</div>
-									<div class="calc__row"> 
-										<div class="calc__text">Тип грунта</div>
-										<div class="select"> 
-											<select>
-												<option value="#">Песок</option>
-												<option value="#">Глина</option>
-											</select>
-										</div>
-									</div>
-									<div class="calc__row"> 
-										<div class="calc__text">Глубина залегания канал. трубы, до (см)</div>
-										<div class="input">
-											<input type="number">
-										</div>
-									</div>
-									<div class="calc__row"> 
-										<div class="calc__text">Выброс очищенных вод из септика</div>
-										<div class="select"> 
-											<select>
-												<option value="#">Самотечная</option>
-												<option value="#">Напорная</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="col-xxl-6 order-xxl-2 order-md-3">
-									<div class="calc__group"> 
-										<div class="calc__title">Сантехнические работы</div>
-										<div class="row">
-											<div class="col-md-6">
-												<div class="calc__row"> 
-													<div class="calc__text">Ванная (220л)</div>
-													<div class="input">
-														<input type="number">
-													</div>
-												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Раковина (30 л.)</div>
-													<div class="input">
-														<input type="number">
-													</div>
-												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Джакузи (400 л.)</div>
-													<div class="input">
-														<input type="number">
-													</div>
-												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Биде (5 л.):</div>
-													<div class="input">
-														<input type="number">
-													</div>
+			<div class="modal modal--full fade" id="popupCalc">
+				<div class="modal-dialog modal-dialog--full">
+					<div class="modal-content">
+						<div class="modal-close" data-bs-dismiss="modal"></div>
+						<div class="popup-calc"> 
+							<div class="title">Рассчитать стоимость</div>
+							<form class="calc__container" action="#"> 
+								<div class="calc__top"> 
+									<div class="row gy-3">
+										<div class="col-xxl-3 col-md-6 order-xxl-1 order-md-1">
+											<div class="calc__title">Основные параметры</div>
+											<div class="calc__row"> 
+												<div class="calc__text">Количество жильцов</div>
+												<div class="input">
+													<input type="number">
 												</div>
 											</div>
-											<div class="col-md-6">
-												<div class="calc__row"> 
-													<div class="calc__text">Стиральная машина (50 л.):</div>
-													<div class="input">
-														<input type="number">
-													</div>
+											<div class="calc__row"> 
+												<div class="calc__text">Тип грунта</div>
+												<div class="select js-select--in-calc-modal">
+													<select>
+														<option value="#">Песок</option>
+														<option value="#">Глина</option>
+													</select>
 												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Посудомоечная машина (20 л.):</div>
-													<div class="input">
-														<input type="number">
-													</div>
+											</div>
+											<div class="calc__row"> 
+												<div class="calc__text">Глубина залегания канал. трубы, до (см)</div>
+												<div class="input">
+													<input type="number">
 												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Унитаз (10 л.):</div>
-													<div class="input">
-														<input type="number">
-													</div>
-												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Душ (60 л.):</div>
-													<div class="input">
-														<input type="number">
-													</div>
+											</div>
+											<div class="calc__row"> 
+												<div class="calc__text">Выброс очищенных вод из септика</div>
+												<div class="select js-select--in-calc-modal">
+													<select>
+														<option value="#">Самотечная</option>
+														<option value="#">Напорная</option>
+													</select>
 												</div>
 											</div>
 										</div>
+										<div class="col-xxl-6 order-xxl-2 order-md-3">
+											<div class="calc__group"> 
+												<div class="calc__title">Сантехнические работы</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="calc__row"> 
+															<div class="calc__text">Ванная (220л)</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Раковина (30 л.)</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Джакузи (400 л.)</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Биде (5 л.):</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="calc__row"> 
+															<div class="calc__text">Стиральная машина (50 л.):</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Посудомоечная машина (20 л.):</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Унитаз (10 л.):</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Душ (60 л.):</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xxl-3 col-md-6 order-xxl-3 order-md-2">
+											<div class="calc__title calc__title--mb20">Дополнительно</div>
+											<div class="calc__checkbox-row"> 
+												<div class="checkbox"> 
+													<label>
+														<input type="checkbox"><span> </span>
+														<div class="checkbox__text">Высокий уровень грунтовых вод</div>
+													</label>
+												</div>
+											</div>
+											<div class="calc__checkbox-row"> 
+												<div class="checkbox"> 
+													<label>
+														<input type="checkbox"><span> </span>
+														<div class="checkbox__text">Сезонное проживание</div>
+													</label>
+												</div>
+											</div>
+											<div class="calc__checkbox-row"> 
+												<div class="checkbox"> 
+													<label>
+														<input type="checkbox"><span> </span>
+														<div class="checkbox__text">Премиум</div>
+													</label>
+												</div>
+											</div>
+											<div class="calc__checkbox-row"> 
+												<div class="checkbox"> 
+													<label>
+														<input type="checkbox"><span> </span>
+														<div class="checkbox__text">Ультрафиолетовая очистка</div>
+													</label>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="col-xxl-3 col-md-6 order-xxl-3 order-md-2">
-									<div class="calc__title calc__title--mb20">Дополнительно</div>
-									<div class="calc__checkbox-row"> 
-										<div class="checkbox"> 
-											<label>
-												<input type="checkbox"><span> </span>
-												<div class="checkbox__text">Высокий уровень грунтовых вод</div>
-											</label>
+								<div class="calc__bottom"> 
+									<div class="row gy-1 gx-1 gx-lg-3">
+										<div class="col-lg-3 col-md-6">
+											<div class="input js-input-tel"> 
+												<input type="text" placeholder="Ваш телефон">
+											</div>
 										</div>
-									</div>
-									<div class="calc__checkbox-row"> 
-										<div class="checkbox"> 
-											<label>
-												<input type="checkbox"><span> </span>
-												<div class="checkbox__text">Сезонное проживание</div>
-											</label>
+										<div class="col-lg-6 col-md-6">
+											<div class="textarea"> 
+												<textarea placeholder="Дополнительные сведения"></textarea>
+											</div>
 										</div>
-									</div>
-									<div class="calc__checkbox-row"> 
-										<div class="checkbox"> 
-											<label>
-												<input type="checkbox"><span> </span>
-												<div class="checkbox__text">Премиум</div>
-											</label>
-										</div>
-									</div>
-									<div class="calc__checkbox-row"> 
-										<div class="checkbox"> 
-											<label>
-												<input type="checkbox"><span> </span>
-												<div class="checkbox__text">Ультрафиолетовая очистка</div>
-											</label>
+										<div class="col-lg-3 col-md-12">
+											<button class="btn btn--big btn--blue" type="submit"> 
+												<div class="btn__inner">Подобрать</div>
+											</button>
 										</div>
 									</div>
 								</div>
-							</div>
+							</form>
 						</div>
-						<div class="calc__bottom"> 
-							<div class="row gy-1 gx-1 gx-lg-3">
-								<div class="col-lg-3 col-md-6">
-									<div class="input js-input-tel"> 
-										<input type="text" placeholder="Ваш телефон">
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6">
-									<div class="textarea"> 
-										<textarea placeholder="Дополнительные сведения"></textarea>
-									</div>
-								</div>
-								<div class="col-lg-3 col-md-12">
-									<button class="btn btn--big btn--blue" type="submit"> 
-										<div class="btn__inner">Подобрать</div>
-									</button>
-								</div>
-							</div>
-						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 			<!-- /popup-calc-->
@@ -679,6 +686,7 @@
 		</div>
 		<script src="js/jquery.min.js"> </script>
 		<script src="js/plugins/jquery.inputmask.min.js"></script>
+		<script src="js/plugins/bootstrap.bundle.min.js"> </script>
 		<script src="js/plugins/swiper-bundle.min.js"> </script>
 		<script src="js/plugins/select2.full.js"> </script>
 		<script src="js/plugins/jquery.magnific-popup.min.js"> </script>

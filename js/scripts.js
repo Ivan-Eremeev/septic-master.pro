@@ -520,6 +520,11 @@ window.onload = function () {
     minimumResultsForSearch: Infinity,
   });
 
+  $('.js-select--in-calc-modal select').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownParent: $('#popupCalc')
+  })
+
   // Inputmask | Маска для ввода телефона
   $('.js-input-tel  input').inputmask("+7(999)-999-99-99");
 
@@ -528,39 +533,39 @@ window.onload = function () {
   //   position: 'right top',
   // });
 
-  // Magnific Popup | Попап окна
-  if ($('.js-open-popup').length) {
-    $('.js-open-popup').magnificPopup({
-      mainClass: 'mfp-fade',
-      callbacks: {
-        beforeOpen: function () {
-          if ($('.header').hasClass('sticky')) {
-            let documentWidth = parseInt(document.documentElement.clientWidth);
-            let windowsWidth = parseInt(window.innerWidth);
-            let scrollbarWidth = windowsWidth - documentWidth;
-            $('.header').css('padding-right', scrollbarWidth);
-          }
-          $('body').addClass('lock');
-        },
-        close: function () {
-          $('.header').css('padding-right', 0);
-          $('body').removeClass('lock');
-        }
-      }
-    });
-  }
+  // // Magnific Popup | Попап окна
+  // if ($('.js-open-popup').length) {
+  //   $('.js-open-popup').magnificPopup({
+  //     mainClass: 'mfp-fade',
+  //     callbacks: {
+  //       beforeOpen: function () {
+  //         if ($('.header').hasClass('sticky')) {
+  //           let documentWidth = parseInt(document.documentElement.clientWidth);
+  //           let windowsWidth = parseInt(window.innerWidth);
+  //           let scrollbarWidth = windowsWidth - documentWidth;
+  //           $('.header').css('padding-right', scrollbarWidth);
+  //         }
+  //         $('body').addClass('lock');
+  //       },
+  //       close: function () {
+  //         $('.header').css('padding-right', 0);
+  //         $('body').removeClass('lock');
+  //       }
+  //     }
+  //   });
+  // }
 
-  //  Magnific Popup || Попап "специальное предложение"
-  if ($('#offerPopup').length) {
-    setTimeout(function () {
-      $.magnificPopup.open({
-        items: {
-          src: '#offerPopup'
-        },
-        type: 'inline'
-      });
-    }, 5000);
-  }
+  // //  Magnific Popup || Попап "специальное предложение"
+  // if ($('#offerPopup').length) {
+  //   setTimeout(function () {
+  //     $.magnificPopup.open({
+  //       items: {
+  //         src: '#offerPopup'
+  //       },
+  //       type: 'inline'
+  //     });
+  //   }, 5000);
+  // }
 
   // // Табы
 	// function tabs() {

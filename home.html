@@ -110,7 +110,9 @@
 								<div class="header__menu-close js-drop-close d-none d-md-block d-lg-none" data-drop="menu"></div>
 								<div class="header__menu-close js-drop-close d-block d-md-none" data-drop="menuMobile"></div>
 								<ul class="header__menu-list"> 
-									<li class="header__menu-item"> <a class="header__menu-link js-open-popup js-drop-close" href="#popupCalc" data-drop="menuMobile">Рассчитать стоимость</a></li>
+									<li class="header__menu-item"> 
+										<div class="header__menu-link" data-bs-toggle="modal" data-bs-target="#popupCalc">Рассчитать стоимость</div>
+									</li>
 									<li class="header__menu-item d-block d-lg-none"><a class="header__menu-link js-menu-toggle" href="#">Виды септиков
 											<svg class="icon-arrow">
 												<use xlink:href="img/sprite.svg#arrow-light"></use>
@@ -320,161 +322,166 @@
 			</header>
 			<!--	/header-->
 			<!-- popup-calc-->
-			<div class="popup popup--full mfp-hide" id="popupCalc">
-				<div class="popup-calc"> 
-					<div class="title">Рассчитать стоимость</div>
-					<form class="calc__container" action="#"> 
-						<div class="calc__top"> 
-							<div class="row gy-3">
-								<div class="col-xxl-3 col-md-6 order-xxl-1 order-md-1">
-									<div class="calc__title">Основные параметры</div>
-									<div class="calc__row"> 
-										<div class="calc__text">Количество жильцов</div>
-										<div class="input">
-											<input type="number">
-										</div>
-									</div>
-									<div class="calc__row"> 
-										<div class="calc__text">Тип грунта</div>
-										<div class="select"> 
-											<select>
-												<option value="#">Песок</option>
-												<option value="#">Глина</option>
-											</select>
-										</div>
-									</div>
-									<div class="calc__row"> 
-										<div class="calc__text">Глубина залегания канал. трубы, до (см)</div>
-										<div class="input">
-											<input type="number">
-										</div>
-									</div>
-									<div class="calc__row"> 
-										<div class="calc__text">Выброс очищенных вод из септика</div>
-										<div class="select"> 
-											<select>
-												<option value="#">Самотечная</option>
-												<option value="#">Напорная</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="col-xxl-6 order-xxl-2 order-md-3">
-									<div class="calc__group"> 
-										<div class="calc__title">Сантехнические работы</div>
-										<div class="row">
-											<div class="col-md-6">
-												<div class="calc__row"> 
-													<div class="calc__text">Ванная (220л)</div>
-													<div class="input">
-														<input type="number">
-													</div>
-												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Раковина (30 л.)</div>
-													<div class="input">
-														<input type="number">
-													</div>
-												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Джакузи (400 л.)</div>
-													<div class="input">
-														<input type="number">
-													</div>
-												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Биде (5 л.):</div>
-													<div class="input">
-														<input type="number">
-													</div>
+			<div class="modal modal--full fade" id="popupCalc">
+				<div class="modal-dialog modal-dialog--full">
+					<div class="modal-content">
+						<div class="modal-close" data-bs-dismiss="modal"></div>
+						<div class="popup-calc"> 
+							<div class="title">Рассчитать стоимость</div>
+							<form class="calc__container" action="#"> 
+								<div class="calc__top"> 
+									<div class="row gy-3">
+										<div class="col-xxl-3 col-md-6 order-xxl-1 order-md-1">
+											<div class="calc__title">Основные параметры</div>
+											<div class="calc__row"> 
+												<div class="calc__text">Количество жильцов</div>
+												<div class="input">
+													<input type="number">
 												</div>
 											</div>
-											<div class="col-md-6">
-												<div class="calc__row"> 
-													<div class="calc__text">Стиральная машина (50 л.):</div>
-													<div class="input">
-														<input type="number">
-													</div>
+											<div class="calc__row"> 
+												<div class="calc__text">Тип грунта</div>
+												<div class="select js-select--in-calc-modal">
+													<select>
+														<option value="#">Песок</option>
+														<option value="#">Глина</option>
+													</select>
 												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Посудомоечная машина (20 л.):</div>
-													<div class="input">
-														<input type="number">
-													</div>
+											</div>
+											<div class="calc__row"> 
+												<div class="calc__text">Глубина залегания канал. трубы, до (см)</div>
+												<div class="input">
+													<input type="number">
 												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Унитаз (10 л.):</div>
-													<div class="input">
-														<input type="number">
-													</div>
-												</div>
-												<div class="calc__row"> 
-													<div class="calc__text">Душ (60 л.):</div>
-													<div class="input">
-														<input type="number">
-													</div>
+											</div>
+											<div class="calc__row"> 
+												<div class="calc__text">Выброс очищенных вод из септика</div>
+												<div class="select js-select--in-calc-modal">
+													<select>
+														<option value="#">Самотечная</option>
+														<option value="#">Напорная</option>
+													</select>
 												</div>
 											</div>
 										</div>
+										<div class="col-xxl-6 order-xxl-2 order-md-3">
+											<div class="calc__group"> 
+												<div class="calc__title">Сантехнические работы</div>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="calc__row"> 
+															<div class="calc__text">Ванная (220л)</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Раковина (30 л.)</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Джакузи (400 л.)</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Биде (5 л.):</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="calc__row"> 
+															<div class="calc__text">Стиральная машина (50 л.):</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Посудомоечная машина (20 л.):</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Унитаз (10 л.):</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+														<div class="calc__row"> 
+															<div class="calc__text">Душ (60 л.):</div>
+															<div class="input">
+																<input type="number">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xxl-3 col-md-6 order-xxl-3 order-md-2">
+											<div class="calc__title calc__title--mb20">Дополнительно</div>
+											<div class="calc__checkbox-row"> 
+												<div class="checkbox"> 
+													<label>
+														<input type="checkbox"><span> </span>
+														<div class="checkbox__text">Высокий уровень грунтовых вод</div>
+													</label>
+												</div>
+											</div>
+											<div class="calc__checkbox-row"> 
+												<div class="checkbox"> 
+													<label>
+														<input type="checkbox"><span> </span>
+														<div class="checkbox__text">Сезонное проживание</div>
+													</label>
+												</div>
+											</div>
+											<div class="calc__checkbox-row"> 
+												<div class="checkbox"> 
+													<label>
+														<input type="checkbox"><span> </span>
+														<div class="checkbox__text">Премиум</div>
+													</label>
+												</div>
+											</div>
+											<div class="calc__checkbox-row"> 
+												<div class="checkbox"> 
+													<label>
+														<input type="checkbox"><span> </span>
+														<div class="checkbox__text">Ультрафиолетовая очистка</div>
+													</label>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
-								<div class="col-xxl-3 col-md-6 order-xxl-3 order-md-2">
-									<div class="calc__title calc__title--mb20">Дополнительно</div>
-									<div class="calc__checkbox-row"> 
-										<div class="checkbox"> 
-											<label>
-												<input type="checkbox"><span> </span>
-												<div class="checkbox__text">Высокий уровень грунтовых вод</div>
-											</label>
+								<div class="calc__bottom"> 
+									<div class="row gy-1 gx-1 gx-lg-3">
+										<div class="col-lg-3 col-md-6">
+											<div class="input js-input-tel"> 
+												<input type="text" placeholder="Ваш телефон">
+											</div>
 										</div>
-									</div>
-									<div class="calc__checkbox-row"> 
-										<div class="checkbox"> 
-											<label>
-												<input type="checkbox"><span> </span>
-												<div class="checkbox__text">Сезонное проживание</div>
-											</label>
+										<div class="col-lg-6 col-md-6">
+											<div class="textarea"> 
+												<textarea placeholder="Дополнительные сведения"></textarea>
+											</div>
 										</div>
-									</div>
-									<div class="calc__checkbox-row"> 
-										<div class="checkbox"> 
-											<label>
-												<input type="checkbox"><span> </span>
-												<div class="checkbox__text">Премиум</div>
-											</label>
-										</div>
-									</div>
-									<div class="calc__checkbox-row"> 
-										<div class="checkbox"> 
-											<label>
-												<input type="checkbox"><span> </span>
-												<div class="checkbox__text">Ультрафиолетовая очистка</div>
-											</label>
+										<div class="col-lg-3 col-md-12">
+											<button class="btn btn--big btn--blue" type="submit"> 
+												<div class="btn__inner">Подобрать</div>
+											</button>
 										</div>
 									</div>
 								</div>
-							</div>
+							</form>
 						</div>
-						<div class="calc__bottom"> 
-							<div class="row gy-1 gx-1 gx-lg-3">
-								<div class="col-lg-3 col-md-6">
-									<div class="input js-input-tel"> 
-										<input type="text" placeholder="Ваш телефон">
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6">
-									<div class="textarea"> 
-										<textarea placeholder="Дополнительные сведения"></textarea>
-									</div>
-								</div>
-								<div class="col-lg-3 col-md-12">
-									<button class="btn btn--big btn--blue" type="submit"> 
-										<div class="btn__inner">Подобрать</div>
-									</button>
-								</div>
-							</div>
-						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 			<!-- /popup-calc-->
@@ -1604,7 +1611,8 @@
 						<div class="popular__cards"> 
 							<div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-md-3 row-cols-2">
 								<div class="col">
-																<div class="product-card"><a class="product-card__img js-open-popup" href="#productPopup_0"> <img src="img/products/img1.jpg" alt="">
+																<div class="product-card">
+																	<div class="product-card__img"><img src="img/products/img1.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
@@ -1625,7 +1633,9 @@
 																			<svg class="icon-eye">
 																				<use xlink:href="img/sprite.svg#eye"></use>
 																			</svg><span>Быстрый просмотр</span>
-																		</div></a>
+																		</div>
+																		<div class="product-card__open-popup" data-bs-toggle="modal" data-bs-target="#productPopup_0"></div>
+																	</div>
 																	<div class="product-card__content"> 
 																		<div class="product-card__description"> 
 																			<div class="product-card__head"> 
@@ -1669,89 +1679,94 @@
 																	</div>
 																</div>
 																<!-- product-popup-->
-																<div class="popup popup--full mfp-hide" id="productPopup_0">
-																	<div class="product-popup">
-																		<div class="product-popup__slider"> 
-																			<div class="sliderProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="thumbProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="product-popup__content"> 
-																			<div class="title">Септик Юнилос</div>
-																			<div class="product-popup__row"> 
-																				<div class="product-popup__info"> 
-																					<div class="product-popup__art">Артикул 234 454</div>
-																					<div class="product-popup__title">Модификации</div>
-																					<div class="product-popup__version"> </div>
-																					<table class="product-popup__table"> 
-																						<tr> 
-																							<td>Количество пользователей </td>
-																							<td> <b>до 75 человек</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Производительность</td>
-																							<td> <b>до 12 м³ в сутки</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Тип очистного устройства</td>
-																							<td> <b>аэрационная усановка</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Способ очищения воды</td>
-																							<td> <b>принудительный</b></td>
-																						</tr>
-																					</table>
-																					<div class="product-popup__items"> 
-																						<div class="product-popup__items-row"> 
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-printer">
-																										<use xlink:href="img/sprite.svg#printer"></use>
-																									</svg></span>Распечатать</div>
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-links">
-																										<use xlink:href="img/sprite.svg#links"></use>
-																									</svg></span>Поделится</div>
+																<div class="modal fade" id="productPopup_0">
+																	<div class="modal-dialog modal-dialog--full">
+																		<div class="modal-content">
+																			<div class="modal-close" data-bs-dismiss="modal"></div>
+																			<div class="product-popup">
+																				<div class="product-popup__slider"> 
+																					<div class="sliderProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
 																						</div>
 																					</div>
-																					<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																					<div class="thumbProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="product-popup__block"> 
-																					<div class="product-popup__stars"> </div>
+																				<div class="product-popup__content"> 
+																					<div class="title">Септик Юнилос</div>
+																					<div class="product-popup__row"> 
+																						<div class="product-popup__info"> 
+																							<div class="product-popup__art">Артикул 234 454</div>
+																							<div class="product-popup__title">Модификации</div>
+																							<div class="product-popup__version"> </div>
+																							<table class="product-popup__table"> 
+																								<tr> 
+																									<td>Количество пользователей </td>
+																									<td> <b>до 75 человек</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Производительность</td>
+																									<td> <b>до 12 м³ в сутки</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Тип очистного устройства</td>
+																									<td> <b>аэрационная усановка</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Способ очищения воды</td>
+																									<td> <b>принудительный</b></td>
+																								</tr>
+																							</table>
+																							<div class="product-popup__items"> 
+																								<div class="product-popup__items-row"> 
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-printer">
+																												<use xlink:href="img/sprite.svg#printer"></use>
+																											</svg></span>Распечатать</div>
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-links">
+																												<use xlink:href="img/sprite.svg#links"></use>
+																											</svg></span>Поделится</div>
+																								</div>
+																							</div>
+																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																						</div>
+																						<div class="product-popup__block"> 
+																							<div class="product-popup__stars"> </div>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -1760,7 +1775,8 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col">
-																<div class="product-card"><a class="product-card__img js-open-popup" href="#productPopup_1"> <img src="img/products/img2.jpg" alt="">
+																<div class="product-card">
+																	<div class="product-card__img"><img src="img/products/img2.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
@@ -1781,7 +1797,9 @@
 																			<svg class="icon-eye">
 																				<use xlink:href="img/sprite.svg#eye"></use>
 																			</svg><span>Быстрый просмотр</span>
-																		</div></a>
+																		</div>
+																		<div class="product-card__open-popup" data-bs-toggle="modal" data-bs-target="#productPopup_1"></div>
+																	</div>
 																	<div class="product-card__content"> 
 																		<div class="product-card__description"> 
 																			<div class="product-card__head"> 
@@ -1825,89 +1843,94 @@
 																	</div>
 																</div>
 																<!-- product-popup-->
-																<div class="popup popup--full mfp-hide" id="productPopup_1">
-																	<div class="product-popup">
-																		<div class="product-popup__slider"> 
-																			<div class="sliderProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="thumbProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="product-popup__content"> 
-																			<div class="title">Септик Юнилос</div>
-																			<div class="product-popup__row"> 
-																				<div class="product-popup__info"> 
-																					<div class="product-popup__art">Артикул 234 454</div>
-																					<div class="product-popup__title">Модификации</div>
-																					<div class="product-popup__version"> </div>
-																					<table class="product-popup__table"> 
-																						<tr> 
-																							<td>Количество пользователей </td>
-																							<td> <b>до 75 человек</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Производительность</td>
-																							<td> <b>до 12 м³ в сутки</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Тип очистного устройства</td>
-																							<td> <b>аэрационная усановка</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Способ очищения воды</td>
-																							<td> <b>принудительный</b></td>
-																						</tr>
-																					</table>
-																					<div class="product-popup__items"> 
-																						<div class="product-popup__items-row"> 
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-printer">
-																										<use xlink:href="img/sprite.svg#printer"></use>
-																									</svg></span>Распечатать</div>
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-links">
-																										<use xlink:href="img/sprite.svg#links"></use>
-																									</svg></span>Поделится</div>
+																<div class="modal fade" id="productPopup_1">
+																	<div class="modal-dialog modal-dialog--full">
+																		<div class="modal-content">
+																			<div class="modal-close" data-bs-dismiss="modal"></div>
+																			<div class="product-popup">
+																				<div class="product-popup__slider"> 
+																					<div class="sliderProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
 																						</div>
 																					</div>
-																					<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																					<div class="thumbProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="product-popup__block"> 
-																					<div class="product-popup__stars"> </div>
+																				<div class="product-popup__content"> 
+																					<div class="title">Септик Юнилос</div>
+																					<div class="product-popup__row"> 
+																						<div class="product-popup__info"> 
+																							<div class="product-popup__art">Артикул 234 454</div>
+																							<div class="product-popup__title">Модификации</div>
+																							<div class="product-popup__version"> </div>
+																							<table class="product-popup__table"> 
+																								<tr> 
+																									<td>Количество пользователей </td>
+																									<td> <b>до 75 человек</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Производительность</td>
+																									<td> <b>до 12 м³ в сутки</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Тип очистного устройства</td>
+																									<td> <b>аэрационная усановка</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Способ очищения воды</td>
+																									<td> <b>принудительный</b></td>
+																								</tr>
+																							</table>
+																							<div class="product-popup__items"> 
+																								<div class="product-popup__items-row"> 
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-printer">
+																												<use xlink:href="img/sprite.svg#printer"></use>
+																											</svg></span>Распечатать</div>
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-links">
+																												<use xlink:href="img/sprite.svg#links"></use>
+																											</svg></span>Поделится</div>
+																								</div>
+																							</div>
+																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																						</div>
+																						<div class="product-popup__block"> 
+																							<div class="product-popup__stars"> </div>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -1916,7 +1939,8 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col">
-																<div class="product-card"><a class="product-card__img js-open-popup" href="#productPopup_2"> <img src="img/products/img3.jpg" alt="">
+																<div class="product-card">
+																	<div class="product-card__img"><img src="img/products/img3.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
@@ -1937,7 +1961,9 @@
 																			<svg class="icon-eye">
 																				<use xlink:href="img/sprite.svg#eye"></use>
 																			</svg><span>Быстрый просмотр</span>
-																		</div></a>
+																		</div>
+																		<div class="product-card__open-popup" data-bs-toggle="modal" data-bs-target="#productPopup_2"></div>
+																	</div>
 																	<div class="product-card__content"> 
 																		<div class="product-card__description"> 
 																			<div class="product-card__head"> 
@@ -1981,89 +2007,94 @@
 																	</div>
 																</div>
 																<!-- product-popup-->
-																<div class="popup popup--full mfp-hide" id="productPopup_2">
-																	<div class="product-popup">
-																		<div class="product-popup__slider"> 
-																			<div class="sliderProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="thumbProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="product-popup__content"> 
-																			<div class="title">Септик Юнилос</div>
-																			<div class="product-popup__row"> 
-																				<div class="product-popup__info"> 
-																					<div class="product-popup__art">Артикул 234 454</div>
-																					<div class="product-popup__title">Модификации</div>
-																					<div class="product-popup__version"> </div>
-																					<table class="product-popup__table"> 
-																						<tr> 
-																							<td>Количество пользователей </td>
-																							<td> <b>до 75 человек</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Производительность</td>
-																							<td> <b>до 12 м³ в сутки</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Тип очистного устройства</td>
-																							<td> <b>аэрационная усановка</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Способ очищения воды</td>
-																							<td> <b>принудительный</b></td>
-																						</tr>
-																					</table>
-																					<div class="product-popup__items"> 
-																						<div class="product-popup__items-row"> 
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-printer">
-																										<use xlink:href="img/sprite.svg#printer"></use>
-																									</svg></span>Распечатать</div>
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-links">
-																										<use xlink:href="img/sprite.svg#links"></use>
-																									</svg></span>Поделится</div>
+																<div class="modal fade" id="productPopup_2">
+																	<div class="modal-dialog modal-dialog--full">
+																		<div class="modal-content">
+																			<div class="modal-close" data-bs-dismiss="modal"></div>
+																			<div class="product-popup">
+																				<div class="product-popup__slider"> 
+																					<div class="sliderProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
 																						</div>
 																					</div>
-																					<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																					<div class="thumbProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="product-popup__block"> 
-																					<div class="product-popup__stars"> </div>
+																				<div class="product-popup__content"> 
+																					<div class="title">Септик Юнилос</div>
+																					<div class="product-popup__row"> 
+																						<div class="product-popup__info"> 
+																							<div class="product-popup__art">Артикул 234 454</div>
+																							<div class="product-popup__title">Модификации</div>
+																							<div class="product-popup__version"> </div>
+																							<table class="product-popup__table"> 
+																								<tr> 
+																									<td>Количество пользователей </td>
+																									<td> <b>до 75 человек</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Производительность</td>
+																									<td> <b>до 12 м³ в сутки</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Тип очистного устройства</td>
+																									<td> <b>аэрационная усановка</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Способ очищения воды</td>
+																									<td> <b>принудительный</b></td>
+																								</tr>
+																							</table>
+																							<div class="product-popup__items"> 
+																								<div class="product-popup__items-row"> 
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-printer">
+																												<use xlink:href="img/sprite.svg#printer"></use>
+																											</svg></span>Распечатать</div>
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-links">
+																												<use xlink:href="img/sprite.svg#links"></use>
+																											</svg></span>Поделится</div>
+																								</div>
+																							</div>
+																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																						</div>
+																						<div class="product-popup__block"> 
+																							<div class="product-popup__stars"> </div>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -2072,7 +2103,8 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col">
-																<div class="product-card"><a class="product-card__img js-open-popup" href="#productPopup_3"> <img src="img/products/img4.jpg" alt="">
+																<div class="product-card">
+																	<div class="product-card__img"><img src="img/products/img4.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
@@ -2093,7 +2125,9 @@
 																			<svg class="icon-eye">
 																				<use xlink:href="img/sprite.svg#eye"></use>
 																			</svg><span>Быстрый просмотр</span>
-																		</div></a>
+																		</div>
+																		<div class="product-card__open-popup" data-bs-toggle="modal" data-bs-target="#productPopup_3"></div>
+																	</div>
 																	<div class="product-card__content"> 
 																		<div class="product-card__description"> 
 																			<div class="product-card__head"> 
@@ -2137,89 +2171,94 @@
 																	</div>
 																</div>
 																<!-- product-popup-->
-																<div class="popup popup--full mfp-hide" id="productPopup_3">
-																	<div class="product-popup">
-																		<div class="product-popup__slider"> 
-																			<div class="sliderProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="thumbProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="product-popup__content"> 
-																			<div class="title">Септик Юнилос</div>
-																			<div class="product-popup__row"> 
-																				<div class="product-popup__info"> 
-																					<div class="product-popup__art">Артикул 234 454</div>
-																					<div class="product-popup__title">Модификации</div>
-																					<div class="product-popup__version"> </div>
-																					<table class="product-popup__table"> 
-																						<tr> 
-																							<td>Количество пользователей </td>
-																							<td> <b>до 75 человек</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Производительность</td>
-																							<td> <b>до 12 м³ в сутки</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Тип очистного устройства</td>
-																							<td> <b>аэрационная усановка</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Способ очищения воды</td>
-																							<td> <b>принудительный</b></td>
-																						</tr>
-																					</table>
-																					<div class="product-popup__items"> 
-																						<div class="product-popup__items-row"> 
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-printer">
-																										<use xlink:href="img/sprite.svg#printer"></use>
-																									</svg></span>Распечатать</div>
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-links">
-																										<use xlink:href="img/sprite.svg#links"></use>
-																									</svg></span>Поделится</div>
+																<div class="modal fade" id="productPopup_3">
+																	<div class="modal-dialog modal-dialog--full">
+																		<div class="modal-content">
+																			<div class="modal-close" data-bs-dismiss="modal"></div>
+																			<div class="product-popup">
+																				<div class="product-popup__slider"> 
+																					<div class="sliderProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
 																						</div>
 																					</div>
-																					<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																					<div class="thumbProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="product-popup__block"> 
-																					<div class="product-popup__stars"> </div>
+																				<div class="product-popup__content"> 
+																					<div class="title">Септик Юнилос</div>
+																					<div class="product-popup__row"> 
+																						<div class="product-popup__info"> 
+																							<div class="product-popup__art">Артикул 234 454</div>
+																							<div class="product-popup__title">Модификации</div>
+																							<div class="product-popup__version"> </div>
+																							<table class="product-popup__table"> 
+																								<tr> 
+																									<td>Количество пользователей </td>
+																									<td> <b>до 75 человек</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Производительность</td>
+																									<td> <b>до 12 м³ в сутки</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Тип очистного устройства</td>
+																									<td> <b>аэрационная усановка</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Способ очищения воды</td>
+																									<td> <b>принудительный</b></td>
+																								</tr>
+																							</table>
+																							<div class="product-popup__items"> 
+																								<div class="product-popup__items-row"> 
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-printer">
+																												<use xlink:href="img/sprite.svg#printer"></use>
+																											</svg></span>Распечатать</div>
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-links">
+																												<use xlink:href="img/sprite.svg#links"></use>
+																											</svg></span>Поделится</div>
+																								</div>
+																							</div>
+																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																						</div>
+																						<div class="product-popup__block"> 
+																							<div class="product-popup__stars"> </div>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -2228,7 +2267,8 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
-																<div class="product-card"><a class="product-card__img js-open-popup" href="#productPopup_4"> <img src="img/products/img5.jpg" alt="">
+																<div class="product-card">
+																	<div class="product-card__img"><img src="img/products/img5.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
@@ -2249,7 +2289,9 @@
 																			<svg class="icon-eye">
 																				<use xlink:href="img/sprite.svg#eye"></use>
 																			</svg><span>Быстрый просмотр</span>
-																		</div></a>
+																		</div>
+																		<div class="product-card__open-popup" data-bs-toggle="modal" data-bs-target="#productPopup_4"></div>
+																	</div>
 																	<div class="product-card__content"> 
 																		<div class="product-card__description"> 
 																			<div class="product-card__head"> 
@@ -2293,89 +2335,94 @@
 																	</div>
 																</div>
 																<!-- product-popup-->
-																<div class="popup popup--full mfp-hide" id="productPopup_4">
-																	<div class="product-popup">
-																		<div class="product-popup__slider"> 
-																			<div class="sliderProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="thumbProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="product-popup__content"> 
-																			<div class="title">Септик Юнилос</div>
-																			<div class="product-popup__row"> 
-																				<div class="product-popup__info"> 
-																					<div class="product-popup__art">Артикул 234 454</div>
-																					<div class="product-popup__title">Модификации</div>
-																					<div class="product-popup__version"> </div>
-																					<table class="product-popup__table"> 
-																						<tr> 
-																							<td>Количество пользователей </td>
-																							<td> <b>до 75 человек</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Производительность</td>
-																							<td> <b>до 12 м³ в сутки</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Тип очистного устройства</td>
-																							<td> <b>аэрационная усановка</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Способ очищения воды</td>
-																							<td> <b>принудительный</b></td>
-																						</tr>
-																					</table>
-																					<div class="product-popup__items"> 
-																						<div class="product-popup__items-row"> 
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-printer">
-																										<use xlink:href="img/sprite.svg#printer"></use>
-																									</svg></span>Распечатать</div>
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-links">
-																										<use xlink:href="img/sprite.svg#links"></use>
-																									</svg></span>Поделится</div>
+																<div class="modal fade" id="productPopup_4">
+																	<div class="modal-dialog modal-dialog--full">
+																		<div class="modal-content">
+																			<div class="modal-close" data-bs-dismiss="modal"></div>
+																			<div class="product-popup">
+																				<div class="product-popup__slider"> 
+																					<div class="sliderProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
 																						</div>
 																					</div>
-																					<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																					<div class="thumbProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="product-popup__block"> 
-																					<div class="product-popup__stars"> </div>
+																				<div class="product-popup__content"> 
+																					<div class="title">Септик Юнилос</div>
+																					<div class="product-popup__row"> 
+																						<div class="product-popup__info"> 
+																							<div class="product-popup__art">Артикул 234 454</div>
+																							<div class="product-popup__title">Модификации</div>
+																							<div class="product-popup__version"> </div>
+																							<table class="product-popup__table"> 
+																								<tr> 
+																									<td>Количество пользователей </td>
+																									<td> <b>до 75 человек</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Производительность</td>
+																									<td> <b>до 12 м³ в сутки</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Тип очистного устройства</td>
+																									<td> <b>аэрационная усановка</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Способ очищения воды</td>
+																									<td> <b>принудительный</b></td>
+																								</tr>
+																							</table>
+																							<div class="product-popup__items"> 
+																								<div class="product-popup__items-row"> 
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-printer">
+																												<use xlink:href="img/sprite.svg#printer"></use>
+																											</svg></span>Распечатать</div>
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-links">
+																												<use xlink:href="img/sprite.svg#links"></use>
+																											</svg></span>Поделится</div>
+																								</div>
+																							</div>
+																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																						</div>
+																						<div class="product-popup__block"> 
+																							<div class="product-popup__stars"> </div>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -2384,7 +2431,8 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
-																<div class="product-card"><a class="product-card__img js-open-popup" href="#productPopup_5"> <img src="img/products/img4.jpg" alt="">
+																<div class="product-card">
+																	<div class="product-card__img"><img src="img/products/img4.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
@@ -2405,7 +2453,9 @@
 																			<svg class="icon-eye">
 																				<use xlink:href="img/sprite.svg#eye"></use>
 																			</svg><span>Быстрый просмотр</span>
-																		</div></a>
+																		</div>
+																		<div class="product-card__open-popup" data-bs-toggle="modal" data-bs-target="#productPopup_5"></div>
+																	</div>
 																	<div class="product-card__content"> 
 																		<div class="product-card__description"> 
 																			<div class="product-card__head"> 
@@ -2449,89 +2499,94 @@
 																	</div>
 																</div>
 																<!-- product-popup-->
-																<div class="popup popup--full mfp-hide" id="productPopup_5">
-																	<div class="product-popup">
-																		<div class="product-popup__slider"> 
-																			<div class="sliderProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="thumbProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="product-popup__content"> 
-																			<div class="title">Септик Юнилос</div>
-																			<div class="product-popup__row"> 
-																				<div class="product-popup__info"> 
-																					<div class="product-popup__art">Артикул 234 454</div>
-																					<div class="product-popup__title">Модификации</div>
-																					<div class="product-popup__version"> </div>
-																					<table class="product-popup__table"> 
-																						<tr> 
-																							<td>Количество пользователей </td>
-																							<td> <b>до 75 человек</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Производительность</td>
-																							<td> <b>до 12 м³ в сутки</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Тип очистного устройства</td>
-																							<td> <b>аэрационная усановка</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Способ очищения воды</td>
-																							<td> <b>принудительный</b></td>
-																						</tr>
-																					</table>
-																					<div class="product-popup__items"> 
-																						<div class="product-popup__items-row"> 
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-printer">
-																										<use xlink:href="img/sprite.svg#printer"></use>
-																									</svg></span>Распечатать</div>
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-links">
-																										<use xlink:href="img/sprite.svg#links"></use>
-																									</svg></span>Поделится</div>
+																<div class="modal fade" id="productPopup_5">
+																	<div class="modal-dialog modal-dialog--full">
+																		<div class="modal-content">
+																			<div class="modal-close" data-bs-dismiss="modal"></div>
+																			<div class="product-popup">
+																				<div class="product-popup__slider"> 
+																					<div class="sliderProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
 																						</div>
 																					</div>
-																					<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																					<div class="thumbProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="product-popup__block"> 
-																					<div class="product-popup__stars"> </div>
+																				<div class="product-popup__content"> 
+																					<div class="title">Септик Юнилос</div>
+																					<div class="product-popup__row"> 
+																						<div class="product-popup__info"> 
+																							<div class="product-popup__art">Артикул 234 454</div>
+																							<div class="product-popup__title">Модификации</div>
+																							<div class="product-popup__version"> </div>
+																							<table class="product-popup__table"> 
+																								<tr> 
+																									<td>Количество пользователей </td>
+																									<td> <b>до 75 человек</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Производительность</td>
+																									<td> <b>до 12 м³ в сутки</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Тип очистного устройства</td>
+																									<td> <b>аэрационная усановка</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Способ очищения воды</td>
+																									<td> <b>принудительный</b></td>
+																								</tr>
+																							</table>
+																							<div class="product-popup__items"> 
+																								<div class="product-popup__items-row"> 
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-printer">
+																												<use xlink:href="img/sprite.svg#printer"></use>
+																											</svg></span>Распечатать</div>
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-links">
+																												<use xlink:href="img/sprite.svg#links"></use>
+																											</svg></span>Поделится</div>
+																								</div>
+																							</div>
+																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																						</div>
+																						<div class="product-popup__block"> 
+																							<div class="product-popup__stars"> </div>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -2540,7 +2595,8 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
-																<div class="product-card"><a class="product-card__img js-open-popup" href="#productPopup_6"> <img src="img/products/img1.jpg" alt="">
+																<div class="product-card">
+																	<div class="product-card__img"><img src="img/products/img1.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
@@ -2561,7 +2617,9 @@
 																			<svg class="icon-eye">
 																				<use xlink:href="img/sprite.svg#eye"></use>
 																			</svg><span>Быстрый просмотр</span>
-																		</div></a>
+																		</div>
+																		<div class="product-card__open-popup" data-bs-toggle="modal" data-bs-target="#productPopup_6"></div>
+																	</div>
 																	<div class="product-card__content"> 
 																		<div class="product-card__description"> 
 																			<div class="product-card__head"> 
@@ -2605,89 +2663,94 @@
 																	</div>
 																</div>
 																<!-- product-popup-->
-																<div class="popup popup--full mfp-hide" id="productPopup_6">
-																	<div class="product-popup">
-																		<div class="product-popup__slider"> 
-																			<div class="sliderProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="thumbProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="product-popup__content"> 
-																			<div class="title">Септик Юнилос</div>
-																			<div class="product-popup__row"> 
-																				<div class="product-popup__info"> 
-																					<div class="product-popup__art">Артикул 234 454</div>
-																					<div class="product-popup__title">Модификации</div>
-																					<div class="product-popup__version"> </div>
-																					<table class="product-popup__table"> 
-																						<tr> 
-																							<td>Количество пользователей </td>
-																							<td> <b>до 75 человек</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Производительность</td>
-																							<td> <b>до 12 м³ в сутки</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Тип очистного устройства</td>
-																							<td> <b>аэрационная усановка</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Способ очищения воды</td>
-																							<td> <b>принудительный</b></td>
-																						</tr>
-																					</table>
-																					<div class="product-popup__items"> 
-																						<div class="product-popup__items-row"> 
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-printer">
-																										<use xlink:href="img/sprite.svg#printer"></use>
-																									</svg></span>Распечатать</div>
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-links">
-																										<use xlink:href="img/sprite.svg#links"></use>
-																									</svg></span>Поделится</div>
+																<div class="modal fade" id="productPopup_6">
+																	<div class="modal-dialog modal-dialog--full">
+																		<div class="modal-content">
+																			<div class="modal-close" data-bs-dismiss="modal"></div>
+																			<div class="product-popup">
+																				<div class="product-popup__slider"> 
+																					<div class="sliderProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
 																						</div>
 																					</div>
-																					<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																					<div class="thumbProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="product-popup__block"> 
-																					<div class="product-popup__stars"> </div>
+																				<div class="product-popup__content"> 
+																					<div class="title">Септик Юнилос</div>
+																					<div class="product-popup__row"> 
+																						<div class="product-popup__info"> 
+																							<div class="product-popup__art">Артикул 234 454</div>
+																							<div class="product-popup__title">Модификации</div>
+																							<div class="product-popup__version"> </div>
+																							<table class="product-popup__table"> 
+																								<tr> 
+																									<td>Количество пользователей </td>
+																									<td> <b>до 75 человек</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Производительность</td>
+																									<td> <b>до 12 м³ в сутки</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Тип очистного устройства</td>
+																									<td> <b>аэрационная усановка</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Способ очищения воды</td>
+																									<td> <b>принудительный</b></td>
+																								</tr>
+																							</table>
+																							<div class="product-popup__items"> 
+																								<div class="product-popup__items-row"> 
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-printer">
+																												<use xlink:href="img/sprite.svg#printer"></use>
+																											</svg></span>Распечатать</div>
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-links">
+																												<use xlink:href="img/sprite.svg#links"></use>
+																											</svg></span>Поделится</div>
+																								</div>
+																							</div>
+																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																						</div>
+																						<div class="product-popup__block"> 
+																							<div class="product-popup__stars"> </div>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -2696,7 +2759,8 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
-																<div class="product-card"><a class="product-card__img js-open-popup" href="#productPopup_7"> <img src="img/products/img5.jpg" alt="">
+																<div class="product-card">
+																	<div class="product-card__img"><img src="img/products/img5.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
@@ -2717,7 +2781,9 @@
 																			<svg class="icon-eye">
 																				<use xlink:href="img/sprite.svg#eye"></use>
 																			</svg><span>Быстрый просмотр</span>
-																		</div></a>
+																		</div>
+																		<div class="product-card__open-popup" data-bs-toggle="modal" data-bs-target="#productPopup_7"></div>
+																	</div>
 																	<div class="product-card__content"> 
 																		<div class="product-card__description"> 
 																			<div class="product-card__head"> 
@@ -2761,89 +2827,94 @@
 																	</div>
 																</div>
 																<!-- product-popup-->
-																<div class="popup popup--full mfp-hide" id="productPopup_7">
-																	<div class="product-popup">
-																		<div class="product-popup__slider"> 
-																			<div class="sliderProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="thumbProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="product-popup__content"> 
-																			<div class="title">Септик Юнилос</div>
-																			<div class="product-popup__row"> 
-																				<div class="product-popup__info"> 
-																					<div class="product-popup__art">Артикул 234 454</div>
-																					<div class="product-popup__title">Модификации</div>
-																					<div class="product-popup__version"> </div>
-																					<table class="product-popup__table"> 
-																						<tr> 
-																							<td>Количество пользователей </td>
-																							<td> <b>до 75 человек</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Производительность</td>
-																							<td> <b>до 12 м³ в сутки</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Тип очистного устройства</td>
-																							<td> <b>аэрационная усановка</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Способ очищения воды</td>
-																							<td> <b>принудительный</b></td>
-																						</tr>
-																					</table>
-																					<div class="product-popup__items"> 
-																						<div class="product-popup__items-row"> 
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-printer">
-																										<use xlink:href="img/sprite.svg#printer"></use>
-																									</svg></span>Распечатать</div>
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-links">
-																										<use xlink:href="img/sprite.svg#links"></use>
-																									</svg></span>Поделится</div>
+																<div class="modal fade" id="productPopup_7">
+																	<div class="modal-dialog modal-dialog--full">
+																		<div class="modal-content">
+																			<div class="modal-close" data-bs-dismiss="modal"></div>
+																			<div class="product-popup">
+																				<div class="product-popup__slider"> 
+																					<div class="sliderProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
 																						</div>
 																					</div>
-																					<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																					<div class="thumbProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="product-popup__block"> 
-																					<div class="product-popup__stars"> </div>
+																				<div class="product-popup__content"> 
+																					<div class="title">Септик Юнилос</div>
+																					<div class="product-popup__row"> 
+																						<div class="product-popup__info"> 
+																							<div class="product-popup__art">Артикул 234 454</div>
+																							<div class="product-popup__title">Модификации</div>
+																							<div class="product-popup__version"> </div>
+																							<table class="product-popup__table"> 
+																								<tr> 
+																									<td>Количество пользователей </td>
+																									<td> <b>до 75 человек</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Производительность</td>
+																									<td> <b>до 12 м³ в сутки</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Тип очистного устройства</td>
+																									<td> <b>аэрационная усановка</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Способ очищения воды</td>
+																									<td> <b>принудительный</b></td>
+																								</tr>
+																							</table>
+																							<div class="product-popup__items"> 
+																								<div class="product-popup__items-row"> 
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-printer">
+																												<use xlink:href="img/sprite.svg#printer"></use>
+																											</svg></span>Распечатать</div>
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-links">
+																												<use xlink:href="img/sprite.svg#links"></use>
+																											</svg></span>Поделится</div>
+																								</div>
+																							</div>
+																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																						</div>
+																						<div class="product-popup__block"> 
+																							<div class="product-popup__stars"> </div>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -2852,7 +2923,8 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
-																<div class="product-card"><a class="product-card__img js-open-popup" href="#productPopup_8"> <img src="img/products/img2.jpg" alt="">
+																<div class="product-card">
+																	<div class="product-card__img"><img src="img/products/img2.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
@@ -2873,7 +2945,9 @@
 																			<svg class="icon-eye">
 																				<use xlink:href="img/sprite.svg#eye"></use>
 																			</svg><span>Быстрый просмотр</span>
-																		</div></a>
+																		</div>
+																		<div class="product-card__open-popup" data-bs-toggle="modal" data-bs-target="#productPopup_8"></div>
+																	</div>
 																	<div class="product-card__content"> 
 																		<div class="product-card__description"> 
 																			<div class="product-card__head"> 
@@ -2917,89 +2991,94 @@
 																	</div>
 																</div>
 																<!-- product-popup-->
-																<div class="popup popup--full mfp-hide" id="productPopup_8">
-																	<div class="product-popup">
-																		<div class="product-popup__slider"> 
-																			<div class="sliderProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="thumbProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="product-popup__content"> 
-																			<div class="title">Септик Юнилос</div>
-																			<div class="product-popup__row"> 
-																				<div class="product-popup__info"> 
-																					<div class="product-popup__art">Артикул 234 454</div>
-																					<div class="product-popup__title">Модификации</div>
-																					<div class="product-popup__version"> </div>
-																					<table class="product-popup__table"> 
-																						<tr> 
-																							<td>Количество пользователей </td>
-																							<td> <b>до 75 человек</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Производительность</td>
-																							<td> <b>до 12 м³ в сутки</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Тип очистного устройства</td>
-																							<td> <b>аэрационная усановка</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Способ очищения воды</td>
-																							<td> <b>принудительный</b></td>
-																						</tr>
-																					</table>
-																					<div class="product-popup__items"> 
-																						<div class="product-popup__items-row"> 
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-printer">
-																										<use xlink:href="img/sprite.svg#printer"></use>
-																									</svg></span>Распечатать</div>
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-links">
-																										<use xlink:href="img/sprite.svg#links"></use>
-																									</svg></span>Поделится</div>
+																<div class="modal fade" id="productPopup_8">
+																	<div class="modal-dialog modal-dialog--full">
+																		<div class="modal-content">
+																			<div class="modal-close" data-bs-dismiss="modal"></div>
+																			<div class="product-popup">
+																				<div class="product-popup__slider"> 
+																					<div class="sliderProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
 																						</div>
 																					</div>
-																					<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																					<div class="thumbProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="product-popup__block"> 
-																					<div class="product-popup__stars"> </div>
+																				<div class="product-popup__content"> 
+																					<div class="title">Септик Юнилос</div>
+																					<div class="product-popup__row"> 
+																						<div class="product-popup__info"> 
+																							<div class="product-popup__art">Артикул 234 454</div>
+																							<div class="product-popup__title">Модификации</div>
+																							<div class="product-popup__version"> </div>
+																							<table class="product-popup__table"> 
+																								<tr> 
+																									<td>Количество пользователей </td>
+																									<td> <b>до 75 человек</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Производительность</td>
+																									<td> <b>до 12 м³ в сутки</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Тип очистного устройства</td>
+																									<td> <b>аэрационная усановка</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Способ очищения воды</td>
+																									<td> <b>принудительный</b></td>
+																								</tr>
+																							</table>
+																							<div class="product-popup__items"> 
+																								<div class="product-popup__items-row"> 
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-printer">
+																												<use xlink:href="img/sprite.svg#printer"></use>
+																											</svg></span>Распечатать</div>
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-links">
+																												<use xlink:href="img/sprite.svg#links"></use>
+																											</svg></span>Поделится</div>
+																								</div>
+																							</div>
+																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																						</div>
+																						<div class="product-popup__block"> 
+																							<div class="product-popup__stars"> </div>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -3008,7 +3087,8 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
-																<div class="product-card"><a class="product-card__img js-open-popup" href="#productPopup_9"> <img src="img/products/img3.jpg" alt="">
+																<div class="product-card">
+																	<div class="product-card__img"><img src="img/products/img3.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
@@ -3029,7 +3109,9 @@
 																			<svg class="icon-eye">
 																				<use xlink:href="img/sprite.svg#eye"></use>
 																			</svg><span>Быстрый просмотр</span>
-																		</div></a>
+																		</div>
+																		<div class="product-card__open-popup" data-bs-toggle="modal" data-bs-target="#productPopup_9"></div>
+																	</div>
 																	<div class="product-card__content"> 
 																		<div class="product-card__description"> 
 																			<div class="product-card__head"> 
@@ -3073,89 +3155,94 @@
 																	</div>
 																</div>
 																<!-- product-popup-->
-																<div class="popup popup--full mfp-hide" id="productPopup_9">
-																	<div class="product-popup">
-																		<div class="product-popup__slider"> 
-																			<div class="sliderProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="thumbProductPopup"> 
-																				<div class="swiper-wrapper"> 
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
-																					</div>
-																					<div class="swiper-slide"> 
-																						<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="product-popup__content"> 
-																			<div class="title">Септик Юнилос</div>
-																			<div class="product-popup__row"> 
-																				<div class="product-popup__info"> 
-																					<div class="product-popup__art">Артикул 234 454</div>
-																					<div class="product-popup__title">Модификации</div>
-																					<div class="product-popup__version"> </div>
-																					<table class="product-popup__table"> 
-																						<tr> 
-																							<td>Количество пользователей </td>
-																							<td> <b>до 75 человек</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Производительность</td>
-																							<td> <b>до 12 м³ в сутки</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Тип очистного устройства</td>
-																							<td> <b>аэрационная усановка</b></td>
-																						</tr>
-																						<tr> 
-																							<td>Способ очищения воды</td>
-																							<td> <b>принудительный</b></td>
-																						</tr>
-																					</table>
-																					<div class="product-popup__items"> 
-																						<div class="product-popup__items-row"> 
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-printer">
-																										<use xlink:href="img/sprite.svg#printer"></use>
-																									</svg></span>Распечатать</div>
-																							<div class="product-popup__item"> <span> 
-																									<svg class="icon-links">
-																										<use xlink:href="img/sprite.svg#links"></use>
-																									</svg></span>Поделится</div>
+																<div class="modal fade" id="productPopup_9">
+																	<div class="modal-dialog modal-dialog--full">
+																		<div class="modal-content">
+																			<div class="modal-close" data-bs-dismiss="modal"></div>
+																			<div class="product-popup">
+																				<div class="product-popup__slider"> 
+																					<div class="sliderProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__img"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
 																						</div>
 																					</div>
-																					<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																					<div class="thumbProductPopup"> 
+																						<div class="swiper-wrapper"> 
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img1.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img2.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img3.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img4.jpg" alt=""></div>
+																							</div>
+																							<div class="swiper-slide"> 
+																								<div class="product-popup__thumb"> <img src="img/products/img5.jpg" alt=""></div>
+																							</div>
+																						</div>
+																					</div>
 																				</div>
-																				<div class="product-popup__block"> 
-																					<div class="product-popup__stars"> </div>
+																				<div class="product-popup__content"> 
+																					<div class="title">Септик Юнилос</div>
+																					<div class="product-popup__row"> 
+																						<div class="product-popup__info"> 
+																							<div class="product-popup__art">Артикул 234 454</div>
+																							<div class="product-popup__title">Модификации</div>
+																							<div class="product-popup__version"> </div>
+																							<table class="product-popup__table"> 
+																								<tr> 
+																									<td>Количество пользователей </td>
+																									<td> <b>до 75 человек</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Производительность</td>
+																									<td> <b>до 12 м³ в сутки</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Тип очистного устройства</td>
+																									<td> <b>аэрационная усановка</b></td>
+																								</tr>
+																								<tr> 
+																									<td>Способ очищения воды</td>
+																									<td> <b>принудительный</b></td>
+																								</tr>
+																							</table>
+																							<div class="product-popup__items"> 
+																								<div class="product-popup__items-row"> 
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-printer">
+																												<use xlink:href="img/sprite.svg#printer"></use>
+																											</svg></span>Распечатать</div>
+																									<div class="product-popup__item"> <span> 
+																											<svg class="icon-links">
+																												<use xlink:href="img/sprite.svg#links"></use>
+																											</svg></span>Поделится</div>
+																								</div>
+																							</div>
+																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
+																						</div>
+																						<div class="product-popup__block"> 
+																							<div class="product-popup__stars"> </div>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
 																		</div>
@@ -4252,6 +4339,7 @@
 		</div>
 		<script src="js/jquery.min.js"> </script>
 		<script src="js/plugins/jquery.inputmask.min.js"></script>
+		<script src="js/plugins/bootstrap.bundle.min.js"> </script>
 		<script src="js/plugins/swiper-bundle.min.js"> </script>
 		<script src="js/plugins/select2.full.js"> </script>
 		<script src="js/plugins/jquery.magnific-popup.min.js"> </script>

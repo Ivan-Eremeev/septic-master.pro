@@ -79,7 +79,7 @@ header#headerSticky.header
           .header__menu-close.js-drop-close(data-drop="menuMobile").d-block.d-md-none
           ul.header__menu-list 
             li.header__menu-item 
-              a(href="#popupCalc").header__menu-link.js-open-popup.js-drop-close(data-drop="menuMobile") Рассчитать стоимость
+              .header__menu-link(data-bs-toggle="modal" data-bs-target="#popupCalc") Рассчитать стоимость
             li.header__menu-item.d-block.d-lg-none
               a(href="#").header__menu-link.js-menu-toggle Виды септиков
                 svg(class="icon-arrow")
@@ -316,113 +316,116 @@ header#headerSticky.header
 //	/header
 
 // popup-calc
-#popupCalc.popup.popup--full.mfp-hide
-  .popup-calc 
-    .title Рассчитать стоимость
-    form(action="#").calc__container 
-      .calc__top 
-        .row.gy-3
-        
-          .col-xxl-3.col-md-6.order-xxl-1.order-md-1
-            .calc__title Основные параметры
-            .calc__row 
-              .calc__text Количество жильцов
-              .input
-                input(type="number") 
-            .calc__row 
-              .calc__text Тип грунта
-              .select 
-                select
-                  option(value="#") Песок
-                  option(value="#") Глина
-            .calc__row 
-              .calc__text Глубина залегания канал. трубы, до (см)
-              .input
-                input(type="number") 
-            .calc__row 
-              .calc__text Выброс очищенных вод из септика
-              .select 
-                select
-                  option(value="#") Самотечная
-                  option(value="#") Напорная
-
-          .col-xxl-6.order-xxl-2.order-md-3
-            .calc__group 
-              .calc__title Сантехнические работы
-              .row
-                .col-md-6
-                  .calc__row 
-                    .calc__text Ванная (220л)
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Раковина (30 л.)
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Джакузи (400 л.)
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Биде (5 л.):
-                    .input
-                      input(type="number") 
-                .col-md-6
-                  .calc__row 
-                    .calc__text Стиральная машина (50 л.):
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Посудомоечная машина (20 л.):
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Унитаз (10 л.):
-                    .input
-                      input(type="number") 
-                  .calc__row 
-                    .calc__text Душ (60 л.):
-                    .input
-                      input(type="number") 
+.modal.modal--full.fade#popupCalc
+  .modal-dialog.modal-dialog--full
+    .modal-content
+      .modal-close(data-bs-dismiss="modal")
+      .popup-calc 
+        .title Рассчитать стоимость
+        form(action="#").calc__container 
+          .calc__top 
+            .row.gy-3
             
-          .col-xxl-3.col-md-6.order-xxl-3.order-md-2
-            .calc__title.calc__title--mb20 Дополнительно
-            .calc__checkbox-row 
-              .checkbox 
-                label
-                  input(type="checkbox")
-                  span 
-                  .checkbox__text Высокий уровень грунтовых вод
-            .calc__checkbox-row 
-              .checkbox 
-                label
-                  input(type="checkbox")
-                  span 
-                  .checkbox__text Сезонное проживание
-            .calc__checkbox-row 
-              .checkbox 
-                label
-                  input(type="checkbox")
-                  span 
-                  .checkbox__text Премиум
-            .calc__checkbox-row 
-              .checkbox 
-                label
-                  input(type="checkbox")
-                  span 
-                  .checkbox__text Ультрафиолетовая очистка
+              .col-xxl-3.col-md-6.order-xxl-1.order-md-1
+                .calc__title Основные параметры
+                .calc__row 
+                  .calc__text Количество жильцов
+                  .input
+                    input(type="number") 
+                .calc__row 
+                  .calc__text Тип грунта
+                  .select.js-select--in-calc-modal
+                    select
+                      option(value="#") Песок
+                      option(value="#") Глина
+                .calc__row 
+                  .calc__text Глубина залегания канал. трубы, до (см)
+                  .input
+                    input(type="number") 
+                .calc__row 
+                  .calc__text Выброс очищенных вод из септика
+                  .select.js-select--in-calc-modal
+                    select
+                      option(value="#") Самотечная
+                      option(value="#") Напорная
 
-      .calc__bottom 
-        .row.gy-1.gx-1.gx-lg-3
-          .col-lg-3.col-md-6
-            .input.js-input-tel 
-              input(type="text" placeholder="Ваш телефон")
-          .col-lg-6.col-md-6
-            .textarea 
-              textarea(placeholder="Дополнительные сведения")
-          .col-lg-3.col-md-12
-            button(type="submit").btn.btn--big.btn--blue 
-              .btn__inner Подобрать
+              .col-xxl-6.order-xxl-2.order-md-3
+                .calc__group 
+                  .calc__title Сантехнические работы
+                  .row
+                    .col-md-6
+                      .calc__row 
+                        .calc__text Ванная (220л)
+                        .input
+                          input(type="number") 
+                      .calc__row 
+                        .calc__text Раковина (30 л.)
+                        .input
+                          input(type="number") 
+                      .calc__row 
+                        .calc__text Джакузи (400 л.)
+                        .input
+                          input(type="number") 
+                      .calc__row 
+                        .calc__text Биде (5 л.):
+                        .input
+                          input(type="number") 
+                    .col-md-6
+                      .calc__row 
+                        .calc__text Стиральная машина (50 л.):
+                        .input
+                          input(type="number") 
+                      .calc__row 
+                        .calc__text Посудомоечная машина (20 л.):
+                        .input
+                          input(type="number") 
+                      .calc__row 
+                        .calc__text Унитаз (10 л.):
+                        .input
+                          input(type="number") 
+                      .calc__row 
+                        .calc__text Душ (60 л.):
+                        .input
+                          input(type="number") 
+                
+              .col-xxl-3.col-md-6.order-xxl-3.order-md-2
+                .calc__title.calc__title--mb20 Дополнительно
+                .calc__checkbox-row 
+                  .checkbox 
+                    label
+                      input(type="checkbox")
+                      span 
+                      .checkbox__text Высокий уровень грунтовых вод
+                .calc__checkbox-row 
+                  .checkbox 
+                    label
+                      input(type="checkbox")
+                      span 
+                      .checkbox__text Сезонное проживание
+                .calc__checkbox-row 
+                  .checkbox 
+                    label
+                      input(type="checkbox")
+                      span 
+                      .checkbox__text Премиум
+                .calc__checkbox-row 
+                  .checkbox 
+                    label
+                      input(type="checkbox")
+                      span 
+                      .checkbox__text Ультрафиолетовая очистка
+
+          .calc__bottom 
+            .row.gy-1.gx-1.gx-lg-3
+              .col-lg-3.col-md-6
+                .input.js-input-tel 
+                  input(type="text" placeholder="Ваш телефон")
+              .col-lg-6.col-md-6
+                .textarea 
+                  textarea(placeholder="Дополнительные сведения")
+              .col-lg-3.col-md-12
+                button(type="submit").btn.btn--big.btn--blue 
+                  .btn__inner Подобрать
 // /popup-calc
 
 // popup-offer
