@@ -10189,6 +10189,7 @@ input[type=number]:focus {
 }
 .portfolio__slider {
   position: relative;
+  margin-bottom: 30px;
 }
 .portfolio__slider #sliderPortfolio {
   overflow: hidden;
@@ -10273,6 +10274,9 @@ input[type=number]:focus {
   .portfolio .title {
     margin-bottom: 20px;
   }
+  .portfolio__slider {
+    margin-bottom: 0;
+  }
   .portfolio__grid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10287,6 +10291,9 @@ input[type=number]:focus {
   .portfolio__pagination {
     display: block;
     bottom: -32px !important;
+  }
+  .portfolio__btn {
+    display: none;
   }
 }
 @media (max-width: 575.98px) {
