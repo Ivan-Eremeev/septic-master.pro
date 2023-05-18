@@ -539,9 +539,9 @@ block content
                     p Приведи друга и получи скидку!
                   form(action="#").discount__popup-form 
                     .input.js-input-tel
-                      input(type="num" placeholder="Введите номер")
+                      input(type="text" placeholder="Введите номер")
                     button(type="submit").btn.btn--big.btn--blue
-                      .btn__inner Получить
+                      span.btn__inner Получить
         .modal.fade#discountPopup_1
           .modal-dialog.modal-dialog--w810.modal-dialog-centered
             .modal-content
@@ -561,9 +561,9 @@ block content
                       li Написать номер договора.
                   form(action="#").discount__popup-form 
                     .input.js-input-tel
-                      input(type="num" placeholder="Введите номер")
+                      input(type="text" placeholder="Введите номер")
                     button(type="submit").btn.btn--big.btn--blue
-                      .btn__inner Получить
+                      span.btn__inner Получить
         .modal.fade#discountPopup_2
           .modal-dialog.modal-dialog--w810.modal-dialog-centered
             .modal-content
@@ -578,9 +578,9 @@ block content
                     p Подробнее у менеджеров
                   form(action="#").discount__popup-form 
                     .input.js-input-tel
-                      input(type="num" placeholder="Введите номер")
+                      input(type="text" placeholder="Введите номер")
                     button(type="submit").btn.btn--big.btn--blue
-                      .btn__inner Получить
+                      span.btn__inner Получить
         .modal.fade#discountPopup_3
           .modal-dialog.modal-dialog--w810.modal-dialog-centered
             .modal-content
@@ -594,9 +594,9 @@ block content
                     p После понимания объема работ возможно получить дополнительную скидку. Чем больше объёмы работ тем больше скидка!
                   form(action="#").discount__popup-form 
                     .input.js-input-tel
-                      input(type="num" placeholder="Введите номер")
+                      input(type="text" placeholder="Введите номер")
                     button(type="submit").btn.btn--big.btn--blue
-                      .btn__inner Получить
+                      span.btn__inner Получить
         .modal.fade#discountPopup_4
           .modal-dialog.modal-dialog--w810.modal-dialog-centered
             .modal-content
@@ -610,9 +610,9 @@ block content
                     p При покупки и установке септика под ключ
                   form(action="#").discount__popup-form 
                     .input.js-input-tel
-                      input(type="num" placeholder="Введите номер")
+                      input(type="text" placeholder="Введите номер")
                     button(type="submit").btn.btn--big.btn--blue
-                      .btn__inner Получить
+                      span.btn__inner Получить
         .modal.fade#discountPopup_5
           .modal-dialog.modal-dialog--w810.modal-dialog-centered
             .modal-content
@@ -626,9 +626,9 @@ block content
                     p Аварийная сигнализация устанавливается бесплатно при заказе монтажа септика под ключ.
                   form(action="#").discount__popup-form 
                     .input.js-input-tel
-                      input(type="num" placeholder="Введите номер")
+                      input(type="text" placeholder="Введите номер")
                     button(type="submit").btn.btn--big.btn--blue
-                      .btn__inner Получить
+                      span.btn__inner Получить
       // /discount
 
       // types
@@ -773,26 +773,26 @@ block content
                     .checkbox 
                       label
                         input(type="checkbox")
-                        span 
-                        .checkbox__text Высокий уровень грунтовых вод
+                        span.checkbox__rectangle
+                        span.checkbox__text Высокий уровень грунтовых вод
                   .calc__checkbox-row 
                     .checkbox 
                       label
                         input(type="checkbox")
-                        span 
-                        .checkbox__text Сезонное проживание
+                        span.checkbox__rectangle
+                        span.checkbox__text Сезонное проживание
                   .calc__checkbox-row 
                     .checkbox 
                       label
                         input(type="checkbox")
-                        span 
-                        .checkbox__text Премиум
+                        span.checkbox__rectangle
+                        span.checkbox__text Премиум
                   .calc__checkbox-row 
                     .checkbox 
                       label
                         input(type="checkbox")
-                        span 
-                        .checkbox__text Ультрафиолетовая очистка
+                        span.checkbox__rectangle
+                        span.checkbox__text Ультрафиолетовая очистка
 
             .calc__bottom 
               .row.gy-1.gx-1.gx-lg-3
@@ -804,7 +804,7 @@ block content
                     textarea(placeholder="Дополнительные сведения")
                 .col-lg-3.col-md-12
                   button(type="submit").btn.btn--big.btn--blue 
-                    .btn__inner Подобрать
+                    span.btn__inner Подобрать
       // /calc
 
       // banner

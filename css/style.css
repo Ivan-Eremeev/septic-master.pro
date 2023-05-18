@@ -6995,7 +6995,7 @@ input[type=number]:focus {
   -ms-user-select: none;
   user-select: none;
 }
-.checkbox span {
+.checkbox__rectangle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7014,7 +7014,7 @@ input[type=number]:focus {
   border: 1px solid #A4B0CE;
   border-radius: 2px;
 }
-.checkbox span:after {
+.checkbox__rectangle:after {
   content: "";
   display: block;
   width: 14px;
@@ -7024,7 +7024,7 @@ input[type=number]:focus {
   background-size: contain;
 }
 @media (min-width: 769px) {
-  .checkbox span:hover {
+  .checkbox__rectangle:hover {
     border-color: #42A1FC;
   }
 }
@@ -7032,12 +7032,12 @@ input[type=number]:focus {
   position: absolute;
   visibility: hidden;
 }
-.checkbox input:checked ~ span {
+.checkbox input:checked ~ .checkbox__rectangle {
   background-color: #0383FD;
   border-color: #0383FD;
 }
 @media (min-width: 769px) {
-  .checkbox input:checked ~ span:hover {
+  .checkbox input:checked ~ .checkbox__rectangle:hover {
     background-color: #42A1FC;
     border-color: #42A1FC;
   }

@@ -7,7 +7,7 @@
     cursor: pointer;
     user-select: none;
   }
-  span {
+  &__rectangle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@
     position: absolute;
     visibility: hidden;
     &:checked {
-      ~ span {
+      ~ .checkbox__rectangle {
         background-color: $accent_color;
         border-color: $accent_color;
         @include media-breakpoint-up(md) {
