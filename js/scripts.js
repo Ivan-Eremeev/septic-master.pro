@@ -540,9 +540,11 @@ window.onload = function () {
             let scrollbarWidth = windowsWidth - documentWidth;
             $('.header').css('padding-right', scrollbarWidth);
           }
+          $('body').addClass('lock');
         },
         close: function () {
           $('.header').css('padding-right', 0);
+          $('body').removeClass('lock');
         }
       }
     });
