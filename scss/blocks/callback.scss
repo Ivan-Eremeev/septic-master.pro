@@ -94,11 +94,9 @@
       height: 132px;
     }
     &__approval {
-      .checkbox {
-        span {
-          width: 18px;
-          height: 18px;
-        }
+      .checkbox__rectangle {
+        width: 18px;
+        height: 18px;
       }
       .checkbox__text {
         font-size: 13px;

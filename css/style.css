@@ -10696,7 +10696,7 @@ input[type=number]:focus {
   .callback .textarea {
     height: 132px;
   }
-  .callback__approval .checkbox span {
+  .callback__approval .checkbox__rectangle {
     width: 18px;
     height: 18px;
   }
