@@ -1,10 +1,12 @@
 mixin product-card(imgUrl, id)
+  // product-card
   .product-card
     .product-card__img
       img(src= imgUrl, alt="")
       .product-card__stickers 
         .product-card__sticker.product-card__sticker--yellow Распродажа 
         .product-card__sticker.product-card__sticker--red Хит
+        .product-card__sticker.product-card__sticker--blue Новинка
       form(action="#").product-card__operations 
         .product-card__operations-icon.product-card__operations-icon--compare
           label 
@@ -54,6 +56,7 @@ mixin product-card(imgUrl, id)
         a(href="#").btn.btn--small.btn--blue 
           .btn__inner Заказать с установкой
         a(href="#").product-card__buy Купить
+  // /product-card
 
   // product-popup
   .modal.fade(id= id)
@@ -62,6 +65,10 @@ mixin product-card(imgUrl, id)
         .modal-close(data-bs-dismiss="modal")
         .product-popup
           .product-popup__slider 
+            .product-popup__stickers 
+              .product-card__sticker.product-card__sticker--yellow Распродажа 
+              .product-card__sticker.product-card__sticker--red Хит
+              .product-card__sticker.product-card__sticker--blue Новинка
             .sliderProductPopup 
               .swiper-wrapper 
                 .swiper-slide 
@@ -103,6 +110,20 @@ mixin product-card(imgUrl, id)
                 .product-popup__art Артикул 234 454
                 .product-popup__title Модификации
                 .product-popup__version 
+                  .product-popup__slider-arrow.product-popup__slider-arrow--prev.swiper-button-prev
+                  .sliderVersion
+                    .swiper-wrapper 
+                      .swiper-slide 
+                        .product-popup__version-item Евролос ПРО 30
+                      .swiper-slide 
+                        .product-popup__version-item Евролос ПРО 20
+                      .swiper-slide 
+                        .product-popup__version-item Евролос ПРО
+                      .swiper-slide 
+                        .product-popup__version-item Евролос ПРО 10
+                      .swiper-slide 
+                        .product-popup__version-item Евролос ПРО 40
+                  .product-popup__slider-arrow.product-popup__slider-arrow--next.swiper-button-next
                 table.product-popup__table  
                   tr  
                     td Количество пользователей 
@@ -135,6 +156,55 @@ mixin product-card(imgUrl, id)
                 .product-popup__more 
                   a(href="#").btn.btn--big.btn--blue-border Детальнее в карточке товара
               .product-popup__block 
-                .product-popup__stars 
-              
+                .product-popup__block-top
+                  .product-popup__stars 
+                    .product-popup__stars-icon.product-popup__stars-icon--fill 
+                    .product-popup__stars-icon.product-popup__stars-icon--fill 
+                    .product-popup__stars-icon.product-popup__stars-icon--fill 
+                    .product-popup__stars-icon.product-popup__stars-icon--fill 
+                    .product-popup__stars-icon
+                  .product-popup__prices 
+                    .product-popup__price 420 290 ₽
+                    .product-popup__price-old 542 290 ₽
+                  .product-popup__install 
+                    .product-popup__install-price от 80 290 ₽
+                    .product-popup__install-item 
+                      svg(class="icon-info")
+                        use(xlink:href="img/sprite.svg#info")
+                      | монтаж под ключ
+                  .product-popup__operations 
+                    .product-popup__operations-item.product-popup__operations-item--compare 
+                      label
+                        input(type="checkbox")
+                        span 
+                        | К сравнению
+                    .product-popup__operations-item.product-popup__operations-item--favorite
+                      label
+                        input(type="checkbox")
+                        span 
+                        | В избранное
+                  .product-popup__buttons 
+                    button.btn.btn--big.btn--blue 
+                      .btn__inner Заказать с установкой
+                    a(href="#").product-popup__link Купить
+                  .product-popup__delivery 
+                    svg(class="icon-pack")
+                      use(xlink:href="img/sprite.svg#pack")
+                    | Доставим и установим <br>ориентировочно 2 мая
+                ul.product-popup__block-bottom 
+                  li 
+                    svg(class="icon-percent")
+                      use(xlink:href="img/sprite.svg#percent")
+                    | Кредит от 
+                    b 33 291 Р/мес
+                  li 
+                    svg(class="icon-percent")
+                      use(xlink:href="img/sprite.svg#percent")
+                    | Рассрочка от 
+                    b 17 131 Р/мес
+                  li 
+                    a(href="#") 
+                      svg(class="icon-p")
+                        use(xlink:href="img/sprite.svg#p")
+                      | Нашли дешевле?
   // /product-popup

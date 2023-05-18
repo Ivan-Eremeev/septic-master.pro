@@ -191,6 +191,7 @@
     top: 9px;
     left: 9px;
     z-index: 2;
+    pointer-events: none;
   }
   &__sticker {
     padding: 8px 10px;
@@ -205,6 +206,10 @@
     }
     &--red {
       background-color: $red_color;
+      color: #fff;
+    }
+    &--blue {
+      background-color: #67B5FF;
       color: #fff;
     }
   }

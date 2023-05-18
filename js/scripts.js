@@ -500,20 +500,37 @@ window.onload = function () {
     });
   }
 
-  // Swiper | Слайдер в попап окне товара
-  const Swipers = Array.from(document.querySelectorAll('.product-popup__slider'), n => {
-    const thumbProductPopup = new Swiper(n.querySelector('.thumbProductPopup'), {
-      spaceBetween: 20,
-      slidesPerView: 4,
-      watchSlidesProgress: true,
+  // Swiper | Слайдер галлерея в попап окне товара
+  if ($('.product-popup__slider').length) {
+    const Swipers = Array.from(document.querySelectorAll('.product-popup__slider'), n => {
+      const thumbProductPopup = new Swiper(n.querySelector('.thumbProductPopup'), {
+        spaceBetween: 20,
+        slidesPerView: 4,
+        watchSlidesProgress: true,
+      });
+      const sliderProductPopup = new Swiper(n.querySelector('.sliderProductPopup'), {
+        spaceBetween: 20,
+        thumbs: {
+          swiper: thumbProductPopup,
+        },
+      });
     });
-    const sliderProductPopup = new Swiper(n.querySelector('.sliderProductPopup'), {
-      spaceBetween: 20,
-      thumbs: {
-        swiper: thumbProductPopup,
-      },
+  }
+
+  // Swiper | Слайдер версии в попап окне товара
+  if ($('.product-popup__version').length) {
+    const productPopupVersion  = Array.from(document.querySelectorAll('.product-popup__version '), n => {
+      const sliderVersion = new Swiper(n.querySelector('.sliderVersion'), {
+        slidesPerView:  'auto',
+        spaceBetween: 8,
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: n.querySelector('.product-popup__slider-arrow--next'),
+          prevEl: n.querySelector('.product-popup__slider-arrow--prev'),
+        },
+      });
     });
-  });
+  }
 
   // Select2 | Стилизация селектов
   $('.select select').select2({

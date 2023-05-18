@@ -1623,11 +1623,13 @@
 						<div class="popular__cards"> 
 							<div class="row row-cols-xxl-5 row-cols-xl-4 row-cols-md-3 row-cols-2">
 								<div class="col">
+																<!-- product-card-->
 																<div class="product-card">
 																	<div class="product-card__img"><img src="img/products/img1.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																			<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
 																		</div>
 																		<form class="product-card__operations" action="#"> 
 																			<div class="product-card__operations-icon product-card__operations-icon--compare">
@@ -1690,6 +1692,7 @@
 																				<div class="btn__inner">Заказать с установкой</div></a><a class="product-card__buy" href="#">Купить</a></div>
 																	</div>
 																</div>
+																<!-- /product-card-->
 																<!-- product-popup-->
 																<div class="modal fade" id="productPopup_0">
 																	<div class="modal-dialog modal-dialog--full">
@@ -1697,6 +1700,11 @@
 																			<div class="modal-close" data-bs-dismiss="modal"></div>
 																			<div class="product-popup">
 																				<div class="product-popup__slider"> 
+																					<div class="product-popup__stickers"> 
+																						<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
+																						<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																						<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
+																					</div>
 																					<div class="sliderProductPopup"> 
 																						<div class="swiper-wrapper"> 
 																							<div class="swiper-slide"> 
@@ -1742,7 +1750,29 @@
 																						<div class="product-popup__info"> 
 																							<div class="product-popup__art">Артикул 234 454</div>
 																							<div class="product-popup__title">Модификации</div>
-																							<div class="product-popup__version"> </div>
+																							<div class="product-popup__version"> 
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--prev swiper-button-prev"></div>
+																								<div class="sliderVersion">
+																									<div class="swiper-wrapper"> 
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 30</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 20</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 10</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 40</div>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--next swiper-button-next"></div>
+																							</div>
 																							<table class="product-popup__table"> 
 																								<tr> 
 																									<td>Количество пользователей </td>
@@ -1776,7 +1806,65 @@
 																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
 																						</div>
 																						<div class="product-popup__block"> 
-																							<div class="product-popup__stars"> </div>
+																							<div class="product-popup__block-top">
+																								<div class="product-popup__stars"> 
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon"></div>
+																								</div>
+																								<div class="product-popup__prices"> 
+																									<div class="product-popup__price">420 290 ₽</div>
+																									<div class="product-popup__price-old">542 290 ₽</div>
+																								</div>
+																								<div class="product-popup__install"> 
+																									<div class="product-popup__install-price">от 80 290 ₽</div>
+																									<div class="product-popup__install-item"> 
+																										<svg class="icon-info">
+																											<use xlink:href="img/sprite.svg#info"></use>
+																										</svg>монтаж под ключ
+																									</div>
+																								</div>
+																								<div class="product-popup__operations"> 
+																									<div class="product-popup__operations-item product-popup__operations-item--compare"> 
+																										<label>
+																											<input type="checkbox"><span> </span>К сравнению
+																										</label>
+																									</div>
+																									<div class="product-popup__operations-item product-popup__operations-item--favorite">
+																										<label>
+																											<input type="checkbox"><span> </span>В избранное
+																										</label>
+																									</div>
+																								</div>
+																								<div class="product-popup__buttons"> 
+																									<button class="btn btn--big btn--blue"> 
+																										<div class="btn__inner">Заказать с установкой</div>
+																									</button><a class="product-popup__link" href="#">Купить</a>
+																								</div>
+																								<div class="product-popup__delivery"> 
+																									<svg class="icon-pack">
+																										<use xlink:href="img/sprite.svg#pack"></use>
+																									</svg>Доставим и установим <br>ориентировочно 2 мая
+																								</div>
+																							</div>
+																							<ul class="product-popup__block-bottom"> 
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Кредит от <b>33 291 Р/мес</b>
+																								</li>
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Рассрочка от <b>17 131 Р/мес</b>
+																								</li>
+																								<li> <a href="#"> 
+																										<svg class="icon-p">
+																											<use xlink:href="img/sprite.svg#p"></use>
+																										</svg>Нашли дешевле?</a></li>
+																							</ul>
 																						</div>
 																					</div>
 																				</div>
@@ -1787,11 +1875,13 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col">
+																<!-- product-card-->
 																<div class="product-card">
 																	<div class="product-card__img"><img src="img/products/img2.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																			<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
 																		</div>
 																		<form class="product-card__operations" action="#"> 
 																			<div class="product-card__operations-icon product-card__operations-icon--compare">
@@ -1854,6 +1944,7 @@
 																				<div class="btn__inner">Заказать с установкой</div></a><a class="product-card__buy" href="#">Купить</a></div>
 																	</div>
 																</div>
+																<!-- /product-card-->
 																<!-- product-popup-->
 																<div class="modal fade" id="productPopup_1">
 																	<div class="modal-dialog modal-dialog--full">
@@ -1861,6 +1952,11 @@
 																			<div class="modal-close" data-bs-dismiss="modal"></div>
 																			<div class="product-popup">
 																				<div class="product-popup__slider"> 
+																					<div class="product-popup__stickers"> 
+																						<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
+																						<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																						<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
+																					</div>
 																					<div class="sliderProductPopup"> 
 																						<div class="swiper-wrapper"> 
 																							<div class="swiper-slide"> 
@@ -1906,7 +2002,29 @@
 																						<div class="product-popup__info"> 
 																							<div class="product-popup__art">Артикул 234 454</div>
 																							<div class="product-popup__title">Модификации</div>
-																							<div class="product-popup__version"> </div>
+																							<div class="product-popup__version"> 
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--prev swiper-button-prev"></div>
+																								<div class="sliderVersion">
+																									<div class="swiper-wrapper"> 
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 30</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 20</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 10</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 40</div>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--next swiper-button-next"></div>
+																							</div>
 																							<table class="product-popup__table"> 
 																								<tr> 
 																									<td>Количество пользователей </td>
@@ -1940,7 +2058,65 @@
 																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
 																						</div>
 																						<div class="product-popup__block"> 
-																							<div class="product-popup__stars"> </div>
+																							<div class="product-popup__block-top">
+																								<div class="product-popup__stars"> 
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon"></div>
+																								</div>
+																								<div class="product-popup__prices"> 
+																									<div class="product-popup__price">420 290 ₽</div>
+																									<div class="product-popup__price-old">542 290 ₽</div>
+																								</div>
+																								<div class="product-popup__install"> 
+																									<div class="product-popup__install-price">от 80 290 ₽</div>
+																									<div class="product-popup__install-item"> 
+																										<svg class="icon-info">
+																											<use xlink:href="img/sprite.svg#info"></use>
+																										</svg>монтаж под ключ
+																									</div>
+																								</div>
+																								<div class="product-popup__operations"> 
+																									<div class="product-popup__operations-item product-popup__operations-item--compare"> 
+																										<label>
+																											<input type="checkbox"><span> </span>К сравнению
+																										</label>
+																									</div>
+																									<div class="product-popup__operations-item product-popup__operations-item--favorite">
+																										<label>
+																											<input type="checkbox"><span> </span>В избранное
+																										</label>
+																									</div>
+																								</div>
+																								<div class="product-popup__buttons"> 
+																									<button class="btn btn--big btn--blue"> 
+																										<div class="btn__inner">Заказать с установкой</div>
+																									</button><a class="product-popup__link" href="#">Купить</a>
+																								</div>
+																								<div class="product-popup__delivery"> 
+																									<svg class="icon-pack">
+																										<use xlink:href="img/sprite.svg#pack"></use>
+																									</svg>Доставим и установим <br>ориентировочно 2 мая
+																								</div>
+																							</div>
+																							<ul class="product-popup__block-bottom"> 
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Кредит от <b>33 291 Р/мес</b>
+																								</li>
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Рассрочка от <b>17 131 Р/мес</b>
+																								</li>
+																								<li> <a href="#"> 
+																										<svg class="icon-p">
+																											<use xlink:href="img/sprite.svg#p"></use>
+																										</svg>Нашли дешевле?</a></li>
+																							</ul>
 																						</div>
 																					</div>
 																				</div>
@@ -1951,11 +2127,13 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col">
+																<!-- product-card-->
 																<div class="product-card">
 																	<div class="product-card__img"><img src="img/products/img3.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																			<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
 																		</div>
 																		<form class="product-card__operations" action="#"> 
 																			<div class="product-card__operations-icon product-card__operations-icon--compare">
@@ -2018,6 +2196,7 @@
 																				<div class="btn__inner">Заказать с установкой</div></a><a class="product-card__buy" href="#">Купить</a></div>
 																	</div>
 																</div>
+																<!-- /product-card-->
 																<!-- product-popup-->
 																<div class="modal fade" id="productPopup_2">
 																	<div class="modal-dialog modal-dialog--full">
@@ -2025,6 +2204,11 @@
 																			<div class="modal-close" data-bs-dismiss="modal"></div>
 																			<div class="product-popup">
 																				<div class="product-popup__slider"> 
+																					<div class="product-popup__stickers"> 
+																						<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
+																						<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																						<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
+																					</div>
 																					<div class="sliderProductPopup"> 
 																						<div class="swiper-wrapper"> 
 																							<div class="swiper-slide"> 
@@ -2070,7 +2254,29 @@
 																						<div class="product-popup__info"> 
 																							<div class="product-popup__art">Артикул 234 454</div>
 																							<div class="product-popup__title">Модификации</div>
-																							<div class="product-popup__version"> </div>
+																							<div class="product-popup__version"> 
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--prev swiper-button-prev"></div>
+																								<div class="sliderVersion">
+																									<div class="swiper-wrapper"> 
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 30</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 20</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 10</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 40</div>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--next swiper-button-next"></div>
+																							</div>
 																							<table class="product-popup__table"> 
 																								<tr> 
 																									<td>Количество пользователей </td>
@@ -2104,7 +2310,65 @@
 																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
 																						</div>
 																						<div class="product-popup__block"> 
-																							<div class="product-popup__stars"> </div>
+																							<div class="product-popup__block-top">
+																								<div class="product-popup__stars"> 
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon"></div>
+																								</div>
+																								<div class="product-popup__prices"> 
+																									<div class="product-popup__price">420 290 ₽</div>
+																									<div class="product-popup__price-old">542 290 ₽</div>
+																								</div>
+																								<div class="product-popup__install"> 
+																									<div class="product-popup__install-price">от 80 290 ₽</div>
+																									<div class="product-popup__install-item"> 
+																										<svg class="icon-info">
+																											<use xlink:href="img/sprite.svg#info"></use>
+																										</svg>монтаж под ключ
+																									</div>
+																								</div>
+																								<div class="product-popup__operations"> 
+																									<div class="product-popup__operations-item product-popup__operations-item--compare"> 
+																										<label>
+																											<input type="checkbox"><span> </span>К сравнению
+																										</label>
+																									</div>
+																									<div class="product-popup__operations-item product-popup__operations-item--favorite">
+																										<label>
+																											<input type="checkbox"><span> </span>В избранное
+																										</label>
+																									</div>
+																								</div>
+																								<div class="product-popup__buttons"> 
+																									<button class="btn btn--big btn--blue"> 
+																										<div class="btn__inner">Заказать с установкой</div>
+																									</button><a class="product-popup__link" href="#">Купить</a>
+																								</div>
+																								<div class="product-popup__delivery"> 
+																									<svg class="icon-pack">
+																										<use xlink:href="img/sprite.svg#pack"></use>
+																									</svg>Доставим и установим <br>ориентировочно 2 мая
+																								</div>
+																							</div>
+																							<ul class="product-popup__block-bottom"> 
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Кредит от <b>33 291 Р/мес</b>
+																								</li>
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Рассрочка от <b>17 131 Р/мес</b>
+																								</li>
+																								<li> <a href="#"> 
+																										<svg class="icon-p">
+																											<use xlink:href="img/sprite.svg#p"></use>
+																										</svg>Нашли дешевле?</a></li>
+																							</ul>
 																						</div>
 																					</div>
 																				</div>
@@ -2115,11 +2379,13 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col">
+																<!-- product-card-->
 																<div class="product-card">
 																	<div class="product-card__img"><img src="img/products/img4.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																			<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
 																		</div>
 																		<form class="product-card__operations" action="#"> 
 																			<div class="product-card__operations-icon product-card__operations-icon--compare">
@@ -2182,6 +2448,7 @@
 																				<div class="btn__inner">Заказать с установкой</div></a><a class="product-card__buy" href="#">Купить</a></div>
 																	</div>
 																</div>
+																<!-- /product-card-->
 																<!-- product-popup-->
 																<div class="modal fade" id="productPopup_3">
 																	<div class="modal-dialog modal-dialog--full">
@@ -2189,6 +2456,11 @@
 																			<div class="modal-close" data-bs-dismiss="modal"></div>
 																			<div class="product-popup">
 																				<div class="product-popup__slider"> 
+																					<div class="product-popup__stickers"> 
+																						<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
+																						<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																						<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
+																					</div>
 																					<div class="sliderProductPopup"> 
 																						<div class="swiper-wrapper"> 
 																							<div class="swiper-slide"> 
@@ -2234,7 +2506,29 @@
 																						<div class="product-popup__info"> 
 																							<div class="product-popup__art">Артикул 234 454</div>
 																							<div class="product-popup__title">Модификации</div>
-																							<div class="product-popup__version"> </div>
+																							<div class="product-popup__version"> 
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--prev swiper-button-prev"></div>
+																								<div class="sliderVersion">
+																									<div class="swiper-wrapper"> 
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 30</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 20</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 10</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 40</div>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--next swiper-button-next"></div>
+																							</div>
 																							<table class="product-popup__table"> 
 																								<tr> 
 																									<td>Количество пользователей </td>
@@ -2268,7 +2562,65 @@
 																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
 																						</div>
 																						<div class="product-popup__block"> 
-																							<div class="product-popup__stars"> </div>
+																							<div class="product-popup__block-top">
+																								<div class="product-popup__stars"> 
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon"></div>
+																								</div>
+																								<div class="product-popup__prices"> 
+																									<div class="product-popup__price">420 290 ₽</div>
+																									<div class="product-popup__price-old">542 290 ₽</div>
+																								</div>
+																								<div class="product-popup__install"> 
+																									<div class="product-popup__install-price">от 80 290 ₽</div>
+																									<div class="product-popup__install-item"> 
+																										<svg class="icon-info">
+																											<use xlink:href="img/sprite.svg#info"></use>
+																										</svg>монтаж под ключ
+																									</div>
+																								</div>
+																								<div class="product-popup__operations"> 
+																									<div class="product-popup__operations-item product-popup__operations-item--compare"> 
+																										<label>
+																											<input type="checkbox"><span> </span>К сравнению
+																										</label>
+																									</div>
+																									<div class="product-popup__operations-item product-popup__operations-item--favorite">
+																										<label>
+																											<input type="checkbox"><span> </span>В избранное
+																										</label>
+																									</div>
+																								</div>
+																								<div class="product-popup__buttons"> 
+																									<button class="btn btn--big btn--blue"> 
+																										<div class="btn__inner">Заказать с установкой</div>
+																									</button><a class="product-popup__link" href="#">Купить</a>
+																								</div>
+																								<div class="product-popup__delivery"> 
+																									<svg class="icon-pack">
+																										<use xlink:href="img/sprite.svg#pack"></use>
+																									</svg>Доставим и установим <br>ориентировочно 2 мая
+																								</div>
+																							</div>
+																							<ul class="product-popup__block-bottom"> 
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Кредит от <b>33 291 Р/мес</b>
+																								</li>
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Рассрочка от <b>17 131 Р/мес</b>
+																								</li>
+																								<li> <a href="#"> 
+																										<svg class="icon-p">
+																											<use xlink:href="img/sprite.svg#p"></use>
+																										</svg>Нашли дешевле?</a></li>
+																							</ul>
 																						</div>
 																					</div>
 																				</div>
@@ -2279,11 +2631,13 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
+																<!-- product-card-->
 																<div class="product-card">
 																	<div class="product-card__img"><img src="img/products/img5.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																			<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
 																		</div>
 																		<form class="product-card__operations" action="#"> 
 																			<div class="product-card__operations-icon product-card__operations-icon--compare">
@@ -2346,6 +2700,7 @@
 																				<div class="btn__inner">Заказать с установкой</div></a><a class="product-card__buy" href="#">Купить</a></div>
 																	</div>
 																</div>
+																<!-- /product-card-->
 																<!-- product-popup-->
 																<div class="modal fade" id="productPopup_4">
 																	<div class="modal-dialog modal-dialog--full">
@@ -2353,6 +2708,11 @@
 																			<div class="modal-close" data-bs-dismiss="modal"></div>
 																			<div class="product-popup">
 																				<div class="product-popup__slider"> 
+																					<div class="product-popup__stickers"> 
+																						<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
+																						<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																						<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
+																					</div>
 																					<div class="sliderProductPopup"> 
 																						<div class="swiper-wrapper"> 
 																							<div class="swiper-slide"> 
@@ -2398,7 +2758,29 @@
 																						<div class="product-popup__info"> 
 																							<div class="product-popup__art">Артикул 234 454</div>
 																							<div class="product-popup__title">Модификации</div>
-																							<div class="product-popup__version"> </div>
+																							<div class="product-popup__version"> 
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--prev swiper-button-prev"></div>
+																								<div class="sliderVersion">
+																									<div class="swiper-wrapper"> 
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 30</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 20</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 10</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 40</div>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--next swiper-button-next"></div>
+																							</div>
 																							<table class="product-popup__table"> 
 																								<tr> 
 																									<td>Количество пользователей </td>
@@ -2432,7 +2814,65 @@
 																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
 																						</div>
 																						<div class="product-popup__block"> 
-																							<div class="product-popup__stars"> </div>
+																							<div class="product-popup__block-top">
+																								<div class="product-popup__stars"> 
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon"></div>
+																								</div>
+																								<div class="product-popup__prices"> 
+																									<div class="product-popup__price">420 290 ₽</div>
+																									<div class="product-popup__price-old">542 290 ₽</div>
+																								</div>
+																								<div class="product-popup__install"> 
+																									<div class="product-popup__install-price">от 80 290 ₽</div>
+																									<div class="product-popup__install-item"> 
+																										<svg class="icon-info">
+																											<use xlink:href="img/sprite.svg#info"></use>
+																										</svg>монтаж под ключ
+																									</div>
+																								</div>
+																								<div class="product-popup__operations"> 
+																									<div class="product-popup__operations-item product-popup__operations-item--compare"> 
+																										<label>
+																											<input type="checkbox"><span> </span>К сравнению
+																										</label>
+																									</div>
+																									<div class="product-popup__operations-item product-popup__operations-item--favorite">
+																										<label>
+																											<input type="checkbox"><span> </span>В избранное
+																										</label>
+																									</div>
+																								</div>
+																								<div class="product-popup__buttons"> 
+																									<button class="btn btn--big btn--blue"> 
+																										<div class="btn__inner">Заказать с установкой</div>
+																									</button><a class="product-popup__link" href="#">Купить</a>
+																								</div>
+																								<div class="product-popup__delivery"> 
+																									<svg class="icon-pack">
+																										<use xlink:href="img/sprite.svg#pack"></use>
+																									</svg>Доставим и установим <br>ориентировочно 2 мая
+																								</div>
+																							</div>
+																							<ul class="product-popup__block-bottom"> 
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Кредит от <b>33 291 Р/мес</b>
+																								</li>
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Рассрочка от <b>17 131 Р/мес</b>
+																								</li>
+																								<li> <a href="#"> 
+																										<svg class="icon-p">
+																											<use xlink:href="img/sprite.svg#p"></use>
+																										</svg>Нашли дешевле?</a></li>
+																							</ul>
 																						</div>
 																					</div>
 																				</div>
@@ -2443,11 +2883,13 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
+																<!-- product-card-->
 																<div class="product-card">
 																	<div class="product-card__img"><img src="img/products/img4.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																			<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
 																		</div>
 																		<form class="product-card__operations" action="#"> 
 																			<div class="product-card__operations-icon product-card__operations-icon--compare">
@@ -2510,6 +2952,7 @@
 																				<div class="btn__inner">Заказать с установкой</div></a><a class="product-card__buy" href="#">Купить</a></div>
 																	</div>
 																</div>
+																<!-- /product-card-->
 																<!-- product-popup-->
 																<div class="modal fade" id="productPopup_5">
 																	<div class="modal-dialog modal-dialog--full">
@@ -2517,6 +2960,11 @@
 																			<div class="modal-close" data-bs-dismiss="modal"></div>
 																			<div class="product-popup">
 																				<div class="product-popup__slider"> 
+																					<div class="product-popup__stickers"> 
+																						<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
+																						<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																						<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
+																					</div>
 																					<div class="sliderProductPopup"> 
 																						<div class="swiper-wrapper"> 
 																							<div class="swiper-slide"> 
@@ -2562,7 +3010,29 @@
 																						<div class="product-popup__info"> 
 																							<div class="product-popup__art">Артикул 234 454</div>
 																							<div class="product-popup__title">Модификации</div>
-																							<div class="product-popup__version"> </div>
+																							<div class="product-popup__version"> 
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--prev swiper-button-prev"></div>
+																								<div class="sliderVersion">
+																									<div class="swiper-wrapper"> 
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 30</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 20</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 10</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 40</div>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--next swiper-button-next"></div>
+																							</div>
 																							<table class="product-popup__table"> 
 																								<tr> 
 																									<td>Количество пользователей </td>
@@ -2596,7 +3066,65 @@
 																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
 																						</div>
 																						<div class="product-popup__block"> 
-																							<div class="product-popup__stars"> </div>
+																							<div class="product-popup__block-top">
+																								<div class="product-popup__stars"> 
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon"></div>
+																								</div>
+																								<div class="product-popup__prices"> 
+																									<div class="product-popup__price">420 290 ₽</div>
+																									<div class="product-popup__price-old">542 290 ₽</div>
+																								</div>
+																								<div class="product-popup__install"> 
+																									<div class="product-popup__install-price">от 80 290 ₽</div>
+																									<div class="product-popup__install-item"> 
+																										<svg class="icon-info">
+																											<use xlink:href="img/sprite.svg#info"></use>
+																										</svg>монтаж под ключ
+																									</div>
+																								</div>
+																								<div class="product-popup__operations"> 
+																									<div class="product-popup__operations-item product-popup__operations-item--compare"> 
+																										<label>
+																											<input type="checkbox"><span> </span>К сравнению
+																										</label>
+																									</div>
+																									<div class="product-popup__operations-item product-popup__operations-item--favorite">
+																										<label>
+																											<input type="checkbox"><span> </span>В избранное
+																										</label>
+																									</div>
+																								</div>
+																								<div class="product-popup__buttons"> 
+																									<button class="btn btn--big btn--blue"> 
+																										<div class="btn__inner">Заказать с установкой</div>
+																									</button><a class="product-popup__link" href="#">Купить</a>
+																								</div>
+																								<div class="product-popup__delivery"> 
+																									<svg class="icon-pack">
+																										<use xlink:href="img/sprite.svg#pack"></use>
+																									</svg>Доставим и установим <br>ориентировочно 2 мая
+																								</div>
+																							</div>
+																							<ul class="product-popup__block-bottom"> 
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Кредит от <b>33 291 Р/мес</b>
+																								</li>
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Рассрочка от <b>17 131 Р/мес</b>
+																								</li>
+																								<li> <a href="#"> 
+																										<svg class="icon-p">
+																											<use xlink:href="img/sprite.svg#p"></use>
+																										</svg>Нашли дешевле?</a></li>
+																							</ul>
 																						</div>
 																					</div>
 																				</div>
@@ -2607,11 +3135,13 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
+																<!-- product-card-->
 																<div class="product-card">
 																	<div class="product-card__img"><img src="img/products/img1.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																			<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
 																		</div>
 																		<form class="product-card__operations" action="#"> 
 																			<div class="product-card__operations-icon product-card__operations-icon--compare">
@@ -2674,6 +3204,7 @@
 																				<div class="btn__inner">Заказать с установкой</div></a><a class="product-card__buy" href="#">Купить</a></div>
 																	</div>
 																</div>
+																<!-- /product-card-->
 																<!-- product-popup-->
 																<div class="modal fade" id="productPopup_6">
 																	<div class="modal-dialog modal-dialog--full">
@@ -2681,6 +3212,11 @@
 																			<div class="modal-close" data-bs-dismiss="modal"></div>
 																			<div class="product-popup">
 																				<div class="product-popup__slider"> 
+																					<div class="product-popup__stickers"> 
+																						<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
+																						<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																						<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
+																					</div>
 																					<div class="sliderProductPopup"> 
 																						<div class="swiper-wrapper"> 
 																							<div class="swiper-slide"> 
@@ -2726,7 +3262,29 @@
 																						<div class="product-popup__info"> 
 																							<div class="product-popup__art">Артикул 234 454</div>
 																							<div class="product-popup__title">Модификации</div>
-																							<div class="product-popup__version"> </div>
+																							<div class="product-popup__version"> 
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--prev swiper-button-prev"></div>
+																								<div class="sliderVersion">
+																									<div class="swiper-wrapper"> 
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 30</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 20</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 10</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 40</div>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--next swiper-button-next"></div>
+																							</div>
 																							<table class="product-popup__table"> 
 																								<tr> 
 																									<td>Количество пользователей </td>
@@ -2760,7 +3318,65 @@
 																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
 																						</div>
 																						<div class="product-popup__block"> 
-																							<div class="product-popup__stars"> </div>
+																							<div class="product-popup__block-top">
+																								<div class="product-popup__stars"> 
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon"></div>
+																								</div>
+																								<div class="product-popup__prices"> 
+																									<div class="product-popup__price">420 290 ₽</div>
+																									<div class="product-popup__price-old">542 290 ₽</div>
+																								</div>
+																								<div class="product-popup__install"> 
+																									<div class="product-popup__install-price">от 80 290 ₽</div>
+																									<div class="product-popup__install-item"> 
+																										<svg class="icon-info">
+																											<use xlink:href="img/sprite.svg#info"></use>
+																										</svg>монтаж под ключ
+																									</div>
+																								</div>
+																								<div class="product-popup__operations"> 
+																									<div class="product-popup__operations-item product-popup__operations-item--compare"> 
+																										<label>
+																											<input type="checkbox"><span> </span>К сравнению
+																										</label>
+																									</div>
+																									<div class="product-popup__operations-item product-popup__operations-item--favorite">
+																										<label>
+																											<input type="checkbox"><span> </span>В избранное
+																										</label>
+																									</div>
+																								</div>
+																								<div class="product-popup__buttons"> 
+																									<button class="btn btn--big btn--blue"> 
+																										<div class="btn__inner">Заказать с установкой</div>
+																									</button><a class="product-popup__link" href="#">Купить</a>
+																								</div>
+																								<div class="product-popup__delivery"> 
+																									<svg class="icon-pack">
+																										<use xlink:href="img/sprite.svg#pack"></use>
+																									</svg>Доставим и установим <br>ориентировочно 2 мая
+																								</div>
+																							</div>
+																							<ul class="product-popup__block-bottom"> 
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Кредит от <b>33 291 Р/мес</b>
+																								</li>
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Рассрочка от <b>17 131 Р/мес</b>
+																								</li>
+																								<li> <a href="#"> 
+																										<svg class="icon-p">
+																											<use xlink:href="img/sprite.svg#p"></use>
+																										</svg>Нашли дешевле?</a></li>
+																							</ul>
 																						</div>
 																					</div>
 																				</div>
@@ -2771,11 +3387,13 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
+																<!-- product-card-->
 																<div class="product-card">
 																	<div class="product-card__img"><img src="img/products/img5.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																			<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
 																		</div>
 																		<form class="product-card__operations" action="#"> 
 																			<div class="product-card__operations-icon product-card__operations-icon--compare">
@@ -2838,6 +3456,7 @@
 																				<div class="btn__inner">Заказать с установкой</div></a><a class="product-card__buy" href="#">Купить</a></div>
 																	</div>
 																</div>
+																<!-- /product-card-->
 																<!-- product-popup-->
 																<div class="modal fade" id="productPopup_7">
 																	<div class="modal-dialog modal-dialog--full">
@@ -2845,6 +3464,11 @@
 																			<div class="modal-close" data-bs-dismiss="modal"></div>
 																			<div class="product-popup">
 																				<div class="product-popup__slider"> 
+																					<div class="product-popup__stickers"> 
+																						<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
+																						<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																						<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
+																					</div>
 																					<div class="sliderProductPopup"> 
 																						<div class="swiper-wrapper"> 
 																							<div class="swiper-slide"> 
@@ -2890,7 +3514,29 @@
 																						<div class="product-popup__info"> 
 																							<div class="product-popup__art">Артикул 234 454</div>
 																							<div class="product-popup__title">Модификации</div>
-																							<div class="product-popup__version"> </div>
+																							<div class="product-popup__version"> 
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--prev swiper-button-prev"></div>
+																								<div class="sliderVersion">
+																									<div class="swiper-wrapper"> 
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 30</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 20</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 10</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 40</div>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--next swiper-button-next"></div>
+																							</div>
 																							<table class="product-popup__table"> 
 																								<tr> 
 																									<td>Количество пользователей </td>
@@ -2924,7 +3570,65 @@
 																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
 																						</div>
 																						<div class="product-popup__block"> 
-																							<div class="product-popup__stars"> </div>
+																							<div class="product-popup__block-top">
+																								<div class="product-popup__stars"> 
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon"></div>
+																								</div>
+																								<div class="product-popup__prices"> 
+																									<div class="product-popup__price">420 290 ₽</div>
+																									<div class="product-popup__price-old">542 290 ₽</div>
+																								</div>
+																								<div class="product-popup__install"> 
+																									<div class="product-popup__install-price">от 80 290 ₽</div>
+																									<div class="product-popup__install-item"> 
+																										<svg class="icon-info">
+																											<use xlink:href="img/sprite.svg#info"></use>
+																										</svg>монтаж под ключ
+																									</div>
+																								</div>
+																								<div class="product-popup__operations"> 
+																									<div class="product-popup__operations-item product-popup__operations-item--compare"> 
+																										<label>
+																											<input type="checkbox"><span> </span>К сравнению
+																										</label>
+																									</div>
+																									<div class="product-popup__operations-item product-popup__operations-item--favorite">
+																										<label>
+																											<input type="checkbox"><span> </span>В избранное
+																										</label>
+																									</div>
+																								</div>
+																								<div class="product-popup__buttons"> 
+																									<button class="btn btn--big btn--blue"> 
+																										<div class="btn__inner">Заказать с установкой</div>
+																									</button><a class="product-popup__link" href="#">Купить</a>
+																								</div>
+																								<div class="product-popup__delivery"> 
+																									<svg class="icon-pack">
+																										<use xlink:href="img/sprite.svg#pack"></use>
+																									</svg>Доставим и установим <br>ориентировочно 2 мая
+																								</div>
+																							</div>
+																							<ul class="product-popup__block-bottom"> 
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Кредит от <b>33 291 Р/мес</b>
+																								</li>
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Рассрочка от <b>17 131 Р/мес</b>
+																								</li>
+																								<li> <a href="#"> 
+																										<svg class="icon-p">
+																											<use xlink:href="img/sprite.svg#p"></use>
+																										</svg>Нашли дешевле?</a></li>
+																							</ul>
 																						</div>
 																					</div>
 																				</div>
@@ -2935,11 +3639,13 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
+																<!-- product-card-->
 																<div class="product-card">
 																	<div class="product-card__img"><img src="img/products/img2.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																			<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
 																		</div>
 																		<form class="product-card__operations" action="#"> 
 																			<div class="product-card__operations-icon product-card__operations-icon--compare">
@@ -3002,6 +3708,7 @@
 																				<div class="btn__inner">Заказать с установкой</div></a><a class="product-card__buy" href="#">Купить</a></div>
 																	</div>
 																</div>
+																<!-- /product-card-->
 																<!-- product-popup-->
 																<div class="modal fade" id="productPopup_8">
 																	<div class="modal-dialog modal-dialog--full">
@@ -3009,6 +3716,11 @@
 																			<div class="modal-close" data-bs-dismiss="modal"></div>
 																			<div class="product-popup">
 																				<div class="product-popup__slider"> 
+																					<div class="product-popup__stickers"> 
+																						<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
+																						<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																						<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
+																					</div>
 																					<div class="sliderProductPopup"> 
 																						<div class="swiper-wrapper"> 
 																							<div class="swiper-slide"> 
@@ -3054,7 +3766,29 @@
 																						<div class="product-popup__info"> 
 																							<div class="product-popup__art">Артикул 234 454</div>
 																							<div class="product-popup__title">Модификации</div>
-																							<div class="product-popup__version"> </div>
+																							<div class="product-popup__version"> 
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--prev swiper-button-prev"></div>
+																								<div class="sliderVersion">
+																									<div class="swiper-wrapper"> 
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 30</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 20</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 10</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 40</div>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--next swiper-button-next"></div>
+																							</div>
 																							<table class="product-popup__table"> 
 																								<tr> 
 																									<td>Количество пользователей </td>
@@ -3088,7 +3822,65 @@
 																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
 																						</div>
 																						<div class="product-popup__block"> 
-																							<div class="product-popup__stars"> </div>
+																							<div class="product-popup__block-top">
+																								<div class="product-popup__stars"> 
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon"></div>
+																								</div>
+																								<div class="product-popup__prices"> 
+																									<div class="product-popup__price">420 290 ₽</div>
+																									<div class="product-popup__price-old">542 290 ₽</div>
+																								</div>
+																								<div class="product-popup__install"> 
+																									<div class="product-popup__install-price">от 80 290 ₽</div>
+																									<div class="product-popup__install-item"> 
+																										<svg class="icon-info">
+																											<use xlink:href="img/sprite.svg#info"></use>
+																										</svg>монтаж под ключ
+																									</div>
+																								</div>
+																								<div class="product-popup__operations"> 
+																									<div class="product-popup__operations-item product-popup__operations-item--compare"> 
+																										<label>
+																											<input type="checkbox"><span> </span>К сравнению
+																										</label>
+																									</div>
+																									<div class="product-popup__operations-item product-popup__operations-item--favorite">
+																										<label>
+																											<input type="checkbox"><span> </span>В избранное
+																										</label>
+																									</div>
+																								</div>
+																								<div class="product-popup__buttons"> 
+																									<button class="btn btn--big btn--blue"> 
+																										<div class="btn__inner">Заказать с установкой</div>
+																									</button><a class="product-popup__link" href="#">Купить</a>
+																								</div>
+																								<div class="product-popup__delivery"> 
+																									<svg class="icon-pack">
+																										<use xlink:href="img/sprite.svg#pack"></use>
+																									</svg>Доставим и установим <br>ориентировочно 2 мая
+																								</div>
+																							</div>
+																							<ul class="product-popup__block-bottom"> 
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Кредит от <b>33 291 Р/мес</b>
+																								</li>
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Рассрочка от <b>17 131 Р/мес</b>
+																								</li>
+																								<li> <a href="#"> 
+																										<svg class="icon-p">
+																											<use xlink:href="img/sprite.svg#p"></use>
+																										</svg>Нашли дешевле?</a></li>
+																							</ul>
 																						</div>
 																					</div>
 																				</div>
@@ -3099,11 +3891,13 @@
 																<!-- /product-popup-->
 								</div>
 								<div class="col d-none d-md-block"> 
+																<!-- product-card-->
 																<div class="product-card">
 																	<div class="product-card__img"><img src="img/products/img3.jpg" alt="">
 																		<div class="product-card__stickers"> 
 																			<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
 																			<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																			<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
 																		</div>
 																		<form class="product-card__operations" action="#"> 
 																			<div class="product-card__operations-icon product-card__operations-icon--compare">
@@ -3166,6 +3960,7 @@
 																				<div class="btn__inner">Заказать с установкой</div></a><a class="product-card__buy" href="#">Купить</a></div>
 																	</div>
 																</div>
+																<!-- /product-card-->
 																<!-- product-popup-->
 																<div class="modal fade" id="productPopup_9">
 																	<div class="modal-dialog modal-dialog--full">
@@ -3173,6 +3968,11 @@
 																			<div class="modal-close" data-bs-dismiss="modal"></div>
 																			<div class="product-popup">
 																				<div class="product-popup__slider"> 
+																					<div class="product-popup__stickers"> 
+																						<div class="product-card__sticker product-card__sticker--yellow">Распродажа </div>
+																						<div class="product-card__sticker product-card__sticker--red">Хит</div>
+																						<div class="product-card__sticker product-card__sticker--blue">Новинка</div>
+																					</div>
 																					<div class="sliderProductPopup"> 
 																						<div class="swiper-wrapper"> 
 																							<div class="swiper-slide"> 
@@ -3218,7 +4018,29 @@
 																						<div class="product-popup__info"> 
 																							<div class="product-popup__art">Артикул 234 454</div>
 																							<div class="product-popup__title">Модификации</div>
-																							<div class="product-popup__version"> </div>
+																							<div class="product-popup__version"> 
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--prev swiper-button-prev"></div>
+																								<div class="sliderVersion">
+																									<div class="swiper-wrapper"> 
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 30</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 20</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 10</div>
+																										</div>
+																										<div class="swiper-slide"> 
+																											<div class="product-popup__version-item">Евролос ПРО 40</div>
+																										</div>
+																									</div>
+																								</div>
+																								<div class="product-popup__slider-arrow product-popup__slider-arrow--next swiper-button-next"></div>
+																							</div>
 																							<table class="product-popup__table"> 
 																								<tr> 
 																									<td>Количество пользователей </td>
@@ -3252,7 +4074,65 @@
 																							<div class="product-popup__more"> <a class="btn btn--big btn--blue-border" href="#">Детальнее в карточке товара</a></div>
 																						</div>
 																						<div class="product-popup__block"> 
-																							<div class="product-popup__stars"> </div>
+																							<div class="product-popup__block-top">
+																								<div class="product-popup__stars"> 
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon product-popup__stars-icon--fill"> </div>
+																									<div class="product-popup__stars-icon"></div>
+																								</div>
+																								<div class="product-popup__prices"> 
+																									<div class="product-popup__price">420 290 ₽</div>
+																									<div class="product-popup__price-old">542 290 ₽</div>
+																								</div>
+																								<div class="product-popup__install"> 
+																									<div class="product-popup__install-price">от 80 290 ₽</div>
+																									<div class="product-popup__install-item"> 
+																										<svg class="icon-info">
+																											<use xlink:href="img/sprite.svg#info"></use>
+																										</svg>монтаж под ключ
+																									</div>
+																								</div>
+																								<div class="product-popup__operations"> 
+																									<div class="product-popup__operations-item product-popup__operations-item--compare"> 
+																										<label>
+																											<input type="checkbox"><span> </span>К сравнению
+																										</label>
+																									</div>
+																									<div class="product-popup__operations-item product-popup__operations-item--favorite">
+																										<label>
+																											<input type="checkbox"><span> </span>В избранное
+																										</label>
+																									</div>
+																								</div>
+																								<div class="product-popup__buttons"> 
+																									<button class="btn btn--big btn--blue"> 
+																										<div class="btn__inner">Заказать с установкой</div>
+																									</button><a class="product-popup__link" href="#">Купить</a>
+																								</div>
+																								<div class="product-popup__delivery"> 
+																									<svg class="icon-pack">
+																										<use xlink:href="img/sprite.svg#pack"></use>
+																									</svg>Доставим и установим <br>ориентировочно 2 мая
+																								</div>
+																							</div>
+																							<ul class="product-popup__block-bottom"> 
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Кредит от <b>33 291 Р/мес</b>
+																								</li>
+																								<li> 
+																									<svg class="icon-percent">
+																										<use xlink:href="img/sprite.svg#percent"></use>
+																									</svg>Рассрочка от <b>17 131 Р/мес</b>
+																								</li>
+																								<li> <a href="#"> 
+																										<svg class="icon-p">
+																											<use xlink:href="img/sprite.svg#p"></use>
+																										</svg>Нашли дешевле?</a></li>
+																							</ul>
 																						</div>
 																					</div>
 																				</div>
