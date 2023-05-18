@@ -7248,6 +7248,23 @@ input[type=number]:focus {
 
 /* /select2-custom */
 /* modal */
+.modal-dialog {
+  max-width: 480px;
+}
+.modal-dialog--w810 {
+  max-width: 810px;
+}
+
+.modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+}
+@media (max-width: 768.98px) {
+  .modal-content {
+    border-radius: 5px;
+  }
+}
+
 .modal-close {
   width: 40px;
   height: 40px;
@@ -10858,10 +10875,6 @@ input[type=number]:focus {
 
 /* /cities */
 /* popup-calc */
-.popup-calc {
-  border-radius: 15px;
-  overflow: hidden;
-}
 .popup-calc .title {
   padding: 36px 30px 0;
   background-color: #E7F0F9;

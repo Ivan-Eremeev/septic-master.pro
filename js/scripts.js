@@ -297,7 +297,7 @@ window.onload = function () {
       slidesPerView: 1.6,
       spaceBetween: 17,
       threshold: 3,
-      loop: true,
+      // loop: true,
       autoplay: {
         disableOnInteraction: false,
         pauseOnMouseEnter: true,

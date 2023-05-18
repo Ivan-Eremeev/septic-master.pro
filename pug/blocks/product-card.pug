@@ -18,7 +18,6 @@ mixin product-card(imgUrl, id)
         svg(class="icon-eye")
           use(xlink:href="img/sprite.svg#eye")
         span Быстрый просмотр
-      //- a(href= '#' + id).product-card__open-popup.js-open-popup 
       .product-card__open-popup(data-bs-toggle="modal" data-bs-target= '#' + id)
     .product-card__content 
       .product-card__description 

@@ -12,7 +12,7 @@ header#headerSticky.header
     .header__top
       .container
         .header__location 
-          a(href="#citiesPopup").js-open-popup.header__location-head 
+          .header__location-head(data-bs-toggle="modal" data-bs-target= "#citiesPopup")
             svg(class="icon-mark")
               use(xlink:href="img/sprite.svg#mark")
             | Москва
@@ -22,7 +22,7 @@ header#headerSticky.header
               span Москва?
             .header__location-row 
               .header__location-link.js-drop-close(data-drop="locationDrop") Да, верно
-              a(href="#citiesPopup").js-open-popup.header__location-link.js-drop-close(data-drop="locationDrop") Нет, выбрать другой
+              .header__location-link.js-drop-close(data-drop="locationDrop" data-bs-toggle="modal" data-bs-target= "#citiesPopup") Нет, выбрать другой
             .header__location-close.js-drop-close(data-drop="locationDrop")
         a(href="#").header__email 
           svg(class="icon-email")
@@ -317,7 +317,7 @@ header#headerSticky.header
 
 // popup-calc
 .modal.modal--full.fade#popupCalc
-  .modal-dialog.modal-dialog--full
+  .modal-dialog.modal-dialog--full.modal-dialog-centered
     .modal-content
       .modal-close(data-bs-dismiss="modal")
       .popup-calc 
@@ -429,61 +429,67 @@ header#headerSticky.header
 // /popup-calc
 
 // popup-offer
-.popup.mfp-hide#offerPopup
-  .popup-offer
-    .title Получите персональное предложение
-    .popup-offer__text Скидки на работы и комплексный подход до 20%
-    .popup-offer__inputs 
-      .row 
-        .col-sm-6 
-          .input 
-            input(type="text" placeholder="Введите имя")
-        .col-sm-6
-          .input.js-input-tel 
-            input(type="text" placeholder="Введите номер")
-    .popup-offer__btn 
-      .btn.btn--big.btn--blue 
-        .btn__inner Получить скидку
+.modal.fade#offerPopup
+  .modal-dialog.modal-dialog--full.modal-dialog-centered
+    .modal-content
+      .modal-close(data-bs-dismiss="modal")
+      .popup-offer
+        .title Получите персональное предложение
+        .popup-offer__text Скидки на работы и комплексный подход до 20%
+        .popup-offer__inputs 
+          .row 
+            .col-sm-6 
+              .input 
+                input(type="text" placeholder="Введите имя")
+            .col-sm-6
+              .input.js-input-tel 
+                input(type="text" placeholder="Введите номер")
+        .popup-offer__btn 
+          .btn.btn--big.btn--blue 
+            .btn__inner Получить скидку
 // /popup-offer
 
 // popup-cities
-.popup.popup--w810.mfp-hide#citiesPopup
-  .popup-cities
-    .title Выберите город
-    form(action="#").popup-cities__search 
-      input(type="text" placeholder="Ваш город")
-      button(type="submit")
-        svg(class="icon-search")
-          use(xlink:href="img/sprite.svg#search")
-    ul.popup-cities__list 
-      li 
-        a(href="#") Москва
-      li 
-        a(href="#") Санкт-Петербург
-      li 
-        a(href="#") Екатеринбург
-      li 
-        a(href="#") Воронеж
-      li 
-        a(href="#") Казань
-      li 
-        a(href="#") Краснодар
-      li 
-        a(href="#") Нижний Новгород
-      li 
-        a(href="#") Новосибирск
-      li 
-        a(href="#") Омск
-      li 
-        a(href="#") Пермь
-      li 
-        a(href="#") Ростов-на-Дону
-      li 
-        a(href="#") Самара
-      li 
-        a(href="#") Саратов
-      li 
-        a(href="#") Уфа
-      li 
-        a(href="#") Челябинск
+.modal.fade#citiesPopup
+  .modal-dialog.modal-dialog--w810.modal-dialog-centered
+    .modal-content
+      .modal-close(data-bs-dismiss="modal")
+      .popup-cities
+        .title Выберите город
+        form(action="#").popup-cities__search 
+          input(type="text" placeholder="Ваш город")
+          button(type="submit")
+            svg(class="icon-search")
+              use(xlink:href="img/sprite.svg#search")
+        ul.popup-cities__list 
+          li 
+            a(href="#") Москва
+          li 
+            a(href="#") Санкт-Петербург
+          li 
+            a(href="#") Екатеринбург
+          li 
+            a(href="#") Воронеж
+          li 
+            a(href="#") Казань
+          li 
+            a(href="#") Краснодар
+          li 
+            a(href="#") Нижний Новгород
+          li 
+            a(href="#") Новосибирск
+          li 
+            a(href="#") Омск
+          li 
+            a(href="#") Пермь
+          li 
+            a(href="#") Ростов-на-Дону
+          li 
+            a(href="#") Самара
+          li 
+            a(href="#") Саратов
+          li 
+            a(href="#") Уфа
+          li 
+            a(href="#") Челябинск
 // /popup-cities
