@@ -555,17 +555,13 @@ window.onload = function () {
   //   });
   // }
 
-  // //  Magnific Popup || Попап "специальное предложение"
-  // if ($('#offerPopup').length) {
-  //   setTimeout(function () {
-  //     $.magnificPopup.open({
-  //       items: {
-  //         src: '#offerPopup'
-  //       },
-  //       type: 'inline'
-  //     });
-  //   }, 5000);
-  // }
+  //  Bootstrap modal || Попап "специальное предложение"
+  if ($('#offerPopup').length) {
+    var offerPopup = new bootstrap.Modal(document.getElementById('offerPopup'));
+    setTimeout(function () {
+      offerPopup.show();
+    }, 5000);
+  }
 
   // // Табы
 	// function tabs() {
