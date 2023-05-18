@@ -64,6 +64,10 @@ mixin product-card(imgUrl, id)
       .modal-content
         .modal-close(data-bs-dismiss="modal")
         .product-popup
+
+          .title.d-block.d-xxl-none Септик Юнилос
+          .product-popup__art.d-block.d-xxl-none Артикул 234 454
+
           .product-popup__slider 
             .product-popup__stickers 
               .product-card__sticker.product-card__sticker--yellow Распродажа 
@@ -103,11 +107,15 @@ mixin product-card(imgUrl, id)
                 .swiper-slide 
                   .product-popup__thumb 
                     img(src="img/products/img5.jpg", alt="")
+
           .product-popup__content 
-            .title Септик Юнилос
+
+            .title.d-none.d-xxl-block Септик Юнилос
+
             .product-popup__row 
+
               .product-popup__info 
-                .product-popup__art Артикул 234 454
+                .product-popup__art.d-none.d-xxl-block Артикул 234 454
                 .product-popup__title Модификации
                 .product-popup__version 
                   .product-popup__slider-arrow.product-popup__slider-arrow--prev.swiper-button-prev
@@ -141,20 +149,41 @@ mixin product-card(imgUrl, id)
                     td Способ очищения воды
                     td 
                         b принудительный
-                .product-popup__items 
+                .product-popup__items.d-none.d-md-block
                   .product-popup__items-row 
                     .product-popup__item 
                       span 
                         svg(class="icon-printer")
                           use(xlink:href="img/sprite.svg#printer")
                       | Распечатать
-                    .product-popup__item 
+                    .product-popup__item.js-drop-social
                       span 
                         svg(class="icon-links")
                           use(xlink:href="img/sprite.svg#links")
                       | Поделится
-                .product-popup__more 
+                  .product-popup__drop
+                    .product-popup__drop-title Поделиться товаром
+                    .product-popup__drop-subtitle Ссылка для вставки
+                    .product-popup__drop-link 
+                      p https://septic-master.pro/catalog/septik-malahit/malahit-air/
+                      a(href="#") 
+                        svg(class="icon-copy")
+                          use(xlink:href="img/sprite.svg#copy")
+                    .product-popup__drop-subtitle Поделитесь в соц.сетях:
+                    .product-popup__drop-social 
+                      .product-popup__drop-social-row 
+                        a(href="#").product-popup__drop-social-item 
+                          img(src="img/social-icons/whatsapp.svg", alt="")
+                        a(href="#").product-popup__drop-social-item 
+                          img(src="img/social-icons/viber.svg", alt="")
+                        a(href="#").product-popup__drop-social-item 
+                          img(src="img/social-icons/vk.svg", alt="")
+                        a(href="#").product-popup__drop-social-item 
+                          img(src="img/social-icons/telegram.svg", alt="")
+                    .product-popup__drop-close
+                .product-popup__more.d-none.d-md-block
                   a(href="#").btn.btn--big.btn--blue-border Детальнее в карточке товара
+                  
               .product-popup__block 
                 .product-popup__block-top
                   .product-popup__stars 
@@ -207,4 +236,7 @@ mixin product-card(imgUrl, id)
                       svg(class="icon-p")
                         use(xlink:href="img/sprite.svg#p")
                       | Нашли дешевле?
+              .product-popup__more.d-block.d-md-none
+                a(href="#").btn.btn--big.btn--blue-border Детальнее в карточке товара
+              
   // /product-popup

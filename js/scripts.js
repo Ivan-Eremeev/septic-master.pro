@@ -504,15 +504,25 @@ window.onload = function () {
   if ($('.product-popup__slider').length) {
     const Swipers = Array.from(document.querySelectorAll('.product-popup__slider'), n => {
       const thumbProductPopup = new Swiper(n.querySelector('.thumbProductPopup'), {
-        spaceBetween: 20,
+        spaceBetween: 12,
         slidesPerView: 4,
         watchSlidesProgress: true,
+        breakpoints: {
+          769: {
+            spaceBetween: 20,
+          },
+        }
       });
       const sliderProductPopup = new Swiper(n.querySelector('.sliderProductPopup'), {
-        spaceBetween: 20,
+        spaceBetween: 12,
         thumbs: {
           swiper: thumbProductPopup,
         },
+        breakpoints: {
+          769: {
+            spaceBetween: 20,
+          },
+        }
       });
     });
   }
@@ -673,6 +683,21 @@ window.onload = function () {
 
   // Fancybox | галлереи
   Fancybox.bind("[data-fancybox]");
+
+  // Выпадайка "поделиться товаром"
+  function dropSocial() {
+    let btn = $('.js-drop-social');
+    let close = $('.product-popup__drop-close');
+    btn.on('click', function () {
+      let currentDrop = $(this).closest('.product-popup__items').find('.product-popup__drop');
+      currentDrop.addClass('open');
+    })
+    close.on('click', function () {
+      let currentDrop = $(this).closest('.product-popup__drop');
+      currentDrop.removeClass('open');
+    })
+  }
+  dropSocial();
 
   // // Sticky Sidebar | Липкий сайдбар
   // if ($('.js-sticky').length) {

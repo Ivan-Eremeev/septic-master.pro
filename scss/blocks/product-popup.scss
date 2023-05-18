@@ -141,6 +141,9 @@
     margin-bottom: 28px;
     td {
       padding: 6px 0;
+      &:first-child {
+        padding-right: 10px;
+      }
     }
     b {
       color: $text_color;
@@ -150,16 +153,19 @@
     font-size: 14px;
     line-height: 17px;
     margin-bottom: 40px;
+    position: relative;
   }
   &__items-row {
     display: flex;
     flex-wrap: wrap;
     margin-left: -40px;
+    margin-top: -10px;
   }
   &__item {
     display: flex;
     align-items: center;
     margin-left: 40px;
+    margin-top: 10px;
     cursor: pointer;
     user-select: none;
     span {
@@ -173,6 +179,7 @@
       flex-shrink: 0;
       margin-right: 10px;
       fill: $accent-color;
+      transition: 0.1s;
       svg {
         width: 20px;
         height: 20px;
@@ -181,6 +188,10 @@
     @include media-breakpoint-up(md) {
       &:hover {
         color: $link_color;
+        span {
+          background-color: $accent-color;
+          fill: #fff;
+        }
       }
     }
   }
@@ -277,6 +288,7 @@
     font-size: 15px;
     line-height: 18px;
     color: #fff;
+    white-space: nowrap;
   }
   &__install-item {
     display: flex;
@@ -284,6 +296,7 @@
     font-size: 13px;
     line-height: 16px;
     fill: $accent-color;
+    white-space: nowrap;
     svg {
       flex-shrink: 0;
       width: 16px;
@@ -299,6 +312,7 @@
   &__operations-item {
     font-size: 14px;
     line-height: 17px;
+    white-space: nowrap;
     label {
       display: flex;
       align-items: center;
@@ -398,6 +412,7 @@
         display: flex;
         align-items: center;
         color: $text_gray_color;
+        fill: $accent-color;
         @include media-breakpoint-up(md) {
           &:hover {
             color: $accent-color;
@@ -415,6 +430,160 @@
         height: 20px;
         margin-right: 8px;
       }
+    }
+  }
+  &__drop {
+    display: none;
+    width: 355px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: (0px 10px 25px rgba(0, 0, 0, 0.2));
+    border-radius: 15px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    z-index: 5;
+    &.open {
+      display: block;
+    }
+  }
+  &__drop-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: $title_color;
+    margin-bottom: 13px;
+  }
+  &__drop-subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__drop-link {
+    display: flex;
+    align-items: center;
+    color: $link_color;
+    margin-bottom: 18px;
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    a {
+      margin-left: 13px;
+      fill: $text_gray_color;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+      @include media-breakpoint-up(md) {
+        &:hover {
+          fill: $accent-color;
+        }
+      }
+    }
+  }
+  &__drop-social {
+    margin-top: 15px;
+  }
+  &__drop-social-row {
+    display: flex;
+    margin-left: -20px;
+    margin-top: -10px;
+  }
+  &__drop-social-item {
+    width: 36px;
+    height: 36px;
+    margin-left: 20px;
+    margin-top: 10px;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__drop-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    user-select: none;
+    &:after,&:before {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 2px;
+      background-color: #999;
+      position: absolute;
+      top: 50%;
+       left: 50%;
+    }
+    &:after {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &:before {
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    display: block;
+    &__slider {
+      margin-bottom: 20px;
+    }
+    &__content {
+      margin-left: 0;
+    }
+    .title {
+      padding-bottom: 0;
+      border-bottom: none;
+      margin-bottom: 13px;
+    }
+    &__art {
+      margin-bottom: 20px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 40px 20px;
+    &__slider {
+      width: 100%;
+    }
+    &__block {
+      width: 300px;
+    }
+    &__buttons {
+      .btn {
+        padding: 15px 10px;
+      }
+    }
+    &__drop {
+      top: -70px;
+      right: -100px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__row {
+      display: block;
+    }
+    &__info {
+      margin-right: 0;
+    }
+    &__block {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__more {
+      .btn {
+        width: 100%;
+      }
+    }
+    &__img {
+      height: 265px;
+    }
+    &__thumb {
+      height: 67px;
+    }
+    &__slider-arrow {
+      display: none;
     }
   }
 }
