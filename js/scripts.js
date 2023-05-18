@@ -555,6 +555,22 @@ window.onload = function () {
   //   });
   // }
 
+  //  Bootstrap modal | Добавление хедеру padding при окрытие попап окна
+  if ($('.modal').length) {
+    let modal = $('.modal');
+    modal.each(function (indexInArray, valueOfElement) { 
+      valueOfElement.addEventListener('show.bs.modal', function (event) {
+        let documentWidth = parseInt(document.documentElement.clientWidth);
+        let windowsWidth = parseInt(window.innerWidth);
+        let scrollbarWidth = windowsWidth - documentWidth;
+        $('.header').css('padding-right', scrollbarWidth);
+      });
+      valueOfElement.addEventListener('hidden.bs.modal', function (event) {
+        $('.header').css('padding-right', 0);
+      });
+    });
+  }
+
   //  Bootstrap modal || Попап "специальное предложение"
   if ($('#offerPopup').length) {
     var offerPopup = new bootstrap.Modal(document.getElementById('offerPopup'));
