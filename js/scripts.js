@@ -549,8 +549,8 @@ window.onload = function () {
 
   $('.js-select--in-calc-modal select').select2({
     minimumResultsForSearch: Infinity,
-    dropdownParent: $('#popupCalc')
-  })
+    dropdownParent: $('#popupCalc .modal-content')
+  });
 
   // Inputmask | Маска для ввода телефона
   $('.js-input-tel  input').inputmask("+7(999)-999-99-99");
