@@ -8403,6 +8403,9 @@ input[type=number]:focus {
   .header__info-text p:last-child {
     margin-bottom: 0;
   }
+  .header__info-text a {
+    color: #007AE7;
+  }
   .header__info-payment-row {
     display: -webkit-box;
     display: -ms-flexbox;
