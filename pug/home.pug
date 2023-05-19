@@ -923,32 +923,61 @@ block content
             .sertificates__pagination.swiper-pagination
       // /sertificates
 
-      // portfolio
-      .portfolio
+      //- // portfolio
+      //- .portfolio
+      //-   .container 
+      //-     .title Наши работы
+      //-     .portfolio__slider 
+      //-       #sliderPortfolio 
+      //-         .swiper-wrapper.portfolio__grid 
+      //-           .swiper-slide.portfolio__col-1
+      //-             a(href="img/portfolio/img1.jpg" data-fancybox).portfolio__img 
+      //-               img(src="img/portfolio/img1.jpg", alt="")
+      //-           .swiper-slide.portfolio__col-2
+      //-             a(href="img/portfolio/img2.jpg" data-fancybox).portfolio__img 
+      //-               img(src="img/portfolio/img2.jpg", alt="")
+      //-           .swiper-slide.portfolio__col-3
+      //-             a(href="img/portfolio/img3.jpg" data-fancybox).portfolio__img 
+      //-               img(src="img/portfolio/img3.jpg", alt="")
+      //-           .swiper-slide.portfolio__col-4
+      //-             a(href="img/portfolio/img4.jpg" data-fancybox).portfolio__img 
+      //-               img(src="img/portfolio/img4.jpg", alt="")
+      //-           .swiper-slide.portfolio__col-5
+      //-             a(href="img/portfolio/img5.jpg" data-fancybox).portfolio__img 
+      //-               img(src="img/portfolio/img5.jpg", alt="")
+      //-       .portfolio__pagination.swiper-pagination
+      //-     a(href="#").portfolio__btn 
+      //-       .btn.btn--big.btn--blue-border Посмотреть все работы
+      //- // /portfolio
+
+      // portfolio-slider
+      .portfolio-slider
         .container 
           .title Наши работы
-          .portfolio__slider 
-            #sliderPortfolio 
-              .swiper-wrapper.portfolio__grid 
-                .swiper-slide.portfolio__col-1
-                  a(href="img/portfolio/img1.jpg" data-fancybox).portfolio__img 
+          .portfolio-slider__slider 
+            #sliderPortfolioSlider 
+              .swiper-wrapper
+                .swiper-slide
+                  a(href="img/portfolio/img1.jpg" data-fancybox).portfolio-slider__img 
                     img(src="img/portfolio/img1.jpg", alt="")
-                .swiper-slide.portfolio__col-2
-                  a(href="img/portfolio/img2.jpg" data-fancybox).portfolio__img 
+                .swiper-slide
+                  a(href="img/portfolio/img2.jpg" data-fancybox).portfolio-slider__img 
                     img(src="img/portfolio/img2.jpg", alt="")
-                .swiper-slide.portfolio__col-3
-                  a(href="img/portfolio/img3.jpg" data-fancybox).portfolio__img 
+                .swiper-slide
+                  a(href="img/portfolio/img3.jpg" data-fancybox).portfolio-slider__img 
                     img(src="img/portfolio/img3.jpg", alt="")
-                .swiper-slide.portfolio__col-4
-                  a(href="img/portfolio/img4.jpg" data-fancybox).portfolio__img 
+                .swiper-slide
+                  a(href="img/portfolio/img4.jpg" data-fancybox).portfolio-slider__img 
                     img(src="img/portfolio/img4.jpg", alt="")
-                .swiper-slide.portfolio__col-5
-                  a(href="img/portfolio/img5.jpg" data-fancybox).portfolio__img 
+                .swiper-slide
+                  a(href="img/portfolio/img5.jpg" data-fancybox).portfolio-slider__img 
                     img(src="img/portfolio/img5.jpg", alt="")
-            .portfolio__pagination.swiper-pagination
-          a(href="#").portfolio__btn 
+            .portfolio-slider__pagination.swiper-pagination
+            .portfolio-slider__slider-arrow.portfolio-slider__slider-arrow--prev.swiper-button-prev
+            .portfolio-slider__slider-arrow.portfolio-slider__slider-arrow--next.swiper-button-next
+          a(href="#").portfolio-slider__btn 
             .btn.btn--big.btn--blue-border Посмотреть все работы
-      // /portfolio
+      // /portfolio-slider
 
       // information
       .information

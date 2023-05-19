@@ -381,45 +381,82 @@ window.onload = function () {
     });
   }
 
+  // // Swiper | Слайдер "наши работы"
+  // if ($('#sliderPortfolio').length) {
+
+  //   let sliderPortfolio;
+  //   let init = false;
+  //   function sliderToggle() {
+  //     if ($(window).width() <= 768 && !init) {
+  //       init = true;
+  //       sliderPortfolio = new Swiper('#sliderPortfolio', {
+  //         slidesPerView: 1.22,
+  //         spaceBetween: 15,
+  //         loop: true,
+  //         autoplay: {
+  //           disableOnInteraction: false,
+  //           pauseOnMouseEnter: true,
+  //         },
+  //         speed: 1000,
+  //         navigation: false,
+  //         pagination: {
+  //           el: '.portfolio__pagination',
+  //           clickable: true,
+  //         },
+  //         breakpoints: {
+  //           576: {
+  //             slidesPerView: 2,
+  //             spaceBetween: 20,
+  //           }
+  //         }
+  //       });
+  //     } else if ($(window).width() > 768 && init) {
+  //       init = false;
+  //       sliderPortfolio.destroy();
+  //     }
+  //   };
+  //   sliderToggle();
+  //   $(window).resize(function () {
+  //     sliderToggle();
+  //   });
+
+  // }
+
   // Swiper | Слайдер "наши работы"
-  if ($('#sliderPortfolio').length) {
-
-    let sliderPortfolio;
-    let init = false;
-    function sliderToggle() {
-      if ($(window).width() <= 768 && !init) {
-        init = true;
-        sliderPortfolio = new Swiper('#sliderPortfolio', {
-          slidesPerView: 1.22,
-          spaceBetween: 15,
-          loop: true,
-          autoplay: {
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          },
-          speed: 1000,
-          navigation: false,
-          pagination: {
-            el: '.portfolio__pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            576: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            }
-          }
-        });
-      } else if ($(window).width() > 768 && init) {
-        init = false;
-        sliderPortfolio.destroy();
+  if ($('#sliderPortfolioSlider').length) {
+    sliderPortfolioSlider = new Swiper('#sliderPortfolioSlider', {
+      slidesPerView: 1.22,
+      spaceBetween: 15,
+      loop: true,
+      autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      speed: 1000,
+      navigation: false,
+      pagination: {
+        el: '.portfolio-slider__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.portfolio-slider__slider-arrow--next',
+        prevEl: '.portfolio-slider__slider-arrow--prev',
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        }
       }
-    };
-    sliderToggle();
-    $(window).resize(function () {
-      sliderToggle();
     });
-
   }
 
   // Swiper | Слайдер "отзывы"
