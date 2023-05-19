@@ -1,0 +1,42 @@
+/* breadcrumbs */
+.breadcrumbs { 
+  padding-top: 13px;
+  margin-bottom: 38px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      &:not(:last-child) {
+        margin-right: 6px;
+        padding-right: 6px;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 12px;
+          background-color: #8B949E;
+          position: absolute;
+          top: 2px;
+          right: 0;
+          transform: rotate(12deg);
+        }
+      }
+      a {
+        color: #8B949E;
+        @include media-breakpoint-up(md) {
+          &:hover {
+            color: $accent_color;
+          }
+        }
+      }
+      span {
+        color: #8B949E;
+      }
+    }
+  }
+}
+/* /breadcrumbs */

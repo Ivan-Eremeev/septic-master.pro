@@ -132,6 +132,14 @@
     &--next {
       margin-left: 8px;
     }
+    @include media-breakpoint-up(md) {
+      &:hover {
+        border-color: #6C7177;
+        &:after {
+          background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.0452 7.99978L1.97414 0.928711L0.954788 1.94806L7.03256 8.02583L0.974136 14.0843L1.96075 15.0709L8.01918 9.01245L8.02586 9.01913L9.0452 7.99978Z' fill='%230383FD'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
   }
   &__table {
     width: 100%;
@@ -523,6 +531,13 @@
     }
     &:before {
       transform: translate(-50%,-50%) rotate(-45deg);
+    }
+    @include media-breakpoint-up(md) {
+      &:hover {
+        &:after,&:before {
+          background-color: $accent-color;
+        }
+      }
     }
   }
   @include media-breakpoint-down(xxl) {

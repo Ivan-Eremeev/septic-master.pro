@@ -1,0 +1,210 @@
+/* catalog */
+.catalog { 
+  margin-bottom: 80px;
+  .title {
+    margin-bottom: 35px;
+  }
+  &__row {
+    display: flex;
+  }
+  &__sidebar {
+    width: 276px;
+    margin-right: 30px;
+    flex-shrink: 0;
+  }
+  &__main {
+    flex-grow: 1;
+  }
+  &__type {
+    margin-bottom: 30px;
+  }
+  &__type-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -16px;
+    margin-left: -8px;
+  }
+  &__type-item {
+    margin-top: 16px;
+    margin-left: 8px;
+    span {
+      display: block;
+      padding: 10px 15px;
+      background-color: #ECF5FE;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 17px;
+      white-space: nowrap;
+      transition: 0.1s;
+      cursor: pointer;
+      user-select: none;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          background-color: #46C0FF;
+          color: #fff;
+        }
+      }
+    }
+    input {
+      position: absolute;
+      visibility: hidden;
+      &:checked {
+        ~ span {
+          background-color: #46C0FF;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &__text {
+    margin-bottom: 27px;
+    h1,h2,h3,h4,h5,h6 {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 10px;
+    }
+  }
+  &__tags {
+    margin-bottom: 15px;
+  }
+  &__tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -16px;
+    margin-left: -8px;
+  }
+  &__tags-item {
+    margin-top: 16px;
+    margin-left: 8px;
+    span {
+      display: block;
+      padding: 10px 15px;
+      border: 1px solid #B2C5D8;
+      border-radius: 20px;
+      font-size: 13px;
+      line-height: 16px;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.1s;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          background-color: $accent_color;
+          border-color: $accent_color;
+          color: #fff;
+        }
+      }
+    }
+    input {
+      position: absolute;
+      visibility: hidden;
+      &:checked {
+        ~ span {
+          background-color: $accent_color;
+          border-color: $accent_color;
+          color: #fff;
+        }
+      }
+    }
+  }
+  &__tags-more {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $link_color;
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        color: #42A1FC;
+      }
+    }
+  }
+  &__sort {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid $border_color;
+  }
+  &__select {
+    display: flex;
+    align-items: center;
+  }
+  &__select-text {
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &__view {
+    display: flex;
+    margin-left: auto;
+  }
+  &__view-item {
+    &:first-child {
+      margin-right: 7px;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #EEF4FA;
+      fill: #9DA5AE;
+      border-radius: 4px;
+      transition: .1s;
+      cursor: pointer;
+      user-select: none;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+      @include media-breakpoint-up(md) {
+        &:hover {
+          fill: #42A1FC;
+        }
+      }
+    }
+    input {
+      position: absolute;
+      visibility: hidden;
+      &:checked {
+        ~ span {
+          // background-color: transparent;
+          fill: $accent_color;
+        }
+      }
+    }
+  }
+  &__cards {
+    margin-bottom: 30px;
+    > .row {
+      margin-left: -3px;
+      margin-right: -3px;
+      margin-top: -6px;
+      > * {
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-top: 6px;
+      }
+    }
+  }
+  &__more {
+    margin-bottom: 30px;
+    text-align: center;
+    .btn {
+      width: 100%;
+      max-width: 220px;
+      padding: 10px 30px;
+    }
+  }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+}
+/* /catalog */

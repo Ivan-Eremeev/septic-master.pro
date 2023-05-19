@@ -1,0 +1,187 @@
+extends core/base.pug
+
+block title 
+  title Навигация по страницам
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .container 
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              a(href="#") Каталог септиков
+            li 
+              span Малахит
+      // /breadcrumbs
+
+      // catalog
+      .catalog
+        .container 
+          h1.title Септики Малахит
+
+          .catalog__row 
+
+            aside.catalog__sidebar 
+
+            main.catalog__main 
+
+              .catalog__type 
+                ul.catalog__type-list
+                  mixin catalog-type(title, checked)
+                    li.catalog__type-item 
+                      label
+                        if checked
+                          input(type="radio" name="catalogType" checked)
+                        else 
+                          input(type="radio" name="catalogType")
+                        span= title
+                  +catalog-type('Малахит', 'checked')
+                  +catalog-type('Топас топол эко')
+                  +catalog-type('Топас-с топол эко')
+                  +catalog-type('Топ Аэро топол эко')
+                  +catalog-type('Астра Юнилос')
+                  +catalog-type('Евролос Био Евролос')
+                  +catalog-type('Евролос Грунт Евролос')
+                  +catalog-type('Тверь Classic')
+                  +catalog-type('Тверь Classic')
+
+              .catalog__text 
+                h2 SEO Текст описание группы септиков, свойств и ТП
+                p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+
+              .catalog__tags 
+                ul.catalog__tags-list.js-more-list
+                  mixin catalog-tag(title, checked)
+                    li.catalog__tags-item 
+                      label
+                        if checked
+                          input(type="radio" name="catalogTags" checked)
+                        else
+                          input(type="radio" name="catalogTags")
+                        span= title 
+                  +catalog-tag('Для частного дома', 'checked')
+                  +catalog-tag('Для дачи')
+                  +catalog-tag('Для частного дома')
+                  +catalog-tag('Для грунтовых вод')
+                  +catalog-tag('Для дачи')
+                  +catalog-tag('Для частного дома')
+                  +catalog-tag('Для дачи')
+                  +catalog-tag('Для огорода')
+                  +catalog-tag('Для дома')
+                  +catalog-tag('Для частного дома')
+                  +catalog-tag('Для дачи')
+                  +catalog-tag('Для частного дома')
+                  +catalog-tag('Для грунтовых вод')
+                  +catalog-tag('Для дачи')
+                  +catalog-tag('Для частного дома')
+                  +catalog-tag('Для дачи')
+                  +catalog-tag('Для огорода')
+                  +catalog-tag('Для дома')
+                .catalog__tags-more.js-more-btn Развернуть теги
+
+              .catalog__sort 
+                .catalog__select 
+                  .catalog__select-text Показывать по
+                  .select 
+                    select
+                      option(value="") По умолчанию
+                      option(value="#") По цене
+                      option(value="#") По популярности
+                .catalog__view 
+                  .catalog__view-item
+                    label
+                      input(type="radio" name="viewSort")
+                      span 
+                        svg(class="icon-view-list")
+                          use(xlink:href="img/sprite.svg#view-list")
+                  .catalog__view-item
+                    label
+                      input(type="radio" name="viewSort" checked)
+                      span 
+                        svg(class="icon-view-grid")
+                          use(xlink:href="img/sprite.svg#view-grid")
+
+              .catalog__cards 
+                include blocks/product-card.pug
+                .row 
+                  .col-xl-3 
+                    +product-card('img/products/img1.jpg', 'productPopup_0')
+                  .col-xl-3 
+                    +product-card('img/products/img2.jpg', 'productPopup_1')
+                  .col-xl-3 
+                    +product-card('img/products/img3.jpg', 'productPopup_2')
+                  .col-xl-3 
+                    +product-card('img/products/img4.jpg', 'productPopup_3')
+                  .col-xl-3 
+                    +product-card('img/products/img5.jpg', 'productPopup_4')
+                  .col-xl-3 
+                    +product-card('img/products/img1.jpg', 'productPopup_5')
+                  .col-xl-3 
+                    +product-card('img/products/img2.jpg', 'productPopup_6')
+                  .col-xl-3 
+                    +product-card('img/products/img3.jpg', 'productPopup_7')
+                  .col-xl-3 
+                    +product-card('img/products/img4.jpg', 'productPopup_8')
+                  .col-xl-3 
+                    +product-card('img/products/img5.jpg', 'productPopup_9')
+                  .col-xl-3 
+                    +product-card('img/products/img1.jpg', 'productPopup_10')
+                  .col-xl-3 
+                    +product-card('img/products/img2.jpg', 'productPopup_11')
+                  .col-xl-3 
+                    +product-card('img/products/img3.jpg', 'productPopup_12')
+                  .col-xl-3 
+                    +product-card('img/products/img4.jpg', 'productPopup_13')
+                  .col-xl-3 
+                    +product-card('img/products/img5.jpg', 'productPopup_14')
+                  .col-xl-3 
+                    +product-card('img/products/img1.jpg', 'productPopup_15')
+                  .col-xl-3 
+                    +product-card('img/products/img2.jpg', 'productPopup_16')
+                  .col-xl-3 
+                    +product-card('img/products/img3.jpg', 'productPopup_17')
+                  .col-xl-3 
+                    +product-card('img/products/img4.jpg', 'productPopup_18')
+                  .col-xl-3 
+                    +product-card('img/products/img5.jpg', 'productPopup_19')
+
+              .catalog__more 
+                a(href="#").btn.btn--big.btn--blue-border Показать еще
+
+              .catalog__pagination 
+                // pagination
+                .pagination
+                  ul 
+                    li 
+                      a(href="#").pagination__prev.disabled
+                        svg(class="icon-arrow-long")
+                          use(xlink:href="img/sprite.svg#arrow-long")
+                    li 
+                      a(href="#").active 1
+                    li 
+                      a(href="#") 2
+                    li 
+                      a(href="#") 3
+                    li 
+                      a(href="#") 4
+                    li 
+                      span ...
+                    li 
+                      a(href="#") 12
+                    li 
+                      a(href="#").pagination__next
+                        svg(class="icon-arrow-long")
+                          use(xlink:href="img/sprite.svg#arrow-long")
+                // /pagination
+      // /catalog
+
+    include core/footer.pug

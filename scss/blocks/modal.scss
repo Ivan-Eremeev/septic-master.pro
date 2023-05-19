@@ -29,12 +29,20 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    transition: 0.1s;
   }
   &:after {
     transform: translate(-50%,-50%) rotate(45deg);
   }
   &:before {
     transform: translate(-50%,-50%) rotate(-45deg);
+  }
+  @include media-breakpoint-up(md) {
+    &:hover {
+      &:after, &:before {
+        background-color: $accent_color;
+      }
+    }
   }
 }
 

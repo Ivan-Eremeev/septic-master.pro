@@ -636,12 +636,12 @@ window.onload = function () {
   }
 
   //  Bootstrap modal || Попап "специальное предложение"
-  if ($('#offerPopup').length) {
-    var offerPopup = new bootstrap.Modal(document.getElementById('offerPopup'));
-    setTimeout(function () {
-      offerPopup.show();
-    }, 5000);
-  }
+  // if ($('#offerPopup').length) {
+  //   var offerPopup = new bootstrap.Modal(document.getElementById('offerPopup'));
+  //   setTimeout(function () {
+  //     offerPopup.show();
+  //   }, 5000);
+  // }
 
   // // Табы
 	// function tabs() {
@@ -772,24 +772,25 @@ window.onload = function () {
   // }
   // scrollUp();
 
-  // // Показать еще в фильтрах
-  // function showMoreFilters() {
-  //   const list = $('.js-more-list');
-  //   const btn = $('.js-more-btn');
-  //   const count = 4;
-  //   list.each(function () {
-  //     $(this).find('li').each(function (index) {
-  //       if (index > count - 1) {
-  //         $(this).fadeOut();
-  //       }
-  //     })
-  //   })
-  //   btn.on('click', function () {
-  //     $(this).fadeOut();
-  //     $(this).parent().find($('.js-more-list li')).fadeIn();
-  //   })
-  // }
-  // showMoreFilters();
+  // Показать еще тэги
+  function showMoreFilters() {
+    const list = $('.js-more-list');
+    const btn = $('.js-more-btn');
+    const count = 9;
+    list.each(function () {
+      $(this).find('li').each(function (index) {
+        if (index > count - 1) {
+          $(this).hide();
+        }
+      })
+    })
+    btn.on('click', function (e) {
+      e.preventDefault();
+      $(this).hide();
+      $(this).parent().find($('.js-more-list li')).show();
+    })
+  }
+  showMoreFilters();
 
   // // Очистить фильтр 
   // function clearFilter() {
