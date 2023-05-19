@@ -674,12 +674,13 @@ window.onload = function () {
   // Аккордеон
   function accordion(accordion, settings) {
     if (accordion.length) {
-      $('.js-accordion').each(function () {
+      $(accordion).each(function () {
         let currentAccordion = $(this);
         let item = currentAccordion.find('.accordion__item');
         let trigger = currentAccordion.find('.js-accordion-trigger');
-        let content = $('.js-accordion-content');
+        let content = currentAccordion.find('.js-accordion-content');
         let time = 300;
+        console.log(currentAccordion);
         trigger.on('click', function () {
           let currentTrigger = $(this);
           let data = currentTrigger.data('content');
@@ -717,6 +718,7 @@ window.onload = function () {
     }
   }
   accordion($('.js-accordion'), true);
+  accordion($('.js-accordion-filter'), false);
 
   // Fancybox | галлереи
   Fancybox.bind("[data-fancybox]");
@@ -791,6 +793,32 @@ window.onload = function () {
     })
   }
   showMoreFilters();
+
+  // noUiSlider | Ползунок цены в фильтрах
+  if ($('#priceSlider').length) {
+    let slider = document.getElementById('priceSlider');
+    let inputMin = document.getElementById('priceMin');
+    let inputMax = document.getElementById('priceMax');
+    noUiSlider.create(slider, {
+      start: [0, 50000],
+      connect: true,
+      range: {
+        'min': 0,
+        'max': 50000
+      },
+      format: wNumb({ decimals: 0 })
+    });
+    slider.noUiSlider.on('update', function (values, handle) {
+      inputMin.value = values[0];
+      inputMax.value = values[1];
+    });
+    inputMin.addEventListener('change', function () {
+      slider.noUiSlider.set([this.value, null]);
+    });
+    inputMax.addEventListener('change', function () {
+      slider.noUiSlider.set([null, this.value]);
+    });
+  }
 
   // // Очистить фильтр 
   // function clearFilter() {

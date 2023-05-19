@@ -1,0 +1,39 @@
+/* nouislider-custom */
+.noUi-horizontal {
+  height: 6px;
+}
+.noUi-target {
+  background: $background_color;
+  border: none;
+}
+.noUi-connect {
+  background: $accent-color;
+}
+.noUi-horizontal .noUi-handle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  top: -11px;
+  right: -14px;
+  border: none;
+  border-radius: 100%;
+  background: rgba(40,151,255, .5);
+  box-shadow: none;
+  cursor: pointer;
+  &:before {
+    display: none;
+  }
+  &:after {
+    display: none;
+  }
+}
+.noUi-touch-area {
+  width: 14px;
+  height: 14px;
+  background-color: $accent-color;
+  border-radius: 100%;
+  position: static;
+}
+/* /nouislider-custom */

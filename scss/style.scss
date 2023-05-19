@@ -174,6 +174,7 @@ $btn_gradient: linear-gradient(325.49deg, #017EFC 18.22%, #10D4FF 81.06%);
 @import 'blocks/swiper-custom';
 @import 'blocks/select2-custom';
 @import 'blocks/modal';
+@import 'blocks/nouislider-custom';
 // @import 'blocks/template';
 // @import 'blocks/popup';
 // @import 'blocks/tabs';
@@ -209,5 +210,6 @@ $btn_gradient: linear-gradient(325.49deg, #017EFC 18.22%, #10D4FF 81.06%);
 @import 'blocks/breadcrumbs';
 @import 'blocks/catalog';
 @import 'blocks/pagination';
+@import 'blocks/filter';
 
 @import 'blocks/footer';
