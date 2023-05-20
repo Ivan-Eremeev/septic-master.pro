@@ -12096,6 +12096,9 @@ input[type=number]:focus {
   -ms-flex-pack: center;
   justify-content: center;
 }
+.catalog__filter {
+  margin-bottom: 30px;
+}
 
 /* /catalog */
 /* pagination */
@@ -12256,6 +12259,9 @@ input[type=number]:focus {
   width: 20px;
   height: 20px;
 }
+.filter__prices {
+  margin-bottom: 40px;
+}
 .filter__prices-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12286,6 +12292,71 @@ input[type=number]:focus {
   right: -18px;
 }
 /* /filter */
+/* banner-small */
+.banner-small {
+  margin-bottom: 30px;
+}
+.banner-small__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 334px;
+  border-radius: 4px;
+  position: relative;
+}
+.banner-small__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.banner-small__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.banner-small__content {
+  margin-top: auto;
+  padding: 20px 18px;
+  position: relative;
+  z-index: 2;
+}
+.banner-small__content--white {
+  color: #fff;
+}
+.banner-small__title {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  margin-bottom: 15px;
+}
+.banner-small__text {
+  font-size: 13px;
+  line-height: 154.02%;
+  margin-bottom: 15px;
+}
+.banner-small__btn .btn {
+  width: 100%;
+  padding: 10px 30px;
+}
+.banner-small__slider {
+  position: relative;
+  padding-bottom: 30px;
+}
+.banner-small__slider #sliderBannerSmall {
+  overflow: hidden;
+}
+.banner-small__pagination {
+  bottom: 0px !important;
+}
+
+/* /banner-small */
 /* footer */
 .footer {
   background-color: #11356A;

@@ -579,6 +579,25 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер мини-баннер
+  if ($('#sliderBannerSmall').length) {
+    const sliderBannerSmall = new Swiper('#sliderBannerSmall', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      threshold: 3,
+      loop: true,
+      autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      speed: 1000,
+      pagination: {
+        el: '.banner-small__pagination',
+        clickable: true,
+      },
+    });
+  }
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,
@@ -680,7 +699,6 @@ window.onload = function () {
         let trigger = currentAccordion.find('.js-accordion-trigger');
         let content = currentAccordion.find('.js-accordion-content');
         let time = 300;
-        console.log(currentAccordion);
         trigger.on('click', function () {
           let currentTrigger = $(this);
           let data = currentTrigger.data('content');
@@ -799,12 +817,14 @@ window.onload = function () {
     let slider = document.getElementById('priceSlider');
     let inputMin = document.getElementById('priceMin');
     let inputMax = document.getElementById('priceMax');
+    let min = Number(slider.getAttribute('data-min'));
+    let max = Number(slider.getAttribute('data-max'));
     noUiSlider.create(slider, {
-      start: [0, 50000],
+      start: [min, max],
       connect: true,
       range: {
-        'min': 0,
-        'max': 50000
+        'min': min,
+        'max': max
       },
       format: wNumb({ decimals: 0 })
     });
@@ -819,6 +839,10 @@ window.onload = function () {
       slider.noUiSlider.set([null, this.value]);
     });
   }
+
+  var num = 1234567890;
+  var result = num.toLocaleString();
+  console.log(result);
 
   // // Очистить фильтр 
   // function clearFilter() {
