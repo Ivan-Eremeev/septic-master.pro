@@ -840,10 +840,6 @@ window.onload = function () {
     });
   }
 
-  var num = 1234567890;
-  var result = num.toLocaleString();
-  console.log(result);
-
   // // Очистить фильтр 
   // function clearFilter() {
   //   let clearBnt = $('.js-filters-clear');

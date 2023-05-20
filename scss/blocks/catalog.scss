@@ -209,5 +209,101 @@
   &__filter {
     margin-bottom: 30px;
   }
+  &__btn-filter {
+    display: none;
+  }
+  @include media-breakpoint-down(lg) {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__sidebar {
+      width: 100%;
+      order: 1;
+    }
+    &__main {
+      margin-bottom: 40px;
+    }
+    &__filter {
+      width: 100%;
+      max-width: 400px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,.2);
+      margin-bottom: 0;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: -800px;
+      transition: 0.5s;
+      z-index: 10;
+      &.open {
+        left: 0;
+      }
+    }
+    &__btn-filter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(325.49deg, #017EFC 18.22%, #10D4FF 81.06%);
+      border-radius: 100%;
+      fill: #fff;
+      cursor: pointer;
+      user-select: none;
+      position: fixed;
+      right: 50px;
+      bottom: 70px;
+      z-index: 9;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &__type-list {
+      margin-top: -8px;
+    }
+    &__type-item {
+      margin-top: 8px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+    &__select-text {
+      display: none;
+    }
+    .title {
+      margin-bottom: 25px;
+    }
+    &__tags-list {
+      margin-top: -8px;
+    }
+    &__tags-item {
+      margin-top: 8px;
+    }
+    &__tags-more {
+      margin-top: 15px;
+    }
+    &__catalog-select {
+      .select {
+        select {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__more {
+      margin-bottom: 0;
+      .btn {
+        max-width: none;
+      }
+    }
+    &__pagination {
+      display: none;
+    }
+    &__btn-filter {
+      right: 15px;
+    }
+  }
 }
 /* /catalog */

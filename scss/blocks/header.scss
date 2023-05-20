@@ -85,6 +85,7 @@
     opacity: 0;
     transform: translate(0,10px);
     transition: .3s;
+    z-index: 10;
     &:after {
       content: '';
       display: block;
@@ -761,7 +762,6 @@
     &__container {
       width: 100%;
       max-width: 400px;
-      padding-bottom: 50px;
       background-color: #fff;
       box-shadow: 0 0 20px rgba(0,0,0,.3);
       overflow-y: auto;

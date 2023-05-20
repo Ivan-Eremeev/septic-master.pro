@@ -565,416 +565,489 @@
 						<h1 class="title">Септики Малахит</h1>
 						<div class="catalog__row"> 
 							<aside class="catalog__sidebar"> 
-								<div class="catalog__filter"> 
+								<div class="catalog__filter" id="filter"> 
 									<!-- filter-->
-									<div class="filter">
-										<div class="accordion js-accordion-filter">
-											<div class="filter__item accordion__item active">
-												<div class="filter__trigger accordion__trigger js-accordion-trigger active" data-content="trigger_1">Модель
-													<svg class="icon-arrow-light">
-														<use xlink:href="img/sprite.svg#arrow-light"></use>
-													</svg>
-												</div>
-												<div class="filter__content accordion__content js-accordion-content open" id="trigger_1">
-													<ul class="filter__list"> 
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
-																</label>
-															</div>
-														</li>
-													</ul>
-												</div>
+									<form class="filter" action="#">
+										<div class="filter__head">Фильтры
+											<div class="filter__close js-drop-close" data-drop="filter"></div>
+										</div>
+										<div class="filter__middle">
+											<div class="filter__title">Модели септиков
+												<div class="filter__reset"> <span> </span>Сбросить все</div>
 											</div>
-											<div class="filter__item accordion__item">
-												<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_2">Количество человек
-													<svg class="icon-arrow-light">
-														<use xlink:href="img/sprite.svg#arrow-light"></use>
-													</svg>
-												</div>
-												<div class="filter__content accordion__content js-accordion-content" id="trigger_2">
-													<ul class="filter__list"> 
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
-																</label>
-															</div>
-														</li>
-													</ul>
-												</div>
+											<div class="catalog__type d-block d-lg-none">
+												<ul class="catalog__type-list">
+																										<li class="catalog__type-item"> 
+																											<label>
+																												<input type="radio" name="catalogType" checked><span>Малахит</span>
+																											</label>
+																										</li>
+																										<li class="catalog__type-item"> 
+																											<label>
+																												<input type="radio" name="catalogType"><span>Топас топол эко</span>
+																											</label>
+																										</li>
+																										<li class="catalog__type-item"> 
+																											<label>
+																												<input type="radio" name="catalogType"><span>Топас-с топол эко</span>
+																											</label>
+																										</li>
+																										<li class="catalog__type-item"> 
+																											<label>
+																												<input type="radio" name="catalogType"><span>Топ Аэро топол эко</span>
+																											</label>
+																										</li>
+																										<li class="catalog__type-item"> 
+																											<label>
+																												<input type="radio" name="catalogType"><span>Астра Юнилос</span>
+																											</label>
+																										</li>
+																										<li class="catalog__type-item"> 
+																											<label>
+																												<input type="radio" name="catalogType"><span>Евролос Био Евролос</span>
+																											</label>
+																										</li>
+																										<li class="catalog__type-item"> 
+																											<label>
+																												<input type="radio" name="catalogType"><span>Евролос Грунт Евролос</span>
+																											</label>
+																										</li>
+																										<li class="catalog__type-item"> 
+																											<label>
+																												<input type="radio" name="catalogType"><span>Тверь Classic</span>
+																											</label>
+																										</li>
+																										<li class="catalog__type-item"> 
+																											<label>
+																												<input type="radio" name="catalogType"><span>Тверь Classic</span>
+																											</label>
+																										</li>
+												</ul>
 											</div>
-											<div class="filter__item accordion__item">
-												<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_3">Назначение
-													<svg class="icon-arrow-light">
-														<use xlink:href="img/sprite.svg#arrow-light"></use>
-													</svg>
+											<div class="accordion js-accordion-filter">
+												<div class="filter__item accordion__item active">
+													<div class="filter__trigger accordion__trigger js-accordion-trigger active" data-content="trigger_1">Модель
+														<svg class="icon-arrow-light">
+															<use xlink:href="img/sprite.svg#arrow-light"></use>
+														</svg>
+													</div>
+													<div class="filter__content accordion__content js-accordion-content open" id="trigger_1">
+														<ul class="filter__list"> 
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
 												</div>
-												<div class="filter__content accordion__content js-accordion-content" id="trigger_3">
-													<ul class="filter__list"> 
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
-																</label>
-															</div>
-														</li>
-													</ul>
+												<div class="filter__item accordion__item">
+													<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_2">Количество человек
+														<svg class="icon-arrow-light">
+															<use xlink:href="img/sprite.svg#arrow-light"></use>
+														</svg>
+													</div>
+													<div class="filter__content accordion__content js-accordion-content" id="trigger_2">
+														<ul class="filter__list"> 
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
 												</div>
-											</div>
-											<div class="filter__item accordion__item">
-												<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_4">Производительность
-													<svg class="icon-arrow-light">
-														<use xlink:href="img/sprite.svg#arrow-light"></use>
-													</svg>
+												<div class="filter__item accordion__item">
+													<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_3">Назначение
+														<svg class="icon-arrow-light">
+															<use xlink:href="img/sprite.svg#arrow-light"></use>
+														</svg>
+													</div>
+													<div class="filter__content accordion__content js-accordion-content" id="trigger_3">
+														<ul class="filter__list"> 
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
 												</div>
-												<div class="filter__content accordion__content js-accordion-content" id="trigger_4">
-													<ul class="filter__list"> 
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
-																</label>
-															</div>
-														</li>
-													</ul>
+												<div class="filter__item accordion__item">
+													<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_4">Производительность
+														<svg class="icon-arrow-light">
+															<use xlink:href="img/sprite.svg#arrow-light"></use>
+														</svg>
+													</div>
+													<div class="filter__content accordion__content js-accordion-content" id="trigger_4">
+														<ul class="filter__list"> 
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
 												</div>
-											</div>
-											<div class="filter__item accordion__item">
-												<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_5">Способ отвода
-													<svg class="icon-arrow-light">
-														<use xlink:href="img/sprite.svg#arrow-light"></use>
-													</svg>
+												<div class="filter__item accordion__item">
+													<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_5">Способ отвода
+														<svg class="icon-arrow-light">
+															<use xlink:href="img/sprite.svg#arrow-light"></use>
+														</svg>
+													</div>
+													<div class="filter__content accordion__content js-accordion-content" id="trigger_5">
+														<ul class="filter__list"> 
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
 												</div>
-												<div class="filter__content accordion__content js-accordion-content" id="trigger_5">
-													<ul class="filter__list"> 
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
-																</label>
-															</div>
-														</li>
-													</ul>
+												<div class="filter__item accordion__item">
+													<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_6">По принципу работы
+														<svg class="icon-arrow-light">
+															<use xlink:href="img/sprite.svg#arrow-light"></use>
+														</svg>
+													</div>
+													<div class="filter__content accordion__content js-accordion-content" id="trigger_6">
+														<ul class="filter__list"> 
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
 												</div>
-											</div>
-											<div class="filter__item accordion__item">
-												<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_6">По принципу работы
-													<svg class="icon-arrow-light">
-														<use xlink:href="img/sprite.svg#arrow-light"></use>
-													</svg>
+												<div class="filter__item accordion__item">
+													<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_7">Еще фильтр
+														<svg class="icon-arrow-light">
+															<use xlink:href="img/sprite.svg#arrow-light"></use>
+														</svg>
+													</div>
+													<div class="filter__content accordion__content js-accordion-content" id="trigger_7">
+														<ul class="filter__list"> 
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
+																	</label>
+																</div>
+															</li>
+															<li> 
+																<div class="checkbox"> 
+																	<label>
+																		<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
+																	</label>
+																</div>
+															</li>
+														</ul>
+													</div>
 												</div>
-												<div class="filter__content accordion__content js-accordion-content" id="trigger_6">
-													<ul class="filter__list"> 
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
-																</label>
-															</div>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="filter__item accordion__item">
-												<div class="filter__trigger accordion__trigger js-accordion-trigger" data-content="trigger_7">Еще фильтр
-													<svg class="icon-arrow-light">
-														<use xlink:href="img/sprite.svg#arrow-light"></use>
-													</svg>
-												</div>
-												<div class="filter__content accordion__content js-accordion-content" id="trigger_7">
-													<ul class="filter__list"> 
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Астра</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Биотанк</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Гринлос</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Димант</span>
-																</label>
-															</div>
-														</li>
-														<li> 
-															<div class="checkbox"> 
-																<label>
-																	<input type="checkbox"><span class="checkbox__rectangle"></span><span class="checkbox__text">Евродиамант</span>
-																</label>
-															</div>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="filter__item accordion__item active">
-												<div class="filter__trigger accordion__trigger js-accordion-trigger active" data-content="trigger_8">Цена, рублей
-													<svg class="icon-arrow-light">
-														<use xlink:href="img/sprite.svg#arrow-light"></use>
-													</svg>
-												</div>
-												<div class="filter__content accordion__content js-accordion-content open" id="trigger_8">
-													<div class="filter__prices"> 
-														<div class="filter__prices-row"> 
-															<div class="filter__prices-input"> 
-																<div class="input"> 
-																	<input type="number" id="priceMin">
+												<div class="filter__item accordion__item active">
+													<div class="filter__trigger accordion__trigger js-accordion-trigger active" data-content="trigger_8">Цена, рублей
+														<svg class="icon-arrow-light">
+															<use xlink:href="img/sprite.svg#arrow-light"></use>
+														</svg>
+													</div>
+													<div class="filter__content accordion__content js-accordion-content open" id="trigger_8">
+														<div class="filter__prices"> 
+															<div class="filter__prices-row"> 
+																<div class="filter__prices-input"> 
+																	<div class="input"> 
+																		<input type="number" id="priceMin">
+																	</div>
+																</div>
+																<div class="filter__prices-input"> 
+																	<div class="input"> 
+																		<input type="number" id="priceMax">
+																	</div>
 																</div>
 															</div>
-															<div class="filter__prices-input"> 
-																<div class="input"> 
-																	<input type="number" id="priceMax">
-																</div>
-															</div>
+															<div class="filter__prices-slider" id="priceSlider" data-min="0" data-max="500000"></div>
 														</div>
-														<div class="filter__prices-slider" id="priceSlider" data-min="0" data-max="500000"></div>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
+										<div class="filter__bottom"> 
+											<button class="btn btn--big btn--blue" type="submit"> 
+												<div class="btn__inner">Показать 5 товаров</div>
+											</button>
+										</div>
+									</form>
 									<!-- /filter-->
 								</div>
-								<!-- banner-small-->
-								<div class="banner-small">
-									<div class="banner-small__item"> 
-										<div class="banner-small__img"> <img src="img/banner-small.jpg" alt=""></div>
-										<div class="banner-small__content"> 
-											<div class="banner-small__title">Калькулятор подбора автономной канализации</div>
-											<div class="banner-small__btn"> 
-												<div class="btn btn--big btn--blue"> 
-													<div class="btn__inner">Рассчитать</div>
-												</div>
-											</div>
-										</div>
-									</div>
+								<div class="catalog__btn-filter js-drop-menu" data-drop="filter">
+									<svg class="icon-filter">
+										<use xlink:href="img/sprite.svg#filter"></use>
+									</svg>
 								</div>
-								<!-- /banner-small-->
-								<!-- banner-small-->
-								<div class="banner-small">
-									<div class="banner-small__slider"> 
-										<div id="sliderBannerSmall">
-											<div class="swiper-wrapper"> 
-												<div class="swiper-slide"> 
-													<div class="banner-small__item"> 
-														<div class="banner-small__img"> <img src="img/banner-small-2.jpg" alt=""></div>
-														<div class="banner-small__content banner-small__content--white">
-															<div class="banner-small__title">Пенсионарам скидки!</div>
-															<div class="banner-small__text">Монтаж септика и подключение подводящихи отводящих магистралей</div>
-															<div class="banner-small__btn"> 
-																<div class="btn btn--big btn--blue"> 
-																	<div class="btn__inner">Получить скидку</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide"> 
-													<div class="banner-small__item"> 
-														<div class="banner-small__img"> <img src="img/banner-small.jpg" alt=""></div>
-														<div class="banner-small__content">
-															<div class="banner-small__title">Калькулятор подбора автономной канализации</div>
-															<div class="banner-small__btn"> 
-																<div class="btn btn--big btn--blue"> 
-																	<div class="btn__inner">Получить скидку</div>
-																</div>
-															</div>
+								<div class="row gy-3">
+									<div class="col-lg-12 col-md-6">
+										<!-- banner-small-->
+										<div class="banner-small">
+											<div class="banner-small__item"> 
+												<div class="banner-small__img"> <img src="img/banner-small.jpg" alt=""></div>
+												<div class="banner-small__content"> 
+													<div class="banner-small__title">Калькулятор подбора автономной канализации</div>
+													<div class="banner-small__btn"> 
+														<div class="btn btn--big btn--blue" data-bs-toggle="modal" data-bs-target="#popupCalc"> 
+															<div class="btn__inner">Рассчитать</div>
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="banner-small__pagination swiper-pagination"></div>
+										<!-- /banner-small-->
+									</div>
+									<div class="col-lg-12 col-md-6">
+										<!-- banner-small-->
+										<div class="banner-small">
+											<div class="banner-small__slider"> 
+												<div id="sliderBannerSmall">
+													<div class="swiper-wrapper"> 
+														<div class="swiper-slide"> 
+															<div class="banner-small__item"> 
+																<div class="banner-small__img"> <img src="img/banner-small-2.jpg" alt=""></div>
+																<div class="banner-small__content banner-small__content--white">
+																	<div class="banner-small__title">Пенсионарам скидки!</div>
+																	<div class="banner-small__text">Монтаж септика и подключение подводящихи отводящих магистралей</div>
+																	<div class="banner-small__btn"> 
+																		<div class="btn btn--big btn--blue" data-bs-toggle="modal" data-bs-target="#offerPopup">
+																			<div class="btn__inner">Получить скидку</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide"> 
+															<div class="banner-small__item"> 
+																<div class="banner-small__img"> <img src="img/banner-small.jpg" alt=""></div>
+																<div class="banner-small__content">
+																	<div class="banner-small__title">Калькулятор подбора автономной канализации</div>
+																	<div class="banner-small__btn"> 
+																		<div class="btn btn--big btn--blue" data-bs-toggle="modal" data-bs-target="#popupCalc">
+																			<div class="btn__inner">Рассчитать</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="banner-small__pagination swiper-pagination"></div>
+											</div>
+										</div>
+										<!-- /banner-small-->
 									</div>
 								</div>
-								<!-- /banner-small-->
 							</aside>
 							<main class="catalog__main"> 
-								<div class="catalog__type"> 
+								<div class="catalog__type d-none d-lg-block">
 									<ul class="catalog__type-list">
 																				<li class="catalog__type-item"> 
 																					<label>
@@ -1184,7 +1257,7 @@
 								</div>
 								<div class="catalog__cards"> 
 									<div class="row"> 
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img1.jpg" alt="">
@@ -1452,7 +1525,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img2.jpg" alt="">
@@ -1720,7 +1793,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img3.jpg" alt="">
@@ -1988,7 +2061,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img4.jpg" alt="">
@@ -2256,7 +2329,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img5.jpg" alt="">
@@ -2524,7 +2597,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img1.jpg" alt="">
@@ -2792,7 +2865,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img2.jpg" alt="">
@@ -3060,7 +3133,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img3.jpg" alt="">
@@ -3328,7 +3401,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img4.jpg" alt="">
@@ -3596,7 +3669,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img5.jpg" alt="">
@@ -3864,7 +3937,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img1.jpg" alt="">
@@ -4132,7 +4205,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img2.jpg" alt="">
@@ -4400,7 +4473,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img3.jpg" alt="">
@@ -4668,7 +4741,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img4.jpg" alt="">
@@ -4936,7 +5009,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img5.jpg" alt="">
@@ -5204,7 +5277,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img1.jpg" alt="">
@@ -5472,7 +5545,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img2.jpg" alt="">
@@ -5740,7 +5813,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img3.jpg" alt="">
@@ -6008,7 +6081,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img4.jpg" alt="">
@@ -6276,7 +6349,7 @@
 																				</div>
 																				<!-- /product-popup-->
 										</div>
-										<div class="col-xl-3"> 
+										<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-6"> 
 																				<!-- product-card-->
 																				<div class="product-card">
 																					<div class="product-card__img"><img src="img/products/img5.jpg" alt="">
