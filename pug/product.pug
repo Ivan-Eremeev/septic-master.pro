@@ -1,0 +1,202 @@
+extends core/base.pug
+
+block title 
+  title Страница товара
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .container 
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              a(href="#") Каталог септиков
+            li 
+              a(href="#") Малахит
+            li 
+              span Септик Юнилос
+      // /breadcrumbs
+
+      // product
+      .product
+        .container 
+          .title Септик для частного дома Юнилос 350л черный БИО Элит+
+          .product__art.d-block.d-xxl-none Артикул 234 454
+
+          .product__container 
+
+            .product__slider 
+              .product__stickers 
+                .product-card__sticker.product-card__sticker--yellow Распродажа 
+                .product-card__sticker.product-card__sticker--red Хит
+                .product-card__sticker.product-card__sticker--blue Новинка
+              #sliderProduct
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product__img 
+                      img(src="img/products/img1.jpg", alt="")
+                  .swiper-slide 
+                    .product__img 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product__img 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product__img 
+                      img(src="img/products/img4.jpg", alt="")
+                  .swiper-slide 
+                    .product__img 
+                      img(src="img/products/img5.jpg", alt="")
+              #thumbProduct
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product__thumb 
+                      img(src="img/products/img1.jpg", alt="")
+                  .swiper-slide 
+                    .product__thumb 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product__thumb 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product__thumb 
+                      img(src="img/products/img4.jpg", alt="")
+                  .swiper-slide 
+                    .product__thumb 
+                      img(src="img/products/img5.jpg", alt="")
+
+            .product__content 
+
+              .product__row 
+
+                .product__info 
+                  .product__art.d-none.d-xxl-block Артикул 234 454
+                  .product__title Модификации
+                  .product__version 
+                    .product__slider-arrow.product__slider-arrow--prev.swiper-button-prev
+                    #sliderVersion
+                      .swiper-wrapper 
+                        .swiper-slide 
+                          .product__version-item Евролос ПРО 30
+                        .swiper-slide 
+                          .product__version-item Евролос ПРО 20
+                        .swiper-slide 
+                          .product__version-item Евролос ПРО
+                        .swiper-slide 
+                          .product__version-item Евролос ПРО 10
+                        .swiper-slide 
+                          .product__version-item Евролос ПРО 40
+                    .product__slider-arrow.product__slider-arrow--next.swiper-button-next
+                  table.product__table  
+                    tr  
+                      td Количество пользователей 
+                      td 
+                        b до 75 человек
+                    tr 
+                      td Производительность
+                      td 
+                        b до 12 м³ в сутки
+                    tr 
+                      td Тип очистного устройства
+                      td 
+                        b аэрационная усановка
+                    tr 
+                      td Способ очищения воды
+                      td 
+                          b принудительный
+                  .product__items.d-none.d-md-block
+                    .product__items-row 
+                      .product__item 
+                        span 
+                          svg(class="icon-printer")
+                            use(xlink:href="img/sprite.svg#printer")
+                        | Распечатать
+                      .product__item.js-drop-social
+                        span 
+                          svg(class="icon-links")
+                            use(xlink:href="img/sprite.svg#links")
+                        | Поделится
+                    .product__drop
+                      .product__drop-title Поделиться товаром
+                      .product__drop-subtitle Ссылка для вставки
+                      .product__drop-link 
+                        p https://septic-master.pro/catalog/septik-malahit/malahit-air/
+                        a(href="#") 
+                          svg(class="icon-copy")
+                            use(xlink:href="img/sprite.svg#copy")
+                      .product__drop-subtitle Поделитесь в соц.сетях:
+                      .product__drop-social 
+                        .product__drop-social-row 
+                          a(href="#").product__drop-social-item 
+                            img(src="img/social-icons/whatsapp.svg", alt="")
+                          a(href="#").product__drop-social-item 
+                            img(src="img/social-icons/viber.svg", alt="")
+                          a(href="#").product__drop-social-item 
+                            img(src="img/social-icons/vk.svg", alt="")
+                          a(href="#").product__drop-social-item 
+                            img(src="img/social-icons/telegram.svg", alt="")
+                      .product__drop-close
+                    
+                .product__block 
+                  .product__block-top
+                    .product__stars 
+                      .product__stars-icon.product__stars-icon--fill 
+                      .product__stars-icon.product__stars-icon--fill 
+                      .product__stars-icon.product__stars-icon--fill 
+                      .product__stars-icon.product__stars-icon--fill 
+                      .product__stars-icon
+                    .product__prices 
+                      .product__price 420 290 ₽
+                      .product__price-old 542 290 ₽
+                    .product__install 
+                      .product__install-price от 80 290 ₽
+                      .product__install-item 
+                        svg(class="icon-info")
+                          use(xlink:href="img/sprite.svg#info")
+                        | монтаж под ключ
+                    .product__operations 
+                      .product__operations-item.product__operations-item--compare 
+                        label
+                          input(type="checkbox")
+                          span 
+                          | К сравнению
+                      .product__operations-item.product__operations-item--favorite
+                        label
+                          input(type="checkbox")
+                          span 
+                          | В избранное
+                    .product__buttons 
+                      button.btn.btn--big.btn--blue 
+                        span.btn__inner Заказать с установкой
+                      a(href="#").product__link Купить
+                    .product__delivery 
+                      svg(class="icon-pack")
+                        use(xlink:href="img/sprite.svg#pack")
+                      | Доставим и установим <br>ориентировочно 2 мая
+                  ul.product__block-bottom 
+                    li 
+                      svg(class="icon-percent")
+                        use(xlink:href="img/sprite.svg#percent")
+                      | Кредит от 
+                      b 33 291 Р/мес
+                    li 
+                      svg(class="icon-percent")
+                        use(xlink:href="img/sprite.svg#percent")
+                      | Рассрочка от 
+                      b 17 131 Р/мес
+                    li 
+                      a(href="#") 
+                        svg(class="icon-p")
+                          use(xlink:href="img/sprite.svg#p")
+                        | Нашли дешевле?
+      // /product
+
+    include core/footer.pug

@@ -598,6 +598,44 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер галлереи на странице товара
+  if ($('#sliderProduct').length) {
+    const thumbProduct = new Swiper('#thumbProduct', {
+      spaceBetween: 12,
+      slidesPerView: 4,
+      watchSlidesProgress: true,
+      breakpoints: {
+        769: {
+          spaceBetween: 20,
+        },
+      }
+    });
+    const sliderProduct = new Swiper('#sliderProduct', {
+      spaceBetween: 12,
+      thumbs: {
+        swiper: thumbProduct,
+      },
+      breakpoints: {
+        769: {
+          spaceBetween: 20,
+        },
+      }
+    });
+  }
+
+  // Swiper | Слайдер версии на странице товара
+  if ($('#sliderVersion').length) {
+      const sliderVersion = new Swiper('#sliderVersion', {
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        watchSlidesProgress: true,
+        navigation: {
+          nextEl: ('.product__slider-arrow--next'),
+          prevEl: ('.product__slider-arrow--prev'),
+        },
+      });
+  }
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,
@@ -741,7 +779,7 @@ window.onload = function () {
   // Fancybox | галлереи
   Fancybox.bind("[data-fancybox]");
 
-  // Выпадайка "поделиться товаром"
+  // Выпадайка "поделиться товаром" в попапе товара
   function dropSocial() {
     let btn = $('.js-drop-social');
     let close = $('.product-popup__drop-close');
@@ -751,6 +789,21 @@ window.onload = function () {
     })
     close.on('click', function () {
       let currentDrop = $(this).closest('.product-popup__drop');
+      currentDrop.removeClass('open');
+    })
+  }
+  dropSocial();
+
+  // Выпадайка "поделиться товаром" на странице товара
+  function dropSocial() {
+    let btn = $('.js-drop-social');
+    let close = $('.product__drop-close');
+    btn.on('click', function () {
+      let currentDrop = $(this).closest('.product__items').find('.product__drop');
+      currentDrop.addClass('open');
+    })
+    close.on('click', function () {
+      let currentDrop = $(this).closest('.product__drop');
       currentDrop.removeClass('open');
     })
   }
