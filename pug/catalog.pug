@@ -412,40 +412,41 @@ block content
                 p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
 
               .catalog__tags 
-                ul.catalog__tags-list.js-more-list
-                  mixin catalog-tag(title, checked)
-                    li.catalog__tags-item 
-                      label
-                        if checked
-                          input(type="radio" name="catalogTags" checked)
-                        else
-                          input(type="radio" name="catalogTags")
-                        span= title 
-                  +catalog-tag('Для частного дома', 'checked')
-                  +catalog-tag('Для дачи')
-                  +catalog-tag('Для частного дома')
-                  +catalog-tag('Для грунтовых вод')
-                  +catalog-tag('Для дачи')
-                  +catalog-tag('Для частного дома')
-                  +catalog-tag('Для дачи')
-                  +catalog-tag('Для огорода')
-                  +catalog-tag('Для дома')
-                  +catalog-tag('Для частного дома')
-                  +catalog-tag('Для дачи')
-                  +catalog-tag('Для частного дома')
-                  +catalog-tag('Для грунтовых вод')
-                  +catalog-tag('Для дачи')
-                  +catalog-tag('Для частного дома')
-                  +catalog-tag('Для дачи')
-                  +catalog-tag('Для огорода')
-                  +catalog-tag('Для дома')
-                  +catalog-tag('Для грунтовых вод')
-                  +catalog-tag('Для дачи')
-                  +catalog-tag('Для частного дома')
-                  +catalog-tag('Для дачи')
-                  +catalog-tag('Для огорода')
-                  +catalog-tag('Для дома')
-                .catalog__tags-more.js-more-btn Развернуть теги
+                .js-more-list
+                  ul.catalog__tags-list
+                    mixin catalog-tag(title, checked)
+                      li.catalog__tags-item 
+                        label
+                          if checked
+                            input(type="radio" name="catalogTags" checked)
+                          else
+                            input(type="radio" name="catalogTags")
+                          span= title 
+                    +catalog-tag('Для частного дома', 'checked')
+                    +catalog-tag('Для дачи')
+                    +catalog-tag('Для частного дома')
+                    +catalog-tag('Для грунтовых вод')
+                    +catalog-tag('Для дачи')
+                    +catalog-tag('Для частного дома')
+                    +catalog-tag('Для дачи')
+                    +catalog-tag('Для огорода')
+                    +catalog-tag('Для дома')
+                    +catalog-tag('Для частного дома')
+                    +catalog-tag('Для дачи')
+                    +catalog-tag('Для частного дома')
+                    +catalog-tag('Для грунтовых вод')
+                    +catalog-tag('Для дачи')
+                    +catalog-tag('Для частного дома')
+                    +catalog-tag('Для дачи')
+                    +catalog-tag('Для огорода')
+                    +catalog-tag('Для дома')
+                    +catalog-tag('Для грунтовых вод')
+                    +catalog-tag('Для дачи')
+                    +catalog-tag('Для частного дома')
+                    +catalog-tag('Для дачи')
+                    +catalog-tag('Для огорода')
+                    +catalog-tag('Для дома')
+                  .catalog__tags-more.js-more-btn Развернуть теги
 
               .catalog__sort 
                 .catalog__select 
@@ -496,21 +497,21 @@ block content
                     +product-card('img/products/img1.jpg', 'productPopup_10')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img2.jpg', 'productPopup_11')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img3.jpg', 'productPopup_12')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img4.jpg', 'productPopup_13')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img5.jpg', 'productPopup_14')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img1.jpg', 'productPopup_15')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img2.jpg', 'productPopup_16')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img3.jpg', 'productPopup_17')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img4.jpg', 'productPopup_18')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img5.jpg', 'productPopup_19')
 
               .catalog__more 
@@ -576,5 +577,83 @@ block content
                   .steps2__num 6
                   .steps2__text Гарантийные обязательства 2 года
       // /steps2
+
+      // tags
+      .tags
+        .container 
+          .title Наши услуги
+          .tags__items.js-more-tags
+            ul.tags__list
+              mixin tags-item(title, checked)
+                li.tags__item 
+                  label
+                    if checked
+                      input(type="radio" name="catalogTags" checked)
+                    else
+                      input(type="radio" name="catalogTags")
+                    span= title 
+              +tags-item('Для частного дома', 'checked')
+              +tags-item('Для дачи')
+              +tags-item('Для частного дома')
+              +tags-item('Для грунтовых вод')
+              +tags-item('Для дачи')
+              +tags-item('Для частного дома')
+              +tags-item('Для дачи')
+              +tags-item('Для огорода')
+              +tags-item('Для дома')
+              +tags-item('Для частного дома')
+              +tags-item('Для дачи')
+              +tags-item('Для частного дома')
+              +tags-item('Для грунтовых вод')
+              +tags-item('Для дачи')
+              +tags-item('Для частного дома')
+              +tags-item('Для дачи')
+              +tags-item('Для огорода')
+              +tags-item('Для дома')
+              +tags-item('Для грунтовых вод')
+              +tags-item('Для дачи')
+              +tags-item('Для частного дома')
+              +tags-item('Для дачи')
+              +tags-item('Для огорода')
+              +tags-item('Для дома')
+            .tags__more.js-more-btn Показать еще
+      // /tags
+
+      // callback2
+      .callback2
+        .container 
+          .callback2__container 
+            .title Задайте вопрос
+            form(action="#").callback2__form
+              .row 
+                .col-xl-4.col-lg-5
+                  .row 
+                    .col-12
+                      .input 
+                        input(type="text" placeholder="Имя")
+                    .col-12
+                      .input.js-input-tel 
+                        input(type="text" placeholder="Телефон")
+                    .col-12
+                      .input 
+                        input(type="text" placeholder="E-mail")
+                .col-xl-8.col-lg-7
+                  .row 
+                    .col-12 
+                      .textarea 
+                        textarea(placeholder="Комментарий")
+                    .col-12.d-flex.align-items-center.flex-wrap.flex-md-nowrap
+                      button(type="submit").btn.btn--big.btn--blue 
+                        .btn__inner Отправить
+                      .checkbox 
+                        label
+                          input(type="checkbox")
+                          span.checkbox__rectangle
+                          span.checkbox__text Соглашаюсь с политикой конфендициальности
+      // /callback2
+
+      include blocks/reviews.pug
+
+      include blocks/cities.pug
 
     include core/footer.pug

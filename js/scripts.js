@@ -792,25 +792,34 @@ window.onload = function () {
   // }
   // scrollUp();
 
-  // Показать еще тэги
-  function showMoreFilters() {
-    const list = $('.js-more-list');
-    const btn = $('.js-more-btn');
-    const count = 9;
+  // Показать еще пункты списка
+  function showMoreFilters(list, count, countMobile) {
+    if (!countMobile) {
+      countMobile = count;
+    }
     list.each(function () {
-      $(this).find('li').each(function (index) {
-        if (index > count - 1) {
-          $(this).hide();
+      let currentList = $(this);
+      let btn = currentList.find('.js-more-btn');
+      currentList.find('li').each(function (index) {
+        if ($(window).width() > 768) {
+          if (index > count - 1) {
+            $(this).hide();
+          }
+        } else {
+          if (index > countMobile - 1) {
+            $(this).hide();
+          }
         }
-      })
-    })
-    btn.on('click', function (e) {
-      e.preventDefault();
-      $(this).hide();
-      $(this).parent().find($('.js-more-list li')).show();
+      });
+      btn.on('click', function (e) {
+        e.preventDefault();
+        btn.hide();
+        currentList.find($('li')).show();
+      });
     })
   }
-  showMoreFilters();
+  showMoreFilters($('.js-more-list'), 9, 4);
+  showMoreFilters($('.js-more-tags'), 11, 4);
 
   // noUiSlider | Ползунок цены в фильтрах
   if ($('#priceSlider').length) {
