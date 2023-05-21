@@ -7,9 +7,6 @@
   border-radius: 4px;
   overflow: hidden;
   &__img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-shrink: 0;
     height: 174px;
     border-bottom: 1px solid $border_color;
@@ -398,92 +395,6 @@
     &__buttons {
       .btn {
         padding: 8px 10px;
-      }
-    }
-  }
-  @include media-breakpoint-up(md) {
-    min-height: 195px;
-    &--list {
-      flex-direction: row;
-      .product-card__img {
-        width: 330px;
-        height: 100%;
-        border-bottom: none;
-        border-right: 1px solid $border_color;
-      }
-      .product-card__content {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 22px 30px 33px;
-      }
-      .product-card__description {
-
-      }
-      .product-card__head {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 13px;
-      }
-      .product-card__art {
-        order: 1;
-        margin-top: 4px;
-      }
-      .product-card__prices {
-        display: flex;
-        align-items: center;
-        padding-top: 0;
-        margin-top: 20px;
-        margin-bottom: 0;
-        border-top: none;
-      }
-      .product-card__buttons {
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        margin-top: 30px;
-        .btn {
-          margin-right: 0;
-          margin-bottom: 20px;
-        }
-      }
-      .product-card__list {
-        padding-bottom: 0;
-      }
-      .product-card__title {
-        display: block;
-        margin-bottom: 10px;
-      }
-    }
-  }
-  @include media-breakpoint-between(md, xxl) {
-    &--list {
-      .product-card__img {
-        width: 250px;
-      }
-      .product-card__content {
-        flex-wrap: wrap;
-      }
-      .product-card__description {
-        width: 50%;
-      }
-      .product-card__prices {
-        width: calc(50% - 30px);
-        margin-left: 30px;
-      }
-      .product-card__buttons {
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        .btn {
-          width: auto;
-          margin-right: 30px;
-          margin-bottom: 0;
-        }
-      }
-      .product-card__buy {
-        margin-left: 0;
-        margin-right: 0;
       }
     }
   }

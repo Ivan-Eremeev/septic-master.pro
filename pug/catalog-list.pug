@@ -1,7 +1,7 @@
 extends core/base.pug
 
 block title 
-  title Каталог
+  title Каталог (список)
 
 block content
 
@@ -471,48 +471,28 @@ block content
                           use(xlink:href="img/sprite.svg#view-grid")
 
               .catalog__cards 
-                include blocks/product-card.pug
+                include blocks/product-card-list.pug
                 .row 
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img1.jpg', 'productPopup_0')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img2.jpg', 'productPopup_1')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img3.jpg', 'productPopup_2')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img4.jpg', 'productPopup_3')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img5.jpg', 'productPopup_4')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img1.jpg', 'productPopup_5')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img2.jpg', 'productPopup_6')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img3.jpg', 'productPopup_7')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img4.jpg', 'productPopup_8')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img5.jpg', 'productPopup_9')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img1.jpg', 'productPopup_10')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +product-card('img/products/img2.jpg', 'productPopup_11')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
-                    +product-card('img/products/img3.jpg', 'productPopup_12')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
-                    +product-card('img/products/img4.jpg', 'productPopup_13')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
-                    +product-card('img/products/img5.jpg', 'productPopup_14')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
-                    +product-card('img/products/img1.jpg', 'productPopup_15')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
-                    +product-card('img/products/img2.jpg', 'productPopup_16')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
-                    +product-card('img/products/img3.jpg', 'productPopup_17')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
-                    +product-card('img/products/img4.jpg', 'productPopup_18')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
-                    +product-card('img/products/img5.jpg', 'productPopup_19')
+                  .col-md-12.col-6 
+                    +product-card-list('img/products/img1.jpg', 'productPopup_0')
+                  .col-md-12.col-6 
+                    +product-card-list('img/products/img2.jpg', 'productPopup_1')
+                  .col-md-12.col-6 
+                    +product-card-list('img/products/img3.jpg', 'productPopup_2')
+                  .col-md-12.col-6 
+                    +product-card-list('img/products/img4.jpg', 'productPopup_3')
+                  .col-md-12.col-6 
+                    +product-card-list('img/products/img5.jpg', 'productPopup_4')
+                  .col-md-12.col-6 
+                    +product-card-list('img/products/img1.jpg', 'productPopup_5')
+                  .col-md-12.col-6 
+                    +product-card-list('img/products/img2.jpg', 'productPopup_6')
+                  .col-md-12.col-6 
+                    +product-card-list('img/products/img3.jpg', 'productPopup_7')
+                  .col-md-12.col-6 
+                    +product-card-list('img/products/img4.jpg', 'productPopup_8')
+                  .col-md-12.col-6 
+                    +product-card-list('img/products/img5.jpg', 'productPopup_9')
 
               .catalog__more 
                 a(href="#").btn.btn--big.btn--blue-border Показать еще
