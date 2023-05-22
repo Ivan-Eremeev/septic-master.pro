@@ -94,16 +94,29 @@
     }
   }
   &__version-item {
-    display: block;
-    padding: 10px 15px;
-    background-color: #ECF5FE;
-    border-radius: 4px;
-    white-space: nowrap;
-    font-size: 14px;
-    line-height: 17px;
-    color: $text_color;
-    cursor: pointer;
-    user-select: none;
+    span {
+      display: block;
+      padding: 10px 15px;
+      background-color: #ECF5FE;
+      border-radius: 4px;
+      white-space: nowrap;
+      font-size: 14px;
+      line-height: 17px;
+      color: $text_color;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.1s;
+    }
+    input {
+      position: absolute;
+      visibility: hidden;
+      &:checked {
+        ~ span {
+          background-color: $accent-color;
+          color: #fff;
+        }
+      }
+    }
   }
   &__slider-arrow {
     width: 48px;
