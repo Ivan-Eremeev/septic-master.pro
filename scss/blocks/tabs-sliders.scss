@@ -1,0 +1,105 @@
+/* tabs-sliders */
+.tabs-sliders { 
+  margin-bottom: 60px;
+  &__sliders {
+    #tabsThumbs {
+      margin-bottom: 35px;
+      overflow: hidden;
+      .swiper-slide {
+        width: auto;
+      }
+      .swiper-slide-thumb-active {
+        .tabs-sliders__thumb {
+          color: $link_color;
+          border-color: $link_color;
+        }
+      }
+    }
+    #tabsSlider {
+      overflow: hidden;
+      .swiper-slide {
+        background-color: #fff;
+        height: auto;
+      }
+    }
+  }
+  &__thumb {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid transparent;
+    color: $text_gray_color;
+    cursor: pointer;
+    user-select: none;
+  }
+  &__description {
+    max-width: 880px;
+    h1,h2,h3,h4,h5,h6 {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin: 15px 0;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 40px;
+    &__thumb {
+      padding: 2px;
+      border: none;
+      background-color: #ECF0F3;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      span {
+        display: block;
+        padding: 8px 12px;
+        border-radius: 7px;
+      }
+    }
+    &__description {
+      h1,h2,h3,h4,h5,h6 {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 15px;
+      }
+    }
+    &__sliders {
+      #tabsThumbs {
+        margin-bottom: 31px;
+        .swiper-slide {
+          &:first-child {
+            .tabs-sliders__thumb {
+              border-radius: 7px 0 0 7px;
+            }
+          }
+          &:last-child {
+            .tabs-sliders__thumb {
+              border-radius: 0 7px 7px 0;
+            }
+          }
+        }
+        .swiper-slide-thumb-active {
+          .tabs-sliders__thumb {
+            color: #fff;
+            span {
+              background-color: $accent-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+    &__sliders {
+      #tabsThumbs {
+        overflow: visible;
+      }
+    }
+  }
+}
+/* /tabs-sliders */

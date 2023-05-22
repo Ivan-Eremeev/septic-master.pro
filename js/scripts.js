@@ -636,6 +636,36 @@ window.onload = function () {
       });
   }
 
+  // Swiper | Слайдер для табов
+  if ($('#tabsThumbs').length) {
+    const tabsThumbs = new Swiper('#tabsThumbs', {
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      watchSlidesProgress: true,
+      threshold: 3,
+      breakpoints: {
+        769: {
+          spaceBetween: 40,
+        },
+      }
+    });
+    const tabsSlider = new Swiper('#tabsSlider', {
+      effect: 'fade',
+      autoHeight: true,
+      allowTouchMove: true,
+      threshold: 3,
+      thumbs: {
+        swiper: tabsThumbs,
+      },
+      breakpoints: {
+        769: {
+          spaceBetween: 40,
+          allowTouchMove: false,
+        },
+      }
+    });
+  }
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,
