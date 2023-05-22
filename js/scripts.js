@@ -780,10 +780,11 @@ window.onload = function () {
   Fancybox.bind("[data-fancybox]");
 
   // Выпадайка "поделиться товаром" в попапе товара
-  function dropSocial() {
-    let btn = $('.js-drop-social');
+  function dropSocialPopup() {
+    let btn = $('.js-drop-social-popup');
     let close = $('.product-popup__drop-close');
     btn.on('click', function () {
+      console.log('hh');
       let currentDrop = $(this).closest('.product-popup__items').find('.product-popup__drop');
       currentDrop.addClass('open');
     })
@@ -792,7 +793,7 @@ window.onload = function () {
       currentDrop.removeClass('open');
     })
   }
-  dropSocial();
+  dropSocialPopup();
 
   // Выпадайка "поделиться товаром" на странице товара
   function dropSocial() {

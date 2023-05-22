@@ -66,7 +66,40 @@ mixin product-card(imgUrl, id)
         .product-popup
 
           .title.d-block.d-xxl-none Септик Юнилос
-          .product-popup__art.d-block.d-xxl-none Артикул 234 454
+          .product-popup__art-items.d-flex.d-xxl-none
+            .product-popup__art Артикул 234 454
+            .product-popup__items.d-block.d-md-none
+              .product-popup__items-row 
+                .product-popup__item 
+                  span 
+                    svg(class="icon-printer")
+                      use(xlink:href="img/sprite.svg#printer")
+                  .product-popup__item-text Распечатать
+                .product-popup__item.js-drop-social-popup
+                  span 
+                    svg(class="icon-links")
+                      use(xlink:href="img/sprite.svg#links")
+                  .product-popup__item-text Поделится
+              .product-popup__drop
+                .product-popup__drop-title Поделиться товаром
+                .product-popup__drop-subtitle Ссылка для вставки
+                .product-popup__drop-link 
+                  p https://septic-master.pro/catalog/septik-malahit/malahit-air/
+                  a(href="#") 
+                    svg(class="icon-copy")
+                      use(xlink:href="img/sprite.svg#copy")
+                .product-popup__drop-subtitle Поделитесь в соц.сетях:
+                .product-popup__drop-social 
+                  .product-popup__drop-social-row 
+                    a(href="#").product-popup__drop-social-item 
+                      img(src="img/social-icons/whatsapp.svg", alt="")
+                    a(href="#").product-popup__drop-social-item 
+                      img(src="img/social-icons/viber.svg", alt="")
+                    a(href="#").product-popup__drop-social-item 
+                      img(src="img/social-icons/vk.svg", alt="")
+                    a(href="#").product-popup__drop-social-item 
+                      img(src="img/social-icons/telegram.svg", alt="")
+                .product-popup__drop-close
 
           .product-popup__slider 
             .product-popup__stickers 
@@ -155,12 +188,12 @@ mixin product-card(imgUrl, id)
                       span 
                         svg(class="icon-printer")
                           use(xlink:href="img/sprite.svg#printer")
-                      | Распечатать
-                    .product-popup__item.js-drop-social
+                      .product-popup__item-text Распечатать
+                    .product-popup__item.js-drop-social-popup
                       span 
                         svg(class="icon-links")
                           use(xlink:href="img/sprite.svg#links")
-                      | Поделится
+                      .product-popup__item-text Поделится
                   .product-popup__drop
                     .product-popup__drop-title Поделиться товаром
                     .product-popup__drop-subtitle Ссылка для вставки

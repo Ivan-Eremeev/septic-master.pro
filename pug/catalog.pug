@@ -619,38 +619,7 @@ block content
             .tags__more.js-more-btn Показать еще
       // /tags
 
-      // callback2
-      .callback2
-        .container 
-          .callback2__container 
-            .title Задайте вопрос
-            form(action="#").callback2__form
-              .row 
-                .col-xl-4.col-lg-5
-                  .row 
-                    .col-12
-                      .input 
-                        input(type="text" placeholder="Имя")
-                    .col-12
-                      .input.js-input-tel 
-                        input(type="text" placeholder="Телефон")
-                    .col-12
-                      .input 
-                        input(type="text" placeholder="E-mail")
-                .col-xl-8.col-lg-7
-                  .row 
-                    .col-12 
-                      .textarea 
-                        textarea(placeholder="Комментарий")
-                    .col-12.d-flex.align-items-center.flex-wrap.flex-md-nowrap
-                      button(type="submit").btn.btn--big.btn--blue 
-                        .btn__inner Отправить
-                      .checkbox 
-                        label
-                          input(type="checkbox")
-                          span.checkbox__rectangle
-                          span.checkbox__text Соглашаюсь с политикой конфендициальности
-      // /callback2
+      include blocks/callback2.pug
 
       include blocks/reviews.pug
 

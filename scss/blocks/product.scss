@@ -39,6 +39,8 @@
     border: 1px solid $border_color;
     border-radius: 4px;
     overflow: hidden;
+    cursor: pointer;
+    user-select: none;
     img {
       display: block;
       width: 100%;
@@ -581,6 +583,7 @@
     }
   }
   @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
     &__row {
       display: block;
     }
@@ -589,7 +592,7 @@
     }
     &__block {
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 0;
     }
     &__more {
       .btn {
@@ -612,6 +615,35 @@
     }
     &__version {
       margin-bottom: 13px;
+    }
+    &__art-items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 13px;
+    }
+    &__art {
+      margin-bottom: 0;
+    }
+    &__items {
+      margin-bottom: 0;
+    }
+    &__items-row {
+      margin-left: -13px;
+    }
+    &__item {
+      margin-left: 13px;
+      span {
+        margin-right: 0;
+      }
+    }
+    &__item-text {
+      display: none;
+    }
+    &__drop {
+      width: 290px;
+      padding: 25px 15px;
+      right: 0;
     }
   }
   @include media-breakpoint-down(sm) {

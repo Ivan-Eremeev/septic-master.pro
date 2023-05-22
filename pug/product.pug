@@ -29,7 +29,40 @@ block content
       .product
         .container 
           .title Септик для частного дома Юнилос 350л черный БИО Элит+
-          .product__art.d-block.d-xxl-none Артикул 234 454
+          .product__art-items.d-flex.d-xxl-none
+            .product__art Артикул 234 454
+            .product__items.d-block.d-md-none
+              .product__items-row 
+                .product__item 
+                  span 
+                    svg(class="icon-printer")
+                      use(xlink:href="img/sprite.svg#printer")
+                  .product__item-text Распечатать
+                .product__item.js-drop-social
+                  span 
+                    svg(class="icon-links")
+                      use(xlink:href="img/sprite.svg#links")
+                  .product__item-text Поделится
+              .product__drop
+                .product__drop-title Поделиться товаром
+                .product__drop-subtitle Ссылка для вставки
+                .product__drop-link 
+                  p https://septic-master.pro/catalog/septik-malahit/malahit-air/
+                  a(href="#") 
+                    svg(class="icon-copy")
+                      use(xlink:href="img/sprite.svg#copy")
+                .product__drop-subtitle Поделитесь в соц.сетях:
+                .product__drop-social 
+                  .product__drop-social-row 
+                    a(href="#").product__drop-social-item 
+                      img(src="img/social-icons/whatsapp.svg", alt="")
+                    a(href="#").product__drop-social-item 
+                      img(src="img/social-icons/viber.svg", alt="")
+                    a(href="#").product__drop-social-item 
+                      img(src="img/social-icons/vk.svg", alt="")
+                    a(href="#").product__drop-social-item 
+                      img(src="img/social-icons/telegram.svg", alt="")
+                .product__drop-close
 
           .product__container 
 
@@ -118,12 +151,12 @@ block content
                         span 
                           svg(class="icon-printer")
                             use(xlink:href="img/sprite.svg#printer")
-                        | Распечатать
+                        .product__item-text Распечатать
                       .product__item.js-drop-social
                         span 
                           svg(class="icon-links")
                             use(xlink:href="img/sprite.svg#links")
-                        | Поделится
+                        .product__item-text Поделится
                     .product__drop
                       .product__drop-title Поделиться товаром
                       .product__drop-subtitle Ссылка для вставки
@@ -198,5 +231,32 @@ block content
                           use(xlink:href="img/sprite.svg#p")
                         | Нашли дешевле?
       // /product
+
+      // benefit2
+      .benefit2
+        .container 
+          .benefit2__items 
+            .row 
+              .col-xl-3.col-md-6 
+                .benefit2__item 
+                  .benefit2__icon 
+                    img(src="img/benefit2-icons/img1.svg", alt="")
+                  .benefit2__text Профессиональные мастера, знающие свою работу
+              .col-xl-3.col-md-6 
+                .benefit2__item 
+                  .benefit2__icon 
+                    img(src="img/benefit2-icons/img2.svg", alt="")
+                  .benefit2__text Гарантийный возврат и обмен товара
+              .col-xl-3.col-md-6 
+                .benefit2__item 
+                  .benefit2__icon 
+                    img(src="img/benefit2-icons/img3.svg", alt="")
+                  .benefit2__text Удобная и быстрая доставка
+              .col-xl-3.col-md-6 
+                .benefit2__item 
+                  .benefit2__icon 
+                    img(src="img/benefit2-icons/img4.svg", alt="")
+                  .benefit2__text Весь товар сертифицирован
+      // /benefit2
 
     include core/footer.pug

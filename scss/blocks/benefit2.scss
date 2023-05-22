@@ -1,0 +1,50 @@
+/* benefit2 */
+.benefit2 { 
+  margin-bottom: 50px;
+  &__items {
+    > .row {
+      margin-top: -30px;
+      > * {
+        margin-top: 30px;
+      }
+    }
+  }
+  &__item {
+    height: 100%;
+    padding: 26px 50px 30px 30px;
+    background-color: #F4F6F8;
+  }
+  &__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+  } 
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+    &__items {
+      > .row {
+        margin-top: -10px;
+        > * {
+          margin-top: 10px;
+        }
+      }
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      padding: 13px 25px;
+    }
+    &__icon {
+      flex-shrink: 0;
+      margin-right: 15px;
+    }
+  }
+}
+/* /benefit2 */

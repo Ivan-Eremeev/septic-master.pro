@@ -37,6 +37,8 @@
     border: 1px solid $border_color;
     border-radius: 4px;
     overflow: hidden;
+    cursor: pointer;
+    user-select: none;
     img {
       display: block;
       width: 100%;
@@ -599,6 +601,36 @@
     }
     &__slider-arrow {
       display: none;
+    }
+    &__art-items {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 13px;
+    }
+    &__art {
+      margin-bottom: 0;
+    }
+    &__items {
+      margin-bottom: 0;
+    }
+    &__items-row {
+      margin-left: -13px;
+    }
+    &__item {
+      margin-left: 13px;
+      span {
+        margin-right: 0;
+      }
+    }
+    &__item-text {
+      display: none;
+    }
+    &__drop {
+      width: 290px;
+      padding: 25px 15px;
+      top: -20px;
+      right: 0;
     }
   }
 }
