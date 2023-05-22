@@ -1,6 +1,6 @@
 /* tabs-sliders */
 .tabs-sliders { 
-  margin-bottom: 60px;
+  margin-bottom: 45px;
   &__sliders {
     #tabsThumbs {
       margin-bottom: 35px;
@@ -46,7 +46,7 @@
     }
   }
   @include media-breakpoint-down(md) {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     &__thumb {
       padding: 2px;
       border: none;
