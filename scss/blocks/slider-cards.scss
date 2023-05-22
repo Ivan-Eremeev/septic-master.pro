@@ -1,0 +1,33 @@
+/* slider-cards */
+.slider-cards { 
+  margin-bottom: 60px;
+  .title {
+    margin-bottom: 35px;
+  }
+  &__slider {
+    position: relative;
+    .sliderCards {
+      overflow: hidden;
+    }
+  }
+  &__slider-arrow {
+    &--prev {
+      left: -20px;
+    }
+    &--next {
+      right: -20px;
+    }
+  }
+  &__pagination {
+    display: none;
+  }
+  @include media-breakpoint-down(md) {
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    &__pagination {
+      display: block;
+      bottom: -30px !important;
+    }
+  }
+}
+/* /slider-cards */

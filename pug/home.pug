@@ -418,60 +418,43 @@ block content
 
           .popular__cards 
             include blocks/product-card.pug
+            include blocks/product-popup.pug
             .row.row-cols-xxl-5.row-cols-xl-4.row-cols-md-3.row-cols-2
               .col
                 +product-card('img/products/img1.jpg', 'productPopup_0')
+                +product-popup('productPopup_0')
               .col
                 +product-card('img/products/img2.jpg', 'productPopup_1')
+                +product-popup('productPopup_1')
               .col
                 +product-card('img/products/img3.jpg', 'productPopup_2')
+                +product-popup('productPopup_2')
               .col
                 +product-card('img/products/img4.jpg', 'productPopup_3')
+                +product-popup('productPopup_3')
               .col.d-none.d-md-block 
                 +product-card('img/products/img5.jpg', 'productPopup_4')
+                +product-popup('productPopup_4')
               .col.d-none.d-md-block 
                 +product-card('img/products/img4.jpg', 'productPopup_5')
+                +product-popup('productPopup_5')
               .col.d-none.d-md-block 
                 +product-card('img/products/img1.jpg', 'productPopup_6')
+                +product-popup('productPopup_6')
               .col.d-none.d-md-block 
                 +product-card('img/products/img5.jpg', 'productPopup_7')
+                +product-popup('productPopup_7')
               .col.d-none.d-md-block 
                 +product-card('img/products/img2.jpg', 'productPopup_8')
+                +product-popup('productPopup_8')
               .col.d-none.d-md-block 
                 +product-card('img/products/img3.jpg', 'productPopup_9')
+                +product-popup('productPopup_9')
           .popular__more 
             a(href="#").btn.btn--big.btn--blue-border Посмотреть все септики
       // /popular
 
-      // brands
-      .brands
-        .container 
-          .title Популярные производители септиков
-          .brands__slider 
-            #sliderBrands 
-              .swiper-wrapper 
-                .swiper-slide 
-                  .brands__item 
-                    img(src="img/brands/img1.jpg", alt="")
-                .swiper-slide 
-                  .brands__item 
-                    img(src="img/brands/img2.jpg", alt="")
-                .swiper-slide 
-                  .brands__item 
-                    img(src="img/brands/img3.jpg", alt="")
-                .swiper-slide 
-                  .brands__item 
-                    img(src="img/brands/img4.jpg", alt="")
-                .swiper-slide 
-                  .brands__item 
-                    img(src="img/brands/img5.jpg", alt="")
-                .swiper-slide 
-                  .brands__item 
-                    img(src="img/brands/img6.jpg", alt="")
-            .brands__slider-arrow.brands__slider-arrow--prev.swiper-button-prev
-            .brands__slider-arrow.brands__slider-arrow--next.swiper-button-next
-            .brands__pagination.swiper-pagination
-      // /brands
+      include blocks/brands.pug
 
       // discount
       .discount

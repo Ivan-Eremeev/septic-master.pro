@@ -472,47 +472,68 @@ block content
 
               .catalog__cards 
                 include blocks/product-card.pug
+                include blocks/product-popup.pug
                 .row 
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img1.jpg', 'productPopup_0')
+                    +product-popup('productPopup_0')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img2.jpg', 'productPopup_1')
+                    +product-popup('productPopup_1')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img3.jpg', 'productPopup_2')
+                    +product-popup('productPopup_2')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img4.jpg', 'productPopup_3')
+                    +product-popup('productPopup_3')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img5.jpg', 'productPopup_4')
+                    +product-popup('productPopup_4')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img1.jpg', 'productPopup_5')
+                    +product-popup('productPopup_5')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img2.jpg', 'productPopup_6')
+                    +product-popup('productPopup_6')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img3.jpg', 'productPopup_7')
+                    +product-popup('productPopup_7')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img4.jpg', 'productPopup_8')
+                    +product-popup('productPopup_8')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img5.jpg', 'productPopup_9')
+                    +product-popup('productPopup_9')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img1.jpg', 'productPopup_10')
+                    +product-popup('productPopup_10')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
                     +product-card('img/products/img2.jpg', 'productPopup_11')
+                    +product-popup('productPopup_11')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img3.jpg', 'productPopup_12')
+                    +product-popup('productPopup_12')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img4.jpg', 'productPopup_13')
+                    +product-popup('productPopup_13')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img5.jpg', 'productPopup_14')
+                    +product-popup('productPopup_14')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img1.jpg', 'productPopup_15')
+                    +product-popup('productPopup_15')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img2.jpg', 'productPopup_16')
+                    +product-popup('productPopup_16')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img3.jpg', 'productPopup_17')
+                    +product-popup('productPopup_17')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img4.jpg', 'productPopup_18')
+                    +product-popup('productPopup_18')
                   .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
                     +product-card('img/products/img5.jpg', 'productPopup_19')
+                    +product-popup('productPopup_19')
 
               .catalog__more 
                 a(href="#").btn.btn--big.btn--blue-border Показать еще
@@ -546,78 +567,9 @@ block content
 
       include blocks/servicing.pug
 
-      // steps2
-      .steps2
-        .container 
-          .title Как мы работаем
-          .steps2__items 
-            .row
-              .col-xl-4.col-md-6 
-                .steps2__item 
-                  .steps2__num 1
-                  .steps2__text Ваша заявка онлайн или по телефону в Москве
-              .col-xl-4.col-md-6 
-                .steps2__item 
-                  .steps2__num 2
-                  .steps2__text Обеспечиваем выезд замерщика на участок
-              .col-xl-4.col-md-6 
-                .steps2__item 
-                  .steps2__num 3
-                  .steps2__text Точный расчет рабочей сметы и согласование договора
-              .col-xl-4.col-md-6 
-                .steps2__item 
-                  .steps2__num 4
-                  .steps2__text Доставка материалов
-              .col-xl-4.col-md-6 
-                .steps2__item 
-                  .steps2__num 5
-                  .steps2__text Монтаж станции, приемка работы и оплата по договору
-              .col-xl-4.col-md-6 
-                .steps2__item 
-                  .steps2__num 6
-                  .steps2__text Гарантийные обязательства 2 года
-      // /steps2
+      include blocks/steps2.pug
 
-      // tags
-      .tags
-        .container 
-          .title Наши услуги
-          .tags__items.js-more-tags
-            ul.tags__list
-              mixin tags-item(title, checked)
-                li.tags__item 
-                  label
-                    if checked
-                      input(type="radio" name="catalogTags" checked)
-                    else
-                      input(type="radio" name="catalogTags")
-                    span= title 
-              +tags-item('Для частного дома', 'checked')
-              +tags-item('Для дачи')
-              +tags-item('Для частного дома')
-              +tags-item('Для грунтовых вод')
-              +tags-item('Для дачи')
-              +tags-item('Для частного дома')
-              +tags-item('Для дачи')
-              +tags-item('Для огорода')
-              +tags-item('Для дома')
-              +tags-item('Для частного дома')
-              +tags-item('Для дачи')
-              +tags-item('Для частного дома')
-              +tags-item('Для грунтовых вод')
-              +tags-item('Для дачи')
-              +tags-item('Для частного дома')
-              +tags-item('Для дачи')
-              +tags-item('Для огорода')
-              +tags-item('Для дома')
-              +tags-item('Для грунтовых вод')
-              +tags-item('Для дачи')
-              +tags-item('Для частного дома')
-              +tags-item('Для дачи')
-              +tags-item('Для огорода')
-              +tags-item('Для дома')
-            .tags__more.js-more-btn Показать еще
-      // /tags
+      include blocks/tags.pug
 
       include blocks/callback2.pug
 

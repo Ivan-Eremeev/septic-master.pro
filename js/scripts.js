@@ -666,6 +666,42 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер с карточками товара
+  if ($('.sliderCards').length) {
+    const sliderCardsWrapper = Array.from(document.querySelectorAll('.slider-cards__slider'), n => {
+      const sliderCards = new Swiper(n.querySelector('.sliderCards'), {
+        slidesPerView: 2,
+        spaceBetween: 8,
+        threshold: 3,
+        navigation: {
+          nextEl: n.querySelector('.slider-cards__slider-arrow--next'),
+          prevEl: n.querySelector('.slider-cards__slider-arrow--prev'),
+        },
+        pagination: {
+          el: n.querySelector('.slider-cards__pagination'),
+          clickable: true,
+        },
+        breakpoints: {
+          // 576: {
+          //   slidesPerView: 3,
+          // },
+          // 769: {
+          //   slidesPerView: 4,
+          // },
+          769: {
+            slidesPerView: 3,
+          },
+          1200: {
+            slidesPerView: 4,
+          },
+          1400: {
+            slidesPerView: 5,
+          },
+        }
+      });
+    })
+  }
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,

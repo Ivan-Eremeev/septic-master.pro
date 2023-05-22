@@ -329,6 +329,7 @@ block content
                     p Очистная станция с принудительным сбросом с помощью насоса. Устанавливается в глинистом грунте, высоком стоянии грунтовых вод, сложном рельефе местности, когда невозможно самотечное водоотведение. Для установки требуется спецтехника. Переработка сточных вод в герметичном режиме, степень очистки стоков 98%.
       // /tabs-sliders
 
+      // small-banners
       .small-banners.d-block.d-md-none
         .container
           .row.gy-3
@@ -373,6 +374,8 @@ block content
                   .banner-small__pagination.swiper-pagination
               // /banner-small
 
+      // /small-banners
+
       // portfolio-slider
       .portfolio-slider
         .container 
@@ -401,5 +404,20 @@ block content
           a(href="#").portfolio-slider__btn 
             .btn.btn--big.btn--blue-border Посмотреть все работы
       // /portfolio-slider
+
+      include blocks/slider-cards.pug
+
+      include blocks/slider-cards.pug
+      +slider-cards('Аналоги септика от других производителей')
+
+      include blocks/brands.pug
+
+      +slider-cards('Рекомендуем')
+
+      +slider-cards('Вы смотрели')
+
+      include blocks/callback2.pug
+
+      include blocks/tags.pug
 
     include core/footer.pug

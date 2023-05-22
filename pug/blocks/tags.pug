@@ -1,0 +1,40 @@
+// tags
+.tags
+  .container 
+    .title Наши услуги
+    .tags__items.js-more-tags
+      ul.tags__list
+        mixin tags-item(title, checked)
+          li.tags__item 
+            label
+              if checked
+                input(type="radio" name="catalogTags" checked)
+              else
+                input(type="radio" name="catalogTags")
+              span= title 
+        +tags-item('Для частного дома', 'checked')
+        +tags-item('Для дачи')
+        +tags-item('Для частного дома')
+        +tags-item('Для грунтовых вод')
+        +tags-item('Для дачи')
+        +tags-item('Для частного дома')
+        +tags-item('Для дачи')
+        +tags-item('Для огорода')
+        +tags-item('Для дома')
+        +tags-item('Для частного дома')
+        +tags-item('Для дачи')
+        +tags-item('Для частного дома')
+        +tags-item('Для грунтовых вод')
+        +tags-item('Для дачи')
+        +tags-item('Для частного дома')
+        +tags-item('Для дачи')
+        +tags-item('Для огорода')
+        +tags-item('Для дома')
+        +tags-item('Для грунтовых вод')
+        +tags-item('Для дачи')
+        +tags-item('Для частного дома')
+        +tags-item('Для дачи')
+        +tags-item('Для огорода')
+        +tags-item('Для дома')
+      .tags__more.js-more-btn Показать еще
+// /tags
