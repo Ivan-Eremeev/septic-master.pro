@@ -1,6 +1,5 @@
 /* table-prices */
 .table-prices { 
-  margin-bottom: 70px;
   &__title {
     font-weight: 600;
     font-size: 22px;
@@ -74,7 +73,6 @@
     }
   }
   @include media-breakpoint-down(md) {
-    margin-bottom: 40px;
     &__table {
       table {
         display: block;

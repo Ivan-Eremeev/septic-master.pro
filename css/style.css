@@ -14098,6 +14098,9 @@ input[type=number]:focus {
 
 /* /slider-cards */
 /* universal */
+.universal {
+  margin-bottom: 60px;
+}
 .universal > .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14165,6 +14168,9 @@ input[type=number]:focus {
   }
 }
 @media (max-width: 991.98px) {
+  .universal {
+    margin-bottom: 40px;
+  }
   .universal .container {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -14250,9 +14256,6 @@ input[type=number]:focus {
 
 /* /service */
 /* table-prices */
-.table-prices {
-  margin-bottom: 70px;
-}
 .table-prices__title {
   font-weight: 600;
   font-size: 22px;
@@ -14314,9 +14317,6 @@ input[type=number]:focus {
   }
 }
 @media (max-width: 768.98px) {
-  .table-prices {
-    margin-bottom: 40px;
-  }
   .table-prices__table table {
     display: block;
   }
