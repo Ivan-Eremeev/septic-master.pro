@@ -10435,7 +10435,7 @@ input[type=number]:focus {
   .portfolio-slider {
     overflow: hidden;
   }
-  .portfolio-slider__slider #sliderPortfolio {
+  .portfolio-slider__slider #sliderPortfolioSlider {
     overflow: visible;
   }
 }
@@ -14093,6 +14093,9 @@ input[type=number]:focus {
   .slider-cards__pagination {
     display: block;
     bottom: -30px !important;
+  }
+  .slider-cards__slider-arrow {
+    display: none;
   }
 }
 

@@ -61,7 +61,7 @@
   @include media-breakpoint-down(sm) {
     overflow: hidden;
     &__slider {
-      #sliderPortfolio {
+      #sliderPortfolioSlider {
         overflow: visible;
       }
     }
