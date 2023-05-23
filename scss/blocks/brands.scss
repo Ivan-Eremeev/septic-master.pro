@@ -8,7 +8,7 @@
     padding: 0 1px;
     position: relative;
     user-select: none;
-    #sliderBrands {
+    #sliderBrands, .sliderBrands {
       overflow: hidden;
     }
     .swiper-wrapper {
@@ -55,7 +55,7 @@
   @include media-breakpoint-down(sm) {
     overflow: hidden;
     &__slider {
-      #sliderBrands {
+      #sliderBrands, .sliderBrands {
         overflow: visible;
       }
     }

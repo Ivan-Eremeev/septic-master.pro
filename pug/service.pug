@@ -182,7 +182,23 @@ block content
                       | 12 000 ₽
                     td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
             // /table-prices
+            
+            //- include blocks/brands2.pug
+            //- +brands('Наши бренды')
 
       // /universal
+
+      include blocks/brands.pug
+
+      include blocks/portfolio-slider.pug
+
+      include blocks/brands.pug
+
+      include blocks/slider-cards.pug
+      +slider-cards('Рекомендуем')
+
+      include blocks/reviews.pug
+
+      include blocks/callback2.pug
 
     include core/footer.pug

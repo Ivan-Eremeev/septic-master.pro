@@ -9599,7 +9599,7 @@ input[type=number]:focus {
   -ms-user-select: none;
   user-select: none;
 }
-.brands__slider #sliderBrands {
+.brands__slider #sliderBrands, .brands__slider .sliderBrands {
   overflow: hidden;
 }
 .brands__slider .swiper-wrapper {
@@ -9654,7 +9654,7 @@ input[type=number]:focus {
   .brands {
     overflow: hidden;
   }
-  .brands__slider #sliderBrands {
+  .brands__slider #sliderBrands, .brands__slider .sliderBrands {
     overflow: visible;
   }
 }
@@ -14098,10 +14098,7 @@ input[type=number]:focus {
 
 /* /slider-cards */
 /* universal */
-.universal {
-  margin-bottom: 60px;
-}
-.universal .container {
+.universal > .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14116,6 +14113,7 @@ input[type=number]:focus {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  min-width: 0;
 }
 .universal__menu {
   height: 100%;
@@ -14167,9 +14165,6 @@ input[type=number]:focus {
   }
 }
 @media (max-width: 991.98px) {
-  .universal {
-    margin-bottom: 40px;
-  }
   .universal .container {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -14255,6 +14250,9 @@ input[type=number]:focus {
 
 /* /service */
 /* table-prices */
+.table-prices {
+  margin-bottom: 70px;
+}
 .table-prices__title {
   font-weight: 600;
   font-size: 22px;
@@ -14316,6 +14314,9 @@ input[type=number]:focus {
   }
 }
 @media (max-width: 768.98px) {
+  .table-prices {
+    margin-bottom: 40px;
+  }
   .table-prices__table table {
     display: block;
   }

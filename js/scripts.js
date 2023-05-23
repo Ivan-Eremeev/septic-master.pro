@@ -309,6 +309,52 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер "производители"
+  if ($('.js-brands-slider').length) {
+    const Swipers = Array.from(document.querySelectorAll('.js-brands-slider'), n => {
+      const sliderBrands = new Swiper(n.querySelector('.sliderBrands'), {
+        slidesPerView: 2.1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+          anabled: true,
+          delay: 1,
+        },
+        speed: 4000,
+        pagination: {
+          el: '.brands__pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: n.querySelector('.brands__slider-arrow--next'),
+          prevEl: n.querySelector('.brands__slider-arrow--prev'),
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          769: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1400: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+        }
+      });
+    })
+  }
+
   // Swiper | Слайдер "акции и скидки"
   if ($('#sliderDiscount').length) {
     const sliderDiscount = new Swiper('#sliderDiscount', {
