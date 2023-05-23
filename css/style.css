@@ -14087,6 +14087,12 @@ input[type=number]:focus {
 }
 
 /* /slider-cards */
+/* service */
+.service .title {
+  margin-bottom: 35px;
+}
+
+/* /service */
 /* footer */
 .footer {
   background-color: #11356A;
