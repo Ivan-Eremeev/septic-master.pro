@@ -11,12 +11,178 @@ block content
 
     .content 
 
-      // service
-      .service
+      // breadcrumbs
+      .breadcrumbs
         .container 
-          .service__sidebar 
-          .service__main 
-            .title Обслуживание септиков
-      // /service
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              a(href="#") Услуги
+            li 
+              a(href="#") Сервисные службы
+            li 
+              span Обслуживание септиков
+      // /breadcrumbs
+
+      // universal
+      .universal
+        .container 
+
+          .universal__sidebar 
+            .row.gy-3
+
+              .col-12.d-none.d-lg-block
+                ul.universal__menu 
+                  li 
+                    a(href="#") Малахит
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Топас топол Эко
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Топас-С топол Эко
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Топ Аэро топол Эко
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Астра Юнилос
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Евролос Био Евролос
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Евролос Грунт Евролос
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Тверь Classic
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+
+              .col-lg-12.col-md-6
+                // banner-small
+                .banner-small
+                  .banner-small__item 
+                    .banner-small__img 
+                      img(src="img/banner-small.jpg", alt="")
+                    .banner-small__content 
+                      .banner-small__title Калькулятор подбора автономной канализации
+                      .banner-small__btn 
+                        .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#popupCalc") 
+                          .btn__inner Рассчитать
+                // /banner-small
+
+              .col-lg-12.col-md-6
+                // banner-small
+                .banner-small
+                  .banner-small__slider 
+                    #sliderBannerSmall
+                      .swiper-wrapper 
+                        .swiper-slide 
+                          .banner-small__item 
+                            .banner-small__img 
+                              img(src="img/banner-small-2.jpg", alt="")
+                            .banner-small__content.banner-small__content--white
+                              .banner-small__title Пенсионарам скидки!
+                              .banner-small__text Монтаж септика и подключение подводящихи отводящих магистралей
+                              .banner-small__btn 
+                                .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#offerPopup")
+                                  .btn__inner Получить скидку
+                        .swiper-slide 
+                          .banner-small__item 
+                            .banner-small__img 
+                              img(src="img/banner-small.jpg", alt="")
+                            .banner-small__content
+                              .banner-small__title Калькулятор подбора автономной канализации
+                              .banner-small__btn 
+                                .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#popupCalc")
+                                  .btn__inner Рассчитать
+                    .banner-small__pagination.swiper-pagination
+                // /banner-small
+
+          .universal__main 
+            
+            // service
+            .service
+              .title Обслуживание септиков
+              .service__rows 
+                .service__row 
+                  img(src="img/service/img1.jpg", alt="")
+                  p Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры в значительной степени обуславливает создание модели развития. 
+                  p Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации дальнейших направлений развития. Таким образом постоянный количественный рост и сфера нашей активности требуют от нас анализа существенных финансовых и административных условий. 
+                .service__row 
+                  img(src="img/service/img2.jpg", alt="")
+                  p Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности играет важную роль в формировании модели развития. 
+                  p Идейные соображения высшего порядка, а также укрепление и развитие структуры в значительной степени обуславливает создание модели развития. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации дальнейших направлений развития. Таким образом постоянный количественный рост и сфера нашей активности требуют от нас анализа существенных финансовых и административных условий. 
+            // /service
+
+            // table-prices
+            .table-prices
+              .table-prices__title Цены на наши услуги
+              .table-prices__table 
+                table 
+                  tr 
+                    th Услуга
+                    th Стоимость
+                    th Описание
+                  tr 
+                    td Очистка септика
+                    td 
+                      .table-prices__text Стоимость
+                      | 12 000 ₽
+                    td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
+                  tr 
+                    td Очистка септика
+                    td 
+                      .table-prices__text Стоимость
+                      | 12 000 ₽
+                    td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
+                  tr 
+                    td Очистка септика
+                    td 
+                      .table-prices__text Стоимость
+                      | 12 000 ₽
+                    td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
+                  tr 
+                    td Очистка септика
+                    td 
+                      .table-prices__text Стоимость
+                      | 12 000 ₽
+                    td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
+                  tr 
+                    td Очистка септика
+                    td 
+                      .table-prices__text Стоимость
+                      | 12 000 ₽
+                    td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
+                  tr 
+                    td Очистка септика
+                    td 
+                      .table-prices__text Стоимость
+                      | 12 000 ₽
+                    td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
+                  tr 
+                    td Очистка септика
+                    td 
+                      .table-prices__text Стоимость
+                      | 12 000 ₽
+                    td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
+                  tr 
+                    td Очистка септика
+                    td 
+                      .table-prices__text Стоимость
+                      | 12 000 ₽
+                    td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
+            // /table-prices
+
+      // /universal
 
     include core/footer.pug

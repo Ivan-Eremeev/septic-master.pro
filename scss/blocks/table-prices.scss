@@ -1,0 +1,129 @@
+/* table-prices */
+.table-prices { 
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: $title_color;
+    margin-bottom: 22px;
+  }
+  &__table {
+    table {
+      width: 100%;
+      tr {
+        &:nth-child(odd) {
+          td {
+            background-color: #F4F6F8;
+          }
+        }
+      }
+      th {
+        padding: 8px;
+        background-color: $background_color;
+        text-align: left;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 154.02%;
+        color: $text_gray_color;
+        &:nth-child(1) {
+          width: 25%;
+          padding-left: 15px;
+          border-radius: 4px 0 0 4px;
+        }
+        &:nth-child(2) {
+          width: 15%;
+        }
+        &:nth-child(3) {
+          padding-right: 15px;
+          border-radius: 0 4px 4px 0;
+        }
+      }
+      td {
+        padding: 6px;
+        font-size: 16px;
+        line-height: 154.02%;
+        background-color: #fff;
+        &:nth-child(1) {
+          padding-left: 15px;
+          border-radius: 4px 0 0 4px;
+        }
+        &:nth-child(3) {
+          padding-right: 15px;
+          color: $text_gray_color;
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+  }
+  &__text {
+    display: none;
+  }
+  @include media-breakpoint-down(xl) {
+    &__table {
+      table {
+        th {
+          &:nth-child(1) {
+            width: 30%;
+          }
+          &:nth-child(2) {
+            width: 20%;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__table {
+      table {
+        display: block;
+        tbody {
+          display: block;
+        }
+        tr {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+          border: 1px solid $border_color;
+          border-radius: 4px;
+          overflow: hidden;
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(odd) {
+            td {
+              background-color: #fff;
+              &:nth-child(1) {
+                background-color: $background_color;
+              }
+              &:nth-child(2) {
+                background-color: #F4F6F8;
+              }
+            }
+          }
+        }
+        td {
+          padding: 12px 20px;
+          &:nth-child(1) {
+            padding-left: 20px;
+            background-color: $background_color;
+          }
+          &:nth-child(2) {
+            display: flex;
+            align-items: center;
+            padding-right: 20px;
+            background-color: #F4F6F8;
+            order: 1;
+          }
+        }
+      }
+    }
+    &__text {
+      display: block;
+      margin-right: 90px;
+      font-size: 14px;
+      line-height: 154.02%;
+      color: $text_gray_color;
+    }
+  }
+}
+/* /table-prices */

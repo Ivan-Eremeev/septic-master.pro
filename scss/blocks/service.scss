@@ -1,7 +1,71 @@
 /* service */
 .service { 
+  margin-bottom: 20px;
   .title {
     margin-bottom: 35px;
+  }
+  &__row {
+    margin-bottom: 25px;
+    &:nth-child(even) {
+      img {
+        width: 357px;
+        float: right;
+        margin-right: 0;
+        margin-left: 30px;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    img {
+      width: 440px;
+      margin-right: 30px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      float: left;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &__row {
+      img {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      &:nth-child(even) {
+        img {
+          width: 100%;
+          float: none;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 35px;
+    .title {
+      margin-bottom: 25px;
+    }
+    &__row {
+      margin-bottom: 30px; 
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__row {
+      img {
+        height: 226px;
+        object-fit: cover;
+      }
+    }
   }
 }
 /* /service */
