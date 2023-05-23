@@ -249,42 +249,42 @@ header#headerSticky.header
           .col-xl-3.col-4
             ul.header__catalog-menu 
               li 
-                a(href="#") По производителю
+                a(href="#" data-catalog-trigger="catalogList_0").active По производителю
                   svg(class="icon-arrow-light")
                     use(xlink:href="img/sprite.svg#arrow-light")
               li 
-                a(href="#") По назначению
+                a(href="#" data-catalog-trigger="catalogList_1") По назначению
                   svg(class="icon-arrow-light")
                     use(xlink:href="img/sprite.svg#arrow-light")
               li 
-                a(href="#") По принципу работы
+                a(href="#" data-catalog-trigger="catalogList_2") По принципу работы
                   svg(class="icon-arrow-light")
                     use(xlink:href="img/sprite.svg#arrow-light")
               li 
-                a(href="#") По количеству человек
+                a(href="#" data-catalog-trigger="catalogList_3") По количеству человек
                   svg(class="icon-arrow-light")
                     use(xlink:href="img/sprite.svg#arrow-light")
               li 
-                a(href="#") По материалу
+                a(href="#" data-catalog-trigger="catalogList_4") По материалу
                   svg(class="icon-arrow-light")
                     use(xlink:href="img/sprite.svg#arrow-light")
               li 
-                a(href="#") По способу отвода
+                a(href="#" data-catalog-trigger="catalogList_5") По способу отвода
                   svg(class="icon-arrow-light")
                     use(xlink:href="img/sprite.svg#arrow-light")
               li 
-                a(href="#") По объему переработки
+                a(href="#" data-catalog-trigger="catalogList_6") По объему переработки
                   svg(class="icon-arrow-light")
                     use(xlink:href="img/sprite.svg#arrow-light")
               li 
-                a(href="#") Распродажа
+                a(href="#" data-catalog-trigger="catalogList_7") Распродажа
                   svg(class="icon-arrow-light")
                     use(xlink:href="img/sprite.svg#arrow-light")
           .col-xl-9.col-8
-            .header__catalog-lists 
+            .header__catalog-lists(data-catalog-drop="catalogList_0").open
               .row 
                 .col-xl-4.col-6
-                  ul.header__catalog-list 
+                  ul.header__catalog-list
                     li 
                       a(href="#") Для частного дома
                     li 
@@ -313,6 +313,195 @@ header#headerSticky.header
                       a(href="#") Для сезонного проживания
                     li 
                       a(href="#") Для гостиниц
+                    li 
+                      a(href="#") Для поселка
+
+            .header__catalog-lists(data-catalog-drop="catalogList_1")
+              .row 
+                .col-xl-4.col-6
+                  ul.header__catalog-list
+                    li 
+                      a(href="#") Для частного дома
+                    li 
+                      a(href="#") Для бани
+                    li 
+                      a(href="#") Для туалета
+                    li 
+                      a(href="#") Для постоянного проживания
+                    li 
+                      a(href="#") Для загородного дома
+                    li 
+                      a(href="#") Для промышленных предприятий
+                    li 
+                      a(href="#") Для кухни
+                    li 
+                      a(href="#") Для дачи
+                .col-xl-4.col-6
+                  ul.header__catalog-list 
+                    li 
+                      a(href="#") Под высокие грунтовые воды
+                    li 
+                      a(href="#") Для непостоянного проживания
+                    li 
+                      a(href="#") Для сезонного проживания
+                    li 
+                      a(href="#") Для гостиниц
+                    li 
+                      a(href="#") Для поселка
+
+            .header__catalog-lists(data-catalog-drop="catalogList_2")
+              .row 
+                .col-xl-4.col-6
+                  ul.header__catalog-list
+                    li 
+                      a(href="#") Для частного дома
+                    li 
+                      a(href="#") Для бани
+                    li 
+                      a(href="#") Для туалета
+                    li 
+                      a(href="#") Для промышленных предприятий
+                    li 
+                      a(href="#") Для кухни
+                    li 
+                      a(href="#") Для дачи
+                    li 
+                      a(href="#") Для коттеджа
+                .col-xl-4.col-6
+                  ul.header__catalog-list 
+                    li 
+                      a(href="#") Под высокие грунтовые воды
+                    li 
+                      a(href="#") Для непостоянного проживания
+                    li 
+                      a(href="#") Для сезонного проживания
+                    li 
+                      a(href="#") Для гостиниц
+                    li 
+                      a(href="#") Для поселка
+
+            .header__catalog-lists(data-catalog-drop="catalogList_3")
+              .row 
+                .col-xl-4.col-6
+                  ul.header__catalog-list
+                    li 
+                      a(href="#") Для частного дома
+                    li 
+                      a(href="#") Для бани
+                    li 
+                      a(href="#") Для туалета
+                    li 
+                      a(href="#") Для постоянного проживания
+                    li 
+                      a(href="#") Для загородного дома
+                    li 
+                      a(href="#") Для промышленных предприятий
+                    li 
+                      a(href="#") Для кухни
+                    li 
+                      a(href="#") Для дачи
+                    li 
+                      a(href="#") Для коттеджа
+                .col-xl-4.col-6
+                  ul.header__catalog-list 
+                    li 
+                      a(href="#") Для гостиниц
+                    li 
+                      a(href="#") Для поселка
+
+            .header__catalog-lists(data-catalog-drop="catalogList_4")
+              .row 
+                .col-xl-4.col-6
+                  ul.header__catalog-list
+                    li 
+                      a(href="#") Для частного дома
+                    li 
+                      a(href="#") Для бани
+                    li 
+                      a(href="#") Для туалета
+                    li 
+                      a(href="#") Для постоянного проживания
+                    li 
+                      a(href="#") Для коттеджа
+                .col-xl-4.col-6
+                  ul.header__catalog-list 
+                    li 
+                      a(href="#") Под высокие грунтовые воды
+                    li 
+                      a(href="#") Для непостоянного проживания
+                    li 
+                      a(href="#") Для сезонного проживания
+                    li 
+                      a(href="#") Для гостиниц
+                    li 
+                      a(href="#") Для поселка
+              
+            .header__catalog-lists(data-catalog-drop="catalogList_5")
+              .row 
+                .col-xl-4.col-6
+                  ul.header__catalog-list
+                    li 
+                      a(href="#") Для постоянного проживания
+                    li 
+                      a(href="#") Для загородного дома
+                    li 
+                      a(href="#") Для промышленных предприятий
+                    li 
+                      a(href="#") Для кухни
+                    li 
+                      a(href="#") Для дачи
+                    li 
+                      a(href="#") Для коттеджа
+                .col-xl-4.col-6
+                  ul.header__catalog-list 
+                    li 
+                      a(href="#") Под высокие грунтовые воды
+                    li 
+                      a(href="#") Для гостиниц
+                    li 
+                      a(href="#") Для поселка
+
+            .header__catalog-lists(data-catalog-drop="catalogList_6")
+              .row 
+                .col-xl-4.col-6
+                  ul.header__catalog-list
+                    li 
+                      a(href="#") Для частного дома
+                    li 
+                      a(href="#") Для дачи
+                    li 
+                      a(href="#") Для коттеджа
+                .col-xl-4.col-6
+                  ul.header__catalog-list 
+                    li 
+                      a(href="#") Под высокие грунтовые воды
+                    li 
+                      a(href="#") Для непостоянного проживания
+                    li 
+                      a(href="#") Для сезонного проживания
+                    li 
+                      a(href="#") Для гостиниц
+
+            .header__catalog-lists(data-catalog-drop="catalogList_7")
+              .row 
+                .col-xl-4.col-6
+                  ul.header__catalog-list
+                    li 
+                      a(href="#") Для частного дома
+                    li 
+                      a(href="#") Для бани
+                    li 
+                      a(href="#") Для туалета
+                    li 
+                      a(href="#") Для постоянного проживания
+                    li 
+                      a(href="#") Для дачи
+                    li 
+                      a(href="#") Для коттеджа
+                .col-xl-4.col-6
+                  ul.header__catalog-list 
+                    li 
+                      a(href="#") Под высокие грунтовые воды
                     li 
                       a(href="#") Для поселка
 //	/header

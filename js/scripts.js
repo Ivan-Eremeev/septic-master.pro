@@ -88,6 +88,24 @@ window.onload = function () {
   }
   catalogMenu();
 
+  // Переключение табов в каталоге
+  function catalogTabs() {
+    let menuItem = $('[data-catalog-trigger]');
+    let dropItem = $('[data-catalog-drop]');
+    menuItem.on('click', function (e) {
+      e.preventDefault();
+      let currentMenuItem = $(this);
+      let currentDropItem = $('[data-catalog-drop="' + currentMenuItem.data('catalog-trigger') + '"]');
+      if (!currentMenuItem.hasClass('active')) {
+        menuItem.removeClass('active');
+        dropItem.removeClass('open');
+        currentMenuItem.addClass('active');
+        currentDropItem.addClass('open');
+      }
+    })
+  }
+  catalogTabs();
+
   // Выпадайки при клике по кнопке
   // Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
   // Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки

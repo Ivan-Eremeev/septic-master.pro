@@ -8044,6 +8044,10 @@ input[type=number]:focus {
   max-height: calc(100vh - 190px);
   padding: 25px 25px 40px 0;
   overflow-y: auto;
+  display: none;
+}
+.header__catalog-lists.open {
+  display: block;
 }
 .header__catalog-list {
   font-size: 14px;

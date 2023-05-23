@@ -530,6 +530,10 @@
     max-height: calc(100vh - 190px);
     padding: 25px 25px 40px 0;
     overflow-y: auto;
+    display: none;
+    &.open {
+      display: block;
+    }
   }
   &__catalog-list {
     font-size: 14px;
