@@ -4,6 +4,11 @@
   .title {
     margin-bottom: 35px;
   }
+  &__rows {
+    &--mb40 {
+      margin-bottom: 40px;
+    }
+  }
   &__row {
     margin-bottom: 25px;
     &:nth-child(even) {

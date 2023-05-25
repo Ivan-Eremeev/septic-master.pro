@@ -183,21 +183,52 @@ block content
                     td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
             // /table-prices
             
-            //- include blocks/brands2.pug
-            //- +brands('Наши бренды')
+            include blocks/brands2.pug
+            +brands2('Наши бренды')
+
+            .service__rows.service__rows--mb40 
+              .service__row
+                img(src="img/service/img1.jpg", alt="")
+                p Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности играет важную роль в формировании модели развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры в значительной степени обуславливает создание модели развития. 
+                p Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации дальнейших направлений развития. Таким образом постоянный количественный рост и сфера нашей активности требуют от нас анализа существенных финансовых и административных условий. 
+
+            // portfolio-slider
+            .portfolio-slider.portfolio-slider--2
+              .container 
+                .title Наши работы
+                .portfolio-slider__slider 
+                  #sliderPortfolioSlider 
+                    .swiper-wrapper
+                      .swiper-slide
+                        a(href="img/portfolio/img1.jpg" data-fancybox).portfolio-slider__img 
+                          img(src="img/portfolio/img1.jpg", alt="")
+                      .swiper-slide
+                        a(href="img/portfolio/img2.jpg" data-fancybox).portfolio-slider__img 
+                          img(src="img/portfolio/img2.jpg", alt="")
+                      .swiper-slide
+                        a(href="img/portfolio/img3.jpg" data-fancybox).portfolio-slider__img 
+                          img(src="img/portfolio/img3.jpg", alt="")
+                      .swiper-slide
+                        a(href="img/portfolio/img4.jpg" data-fancybox).portfolio-slider__img 
+                          img(src="img/portfolio/img4.jpg", alt="")
+                      .swiper-slide
+                        a(href="img/portfolio/img5.jpg" data-fancybox).portfolio-slider__img 
+                          img(src="img/portfolio/img5.jpg", alt="")
+                  .portfolio-slider__pagination.swiper-pagination
+                  .portfolio-slider__slider-arrow.portfolio-slider__slider-arrow--prev.swiper-button-prev
+                  .portfolio-slider__slider-arrow.portfolio-slider__slider-arrow--next.swiper-button-next
+                //- a(href="#").portfolio-slider__btn 
+                //-   .btn.btn--big.btn--blue-border Посмотреть все работы
+            // /portfolio-slider
+
+            +brands2('Мы являемся официальным представителем')
+
+            include blocks/slider-cards.pug
+            +slider-cards('Рекомендуем')
+
+            include blocks/reviews-noimage.pug
 
       // /universal
-
-      include blocks/brands.pug
-
-      include blocks/portfolio-slider.pug
-
-      include blocks/brands.pug
-
-      include blocks/slider-cards.pug
-      +slider-cards('Рекомендуем')
-
-      include blocks/reviews.pug
 
       include blocks/callback2.pug
 

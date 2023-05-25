@@ -10405,6 +10405,9 @@ input[type=number]:focus {
 .portfolio-slider__slider-arrow--next {
   right: -20px;
 }
+.portfolio-slider--2 .portfolio-slider__img {
+  height: 217px;
+}
 @media (max-width: 768.98px) {
   .portfolio-slider {
     padding-bottom: 30px;
@@ -14198,6 +14201,9 @@ input[type=number]:focus {
 .service .title {
   margin-bottom: 35px;
 }
+.service__rows--mb40 {
+  margin-bottom: 40px;
+}
 .service__row {
   margin-bottom: 25px;
 }
@@ -14259,6 +14265,9 @@ input[type=number]:focus {
 
 /* /service */
 /* table-prices */
+.table-prices {
+  margin-bottom: 60px;
+}
 .table-prices__title {
   font-weight: 600;
   font-size: 22px;
@@ -14320,6 +14329,9 @@ input[type=number]:focus {
   }
 }
 @media (max-width: 768.98px) {
+  .table-prices {
+    margin-bottom: 40px;
+  }
   .table-prices__table table {
     display: block;
   }
