@@ -322,7 +322,7 @@ window.onload = function () {
         },
         speed: 4000,
         pagination: {
-          el: '.brands__pagination',
+          el: n.querySelector('.brands__pagination'),
           clickable: true,
         },
         navigation: {
@@ -644,22 +644,24 @@ window.onload = function () {
   }
 
   // Swiper | Слайдер мини-баннер
-  if ($('#sliderBannerSmall').length) {
-    const sliderBannerSmall = new Swiper('#sliderBannerSmall', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      threshold: 3,
-      loop: true,
-      autoplay: {
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-      speed: 1000,
-      pagination: {
-        el: '.banner-small__pagination',
-        clickable: true,
-      },
-    });
+  if ($('.banner-small__slider ').length) {
+    const slider = Array.from(document.querySelectorAll('.banner-small__slider '), n => {
+      const sliderBannerSmall = new Swiper(n.querySelector('.sliderBannerSmall'), {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        threshold: 3,
+        loop: true,
+        autoplay: {
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        speed: 1000,
+        pagination: {
+          el: n.querySelector('.banner-small__pagination'),
+          clickable: true,
+        },
+      });
+    })
   }
 
   // Swiper | Слайдер галлереи на странице товара
@@ -760,6 +762,42 @@ window.onload = function () {
           },
           1400: {
             slidesPerView: 5,
+          },
+        }
+      });
+    })
+  }
+
+  // Swiper | Слайдер с карточками товара
+  if ($('.sliderCards2').length) {
+    const sliderCardsWrapper = Array.from(document.querySelectorAll('.slider-cards__slider'), n => {
+      const sliderCards = new Swiper(n.querySelector('.sliderCards2'), {
+        slidesPerView: 2,
+        spaceBetween: 8,
+        threshold: 3,
+        navigation: {
+          nextEl: n.querySelector('.slider-cards__slider-arrow--next'),
+          prevEl: n.querySelector('.slider-cards__slider-arrow--prev'),
+        },
+        pagination: {
+          el: n.querySelector('.slider-cards__pagination'),
+          clickable: true,
+        },
+        breakpoints: {
+          // 576: {
+          //   slidesPerView: 3,
+          // },
+          769: {
+            slidesPerView: 3,
+          },
+          992: {
+            slidesPerView: 2,
+          },
+          1200: {
+            slidesPerView: 3,
+          },
+          1400: {
+            slidesPerView: 4,
           },
         }
       });

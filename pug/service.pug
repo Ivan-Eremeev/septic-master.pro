@@ -67,7 +67,7 @@ block content
                       svg(class="icon-arrow-light")
                         use(xlink:href="img/sprite.svg#arrow-light")
 
-              .col-lg-12.col-md-6
+              .col-lg-12.col-md-6.d-none.d-lg-block
                 // banner-small
                 .banner-small
                   .banner-small__item 
@@ -80,11 +80,11 @@ block content
                           .btn__inner Рассчитать
                 // /banner-small
 
-              .col-lg-12.col-md-6
+              .col-lg-12.col-md-6.d-none.d-lg-block
                 // banner-small
                 .banner-small
                   .banner-small__slider 
-                    #sliderBannerSmall
+                    .sliderBannerSmall
                       .swiper-wrapper 
                         .swiper-slide 
                           .banner-small__item 
@@ -182,6 +182,50 @@ block content
                       | 12 000 ₽
                     td Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации форм развития.
             // /table-prices
+
+            .universal__banners.d-block.d-lg-none
+              .row.gy-3
+
+                .col-lg-12.col-md-6
+                    // banner-small
+                    .banner-small
+                      .banner-small__item 
+                        .banner-small__img 
+                          img(src="img/banner-small.jpg", alt="")
+                        .banner-small__content 
+                          .banner-small__title Калькулятор подбора автономной канализации
+                          .banner-small__btn 
+                            .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#popupCalc") 
+                              .btn__inner Рассчитать
+                    // /banner-small
+
+                .col-lg-12.col-md-6
+                  // banner-small
+                  .banner-small
+                    .banner-small__slider 
+                      .sliderBannerSmall
+                        .swiper-wrapper 
+                          .swiper-slide 
+                            .banner-small__item 
+                              .banner-small__img 
+                                img(src="img/banner-small-2.jpg", alt="")
+                              .banner-small__content.banner-small__content--white
+                                .banner-small__title Пенсионарам скидки!
+                                .banner-small__text Монтаж септика и подключение подводящихи отводящих магистралей
+                                .banner-small__btn 
+                                  .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#offerPopup")
+                                    .btn__inner Получить скидку
+                          .swiper-slide 
+                            .banner-small__item 
+                              .banner-small__img 
+                                img(src="img/banner-small.jpg", alt="")
+                              .banner-small__content
+                                .banner-small__title Калькулятор подбора автономной канализации
+                                .banner-small__btn 
+                                  .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#popupCalc")
+                                    .btn__inner Рассчитать
+                      .banner-small__pagination.swiper-pagination
+                  // /banner-small
             
             include blocks/brands2.pug
             +brands2('Наши бренды', 'brands--2')

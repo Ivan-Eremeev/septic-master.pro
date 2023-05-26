@@ -1,6 +1,5 @@
 /* universal */
 .universal { 
-  margin-bottom: 60px;
   > .container {
     display: flex;
   }
@@ -52,8 +51,10 @@
       }
     }
   }
+  &__banners {
+    margin-bottom: 35px;
+  }
   @include media-breakpoint-down(lg) {
-    margin-bottom: 40px;
     .container {
       flex-wrap: wrap;
     }

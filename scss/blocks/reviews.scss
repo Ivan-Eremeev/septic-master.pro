@@ -90,6 +90,9 @@
   &--noimage {
     margin-left: calc($grid-gutter-width / 2) * -1;
     margin-right: calc($grid-gutter-width / 2) * -1;
+    .reviews__img {
+      display: none;
+    }
   }
   @include media-breakpoint-down(xl) {
     &__item {
@@ -126,6 +129,11 @@
     &__info-items {
       padding-bottom: 5px;
       margin-bottom: 15px;
+    }
+    &--noimage {
+      .reviews__img {
+        display: block;
+      }
     }
   }
   @include media-breakpoint-down(sm) {
