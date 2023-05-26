@@ -184,7 +184,7 @@ block content
             // /table-prices
             
             include blocks/brands2.pug
-            +brands2('Наши бренды')
+            +brands2('Наши бренды', 'brands--2')
 
             .service__rows.service__rows--mb40 
               .service__row
@@ -194,7 +194,7 @@ block content
 
             // portfolio-slider
             .portfolio-slider.portfolio-slider--2
-              .container 
+              .container
                 .title Наши работы
                 .portfolio-slider__slider 
                   #sliderPortfolioSlider 
@@ -221,10 +221,10 @@ block content
                 //-   .btn.btn--big.btn--blue-border Посмотреть все работы
             // /portfolio-slider
 
-            +brands2('Мы являемся официальным представителем')
+            +brands2('Мы являемся официальным представителем', 'brands--2')
 
-            include blocks/slider-cards.pug
-            +slider-cards('Рекомендуем')
+            include blocks/slider-cards2.pug
+            +slider-cards2('Рекомендуем')
 
             include blocks/reviews-noimage.pug
 

@@ -35,6 +35,8 @@
     }
   }
   &--2 {
+    margin-left: calc($grid-gutter-width / 2) * -1;
+    margin-right: calc($grid-gutter-width / 2) * -1;
     .portfolio-slider__img {
       height: 217px;
     }

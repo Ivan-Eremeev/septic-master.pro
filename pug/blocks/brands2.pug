@@ -1,29 +1,30 @@
-mixin brands2(title)
+mixin brands2(title, addClass)
   // brands
-  .brands
-    .title= title
-    .brands__slider.js-brands-slider
-      .sliderBrands 
-        .swiper-wrapper 
-          .swiper-slide 
-            .brands__item 
-              img(src="img/brands/img1.jpg", alt="")
-          .swiper-slide 
-            .brands__item 
-              img(src="img/brands/img2.jpg", alt="")
-          .swiper-slide 
-            .brands__item 
-              img(src="img/brands/img3.jpg", alt="")
-          .swiper-slide 
-            .brands__item 
-              img(src="img/brands/img4.jpg", alt="")
-          .swiper-slide 
-            .brands__item 
-              img(src="img/brands/img5.jpg", alt="")
-          .swiper-slide 
-            .brands__item 
-              img(src="img/brands/img6.jpg", alt="")
-      .brands__slider-arrow.brands__slider-arrow--prev.swiper-button-prev
-      .brands__slider-arrow.brands__slider-arrow--next.swiper-button-next
-      .brands__pagination.swiper-pagination
+  .brands(class= addClass)
+    .container
+      .title= title
+      .brands__slider.js-brands-slider
+        .sliderBrands 
+          .swiper-wrapper 
+            .swiper-slide 
+              .brands__item 
+                img(src="img/brands/img1.jpg", alt="")
+            .swiper-slide 
+              .brands__item 
+                img(src="img/brands/img2.jpg", alt="")
+            .swiper-slide 
+              .brands__item 
+                img(src="img/brands/img3.jpg", alt="")
+            .swiper-slide 
+              .brands__item 
+                img(src="img/brands/img4.jpg", alt="")
+            .swiper-slide 
+              .brands__item 
+                img(src="img/brands/img5.jpg", alt="")
+            .swiper-slide 
+              .brands__item 
+                img(src="img/brands/img6.jpg", alt="")
+        .brands__slider-arrow.brands__slider-arrow--prev.swiper-button-prev
+        .brands__slider-arrow.brands__slider-arrow--next.swiper-button-next
+        .brands__pagination.swiper-pagination
   // /brands

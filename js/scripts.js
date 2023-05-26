@@ -313,7 +313,7 @@ window.onload = function () {
   if ($('.js-brands-slider').length) {
     const Swipers = Array.from(document.querySelectorAll('.js-brands-slider'), n => {
       const sliderBrands = new Swiper(n.querySelector('.sliderBrands'), {
-        slidesPerView: 2.1,
+        slidesPerView: 2.2,
         spaceBetween: 10,
         loop: true,
         autoplay: {

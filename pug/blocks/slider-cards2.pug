@@ -1,0 +1,35 @@
+mixin slider-cards2(title)
+  // slider-cards
+  include product-card.pug
+  include product-popup.pug
+  .slider-cards.slider-cards--2
+    .container 
+      .title= title
+      
+      .slider-cards__slider 
+        .sliderCards
+          .swiper-wrapper 
+            .swiper-slide 
+                +product-card('img/products/img1.jpg', 'productPopup_0')
+            .swiper-slide 
+                +product-card('img/products/img2.jpg', 'productPopup_1')
+            .swiper-slide 
+                +product-card('img/products/img3.jpg', 'productPopup_2')
+            .swiper-slide 
+                +product-card('img/products/img4.jpg', 'productPopup_3')
+            .swiper-slide 
+              +product-card('img/products/img5.jpg', 'productPopup_4')
+            .swiper-slide 
+              +product-card('img/products/img2.jpg', 'productPopup_5')
+        .slider-cards__slider-arrow.slider-cards__slider-arrow--prev.swiper-button-prev
+        .slider-cards__slider-arrow.slider-cards__slider-arrow--next.swiper-button-next
+        .slider-cards__pagination.swiper-pagination
+
+      .slider-cards__popups 
+        +product-popup('productPopup_0')
+        +product-popup('productPopup_1')
+        +product-popup('productPopup_2')
+        +product-popup('productPopup_3')
+        +product-popup('productPopup_4')
+        +product-popup('productPopup_5')
+  // /slider-cards

@@ -9634,6 +9634,10 @@ input[type=number]:focus {
 .brands__pagination {
   bottom: -32px !important;
 }
+.brands--2 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 @media (max-width: 768.98px) {
   .brands {
     padding-bottom: 30px;
@@ -10405,6 +10409,10 @@ input[type=number]:focus {
 .portfolio-slider__slider-arrow--next {
   right: -20px;
 }
+.portfolio-slider--2 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 .portfolio-slider--2 .portfolio-slider__img {
   height: 217px;
 }
@@ -10595,6 +10603,10 @@ input[type=number]:focus {
 }
 .reviews__pagination {
   display: none;
+}
+.reviews--noimage {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 @media (max-width: 1199.98px) {
   .reviews__item {
@@ -14087,6 +14099,10 @@ input[type=number]:focus {
 }
 .slider-cards__pagination {
   display: none;
+}
+.slider-cards--2 {
+  margin-left: -15px;
+  margin-right: -15px;
 }
 @media (max-width: 768.98px) {
   .slider-cards {

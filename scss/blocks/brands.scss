@@ -38,6 +38,10 @@
   &__pagination {
     bottom: -32px !important;
   }
+  &--2 {
+    margin-left: calc($grid-gutter-width / 2) * -1;
+    margin-right: calc($grid-gutter-width / 2) * -1;
+  }
   @include media-breakpoint-down(md) {
     padding-bottom: 30px;
     margin-bottom: 35px;
