@@ -1,13 +1,12 @@
-mixin slider-cards3(title)
-  // slider-cards
+mixin slider-category-cards(title)
+  // slider-category-cards
   include category-card.pug
-  include product-popup.pug
-  .slider-cards.slider-cards--2
+  .slider-category-cards
     .container 
       .title= title
       
-      .slider-cards__slider 
-        .sliderCards2
+      .slider-category-cards__slider 
+        .sliderCategoryCards
           .swiper-wrapper 
             .swiper-slide 
                 +category-card('img/products/img1.jpg')
@@ -21,7 +20,7 @@ mixin slider-cards3(title)
               +category-card('img/products/img5.jpg')
             .swiper-slide 
               +category-card('img/products/img2.jpg')
-        .slider-cards__slider-arrow.slider-cards__slider-arrow--prev.swiper-button-prev
-        .slider-cards__slider-arrow.slider-cards__slider-arrow--next.swiper-button-next
-        .slider-cards__pagination.swiper-pagination
-  // /slider-cards
+        .slider-category-cards__slider-arrow.slider-category-cards__slider-arrow--prev.swiper-button-prev
+        .slider-category-cards__slider-arrow.slider-category-cards__slider-arrow--next.swiper-button-next
+        .slider-category-cards__pagination.swiper-pagination
+  // /slider-category-cards
