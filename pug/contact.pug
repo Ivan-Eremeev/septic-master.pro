@@ -1,0 +1,347 @@
+extends core/base.pug
+
+block title 
+  title Контакты
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .container 
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              a(href="#") Услуги
+            li 
+              a(href="#") Сервисные службы
+            li 
+              span Обслуживание септиков
+      // /breadcrumbs
+
+      // universal
+      .universal
+        .container 
+
+          .universal__sidebar 
+            .row.gy-3
+
+              .col-12.d-none.d-lg-block
+                ul.universal__menu 
+                  li 
+                    a(href="#") Малахит
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Топас топол Эко
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Топас-С топол Эко
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Топ Аэро топол Эко
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Астра Юнилос
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Евролос Био Евролос
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Евролос Грунт Евролос
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+                  li 
+                    a(href="#") Тверь Classic
+                      svg(class="icon-arrow-light")
+                        use(xlink:href="img/sprite.svg#arrow-light")
+
+              .col-lg-12.col-md-6.d-none.d-lg-block
+                // banner-small
+                .banner-small
+                  .banner-small__item 
+                    .banner-small__img 
+                      img(src="img/banner-small.jpg", alt="")
+                    .banner-small__content 
+                      .banner-small__title Калькулятор подбора автономной канализации
+                      .banner-small__btn 
+                        .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#popupCalc") 
+                          .btn__inner Рассчитать
+                // /banner-small
+
+              .col-lg-12.col-md-6.d-none.d-lg-block
+                // banner-small
+                .banner-small
+                  .banner-small__slider 
+                    .sliderBannerSmall
+                      .swiper-wrapper 
+                        .swiper-slide 
+                          .banner-small__item 
+                            .banner-small__img 
+                              img(src="img/banner-small-2.jpg", alt="")
+                            .banner-small__content.banner-small__content--white
+                              .banner-small__title Пенсионарам скидки!
+                              .banner-small__text Монтаж септика и подключение подводящихи отводящих магистралей
+                              .banner-small__btn 
+                                .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#offerPopup")
+                                  .btn__inner Получить скидку
+                        .swiper-slide 
+                          .banner-small__item 
+                            .banner-small__img 
+                              img(src="img/banner-small.jpg", alt="")
+                            .banner-small__content
+                              .banner-small__title Калькулятор подбора автономной канализации
+                              .banner-small__btn 
+                                .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#popupCalc")
+                                  .btn__inner Рассчитать
+                    .banner-small__pagination.swiper-pagination
+                // /banner-small
+
+          .universal__main 
+
+            // contact
+            .contact
+              .container 
+                .title Контакты
+
+                .contact__items 
+                  .contact__items-tables
+                    .row 
+                      .col-xl-6 
+                        table.contact__items-table 
+                          tr 
+                            td 
+                              .contact__name 
+                                svg(class="icon-mark")
+                                  use(xlink:href="img/sprite.svg#mark")
+                                | Адрес:
+                            td Москва, ул. Дорогобужская, 14
+                          tr 
+                            td 
+                              .contact__name 
+                                svg(class="icon-tel2")
+                                  use(xlink:href="img/sprite.svg#tel2")
+                                | Телефон:
+                            td 
+                              .contact__tel
+                                a(href="tel:+74994442196") +7 (499) 444-21-96
+                              .contact__tel
+                                a(href="tel:+79773008989") +7 (977) 300-89-89
+                      .col-xl-6 
+                        table.contact__items-table 
+                          tr 
+                            td 
+                              .contact__name 
+                                svg(class="icon-clock")
+                                  use(xlink:href="img/sprite.svg#clock")
+                                | Время работы:
+                            td пн-вс: 7:00 - 20:00
+                          tr 
+                            td 
+                              .contact__name 
+                                svg(class="icon-email")
+                                  use(xlink:href="img/sprite.svg#email")
+                                | Эл. почта:
+                            td 
+                              .contact__link 
+                                a(href="mailto:Septic-master.pro.yandex") Septic-master.pro.yandex
+
+                .contact__requisites
+                  .contact__requisites-tables 
+                    .contact__title Реквизиты организации
+                    .row 
+                      .col-xl-6 
+                        table.contact__requisites-table 
+                          tr 
+                            td 
+                              .contact__name Номер счета
+                            td 40802810540000032781
+                          tr 
+                            td 
+                              .contact__name Банк
+                            td ПАО СберБанк
+                          tr 
+                            td 
+                              .contact__name БИК
+                            td 044525225
+                      .col-xl-6 
+                        table.contact__requisites-table 
+                          tr 
+                            td 
+                              .contact__name Кор. счет
+                            td 301018104000000000225
+                          tr 
+                            td 
+                              .contact__name ОГРН
+                            td 317213000052597
+                          tr 
+                            td 
+                              .contact__name ИНН
+                            td 212500430335
+
+                  .contact__files 
+                    a(href="#") 
+                      svg(class="icon-pdf")
+                        use(xlink:href="img/sprite.svg#pdf")
+                      | Скачать одним PDF
+            // /contact
+
+            // map
+            .map
+              .container 
+                .title Работаем в Москве и Московской области
+                .map__title Зона обслуживания
+                .map__text На карте мы указали границы обслуживания и количество свободных мастеров, готовых к выезду
+                .map__map 
+                  #map 
+            // /map
+
+            // callback2
+            .callback2
+              .container 
+                .callback2__container 
+                  .title Задайте вопрос
+                  form(action="#").callback2__form
+                    .row 
+                      .col-xl-5
+                        .row 
+                          .col-12
+                            .input 
+                              input(type="text" placeholder="Имя")
+                          .col-12
+                            .input.js-input-tel 
+                              input(type="text" placeholder="Телефон")
+                          .col-12
+                            .input 
+                              input(type="text" placeholder="E-mail")
+                      .col-xl-7
+                        .row 
+                          .col-12 
+                            .textarea 
+                              textarea(placeholder="Комментарий")
+                          .col-12.d-flex.align-items-center.flex-wrap.flex-md-nowrap
+                            button(type="submit").btn.btn--big.btn--blue 
+                              span.btn__inner Отправить
+                            .checkbox 
+                              label
+                                input(type="checkbox")
+                                span.checkbox__rectangle
+                                span.checkbox__text Соглашаюсь с политикой конфендициальности
+            // /callback2
+
+            .universal__banners.d-block.d-lg-none
+              .row.gy-3
+
+                .col-lg-12.col-md-6
+                    // banner-small
+                    .banner-small
+                      .banner-small__item 
+                        .banner-small__img 
+                          img(src="img/banner-small.jpg", alt="")
+                        .banner-small__content 
+                          .banner-small__title Калькулятор подбора автономной канализации
+                          .banner-small__btn 
+                            .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#popupCalc") 
+                              .btn__inner Рассчитать
+                    // /banner-small
+
+                .col-lg-12.col-md-6
+                  // banner-small
+                  .banner-small
+                    .banner-small__slider 
+                      .sliderBannerSmall
+                        .swiper-wrapper 
+                          .swiper-slide 
+                            .banner-small__item 
+                              .banner-small__img 
+                                img(src="img/banner-small-2.jpg", alt="")
+                              .banner-small__content.banner-small__content--white
+                                .banner-small__title Пенсионарам скидки!
+                                .banner-small__text Монтаж септика и подключение подводящихи отводящих магистралей
+                                .banner-small__btn 
+                                  .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#offerPopup")
+                                    .btn__inner Получить скидку
+                          .swiper-slide 
+                            .banner-small__item 
+                              .banner-small__img 
+                                img(src="img/banner-small.jpg", alt="")
+                              .banner-small__content
+                                .banner-small__title Калькулятор подбора автономной канализации
+                                .banner-small__btn 
+                                  .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#popupCalc")
+                                    .btn__inner Рассчитать
+                      .banner-small__pagination.swiper-pagination
+                  // /banner-small
+
+            // managers
+            .managers
+              .container 
+                .title Менеджеры по продажам
+                .row 
+                  .col-md-6 
+                    .managers__item 
+                      .managers__img 
+                        img(src="img/managers/img1.jpg", alt="")
+                      .managers__content 
+                        table.managers__table 
+                          tr 
+                            td 
+                              .managers__name Имя:
+                            td Андрей
+                          tr 
+                            td 
+                              .managers__name Телефон:
+                            td 
+                              .managers__tel 
+                                a(href="tel:+74951336514") +7 (495) 133-65-14
+                          tr 
+                            td 
+                              .managers__name Email:
+                            td 
+                              .managers__email 
+                                a(href="mailto:order@septik-profi.ru") order@septik-profi.ru
+                  .col-md-6 
+                    .managers__item 
+                      .managers__img 
+                        img(src="img/managers/img2.jpg", alt="")
+                      .managers__content 
+                        table.managers__table 
+                          tr 
+                            td 
+                              .managers__name Имя:
+                            td Мария
+                          tr 
+                            td 
+                              .managers__name Телефон:
+                            td 
+                              .managers__tel 
+                                a(href="tel:+74951336514") +7 (495) 133-65-14
+                          tr 
+                            td 
+                              .managers__name Email:
+                            td 
+                              .managers__email 
+                                a(href="mailto:order@septik-profi.ru") order@septik-profi.ru
+            // /managers
+
+            include blocks/slider-cards3.pug
+            +slider-cards3('Продажа оборудования')
+
+            include blocks/reviews-noimage.pug
+
+      // /universal
+
+      include blocks/cities.pug
+
+    include core/footer.pug

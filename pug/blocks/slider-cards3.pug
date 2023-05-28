@@ -1,0 +1,27 @@
+mixin slider-cards3(title)
+  // slider-cards
+  include category-card.pug
+  include product-popup.pug
+  .slider-cards.slider-cards--2
+    .container 
+      .title= title
+      
+      .slider-cards__slider 
+        .sliderCards2
+          .swiper-wrapper 
+            .swiper-slide 
+                +category-card('img/products/img1.jpg')
+            .swiper-slide 
+                +category-card('img/products/img2.jpg')
+            .swiper-slide 
+                +category-card('img/products/img3.jpg')
+            .swiper-slide 
+                +category-card('img/products/img4.jpg')
+            .swiper-slide 
+              +category-card('img/products/img5.jpg')
+            .swiper-slide 
+              +category-card('img/products/img2.jpg')
+        .slider-cards__slider-arrow.slider-cards__slider-arrow--prev.swiper-button-prev
+        .slider-cards__slider-arrow.slider-cards__slider-arrow--next.swiper-button-next
+        .slider-cards__pagination.swiper-pagination
+  // /slider-cards
