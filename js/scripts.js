@@ -804,7 +804,7 @@ window.onload = function () {
     })
   }
 
-  // Swiper | Слайдер с карточками товара
+  // Swiper | Слайдер с карточками категорий
   if ($('.sliderCategoryCards').length) {
     const sliderCardsWrapper = Array.from(document.querySelectorAll('.slider-category-cards__slider'), n => {
       const sliderCards = new Swiper(n.querySelector('.sliderCategoryCards'), {
