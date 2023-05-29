@@ -4,11 +4,21 @@ mixin product-popup(id)
     .modal-dialog.modal-dialog--full
       .modal-content
         .modal-close(data-bs-dismiss="modal")
-        .product-popup
+        .product-popup.js-product-variants
 
-          .title.d-block.d-xxl-none Септик Юнилос
+          .title.d-block.d-xxl-none 
+            span(data-variants-change="variant_0").open Евролос ПРО 30
+            span(data-variants-change="variant_1") Евролос ПРО 20
+            span(data-variants-change="variant_2") Евролос ПРО
+            span(data-variants-change="variant_3") Евролос ПРО 10
+            span(data-variants-change="variant_4") Евролос ПРО 40
           .product-popup__art-items.d-flex.d-xxl-none
-            .product-popup__art Артикул 234 454
+            .product-popup__art 
+              div(data-variants-change="variant_0").open Артикул 234 454
+              div(data-variants-change="variant_1") Артикул 234 4
+              div(data-variants-change="variant_2") Артикул 24 454
+              div(data-variants-change="variant_3") Артикул 4 454
+              div(data-variants-change="variant_4") Артикул 24 45
             .product-popup__items.d-block.d-md-none
               .product-popup__items-row 
                 .product-popup__item 
@@ -42,102 +52,273 @@ mixin product-popup(id)
                       img(src="img/social-icons/telegram.svg", alt="")
                 .product-popup__drop-close
 
-          .product-popup__slider 
-            .product-popup__stickers 
-              .product-card__sticker.product-card__sticker--yellow Распродажа 
-              .product-card__sticker.product-card__sticker--red Хит
-              .product-card__sticker.product-card__sticker--blue Новинка
-            .sliderProductPopup 
-              .swiper-wrapper 
-                .swiper-slide 
-                  .product-popup__img 
-                    img(src="img/products/img1.jpg", alt="")
-                .swiper-slide 
-                  .product-popup__img 
-                    img(src="img/products/img2.jpg", alt="")
-                .swiper-slide 
-                  .product-popup__img 
-                    img(src="img/products/img3.jpg", alt="")
-                .swiper-slide 
-                  .product-popup__img 
-                    img(src="img/products/img4.jpg", alt="")
-                .swiper-slide 
-                  .product-popup__img 
-                    img(src="img/products/img5.jpg", alt="")
-            .thumbProductPopup 
-              .swiper-wrapper 
-                .swiper-slide 
-                  .product-popup__thumb 
-                    img(src="img/products/img1.jpg", alt="")
-                .swiper-slide 
-                  .product-popup__thumb 
-                    img(src="img/products/img2.jpg", alt="")
-                .swiper-slide 
-                  .product-popup__thumb 
-                    img(src="img/products/img3.jpg", alt="")
-                .swiper-slide 
-                  .product-popup__thumb 
-                    img(src="img/products/img4.jpg", alt="")
-                .swiper-slide 
-                  .product-popup__thumb 
-                    img(src="img/products/img5.jpg", alt="")
+          div(data-variants-change="variant_0").open 
+            .product-popup__slider 
+              .product-popup__stickers
+                .product-card__sticker.product-card__sticker--yellow Распродажа 
+                .product-card__sticker.product-card__sticker--red Хит
+                .product-card__sticker.product-card__sticker--blue Новинка
+              .sliderProductPopup 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img1.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img4.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img5.jpg", alt="")
+              .thumbProductPopup 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img1.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img4.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img5.jpg", alt="")
+
+          div(data-variants-change="variant_1")
+            .product-popup__slider 
+              .product-popup__stickers
+                .product-card__sticker.product-card__sticker--yellow Распродажа 
+              .sliderProductPopup 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img1.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img4.jpg", alt="")
+              .thumbProductPopup 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img1.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img4.jpg", alt="")
+
+          div(data-variants-change="variant_2")
+            .product-popup__slider 
+              .product-popup__stickers
+                .product-card__sticker.product-card__sticker--red Хит
+              .sliderProductPopup 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img1.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img5.jpg", alt="")
+              .thumbProductPopup 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img1.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img5.jpg", alt="")
+
+          div(data-variants-change="variant_3")
+            .product-popup__slider 
+              .product-popup__stickers
+                .product-card__sticker.product-card__sticker--blue Новинка
+              .sliderProductPopup 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img4.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img5.jpg", alt="")
+              .thumbProductPopup 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img4.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img5.jpg", alt="")
+
+          div(data-variants-change="variant_4")
+            .product-popup__slider 
+              .product-popup__stickers
+                .product-card__sticker.product-card__sticker--red Хит
+                .product-card__sticker.product-card__sticker--blue Новинка
+              .sliderProductPopup 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img1.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img4.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__img 
+                      img(src="img/products/img5.jpg", alt="")
+              .thumbProductPopup 
+                .swiper-wrapper 
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img1.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img2.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img3.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img4.jpg", alt="")
+                  .swiper-slide 
+                    .product-popup__thumb 
+                      img(src="img/products/img5.jpg", alt="")
 
           .product-popup__content 
 
-            .title.d-none.d-xxl-block Септик Юнилос
+            .title.d-none.d-xxl-block
+              span(data-variants-change="variant_0").open Евролос ПРО 30
+              span(data-variants-change="variant_1") Евролос ПРО 20
+              span(data-variants-change="variant_2") Евролос ПРО
+              span(data-variants-change="variant_3") Евролос ПРО 10
+              span(data-variants-change="variant_4") Евролос ПРО 40
 
             .product-popup__row 
 
               .product-popup__info 
-                .product-popup__art.d-none.d-xxl-block Артикул 234 454
+                .product-popup__art.d-none.d-xxl-block 
+                  div(data-variants-change="variant_0").open Артикул 234 454
+                  div(data-variants-change="variant_1") Артикул 234 4
+                  div(data-variants-change="variant_2") Артикул 24 454
+                  div(data-variants-change="variant_3") Артикул 4 454
+                  div(data-variants-change="variant_4") Артикул 24 45
                 .product-popup__title Модификации
                 .product-popup__version 
                   .product-popup__slider-arrow.product-popup__slider-arrow--prev.swiper-button-prev
                   .sliderVersion
                     .swiper-wrapper 
                       .swiper-slide 
-                        .product__version-item 
-                          label 
-                            input(type="radio" name="version")
-                            span Евролос ПРО 30
+                        .product__version-item(data-variants-trigger="variant_0").active Евролос ПРО 30
                       .swiper-slide 
-                        .product__version-item 
-                          label 
-                            input(type="radio" name="version")
-                            span Евролос ПРО 20
+                        .product__version-item(data-variants-trigger="variant_1") Евролос ПРО 20
                       .swiper-slide 
-                        .product__version-item 
-                          label 
-                            input(type="radio" name="version")
-                            span Евролос ПРО
+                        .product__version-item(data-variants-trigger="variant_2") Евролос ПРО
                       .swiper-slide 
-                        .product__version-item 
-                          label 
-                            input(type="radio" name="version")
-                            span Евролос ПРО 10
+                        .product__version-item(data-variants-trigger="variant_3") Евролос ПРО 10
                       .swiper-slide 
-                        .product__version-item 
-                          label 
-                            input(type="radio" name="version")
-                            span Евролос ПРО 40
+                        .product__version-item(data-variants-trigger="variant_4") Евролос ПРО 40
                   .product-popup__slider-arrow.product-popup__slider-arrow--next.swiper-button-next
                 table.product-popup__table  
                   tr  
                     td Количество пользователей 
                     td 
-                      b до 75 человек
+                      span(data-variants-change="variant_0").open 
+                        b до 75 человек
+                      span(data-variants-change="variant_1") 
+                        b до 70 человек
+                      span(data-variants-change="variant_2") 
+                        b до 80 человек
+                      span(data-variants-change="variant_3") 
+                        b до 85 человек
+                      span(data-variants-change="variant_4") 
+                        b до 60 человек
                   tr 
                     td Производительность
                     td 
-                      b до 12 м³ в сутки
+                      span(data-variants-change="variant_0").open 
+                        b до 12 м³ в сутки
+                      span(data-variants-change="variant_1") 
+                        b до 13 м³ в сутки
+                      span(data-variants-change="variant_2") 
+                        b до 15 м³ в сутки
+                      span(data-variants-change="variant_3") 
+                        b до 20 м³ в сутки
+                      span(data-variants-change="variant_4") 
+                        b до 10 м³ в сутки 
                   tr 
                     td Тип очистного устройства
                     td 
-                      b аэрационная усановка
+                      span(data-variants-change="variant_0").open 
+                        b аэрационная усановка1
+                      span(data-variants-change="variant_1") 
+                        b аэрационная усановка2
+                      span(data-variants-change="variant_2") 
+                        b аэрационная усановка3
+                      span(data-variants-change="variant_3") 
+                        b аэрационная усановка4
+                      span(data-variants-change="variant_4") 
+                        b аэрационная усановка5
                   tr 
                     td Способ очищения воды
                     td 
-                        b принудительный
+                      span(data-variants-change="variant_0").open 
+                        b принудительный1
+                      span(data-variants-change="variant_1") 
+                        b принудительный2
+                      span(data-variants-change="variant_2") 
+                        b принудительный3
+                      span(data-variants-change="variant_3") 
+                        b принудительный4
+                      span(data-variants-change="variant_4") 
+                        b принудительный5
                 .product-popup__items.d-none.d-md-block
                   .product-popup__items-row 
                     .product-popup__item 
@@ -174,18 +355,62 @@ mixin product-popup(id)
                   a(href="#").btn.btn--big.btn--blue-border Детальнее в карточке товара
                   
               .product-popup__block 
-                .product-popup__block-top
-                  .product-popup__stars 
-                    .product-popup__stars-icon.product-popup__stars-icon--fill 
-                    .product-popup__stars-icon.product-popup__stars-icon--fill 
-                    .product-popup__stars-icon.product-popup__stars-icon--fill 
-                    .product-popup__stars-icon.product-popup__stars-icon--fill 
-                    .product-popup__stars-icon
+                .product-popup__block-top 
+                  div(data-variants-change="variant_0").open
+                    .product-popup__stars
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon
+                  div(data-variants-change="variant_1")
+                    .product-popup__stars
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon
+                      .product-popup__stars-icon
+                  div(data-variants-change="variant_2")
+                    .product-popup__stars
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon
+                      .product-popup__stars-icon
+                      .product-popup__stars-icon
+                  div(data-variants-change="variant_3")
+                    .product-popup__stars
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon
+                  div(data-variants-change="variant_4")
+                    .product-popup__stars
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill 
+                      .product-popup__stars-icon.product-popup__stars-icon--fill
                   .product-popup__prices 
-                    .product-popup__price 420 290 ₽
-                    .product-popup__price-old 542 290 ₽
+                    .product-popup__price 
+                      span(data-variants-change="variant_0").open 420 290 ₽
+                      span(data-variants-change="variant_1") 420 29 ₽
+                      span(data-variants-change="variant_2") 42 290 ₽
+                      span(data-variants-change="variant_3") 420 90 ₽
+                      span(data-variants-change="variant_4") 20 290 ₽
+                    .product-popup__price-old 
+                      span(data-variants-change="variant_0").open 4542 290 ₽
+                      span(data-variants-change="variant_1") 52 20 ₽
+                      span(data-variants-change="variant_2") 542 290 ₽
+                      span(data-variants-change="variant_3") 42 290 ₽
+                      span(data-variants-change="variant_4") 54 20 ₽
                   .product-popup__install 
-                    .product-popup__install-price от 80 290 ₽
+                    .product-popup__install-price 
+                      span(data-variants-change="variant_0").open от 80 29 ₽
+                      span(data-variants-change="variant_1") от 80 20 ₽
+                      span(data-variants-change="variant_2") от 8 290 ₽
+                      span(data-variants-change="variant_3") от 80 290 ₽
+                      span(data-variants-change="variant_4") от 8 90 ₽
                     .product-popup__install-item 
                       svg(class="icon-info")
                         use(xlink:href="img/sprite.svg#info")
@@ -208,18 +433,40 @@ mixin product-popup(id)
                   .product-popup__delivery 
                     svg(class="icon-pack")
                       use(xlink:href="img/sprite.svg#pack")
-                    | Доставим и установим <br>ориентировочно 2 мая
+                    span(data-variants-change="variant_0").open Доставим и установим <br>ориентировочно 2 мая
+                    span(data-variants-change="variant_1") Доставим и установим <br>ориентировочно 3 мая
+                    span(data-variants-change="variant_2") Доставим и установим <br>ориентировочно 4 мая
+                    span(data-variants-change="variant_3") Доставим и установим <br>ориентировочно 5 мая
+                    span(data-variants-change="variant_4") Доставим и установим <br>ориентировочно 6 мая
                 ul.product-popup__block-bottom 
                   li 
                     svg(class="icon-percent")
                       use(xlink:href="img/sprite.svg#percent")
                     | Кредит от 
-                    b 33 291 Р/мес
+                    span(data-variants-change="variant_0").open 
+                      b 33 291 Р/мес
+                    span(data-variants-change="variant_1")
+                      b 33 21 Р/мес
+                    span(data-variants-change="variant_2")
+                      b 33 91 Р/мес
+                    span(data-variants-change="variant_3")
+                      b 3 291 Р/мес
+                    span(data-variants-change="variant_4")
+                      b 33 29 Р/мес
                   li 
                     svg(class="icon-percent")
                       use(xlink:href="img/sprite.svg#percent")
                     | Рассрочка от 
-                    b 17 131 Р/мес
+                    span(data-variants-change="variant_0").open 
+                      b 17 11 Р/мес
+                    span(data-variants-change="variant_1")
+                      b 17 31 Р/мес
+                    span(data-variants-change="variant_2")
+                      b 1 131 Р/мес
+                    span(data-variants-change="variant_3")
+                      b 7 131 Р/мес
+                    span(data-variants-change="variant_4")
+                      b 17 13 Р/мес
                   li 
                     a(href="#") 
                       svg(class="icon-p")

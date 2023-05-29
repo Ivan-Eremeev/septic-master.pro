@@ -1168,6 +1168,27 @@ window.onload = function () {
     }
   }
 
+  // Модификации товара
+  function productVariants() {
+    let product = $('.js-product-variants');
+    product.each(function () {
+      let currentProduct = $(this);
+      let trigger = currentProduct.find('[data-variants-trigger]');
+      let change = currentProduct.find('[data-variants-change]');
+      trigger.on('click', function () {
+        let currentTrigger = $(this);
+        let currentChange = currentProduct.find('[data-variants-change="' + currentTrigger.data('variants-trigger') + '"]');
+        if (!currentTrigger.hasClass('active')) {
+          trigger.removeClass('active');
+          change.removeClass('open');
+          currentTrigger.addClass('active');
+          currentChange.addClass('open');
+        }
+      })
+    });
+  }
+  productVariants();
+
   // // Очистить фильтр 
   // function clearFilter() {
   //   let clearBnt = $('.js-filters-clear');
