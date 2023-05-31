@@ -41,30 +41,30 @@ block content
 
                   .filter__middle
 
-                    .filter__title Модели септиков
-                      .filter__reset 
-                        span 
-                        | Сбросить все
+                    //- .filter__title Модели септиков
+                    //-   .filter__reset 
+                    //-     span 
+                    //-     | Сбросить все
 
-                    .catalog__type.d-block.d-lg-none
-                      ul.catalog__type-list
-                        mixin catalog-type(title, checked)
-                          li.catalog__type-item 
-                            label
-                              if checked
-                                input(type="radio" name="catalogType" checked)
-                              else 
-                                input(type="radio" name="catalogType")
-                              span= title
-                        +catalog-type('Малахит', 'checked')
-                        +catalog-type('Топас топол эко')
-                        +catalog-type('Топас-с топол эко')
-                        +catalog-type('Топ Аэро топол эко')
-                        +catalog-type('Астра Юнилос')
-                        +catalog-type('Евролос Био Евролос')
-                        +catalog-type('Евролос Грунт Евролос')
-                        +catalog-type('Тверь Classic')
-                        +catalog-type('Тверь Classic')
+                    //- .catalog__type.d-block.d-lg-none
+                    //-   ul.catalog__type-list
+                    //-     mixin catalog-type(title, checked)
+                    //-       li.catalog__type-item 
+                    //-         label
+                    //-           if checked
+                    //-             input(type="radio" name="catalogType" checked)
+                    //-           else 
+                    //-             input(type="radio" name="catalogType")
+                    //-           span= title
+                    //-     +catalog-type('Малахит', 'checked')
+                    //-     +catalog-type('Топас топол эко')
+                    //-     +catalog-type('Топас-с топол эко')
+                    //-     +catalog-type('Топ Аэро топол эко')
+                    //-     +catalog-type('Астра Юнилос')
+                    //-     +catalog-type('Евролос Био Евролос')
+                    //-     +catalog-type('Евролос Грунт Евролос')
+                    //-     +catalog-type('Тверь Classic')
+                    //-     +catalog-type('Тверь Classic')
 
                     .accordion.js-accordion-filter
                       .filter__item.accordion__item.active
@@ -438,53 +438,53 @@ block content
               .catalog__cards 
                 include blocks/service-card.pug
                 .row 
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
-                    +service-card('img/products/img1.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12 
+                    +service-card('img/products/img1.jpg', 'question')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12 
                     +service-card('img/products/img2.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12 
                     +service-card('img/products/img3.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12 
                     +service-card('img/products/img4.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12 
                     +service-card('img/products/img5.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12 
                     +service-card('img/products/img1.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12 
                     +service-card('img/products/img2.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12 
                     +service-card('img/products/img3.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12 
                     +service-card('img/products/img4.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img5.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img1.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img2.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img3.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img4.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img5.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img1.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img2.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img3.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img4.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img5.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img2.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img3.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img4.jpg')
-                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-12.d-none.d-md-block
                     +service-card('img/products/img5.jpg')
 
               .catalog__more 
@@ -519,10 +519,39 @@ block content
 
       include blocks/callback2.pug
 
+      // portfolio-slider2
+      .portfolio-slider2
+        .container 
+          .title Наши работы
+          .portfolio-slider2__slider 
+            #sliderPortfolioSlider2 
+              .swiper-wrapper
+                .swiper-slide
+                  a(href="img/portfolio/img1.jpg" data-fancybox).portfolio-slider2__img 
+                    img(src="img/portfolio/img1.jpg", alt="")
+                .swiper-slide
+                  a(href="img/portfolio/img2.jpg" data-fancybox).portfolio-slider2__img 
+                    img(src="img/portfolio/img2.jpg", alt="")
+                .swiper-slide
+                  a(href="img/portfolio/img3.jpg" data-fancybox).portfolio-slider2__img 
+                    img(src="img/portfolio/img3.jpg", alt="")
+                .swiper-slide
+                  a(href="img/portfolio/img4.jpg" data-fancybox).portfolio-slider2__img 
+                    img(src="img/portfolio/img4.jpg", alt="")
+                .swiper-slide
+                  a(href="img/portfolio/img5.jpg" data-fancybox).portfolio-slider2__img 
+                    img(src="img/portfolio/img5.jpg", alt="")
+            .portfolio-slider2__pagination.swiper-pagination
+            .portfolio-slider2__slider-arrow.portfolio-slider2__slider-arrow--prev.swiper-button-prev
+            .portfolio-slider2__slider-arrow.portfolio-slider2__slider-arrow--next.swiper-button-next
+          //- a(href="#").portfolio-slider2__btn 
+            //- .btn.btn--big.btn--blue-border Посмотреть все работы
+      // /portfolio-slider2
+
       // sertificates
       .sertificates
         .container 
-          .title Сертификаты
+          .title Мы являемся официальным представителем
 
           .sertificates__slider 
 

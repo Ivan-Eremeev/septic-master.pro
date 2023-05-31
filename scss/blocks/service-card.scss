@@ -3,6 +3,7 @@
   height: 100%;
   border: 1px solid $border_color;
   border-radius: 4px;
+  position: relative;
   &__img {
     display: flex;
     align-items: center;
@@ -17,6 +18,8 @@
     display: flex;
     flex-direction: column;
     padding: 16px 20px 20px;
+    position: relative;
+    z-index: 2;
   }
   &__title {
     font-weight: 600;
@@ -61,6 +64,93 @@
       @include media-breakpoint-up(md) {
         &:hover {
           color: #42A1FC;
+        }
+      }
+    }
+  }
+  &__tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #5ACB34;
+    svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-right: 2px;
+    }
+    a {
+      color: $text_color;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+  &--question {
+    .service-card__img {
+      border: none;
+      filter: grayscale(1);
+      opacity: 0.3;
+    }
+  }
+  &__overlay {
+    background-color: rgba(107,116,125, .2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  &__question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 85px;
+    background-color: #0F7DFF;
+    border-radius: 100%;
+    fill: #fff;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%,0);
+    svg {
+      width: 30px;
+      height: 60px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-size: 22px;
+      line-height: 27px;
+    }
+    &__img {
+      height: 197px;
+    }
+    &__btn {
+      .btn {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+    &__more {
+      a {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+    &--question {
+      .service-card__title {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      .service-card__btn {
+        .btn {
+          font-size: 13px;
+          line-height: 16px;
         }
       }
     }

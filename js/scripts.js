@@ -523,6 +523,51 @@ window.onload = function () {
     });
   }
 
+  // Swiper | Слайдер "наши работы2"
+  if ($('#sliderPortfolioSlider2').length) {
+    sliderPortfolioSlider = new Swiper('#sliderPortfolioSlider2', {
+      slidesPerView: 1.22,
+      spaceBetween: 15,
+      loop: true,
+      autoplay: {
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      speed: 1000,
+      navigation: false,
+      pagination: {
+        el: '.portfolio-slider2__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.portfolio-slider2__slider-arrow--next',
+        prevEl: '.portfolio-slider2__slider-arrow--prev',
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        1400: {
+          slidesPerView: 5,
+          spaceBetween: 30,
+        }
+      }
+    });
+  }
+
   // Swiper | Слайдер "отзывы"
   if ($('#sliderReviews').length) {
     const sliderReviews = new Swiper('#sliderReviews', {

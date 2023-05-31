@@ -1,16 +1,38 @@
-mixin service-card(imgUrl)
-  // service-card
-  .service-card
-    a(href="#").service-card__img 
-      img(src= imgUrl, alt="")
-    .service-card__content 
-      a(href="#").service-card__title Ремонт септиков ЕВРОЛОС БИО
-      .service-card__price 
-        |  Цена
-        span  от 42 290р
-      .service-card__btn 
-        .btn.btn--small.btn--blue 
-          .btn__inner Заказать услугу
-      .service-card__more 
-        a(href="#") Подробнее
-  // /service-card
+mixin service-card(imgUrl, question)
+  if question
+    // service-card
+    .service-card.service-card--question
+      a(href="#").service-card__img 
+        img(src= imgUrl, alt="")
+      .service-card__content 
+        a(href="#").service-card__title Не знаете модель своего септика?
+        .service-card__price 
+          |  Консультация мастера
+        .service-card__btn 
+          .btn.btn--small.btn--blue 
+            .btn__inner Отправить фото
+        .service-card__tel 
+          svg(class="icon-whatsapp")
+            use(xlink:href="img/sprite.svg#whatsapp")
+          a(href="tel:+74994442196") +7 (499) 444-21-96
+      .service-card__overlay 
+        .service-card__question 
+          svg(class="icon-question")
+            use(xlink:href="img/sprite.svg#question")
+    // /service-card
+  else 
+    // service-card
+    .service-card
+      a(href="#").service-card__img 
+        img(src= imgUrl, alt="")
+      .service-card__content 
+        a(href="#").service-card__title Ремонт септиков ЕВРОЛОС БИО
+        .service-card__price 
+          |  Цена
+          span  от 42 290р
+        .service-card__btn 
+          .btn.btn--small.btn--blue 
+            .btn__inner Заказать услугу
+        .service-card__more 
+          a(href="#") Подробнее
+    // /service-card

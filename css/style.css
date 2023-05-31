@@ -15026,6 +15026,7 @@ input[type=number]:focus {
   height: 100%;
   border: 1px solid #D9D9D9;
   border-radius: 4px;
+  position: relative;
 }
 .service-card__img {
   display: -webkit-box;
@@ -15052,6 +15053,8 @@ input[type=number]:focus {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 16px 20px 20px;
+  position: relative;
+  z-index: 2;
 }
 .service-card__title {
   font-weight: 600;
@@ -15106,8 +15109,180 @@ input[type=number]:focus {
     color: #42A1FC;
   }
 }
+.service-card__tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  fill: #5ACB34;
+}
+.service-card__tel svg {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+}
+.service-card__tel a {
+  color: #3E444D;
+}
+@media (min-width: 769px) {
+  .service-card__tel a:hover {
+    color: #0383FD;
+  }
+}
+.service-card--question .service-card__img {
+  border: none;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+.service-card__overlay {
+  background-color: rgba(107, 116, 125, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.service-card__question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 85px;
+  height: 85px;
+  background-color: #0F7DFF;
+  border-radius: 100%;
+  fill: #fff;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.service-card__question svg {
+  width: 30px;
+  height: 60px;
+}
+@media (max-width: 768.98px) {
+  .service-card__title {
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .service-card__img {
+    height: 197px;
+  }
+  .service-card__btn .btn {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .service-card__more a {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .service-card--question .service-card__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .service-card--question .service-card__btn .btn {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
 
 /* /service-card */
+/* portfolio-slider2 */
+.portfolio-slider2 {
+  margin-bottom: 70px;
+}
+.portfolio-slider2 .title {
+  margin-bottom: 35px;
+}
+.portfolio-slider2__slider {
+  position: relative;
+  margin-bottom: 30px;
+}
+.portfolio-slider2__slider #sliderPortfolioSlider2 {
+  overflow: hidden;
+}
+.portfolio-slider2__img {
+  display: block;
+  height: 215px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.portfolio-slider2__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.portfolio-slider2__pagination {
+  display: none;
+}
+.portfolio-slider2__slider-arrow--prev {
+  left: -20px;
+}
+.portfolio-slider2__slider-arrow--next {
+  right: -20px;
+}
+.portfolio-slider2--2 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.portfolio-slider2--2 .portfolio-slider__img {
+  height: 217px;
+}
+@media (max-width: 768.98px) {
+  .portfolio-slider2 {
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+  }
+  .portfolio-slider2 .title {
+    margin-bottom: 20px;
+  }
+  .portfolio-slider2__slider {
+    margin-bottom: 0;
+  }
+  .portfolio-slider2__img {
+    height: 222px;
+    position: static;
+  }
+  .portfolio-slider2__pagination {
+    display: block;
+    bottom: -32px !important;
+  }
+  .portfolio-slider2__btn {
+    display: none;
+  }
+  .portfolio-slider2__slider-arrow {
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .portfolio-slider2 {
+    overflow: hidden;
+  }
+  .portfolio-slider2__slider #sliderPortfolioSlider2 {
+    overflow: visible;
+  }
+}
+
+/* /portfolio-slider2 */
 /* footer */
 .footer {
   background-color: #11356A;

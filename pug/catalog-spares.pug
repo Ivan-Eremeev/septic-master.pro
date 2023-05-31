@@ -41,30 +41,30 @@ block content
 
                   .filter__middle
 
-                    .filter__title Модели септиков
-                      .filter__reset 
-                        span 
-                        | Сбросить все
+                    //- .filter__title Модели септиков
+                    //-   .filter__reset 
+                    //-     span 
+                    //-     | Сбросить все
 
-                    .catalog__type.d-block.d-lg-none
-                      ul.catalog__type-list
-                        mixin catalog-type(title, checked)
-                          li.catalog__type-item 
-                            label
-                              if checked
-                                input(type="radio" name="catalogType" checked)
-                              else 
-                                input(type="radio" name="catalogType")
-                              span= title
-                        +catalog-type('Малахит', 'checked')
-                        +catalog-type('Топас топол эко')
-                        +catalog-type('Топас-с топол эко')
-                        +catalog-type('Топ Аэро топол эко')
-                        +catalog-type('Астра Юнилос')
-                        +catalog-type('Евролос Био Евролос')
-                        +catalog-type('Евролос Грунт Евролос')
-                        +catalog-type('Тверь Classic')
-                        +catalog-type('Тверь Classic')
+                    //- .catalog__type.d-block.d-lg-none
+                    //-   ul.catalog__type-list
+                    //-     mixin catalog-type(title, checked)
+                    //-       li.catalog__type-item 
+                    //-         label
+                    //-           if checked
+                    //-             input(type="radio" name="catalogType" checked)
+                    //-           else 
+                    //-             input(type="radio" name="catalogType")
+                    //-           span= title
+                    //-     +catalog-type('Малахит', 'checked')
+                    //-     +catalog-type('Топас топол эко')
+                    //-     +catalog-type('Топас-с топол эко')
+                    //-     +catalog-type('Топ Аэро топол эко')
+                    //-     +catalog-type('Астра Юнилос')
+                    //-     +catalog-type('Евролос Био Евролос')
+                    //-     +catalog-type('Евролос Грунт Евролос')
+                    //-     +catalog-type('Тверь Classic')
+                    //-     +catalog-type('Тверь Classic')
 
                     .accordion.js-accordion-filter
                       .filter__item.accordion__item.active
