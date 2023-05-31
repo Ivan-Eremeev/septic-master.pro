@@ -840,6 +840,38 @@ window.onload = function () {
     })
   }
 
+  // Swiper | Слайдер с карточками категорий 2
+  if ($('.sliderCategoryCards2').length) {
+    const sliderWrap = Array.from(document.querySelectorAll('.slider-category-cards2__slider'), n => {
+      const sliderCategoryCards2 = new Swiper(n.querySelector('.sliderCategoryCards2'), {
+        slidesPerView: 2.25,
+        spaceBetween: 8,
+        threshold: 3,
+        navigation: {
+          nextEl: n.querySelector('.slider-category-cards2__slider-arrow--next'),
+          prevEl: n.querySelector('.slider-category-cards2__slider-arrow--prev'),
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 3,
+          },
+          769: {
+            slidesPerView: 4,
+          },
+          992: {
+            slidesPerView: 4,
+          },
+          1200: {
+            slidesPerView: 5,
+          },
+          1400: {
+            slidesPerView: 6,
+          },
+        }
+      });
+    })
+  }
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,

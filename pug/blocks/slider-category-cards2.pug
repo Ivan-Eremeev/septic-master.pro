@@ -1,0 +1,26 @@
+mixin slider-category-cards2(title)
+  // slider-category-cards2
+  include category-card2.pug
+  .slider-category-cards2
+    .container 
+      if title 
+        .title= title
+      
+      .slider-category-cards2__slider 
+        .sliderCategoryCards2
+          .swiper-wrapper 
+            .swiper-slide 
+                +category-card2('img/spares/img1.jpg', 'Компрессоры ')
+            .swiper-slide 
+                +category-card2('img/spares/img2.jpg', 'Насосы')
+            .swiper-slide 
+                +category-card2('img/spares/img3.jpg', 'Электромагнитные клапаны')
+            .swiper-slide 
+                +category-card2('img/spares/img4.jpg', 'Блоки управления')
+            .swiper-slide 
+              +category-card2('img/spares/img5.jpg', 'Поплавковые переключатели')
+            .swiper-slide 
+              +category-card2('img/spares/img2.jpg', 'Пластик для наращивания')
+        .slider-category-cards2__slider-arrow.slider-category-cards2__slider-arrow--prev.swiper-button-prev
+        .slider-category-cards2__slider-arrow.slider-category-cards2__slider-arrow--next.swiper-button-next
+  // /slider-category-cards2
