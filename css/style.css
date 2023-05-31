@@ -12325,6 +12325,67 @@ input[type=number]:focus {
   margin-left: -15px;
   margin-right: -15px;
 }
+.catalog__services {
+  margin-bottom: 20px;
+}
+.catalog__services > .row {
+  margin-left: -3px;
+  margin-right: -3px;
+  margin-top: -6px;
+}
+.catalog__services > .row > * {
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-top: 6px;
+}
+.catalog__services-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 18px 10px;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid #D9D9D9;
+  color: #3E444D;
+}
+@media (min-width: 769px) {
+  .catalog__services-item:hover {
+    color: #007AE7;
+  }
+}
+.catalog__services-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 6px;
+  width: 36px;
+  height: 36px;
+}
+.catalog__services-icon img {
+  max-height: 100%;
+}
+.catalog__services-text {
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration-line: underline;
+}
+.catalog__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 22px;
+}
 @media (max-width: 991.98px) {
   .catalog__row {
     -ms-flex-wrap: wrap;
@@ -12417,6 +12478,19 @@ input[type=number]:focus {
   .catalog__catalog-select .select select {
     font-size: 14px;
   }
+  .catalog__services > .row {
+    margin-left: -7px;
+    margin-right: -7px;
+    margin-top: -14px;
+  }
+  .catalog__services > .row > * {
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-top: 14px;
+  }
+  .catalog__title {
+    margin-bottom: 5px;
+  }
 }
 @media (max-width: 575.98px) {
   .catalog__more {
@@ -12430,6 +12504,15 @@ input[type=number]:focus {
   }
   .catalog__btn-filter {
     right: 15px;
+  }
+  .catalog__services-item {
+    display: block;
+    min-height: 105px;
+    padding: 16px 15px;
+  }
+  .catalog__services-icon {
+    margin-right: 0;
+    margin-bottom: 2px;
   }
 }
 
@@ -14938,6 +15021,93 @@ input[type=number]:focus {
 }
 
 /* /category-card2 */
+/* service-card */
+.service-card {
+  height: 100%;
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+}
+.service-card__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 176px;
+  border-bottom: 1px solid #D9D9D9;
+}
+.service-card__img img {
+  max-height: 100%;
+}
+.service-card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 16px 20px 20px;
+}
+.service-card__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  margin-bottom: 2px;
+  color: #3E444D;
+}
+@media (min-width: 769px) {
+  .service-card__title:hover {
+    color: #0383FD;
+  }
+}
+.service-card__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: auto;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6D7680;
+  margin-bottom: 17px;
+}
+.service-card__price span {
+  color: #062F61;
+}
+.service-card__btn {
+  margin-bottom: 10px;
+}
+.service-card__btn .btn {
+  width: 100%;
+}
+.service-card__more {
+  text-align: center;
+}
+.service-card__more a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  text-decoration: underline;
+  color: #007AE7;
+}
+@media (min-width: 769px) {
+  .service-card__more a:hover {
+    color: #42A1FC;
+  }
+}
+
+/* /service-card */
 /* footer */
 .footer {
   background-color: #11356A;

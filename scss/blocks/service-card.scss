@@ -1,0 +1,69 @@
+/* service-card */
+.service-card { 
+  height: 100%;
+  border: 1px solid $border_color;
+  border-radius: 4px;
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 176px;
+    border-bottom: 1px solid $border_color;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px 20px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 2px;
+    color: $text_color;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    font-size: 14px;
+    line-height: 17px;
+    color: $text_gray_color;
+    margin-bottom: 17px;
+    span {
+      color: $title_color;
+    }
+  }
+  &__btn {
+    margin-bottom: 10px;
+    .btn {
+      width: 100%;
+    }
+  }
+  &__more {
+    text-align: center;
+    a {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 16px;
+      text-decoration: underline;
+      color: $link_color;
+      @include media-breakpoint-up(md) {
+        &:hover {
+          color: #42A1FC;
+        }
+      }
+    }
+  }
+}
+/* /service-card */

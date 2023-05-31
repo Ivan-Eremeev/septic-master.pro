@@ -1,0 +1,565 @@
+extends core/base.pug
+
+block title 
+  title Каталог услуг
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .container 
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              a(href="#") Каталог септиков
+            li 
+              span Малахит
+      // /breadcrumbs
+
+      // catalog
+      .catalog
+        .container 
+          h1.title Септики Малахит
+
+          .catalog__row 
+
+            .catalog__sidebar 
+
+              #filter.catalog__filter 
+
+                // filter
+                form(action="#").filter
+                  .filter__head Фильтры
+                    .filter__close.js-drop-close(data-drop="filter")
+
+                  .filter__middle
+
+                    .filter__title Модели септиков
+                      .filter__reset 
+                        span 
+                        | Сбросить все
+
+                    .catalog__type.d-block.d-lg-none
+                      ul.catalog__type-list
+                        mixin catalog-type(title, checked)
+                          li.catalog__type-item 
+                            label
+                              if checked
+                                input(type="radio" name="catalogType" checked)
+                              else 
+                                input(type="radio" name="catalogType")
+                              span= title
+                        +catalog-type('Малахит', 'checked')
+                        +catalog-type('Топас топол эко')
+                        +catalog-type('Топас-с топол эко')
+                        +catalog-type('Топ Аэро топол эко')
+                        +catalog-type('Астра Юнилос')
+                        +catalog-type('Евролос Био Евролос')
+                        +catalog-type('Евролос Грунт Евролос')
+                        +catalog-type('Тверь Classic')
+                        +catalog-type('Тверь Classic')
+
+                    .accordion.js-accordion-filter
+                      .filter__item.accordion__item.active
+                        .filter__trigger.accordion__trigger.js-accordion-trigger.active(data-content="trigger_1") Модель
+                          svg(class="icon-arrow-light")
+                            use(xlink:href="img/sprite.svg#arrow-light")
+                        #trigger_1.filter__content.accordion__content.js-accordion-content.open
+                          ul.filter__list 
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Астра
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Биотанк
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Гринлос
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Димант
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Евродиамант
+                      .filter__item.accordion__item
+                        .filter__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_2") Количество человек
+                          svg(class="icon-arrow-light")
+                            use(xlink:href="img/sprite.svg#arrow-light")
+                        #trigger_2.filter__content.accordion__content.js-accordion-content
+                          ul.filter__list 
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Астра
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Биотанк
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Гринлос
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Димант
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Евродиамант
+                      .filter__item.accordion__item
+                        .filter__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_3") Назначение
+                          svg(class="icon-arrow-light")
+                            use(xlink:href="img/sprite.svg#arrow-light")
+                        #trigger_3.filter__content.accordion__content.js-accordion-content
+                          ul.filter__list 
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Астра
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Биотанк
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Гринлос
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Димант
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Евродиамант
+                      .filter__item.accordion__item
+                        .filter__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_4") Производительность
+                          svg(class="icon-arrow-light")
+                            use(xlink:href="img/sprite.svg#arrow-light")
+                        #trigger_4.filter__content.accordion__content.js-accordion-content
+                          ul.filter__list 
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Астра
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Биотанк
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Гринлос
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Димант
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Евродиамант
+                      .filter__item.accordion__item
+                        .filter__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_5") Способ отвода
+                          svg(class="icon-arrow-light")
+                            use(xlink:href="img/sprite.svg#arrow-light")
+                        #trigger_5.filter__content.accordion__content.js-accordion-content
+                          ul.filter__list 
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Астра
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Биотанк
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Гринлос
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Димант
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Евродиамант
+                      .filter__item.accordion__item
+                        .filter__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_6") По принципу работы
+                          svg(class="icon-arrow-light")
+                            use(xlink:href="img/sprite.svg#arrow-light")
+                        #trigger_6.filter__content.accordion__content.js-accordion-content
+                          ul.filter__list 
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Астра
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Биотанк
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Гринлос
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Димант
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Евродиамант
+                      .filter__item.accordion__item
+                        .filter__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_7") Еще фильтр
+                          svg(class="icon-arrow-light")
+                            use(xlink:href="img/sprite.svg#arrow-light")
+                        #trigger_7.filter__content.accordion__content.js-accordion-content
+                          ul.filter__list 
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Астра
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Биотанк
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Гринлос
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Димант
+                            li 
+                              .checkbox 
+                                label
+                                  input(type="checkbox")
+                                  span.checkbox__rectangle
+                                  span.checkbox__text Евродиамант
+                      .filter__item.accordion__item.active
+                        .filter__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_8").active Цена, рублей
+                          svg(class="icon-arrow-light")
+                            use(xlink:href="img/sprite.svg#arrow-light")
+                        #trigger_8.filter__content.accordion__content.js-accordion-content.open
+                          .filter__prices 
+                            .filter__prices-row 
+                              .filter__prices-input 
+                                .input 
+                                  input(type="number")#priceMin
+                              .filter__prices-input 
+                                .input 
+                                  input(type="number")#priceMax
+                            .filter__prices-slider#priceSlider(data-min="0" data-max="500000")
+                  
+                  .filter__bottom 
+                    button(type="submit").btn.btn--big.btn--blue 
+                      span.btn__inner Показать 5 товаров
+                // /filter
+
+              .catalog__btn-filter.js-drop-menu(data-drop="filter")
+                svg(class="icon-filter")
+                  use(xlink:href="img/sprite.svg#filter")
+
+              .row.gy-3
+                .col-lg-12.col-md-6
+                  // banner-small
+                  .banner-small
+                    .banner-small__item 
+                      .banner-small__img 
+                        img(src="img/banner-small.jpg", alt="")
+                      .banner-small__content 
+                        .banner-small__title Калькулятор подбора автономной канализации
+                        .banner-small__btn 
+                          .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#popupCalc") 
+                            .btn__inner Рассчитать
+                  // /banner-small
+
+                .col-lg-12.col-md-6
+                  // banner-small
+                  .banner-small
+                    .banner-small__slider 
+                      .sliderBannerSmall
+                        .swiper-wrapper 
+                          .swiper-slide 
+                            .banner-small__item 
+                              .banner-small__img 
+                                img(src="img/banner-small-2.jpg", alt="")
+                              .banner-small__content.banner-small__content--white
+                                .banner-small__title Пенсионарам скидки!
+                                .banner-small__text Монтаж септика и подключение подводящихи отводящих магистралей
+                                .banner-small__btn 
+                                  .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#offerPopup")
+                                    .btn__inner Получить скидку
+                          .swiper-slide 
+                            .banner-small__item 
+                              .banner-small__img 
+                                img(src="img/banner-small.jpg", alt="")
+                              .banner-small__content
+                                .banner-small__title Калькулятор подбора автономной канализации
+                                .banner-small__btn 
+                                  .btn.btn--big.btn--blue(data-bs-toggle="modal" data-bs-target="#popupCalc")
+                                    .btn__inner Рассчитать
+                      .banner-small__pagination.swiper-pagination
+                  // /banner-small
+
+            .catalog__main 
+
+              .catalog__text 
+                h2 SEO Текст описание группы септиков, свойств и ТП
+                p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+
+              .catalog__title Профессиональный сервис септиков
+
+              .catalog__services 
+                .row 
+                  .col-xxl-2.col-md-4.col-6
+                    a(href="#").catalog__services-item
+                      .catalog__services-icon 
+                        img(src="img/catalog-services-icons/img1.svg", alt="")
+                      .catalog__services-text Обслуживание септиков
+                  .col-xxl-2.col-md-4.col-6
+                    a(href="#").catalog__services-item
+                      .catalog__services-icon 
+                        img(src="img/catalog-services-icons/img2.svg", alt="")
+                      .catalog__services-text Ремонт септиков
+                  .col-xxl-2.col-md-4.col-6
+                    a(href="#").catalog__services-item
+                      .catalog__services-icon 
+                        img(src="img/catalog-services-icons/img3.svg", alt="")
+                      .catalog__services-text Наращивание септиков
+                  .col-xxl-2.col-md-4.col-6
+                    a(href="#").catalog__services-item
+                      .catalog__services-icon 
+                        img(src="img/catalog-services-icons/img4.svg", alt="")
+                      .catalog__services-text Пайка септиков
+                  .col-xxl-2.col-md-4.col-6
+                    a(href="#").catalog__services-item
+                      .catalog__services-icon 
+                        img(src="img/catalog-services-icons/img5.svg", alt="")
+                      .catalog__services-text Откачка септиков
+                  .col-xxl-2.col-md-4.col-6
+                    a(href="#").catalog__services-item
+                      .catalog__services-icon 
+                        img(src="img/catalog-services-icons/img6.svg", alt="")
+                      .catalog__services-text Модернизация септиков
+
+              .catalog__sort 
+                .catalog__select 
+                  .catalog__select-text Показывать по
+                  .select 
+                    select
+                      option(value="") По умолчанию
+                      option(value="#") По цене
+                      option(value="#") По популярности
+
+              .catalog__cards 
+                include blocks/service-card.pug
+                .row 
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img1.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img2.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img3.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img4.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img5.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img1.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img2.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img3.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img4.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img5.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img1.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6 
+                    +service-card('img/products/img2.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img3.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img4.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img5.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img1.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img2.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img3.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img4.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img5.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img2.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img3.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img4.jpg')
+                  .col-xxl-3.col-xl-4.col-lg-6.col-md-4.col-6.d-none.d-md-block
+                    +service-card('img/products/img5.jpg')
+
+              .catalog__more 
+                a(href="#").btn.btn--big.btn--blue-border Показать еще
+
+              .catalog__pagination 
+                // pagination
+                .pagination
+                  ul 
+                    li 
+                      a(href="#").pagination__prev.disabled
+                        svg(class="icon-arrow-long")
+                          use(xlink:href="img/sprite.svg#arrow-long")
+                    li 
+                      a(href="#").active 1
+                    li 
+                      a(href="#") 2
+                    li 
+                      a(href="#") 3
+                    li 
+                      a(href="#") 4
+                    li 
+                      span ...
+                    li 
+                      a(href="#") 12
+                    li 
+                      a(href="#").pagination__next
+                        svg(class="icon-arrow-long")
+                          use(xlink:href="img/sprite.svg#arrow-long")
+                // /pagination
+      // /catalog
+
+      include blocks/callback2.pug
+
+      // sertificates
+      .sertificates
+        .container 
+          .title Сертификаты
+
+          .sertificates__slider 
+
+            #sliderSertificates 
+              .swiper-wrapper 
+                .swiper-slide 
+                  a(href="img/sertificates/img1-full.jpg").sertificates__item(data-fancybox) 
+                    img(src="img/sertificates/img1.jpg", alt="")
+                .swiper-slide 
+                  a(href="img/sertificates/img2-full.jpg").sertificates__item(data-fancybox) 
+                    img(src="img/sertificates/img2.jpg", alt="")
+                .swiper-slide 
+                  a(href="img/sertificates/img3-full.jpg").sertificates__item(data-fancybox) 
+                    img(src="img/sertificates/img3.jpg", alt="")
+                .swiper-slide 
+                  a(href="img/sertificates/img4-full.jpg").sertificates__item(data-fancybox) 
+                    img(src="img/sertificates/img4.jpg", alt="")
+                .swiper-slide 
+                  a(href="img/sertificates/img5-full.jpg").sertificates__item(data-fancybox) 
+                    img(src="img/sertificates/img5.jpg", alt="")
+                .swiper-slide 
+                  a(href="img/sertificates/img6-full.jpg").sertificates__item(data-fancybox) 
+                    img(src="img/sertificates/img6.jpg", alt="")
+
+            .sertificates__slider-arrow.sertificates__slider-arrow--prev.swiper-button-prev
+            .sertificates__slider-arrow.sertificates__slider-arrow--next.swiper-button-next
+            .sertificates__pagination.swiper-pagination
+      // /sertificates
+
+      include blocks/brands.pug
+      +brands('Подобрать септик по производителю')
+
+      include blocks/slider-cards.pug
+      +slider-cards('Рекомендуем')
+
+      include blocks/reviews.pug
+
+      include blocks/cities.pug
+
+    include core/footer.pug

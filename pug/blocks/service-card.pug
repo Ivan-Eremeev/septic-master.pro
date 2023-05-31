@@ -1,0 +1,16 @@
+mixin service-card(imgUrl)
+  // service-card
+  .service-card
+    a(href="#").service-card__img 
+      img(src= imgUrl, alt="")
+    .service-card__content 
+      a(href="#").service-card__title Ремонт септиков ЕВРОЛОС БИО
+      .service-card__price 
+        |  Цена
+        span  от 42 290р
+      .service-card__btn 
+        .btn.btn--small.btn--blue 
+          .btn__inner Заказать услугу
+      .service-card__more 
+        a(href="#") Подробнее
+  // /service-card
