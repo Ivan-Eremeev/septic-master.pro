@@ -1,0 +1,161 @@
+extends core/base.pug
+
+block title 
+  title FAQ
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .container 
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              span FAQ
+      // /breadcrumbs
+
+      // faq-page
+      .faq-page
+        .container 
+          .title Ответы на популярные вопросы
+          .row.gy-5
+            .col-xl-6 
+
+              // faq
+              .faq
+                .faq__accordion.accordion.js-accordion
+                  .faq__item.accordion__item.active
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_1").active Сколько потребляет энергии септик?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_1.faq__content.accordion__content.js-accordion-content.open
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_2") Можно установить септик самому?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_2.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_3") Что можно сливать в биосептик?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_3.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_4") Как работает септик зимой?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_4.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_5") Станция биологической очистки?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_5.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_6") Можно установить септик самому?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_6.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_7") Что можно сливать в биосептик?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_7.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_8") Как работает септик зимой?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_8.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_9") Как работает септик зимой?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_9.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_10") Станция биологической очистки?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_10.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_11") Можно установить септик самому?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_11.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_12") Что можно сливать в биосептик?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_12.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                  .faq__item.accordion__item
+                    .faq__trigger.accordion__trigger.js-accordion-trigger(data-content="trigger_13") Как работает септик зимой?
+                      .faq__arrow 
+                        svg(class="icon-arrow-light")
+                          use(xlink:href="img/sprite.svg#arrow-light")
+                    #trigger_13.faq__content.accordion__content.js-accordion-content
+                      | «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+              // /faq
+
+            .col-xl-6 
+              // callback3
+              .callback3
+                .title Не нашли ответ на вопрос? Напишите нам
+                form(action="#").callback3__form 
+                  .row
+                    .col-md-6 
+                      .input 
+                        input(type="text" placeholder="Имя")
+                    .col-md-6 
+                      .input.js-input-tel
+                        input(type="text" placeholder="Телефон")
+                    .col-12
+                      .input 
+                        input(type="text" placeholder="E-mail")
+                    .col-12
+                      .textarea 
+                        textarea(placeholder="Комментарий")
+                    .col-12 
+                      .callback3__approval
+                        button(type="submit").btn.btn--big.btn--blue 
+                          .btn__inner Отправить
+                        .checkbox 
+                          label
+                            input(type="checkbox")
+                            span.checkbox__rectangle
+                            span.checkbox__text Соглашаюсь с политикой конфендициальности
+              // /callback3
+
+      // /faq-page
+
+      include blocks/cities.pug
+
+    include core/footer.pug

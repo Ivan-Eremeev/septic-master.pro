@@ -15283,6 +15283,95 @@ input[type=number]:focus {
 }
 
 /* /portfolio-slider2 */
+/* faq-page */
+.faq-page {
+  margin-bottom: 100px;
+}
+.faq-page .title {
+  margin-bottom: 35px;
+}
+.faq-page .faq {
+  margin-bottom: 0;
+}
+@media (max-width: 768.98px) {
+  .faq-page .title {
+    margin-bottom: 25px;
+  }
+}
+
+/* /faq-page */
+/* callback3 */
+.callback3 {
+  background-color: #E7F0F9;
+  border-radius: 4px;
+  padding: 30px 30px 50px;
+}
+.callback3 .title {
+  margin-bottom: 28px;
+}
+.callback3__form > .row {
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: -20px;
+}
+.callback3__form > .row > * {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+}
+.callback3__form .input input {
+  font-size: 14px;
+  line-height: 17px;
+}
+.callback3__form .textarea {
+  height: 200px;
+}
+.callback3__form .textarea textarea {
+  font-size: 14px;
+  line-height: 17px;
+}
+.callback3__approval {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.callback3__approval .btn {
+  width: 100%;
+  max-width: 206px;
+  margin-right: 30px;
+}
+@media (max-width: 768.98px) {
+  .callback3 {
+    padding: 30px 15px;
+  }
+  .callback3 .title {
+    margin-bottom: 23px;
+  }
+  .callback3__approval {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .callback3__approval .btn {
+    margin-right: 0;
+    max-width: none;
+    margin-bottom: 15px;
+  }
+  .callback3__approval .checkbox__text {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .callback3__form > .row {
+    margin-top: -15px;
+  }
+  .callback3__form > .row > * {
+    margin-top: 15px;
+  }
+}
+
+/* /callback3 */
 /* footer */
 .footer {
   background-color: #11356A;

@@ -1,0 +1,16 @@
+/* faq-page */
+.faq-page { 
+  margin-bottom: 100px;
+  .title {
+    margin-bottom: 35px;
+  }
+  .faq {
+    margin-bottom: 0;
+  }
+  @include media-breakpoint-down(md) {
+    .title {
+      margin-bottom: 25px;
+    }
+  }
+}
+/* /faq-page */
