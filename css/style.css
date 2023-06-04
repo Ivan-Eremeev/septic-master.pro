@@ -10916,12 +10916,14 @@ input[type=number]:focus {
   padding: 15px 15px 20px;
   border: 1px solid #D9D9D9;
   border-top: none;
+  border-radius: 0 0 4px 4px;
 }
 .articles-slider__date {
   font-size: 13px;
   line-height: 16px;
   color: #6D7680;
   margin-bottom: 5px;
+  opacity: 0.6;
 }
 .articles-slider__text {
   font-size: 16px;
@@ -15372,6 +15374,38 @@ input[type=number]:focus {
 }
 
 /* /callback3 */
+/* articles */
+.articles {
+  margin-bottom: 100px;
+}
+.articles .title {
+  margin-bottom: 35px;
+}
+.articles__more {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.articles__more .btn {
+  width: 100%;
+  max-width: 220px;
+  padding: 10px 30px;
+}
+.articles__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media (max-width: 768.98px) {
+  .articles .title {
+    margin-bottom: 25px;
+  }
+}
+
+/* /articles */
 /* footer */
 .footer {
   background-color: #11356A;

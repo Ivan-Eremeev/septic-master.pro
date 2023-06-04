@@ -1,0 +1,27 @@
+/* articles */
+.articles { 
+  margin-bottom: 100px;
+  .title {
+    margin-bottom: 35px;
+  }
+  &__more {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .btn {
+      width: 100%;
+      max-width: 220px;
+      padding: 10px 30px;
+    }
+  }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+  @include media-breakpoint-down(md) {
+    .title {
+      margin-bottom: 25px;
+    }
+  }
+}
+/* /articles */
