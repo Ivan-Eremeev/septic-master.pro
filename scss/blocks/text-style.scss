@@ -1,0 +1,179 @@
+/* text-style */
+.text-style { 
+  margin-bottom: 100px;
+  .title {
+    margin-bottom: 35px;
+  }
+  &__block {
+    max-width: 880px;
+    margin-bottom: 40px;
+    h1,h2,h3,h4,h5,h6 {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 27px;
+      margin: 12px 0;
+    }
+    p {
+      margin: 15px 0;
+    }
+    ul {
+      padding-left: 10px;
+      li {
+        padding-left: 15px;
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          width: 6px;
+          height: 6px;
+          background-color: $text_color;
+          border-radius: 100%;
+          position: absolute;
+          top: 10px;
+          left: 0;
+        }
+      }
+    }
+    ol {
+      padding-left: 25px;
+      list-style-type: decimal;
+      li {
+
+      }
+    }
+    blockquote {
+      margin: 40px 0;
+      padding: 35px 35px 40px;
+      background-color: #E7F0F9;
+      border-radius: 4px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 154.02%;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        width: 69px;
+        height: 53px;
+        background-image: url("data:image/svg+xml,%3Csvg width='69' height='53' viewBox='0 0 69 53' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 52.0526V37.7344C0 33.5085 0.795455 29.0589 2.38636 24.3856C3.97727 19.7124 6.18963 15.2379 9.02344 10.9624C11.8572 6.68678 15.1882 3.03266 19.0163 0L30.0533 7.90482C27.0206 12.3295 24.4354 16.9531 22.2976 21.7756C20.1598 26.598 19.0909 31.843 19.0909 37.5106V52.0526H0ZM38.0327 52.0526V37.7344C38.0327 33.5085 38.8281 29.0589 40.419 24.3856C42.0099 19.7124 44.2223 15.2379 47.0561 10.9624C49.8899 6.68678 53.2209 3.03266 57.049 0L68.0859 7.90482C65.0533 12.3295 62.468 16.9531 60.3303 21.7756C58.1925 26.598 57.1236 31.843 57.1236 37.5106V52.0526H38.0327Z' fill='%23D3DCE5'/%3E%3C/svg%3E%0A");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -20px;
+        left: -30px;
+      }
+    }
+    table {
+      width: 100%;
+      margin: 40px 0;
+      tr {
+        &:nth-child(odd) {
+          td {
+            background-color: #F4F6F8;
+          }
+        }
+      }
+      th {
+        padding: 8px;
+        background-color: $background_color;
+        text-align: left;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 154.02%;
+        color: $text_gray_color;
+        &:nth-child(1) {
+          width: 30%;
+          padding-left: 15px;
+          border-radius: 4px 0 0 4px;
+        }
+        &:nth-child(2) {
+          width: 20%;
+        }
+        &:nth-child(3) {
+          padding-right: 15px;
+          border-radius: 0 4px 4px 0;
+        }
+      }
+      td {
+        padding: 6px;
+        font-size: 16px;
+        line-height: 154.02%;
+        background-color: #fff;
+        &:nth-child(1) {
+          padding-left: 15px;
+          border-radius: 4px 0 0 4px;
+        }
+        &:nth-child(3) {
+          padding-right: 15px;
+          color: $text_gray_color;
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 60px;
+    .title {
+      margin-bottom: 25px;
+    }
+    &__block {
+      h1,h2,h3,h4,h5,h6 {
+        font-size: 20px;
+        line-height: 25px;
+      }
+      blockquote {
+        padding: 20px 15px 25px;
+        font-size: 18px;
+        &:before {
+          width: 40px;
+          height: 31px;
+          top: -15px;
+          left: -10px;
+        }
+      }
+      table {
+        display: block;
+        tbody {
+          display: block;
+        }
+        tr {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+          border: 1px solid $border_color;
+          border-radius: 4px;
+          overflow: hidden;
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(odd) {
+            td {
+              background-color: #fff;
+              &:nth-child(1) {
+                background-color: $background_color;
+              }
+              &:nth-child(2) {
+                background-color: #F4F6F8;
+              }
+            }
+          }
+        }
+        td {
+          padding: 12px 10px;
+          &:nth-child(1) {
+            padding-left: 10px;
+            background-color: $background_color;
+          }
+          &:nth-child(2) {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+            background-color: #F4F6F8;
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}
+/* /text-style */
