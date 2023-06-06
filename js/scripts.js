@@ -1266,6 +1266,8 @@ window.onload = function () {
   }
   productVariants();
 
+  
+
   // // Очистить фильтр 
   // function clearFilter() {
   //   let clearBnt = $('.js-filters-clear');

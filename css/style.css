@@ -15664,15 +15664,6 @@ input[type=number]:focus {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.article__video {
-  position: relative;
-  margin-bottom: 40px;
-}
-.article__video:after {
-  content: "";
-  display: block;
-  padding-top: 56.25%;
-}
 .article__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15750,6 +15741,27 @@ input[type=number]:focus {
 }
 
 /* /article */
+/* video */
+.video {
+  position: relative;
+  margin-bottom: 40px;
+}
+.video iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.video:after {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+/* /video */
 /* footer */
 .footer {
   background-color: #11356A;

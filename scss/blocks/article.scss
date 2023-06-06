@@ -58,13 +58,7 @@
     }
   }
   &__video {
-    position: relative;
-    margin-bottom: 40px;
-    &:after {
-      content: '';
-      display: block;
-      padding-top: 56.25%;
-    }
+    
   }
   &__bottom {
     display: flex;
