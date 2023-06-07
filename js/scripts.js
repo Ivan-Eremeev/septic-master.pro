@@ -1266,6 +1266,30 @@ window.onload = function () {
   }
   productVariants();
 
+  // Сортировка на странице "Наши работы"
+  function sotrPortfolioPage() {
+    let trigger = $('[data-portfolio-trigger]');
+    let item = $('[data-portfolio-controlled]');
+    trigger.on('click', function () {
+      let currentTrigger = $(this);
+      let currentItem = $('[data-portfolio-controlled="' + currentTrigger.data('portfolio-trigger') + '"]');
+      if (!currentTrigger.hasClass('active') && currentTrigger.data('portfolio-trigger') != 'all') {
+        trigger.removeClass('active');
+        currentTrigger.addClass('active');
+        item.hide();
+        currentItem.show();
+        console.log('aa');
+      }
+      else if (!currentTrigger.hasClass('active') && currentTrigger.data('portfolio-trigger') == 'all') {
+        trigger.removeClass('active');
+        currentTrigger.addClass('active');
+        item.show();
+        console.log('ss');
+      }
+    });
+  }
+  sotrPortfolioPage();
+
   // // Очистить фильтр 
   // function clearFilter() {
   //   let clearBnt = $('.js-filters-clear');

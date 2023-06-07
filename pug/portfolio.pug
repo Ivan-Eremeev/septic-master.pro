@@ -1,0 +1,180 @@
+extends core/base.pug
+
+block title 
+  title Наши работы
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .container 
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              span Наши работы
+      // /breadcrumbs
+
+      // portfolio-page
+      .portfolio-page
+        .container 
+
+          .title Наши работы
+          
+          .portfolio-page__sort
+            .portfolio-page__sort-item(data-portfolio-trigger="all").active Все
+            .portfolio-page__sort-item(data-portfolio-trigger="photo") Фото
+            .portfolio-page__sort-item(data-portfolio-trigger="video") Видео
+
+          .portfolio-page__items 
+            .row 
+              .col-xl-3(data-portfolio-controlled="video") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img1.jpg", alt="")
+                  .portfolio-page__play 
+                    img(src="img/play.svg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img2.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img3.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img4.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img5.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="video") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img1.jpg", alt="")
+                  .portfolio-page__play 
+                    img(src="img/play.svg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img2.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img3.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img4.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img5.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="video") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img1.jpg", alt="")
+                  .portfolio-page__play 
+                    img(src="img/play.svg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img2.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img3.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img4.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img5.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="video") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img1.jpg", alt="")
+                  .portfolio-page__play 
+                    img(src="img/play.svg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img2.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img3.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img4.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img5.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="video") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img1.jpg", alt="")
+                  .portfolio-page__play 
+                    img(src="img/play.svg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img2.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img3.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img4.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img5.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="video") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img1.jpg", alt="")
+                  .portfolio-page__play 
+                    img(src="img/play.svg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img2.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img3.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img4.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img5.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="video") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img1.jpg", alt="")
+                  .portfolio-page__play 
+                    img(src="img/play.svg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img2.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img3.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img4.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img5.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="video") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img1.jpg", alt="")
+                  .portfolio-page__play 
+                    img(src="img/play.svg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img2.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img3.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img4.jpg", alt="")
+              .col-xl-3(data-portfolio-controlled="photo") 
+                .portfolio-page__item
+                  img(src="img/portfolio/img5.jpg", alt="")
+
+          .portfolio-page__more 
+            .btn.btn--big.btn--blue-border Показать еще
+      // /portfolio-page
+
+      include blocks/cities.pug
+
+    include core/footer.pug
