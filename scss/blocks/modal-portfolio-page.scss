@@ -1,0 +1,44 @@
+/* modal-portfolio-page */
+.modal-portfolio-page { 
+  padding: 12px;
+  &__slider {
+    #sliderModalPortfolioPage{
+      overflow: hidden;
+      border-radius: 4px;
+    }
+  }
+  &__item {
+    border-radius: 4px;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+    }
+    iframe {
+      display: block;
+    }
+  }
+  &__slider-arrow {
+    &--prev {
+      left: -20px;
+    }
+    &--next {
+      right: -20px;
+    }
+  }
+  &__pagination {
+    display: none;
+  }
+  @include media-breakpoint-down(md) {
+    &__slider {
+      padding-bottom: 30px;
+    }
+    &__slider-arrow {
+      display: none;
+    }
+    &__pagination {
+      display: block;
+    }
+  }
+}
+/* /modal-portfolio-page */

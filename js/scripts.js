@@ -917,6 +917,24 @@ window.onload = function () {
     })
   }
 
+  // Swiper | Слайдер в попап окне на странице "наши работы"
+  if ($('#sliderModalPortfolioPage').length) {
+    const sliderModalPortfolioPage = new Swiper('#sliderModalPortfolioPage', {
+      slidesPerView: 1,
+      autoHeight: true,
+      spaceBetween: 10,
+      threshold: 3,
+      navigation: {
+        nextEl: '.modal-portfolio-page__slider-arrow--next',
+        prevEl: '.modal-portfolio-page__slider-arrow--prev',
+      },
+      pagination: {
+        el: '.modal-portfolio-page__pagination',
+        clickable: true,
+      },
+    });
+  }
+
   // Select2 | Стилизация селектов
   $('.select select').select2({
     minimumResultsForSearch: Infinity,

@@ -1,4 +1,30 @@
 /* modal */
+.modal {
+  &--portfolio-page {
+    .modal-dialog {
+      max-width: 1050px;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .modal-content {
+      border-radius: 4px;
+      overflow: visible;
+    }
+    .modal-close {
+      top: -45px;
+      right: -45px;
+      &:after,&:before {
+        background-color: #fff;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .modal-dialog {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
 .modal-dialog {
   max-width: 480px;
   &--w810 {
