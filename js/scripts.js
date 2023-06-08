@@ -933,7 +933,19 @@ window.onload = function () {
         clickable: true,
       },
     });
+    // Открыть слайд соответствующий карточке на странице
+    let item = $('.portfolio-page__item');
+    item.on('click', function () {
+      let index = item.index(this);
+      sliderModalPortfolioPage.slideTo(index);
+    });
+    // Отключить видео в попап окне при переключении слайда
+    sliderModalPortfolioPage.on('slideChange', function () {
+      $('.modal').find('iframe').remove();
+    });
+    
   }
+
 
   // Select2 | Стилизация селектов
   $('.select select').select2({
@@ -975,18 +987,22 @@ window.onload = function () {
   //   });
   // }
 
-  //  Bootstrap modal | Добавление хедеру padding при окрытие попап окна
+  //  Bootstrap modal | Функции попап окон
   if ($('.modal').length) {
     let modal = $('.modal');
     modal.each(function (indexInArray, valueOfElement) { 
       valueOfElement.addEventListener('show.bs.modal', function (event) {
+        // Добавление хедеру padding при окрытие попап окна
         let documentWidth = parseInt(document.documentElement.clientWidth);
         let windowsWidth = parseInt(window.innerWidth);
         let scrollbarWidth = windowsWidth - documentWidth;
         $('.header').css('padding-right', scrollbarWidth);
       });
       valueOfElement.addEventListener('hidden.bs.modal', function (event) {
+        // Убрать хедеру padding при закрытии попап окна
         $('.header').css('padding-right', 0);
+        // Отключить видео в попап окне при его закрытии
+        $(this).find('iframe').remove();
       });
     });
   }
@@ -1307,6 +1323,35 @@ window.onload = function () {
     });
   }
   sotrPortfolioPage();
+
+  // Ленивая загрузка видео с дзен
+  function uploadYoutubeVideo() {
+    if ($(".js-dzen").length) {
+      $(".js-dzen").each(function () {
+        // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
+        $(this).append($('<img src="img/play.svg" alt="Play" class="video__play">'));
+      });
+      $('.video__preview').on('click', function () {
+        console.log('kk');
+        // создаем iframe со включенной опцией autoplay
+        let wrapp = $(this).closest('.js-dzen'),
+          videoId = wrapp.attr('id'),
+          iframe_url = "https://dzen.ru/embed/" + videoId + "?from_block=partner&from=zen&backoffice=1&mute=0&autoplay=1&tv=0";
+        if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
+        // Высота и ширина iframe должны быть такими же, как и у родительского блока
+        let iframe = $('<iframe/>', {
+          'frameborder': '0',
+          'src': iframe_url,
+          'allow': "autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media",
+          'scrolling': 'no',
+          'allowfullscreen': '',
+        })
+        // Заменяем миниатюру HTML5 плеером с YouTube
+        $(this).closest('.js-dzen').append(iframe);
+      });
+    }
+  };
+  uploadYoutubeVideo();
 
   // // Очистить фильтр 
   // function clearFilter() {
