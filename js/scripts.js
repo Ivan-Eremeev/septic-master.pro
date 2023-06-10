@@ -942,10 +942,35 @@ window.onload = function () {
     // Отключить видео в попап окне при переключении слайда
     sliderModalPortfolioPage.on('slideChange', function () {
       $('.modal').find('iframe').remove();
-    });
-    
+    }); 
   }
 
+  // Swiper | Слайдер в попап окне на странице "наши работы"
+  if ($('#sliderReviews2').length) {
+    const sliderReviews2 = new Swiper('#sliderReviews2', {
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+      threshold: 3,
+      navigation: {
+        nextEl: '.reviews2__slider-arrow--next',
+        prevEl: '.reviews2__slider-arrow--prev',
+      },
+      pagination: {
+        el: '.reviews2__pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        769: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+      }
+    });
+  }
 
   // Select2 | Стилизация селектов
   $('.select select').select2({
@@ -1300,29 +1325,27 @@ window.onload = function () {
   }
   productVariants();
 
-  // Сортировка на странице "Наши работы"
-  function sotrPortfolioPage() {
-    let trigger = $('[data-portfolio-trigger]');
-    let item = $('[data-portfolio-controlled]');
-    trigger.on('click', function () {
-      let currentTrigger = $(this);
-      let currentItem = $('[data-portfolio-controlled="' + currentTrigger.data('portfolio-trigger') + '"]');
-      if (!currentTrigger.hasClass('active') && currentTrigger.data('portfolio-trigger') != 'all') {
-        trigger.removeClass('active');
-        currentTrigger.addClass('active');
-        item.hide();
-        currentItem.show();
-        console.log('aa');
-      }
-      else if (!currentTrigger.hasClass('active') && currentTrigger.data('portfolio-trigger') == 'all') {
-        trigger.removeClass('active');
-        currentTrigger.addClass('active');
-        item.show();
-        console.log('ss');
-      }
-    });
-  }
-  sotrPortfolioPage();
+  // // Сортировка на странице "Наши работы"
+  // function sotrPortfolioPage() {
+  //   let trigger = $('[data-portfolio-trigger]');
+  //   let item = $('[data-portfolio-controlled]');
+  //   trigger.on('click', function () {
+  //     let currentTrigger = $(this);
+  //     let currentItem = $('[data-portfolio-controlled="' + currentTrigger.data('portfolio-trigger') + '"]');
+  //     if (!currentTrigger.hasClass('active') && currentTrigger.data('portfolio-trigger') != 'all') {
+  //       trigger.removeClass('active');
+  //       currentTrigger.addClass('active');
+  //       item.hide();
+  //       currentItem.show();
+  //     }
+  //     else if (!currentTrigger.hasClass('active') && currentTrigger.data('portfolio-trigger') == 'all') {
+  //       trigger.removeClass('active');
+  //       currentTrigger.addClass('active');
+  //       item.show();
+  //     }
+  //   });
+  // }
+  // sotrPortfolioPage();
 
   // Ленивая загрузка видео с дзен
   function uploadYoutubeVideo() {
