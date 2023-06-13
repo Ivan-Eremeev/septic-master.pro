@@ -1,0 +1,411 @@
+extends core/base.pug
+
+block title 
+  title Отзывы-наши работы
+
+block content
+
+  .page 
+
+    include core/header.pug
+
+    .content 
+
+      // breadcrumbs
+      .breadcrumbs
+        .container 
+          ul 
+            li 
+              a(href="#") Главная
+            li 
+              span Наши работы и отзывы
+      // /breadcrumbs
+
+      // portfolio-page
+      .portfolio-page
+        .container 
+
+          .title Наши работы и отзывы
+
+          .portfolio-page__tabs.js-tabs
+
+            ul.portfolio-page__triggers
+              li 
+                a(href="#tab_1").portfolio-page__trigger.js-tabs-trigger.active 
+                  .portfolio-page__sort-item Отзывы
+              li 
+                a(href="#tab_2").portfolio-page__trigger.js-tabs-trigger 
+                  .portfolio-page__sort-item Фото и видео работ
+
+            div
+              .js-tabs-content.open(data-href="#tab_1")
+              
+                .portfolio-page__reviews
+                  .row 
+                    .col-sm-6
+                      .reviews2__card
+                        .reviews2__img 
+                          img(src="img/portfolio/img4.jpg", alt="")
+                        .reviews2__content 
+                          .reviews2__info 
+                            .reviews2__photo 
+                              img(src="img/client.jpg", alt="")
+                            .reviews2__info-content 
+                              .reviews2__name Отзыв от Алексея Медика
+                              .reviews2__items 
+                                .reviews2__items-row 
+                                  .reviews2__item 
+                                    svg(class="icon-wallet")
+                                      use(xlink:href="img/sprite.svg#wallet")
+                                    | Стоимость: 7 000 рублей
+                                  .reviews2__item 
+                                    svg(class="icon-calendar")
+                                      use(xlink:href="img/sprite.svg#calendar")
+                                    | Сроки: 1 день
+                          .reviews2__text 
+                            p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                            p Для детальной оценки, стоит согласовать выезд на объект инженера-замерщика для проведения расчетов и...
+                            .reviews2__more Показать полностью.
+                    .col-sm-6 
+                      .reviews2__card
+                        .reviews2__img 
+                          .video.js-dzen#vdI-RjzSyAng
+                            img(src="img/portfolio/img1.jpg", alt="").video__preview
+                        .reviews2__content 
+                          .reviews2__info 
+                            .reviews2__photo 
+                              img(src="img/client.jpg", alt="")
+                            .reviews2__info-content 
+                              .reviews2__name Отзыв от Алексея Медика
+                              .reviews2__items 
+                                .reviews2__items-row 
+                                  .reviews2__item 
+                                    svg(class="icon-wallet")
+                                      use(xlink:href="img/sprite.svg#wallet")
+                                    | Стоимость: 7 000 рублей
+                                  .reviews2__item 
+                                    svg(class="icon-calendar")
+                                      use(xlink:href="img/sprite.svg#calendar")
+                                    | Сроки: 1 день
+                          .reviews2__text 
+                            p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+
+              .js-tabs-content(data-href="#tab_2")
+              
+                .portfolio-page__items 
+                  .row 
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img1.jpg", alt="")
+                        .portfolio-page__play 
+                          img(src="img/play.svg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img1.jpg", alt="")
+                        .portfolio-page__play 
+                          img(src="img/play.svg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img1.jpg", alt="")
+                        .portfolio-page__play 
+                          img(src="img/play.svg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img1.jpg", alt="")
+                        .portfolio-page__play 
+                          img(src="img/play.svg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img1.jpg", alt="")
+                        .portfolio-page__play 
+                          img(src="img/play.svg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img1.jpg", alt="")
+                        .portfolio-page__play 
+                          img(src="img/play.svg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img1.jpg", alt="")
+                        .portfolio-page__play 
+                          img(src="img/play.svg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img1.jpg", alt="")
+                        .portfolio-page__play 
+                          img(src="img/play.svg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .col-xl-3.col-md-4.col-sm-6
+                      .portfolio-page__item(data-bs-toggle="modal" data-bs-target="#portfolioPagePopup")
+                        img(src="img/portfolio/img5.jpg", alt="")
+
+                .portfolio-page__more 
+                  .btn.btn--big.btn--blue-border Показать еще 
+
+                .portfolio-page__pagination
+                  // pagination
+                  .pagination
+                    ul 
+                      li 
+                        a(href="#").pagination__prev.disabled
+                          svg(class="icon-arrow-long")
+                            use(xlink:href="img/sprite.svg#arrow-long")
+                      li 
+                        a(href="#").active 1
+                      li 
+                        a(href="#") 2
+                      li 
+                        a(href="#") 3
+                      li 
+                        a(href="#") 4
+                      li 
+                        span ...
+                      li 
+                        a(href="#") 12
+                      li 
+                        a(href="#").pagination__next
+                          svg(class="icon-arrow-long")
+                            use(xlink:href="img/sprite.svg#arrow-long")
+                  // /pagination
+
+      // /portfolio-page
+
+      // modal-portfolio-page
+      .modal.modal--portfolio-page.fade#portfolioPagePopup
+        .modal-dialog.modal-dialog-centered
+          .modal-content
+            .modal-close(data-bs-dismiss="modal")
+            .modal-portfolio-page
+              .modal-portfolio-page__slider 
+                #sliderModalPortfolioPage 
+                  .swiper-wrapper 
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        .video.js-dzen#vdI-RjzSyAng
+                          img(src="img/portfolio/img1.jpg", alt="").video__preview
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        .video.js-dzen#vdI-RjzSyAng
+                          img(src="img/portfolio/img1.jpg", alt="").video__preview
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        .video.js-dzen#vdI-RjzSyAng
+                          img(src="img/portfolio/img1.jpg", alt="").video__preview
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        .video.js-dzen#vdI-RjzSyAng
+                          img(src="img/portfolio/img1.jpg", alt="").video__preview
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        .video.js-dzen#vdI-RjzSyAng
+                          img(src="img/portfolio/img1.jpg", alt="").video__preview
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        .video.js-dzen#vdI-RjzSyAng
+                          img(src="img/portfolio/img1.jpg", alt="").video__preview
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        .video.js-dzen#vdI-RjzSyAng
+                          img(src="img/portfolio/img1.jpg", alt="").video__preview
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img5.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        .video.js-dzen#vdI-RjzSyAng
+                          img(src="img/portfolio/img1.jpg", alt="").video__preview
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img2.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img3.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img4.jpg", alt="")
+                    .swiper-slide
+                      .modal-portfolio-page__item 
+                        img(src="img/portfolio/img5.jpg", alt="")
+                .modal-portfolio-page__slider-arrow.modal-portfolio-page__slider-arrow--prev.swiper-button-prev
+                .modal-portfolio-page__slider-arrow.modal-portfolio-page__slider-arrow--next.swiper-button-next
+                .modal-portfolio-page__pagination.swiper-pagination
+      // /modal-portfolio-page
+
+      include blocks/callback2.pug
+
+      include blocks/cities.pug
+
+    include core/footer.pug

@@ -15,6 +15,7 @@
     border-radius: 4px;
     font-size: 14px;
     line-height: 17px;
+    color: $text_color;
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
@@ -77,6 +78,7 @@
   }
   &__more {
     text-align: center;
+    margin-bottom: 30px;
     .btn {
       width: 100%;
       max-width: 220px;
@@ -95,12 +97,48 @@
       height: 55px;
     }
   }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+  &__triggers {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__trigger {
+    &.active {
+      .portfolio-page__sort-item {
+        background-color: #46C0FF;
+        color: #fff;
+      }
+    }
+  }
+  &__reviews {
+    > .row {
+      margin-top: -30px;
+      > * {
+        margin-top: 30px;
+      }
+    }
+  }
   @include media-breakpoint-down(md) {
     .title {
       margin-bottom: 25px;
     }
     &__items {
       .row {
+        margin-left: -5px;
+        margin-right: -5px;
+        margin-top: -10px;
+        > * {
+          padding-left: 5px;
+          padding-right: 5px;
+          margin-top: 10px;
+        }
+      }
+    }
+    &__reviews {
+      > .row {
         margin-left: -5px;
         margin-right: -5px;
         margin-top: -10px;

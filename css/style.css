@@ -7403,6 +7403,15 @@ input[type=number]:focus {
 }
 
 /* /nouislider-custom */
+/* js-tabs */
+.js-tabs-content {
+  display: none;
+}
+.js-tabs-content.open {
+  display: block;
+}
+
+/* /js-tabs */
 /* accordion */
 .accordion__trigger {
   cursor: pointer;
@@ -15836,6 +15845,7 @@ input[type=number]:focus {
   border-radius: 4px;
   font-size: 14px;
   line-height: 17px;
+  color: #3E444D;
   white-space: nowrap;
   cursor: pointer;
   -webkit-user-select: none;
@@ -15905,6 +15915,7 @@ input[type=number]:focus {
 }
 .portfolio-page__more {
   text-align: center;
+  margin-bottom: 30px;
 }
 .portfolio-page__more .btn {
   width: 100%;
@@ -15925,6 +15936,30 @@ input[type=number]:focus {
   width: 55px;
   height: 55px;
 }
+.portfolio-page__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.portfolio-page__triggers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+.portfolio-page__trigger.active .portfolio-page__sort-item {
+  background-color: #46C0FF;
+  color: #fff;
+}
+.portfolio-page__reviews > .row {
+  margin-top: -30px;
+}
+.portfolio-page__reviews > .row > * {
+  margin-top: 30px;
+}
 @media (max-width: 768.98px) {
   .portfolio-page .title {
     margin-bottom: 25px;
@@ -15935,6 +15970,16 @@ input[type=number]:focus {
     margin-top: -10px;
   }
   .portfolio-page__items .row > * {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 10px;
+  }
+  .portfolio-page__reviews > .row {
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: -10px;
+  }
+  .portfolio-page__reviews > .row > * {
     padding-left: 5px;
     padding-right: 5px;
     margin-top: 10px;
