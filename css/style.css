@@ -8735,7 +8735,8 @@ input[type=number]:focus {
     padding-top: 20px;
   }
   .welcome__item {
-    padding: 20px 20px 152px;
+    min-height: 462px;
+    padding: 20px;
   }
   .welcome__title {
     width: 100%;

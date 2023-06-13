@@ -116,7 +116,8 @@
     margin-bottom: 65px;
     padding-top: 20px;
     &__item {
-      padding: 20px 20px 152px;
+      min-height: 462px;
+      padding: 20px;
     }
     &__title {
       width: 100%;
