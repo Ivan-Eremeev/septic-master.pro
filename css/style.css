@@ -16219,6 +16219,56 @@ input[type=number]:focus {
 }
 
 /* /reviews2 */
+/* add-review */
+.add-review {
+  margin-bottom: 60px;
+}
+.add-review .row {
+  margin-top: -30px;
+}
+.add-review .row > * {
+  margin-top: 30px;
+}
+.add-review__form {
+  background-color: #E7F0F9;
+  border-radius: 4px;
+  padding: 40px 60px 60px;
+}
+.add-review .title {
+  margin-bottom: 35px;
+}
+.add-review .btn {
+  width: 100%;
+  max-width: 300px;
+}
+@media (max-width: 768.98px) {
+  .add-review {
+    margin-bottom: 30px;
+  }
+  .add-review .row {
+    margin-top: -20px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .add-review .row > * {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .add-review .title {
+    margin-bottom: 25px;
+  }
+  .add-review__form {
+    padding: 30px 15px 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .add-review .btn {
+    max-width: none;
+  }
+}
+
+/* /add-review */
 /* footer */
 .footer {
   background-color: #11356A;

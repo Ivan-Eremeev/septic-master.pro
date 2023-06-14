@@ -21,6 +21,25 @@ block content
               span Наши работы и отзывы
       // /breadcrumbs
 
+      // add-review
+      .add-review
+        .container 
+          form(action="#").add-review__form  
+            .title Оставить отзыв
+            .row 
+              .col-12
+                .textarea 
+                  textarea(placeholder="Отзыв")
+              .col-12
+                .input 
+                  input(type="text" placeholder="Имя")
+              .col-12
+                .btn.btn--big.btn--blue-border Загрузить фото/видео
+              .col-12
+                button(type="submit").btn.btn--big.btn--blue 
+                  .btn__inner Отправить
+      // /add-review
+
       // portfolio-page
       .portfolio-page
         .container 
