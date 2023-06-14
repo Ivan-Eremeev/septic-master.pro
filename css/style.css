@@ -6898,6 +6898,10 @@ input[type=number]:focus {
   position: relative;
   z-index: 2;
 }
+.btn--file input {
+  position: absolute;
+  visibility: hidden;
+}
 
 /* /btn */
 /* title */

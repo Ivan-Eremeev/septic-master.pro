@@ -93,5 +93,11 @@
     position: relative;
     z-index: 2;
   }
+  &--file {
+    input {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
 }
 /* /btn */

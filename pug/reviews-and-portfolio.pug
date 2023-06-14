@@ -34,7 +34,9 @@ block content
                 .input 
                   input(type="text" placeholder="Имя")
               .col-12
-                .btn.btn--big.btn--blue-border Загрузить фото/видео
+                label.btn.btn--big.btn--blue-border.btn--file 
+                  input(type="file")
+                  span Загрузить фото/видео
               .col-12
                 button(type="submit").btn.btn--big.btn--blue 
                   span.btn__inner Отправить
