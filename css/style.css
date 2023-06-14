@@ -15954,6 +15954,9 @@ input[type=number]:focus {
   background-color: #46C0FF;
   color: #fff;
 }
+.portfolio-page__reviews {
+  margin-bottom: 30px;
+}
 .portfolio-page__reviews > .row {
   margin-top: -30px;
 }
@@ -16061,6 +16064,7 @@ input[type=number]:focus {
   height: 362px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  position: relative;
 }
 .reviews2__img img {
   display: block;
@@ -16075,6 +16079,12 @@ input[type=number]:focus {
 }
 .reviews2__img .video:after {
   display: none;
+}
+.reviews2__img .sliderImgReviews2 {
+  height: 100%;
+}
+.reviews2__img .reviews2-card__pagination {
+  bottom: -30px;
 }
 .reviews2__content {
   -webkit-box-flex: 1;

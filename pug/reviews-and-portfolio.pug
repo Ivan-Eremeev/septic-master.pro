@@ -42,10 +42,21 @@ block content
               
                 .portfolio-page__reviews
                   .row 
-                    .col-sm-6
+                    .col-md-6
                       .reviews2__card
                         .reviews2__img 
-                          img(src="img/portfolio/img4.jpg", alt="")
+                          .sliderImgReviews2 
+                            .swiper-wrapper 
+                              .swiper-slide 
+                                img(src="img/portfolio/img4.jpg", alt="")
+                              .swiper-slide 
+                                .video.js-dzen#vdI-RjzSyAng
+                                  img(src="img/portfolio/img1.jpg", alt="").video__preview
+                              .swiper-slide 
+                                img(src="img/portfolio/img3.jpg", alt="")
+                              .swiper-slide 
+                                img(src="img/portfolio/img2.jpg", alt="")
+                          .reviews2-card__pagination.swiper-pagination
                         .reviews2__content 
                           .reviews2__info 
                             .reviews2__photo 
@@ -66,11 +77,19 @@ block content
                             p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
                             p Для детальной оценки, стоит согласовать выезд на объект инженера-замерщика для проведения расчетов и...
                             .reviews2__more Показать полностью.
-                    .col-sm-6 
+                    .col-md-6 
                       .reviews2__card
                         .reviews2__img 
-                          .video.js-dzen#vdI-RjzSyAng
-                            img(src="img/portfolio/img1.jpg", alt="").video__preview
+                          .sliderImgReviews2 
+                            .swiper-wrapper 
+                              .swiper-slide 
+                                .video.js-dzen#vdI-RjzSyAng
+                                  img(src="img/portfolio/img1.jpg", alt="").video__preview
+                              .swiper-slide
+                                img(src="img/portfolio/img4.jpg", alt="")
+                              .swiper-slide
+                                img(src="img/portfolio/img3.jpg", alt="")
+                          .reviews2-card__pagination.swiper-pagination
                         .reviews2__content 
                           .reviews2__info 
                             .reviews2__photo 
@@ -89,6 +108,233 @@ block content
                                     | Сроки: 1 день
                           .reviews2__text 
                             p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                    .col-md-6
+                      .reviews2__card
+                        .reviews2__img 
+                          .sliderImgReviews2 
+                            .swiper-wrapper 
+                              .swiper-slide 
+                                img(src="img/portfolio/img4.jpg", alt="")
+                              .swiper-slide 
+                                .video.js-dzen#vdI-RjzSyAng
+                                  img(src="img/portfolio/img1.jpg", alt="").video__preview
+                              .swiper-slide 
+                                img(src="img/portfolio/img3.jpg", alt="")
+                              .swiper-slide 
+                                img(src="img/portfolio/img2.jpg", alt="")
+                          .reviews2-card__pagination.swiper-pagination
+                        .reviews2__content 
+                          .reviews2__info 
+                            .reviews2__photo 
+                              img(src="img/client.jpg", alt="")
+                            .reviews2__info-content 
+                              .reviews2__name Отзыв от Алексея Медика
+                              .reviews2__items 
+                                .reviews2__items-row 
+                                  .reviews2__item 
+                                    svg(class="icon-wallet")
+                                      use(xlink:href="img/sprite.svg#wallet")
+                                    | Стоимость: 7 000 рублей
+                                  .reviews2__item 
+                                    svg(class="icon-calendar")
+                                      use(xlink:href="img/sprite.svg#calendar")
+                                    | Сроки: 1 день
+                          .reviews2__text 
+                            p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                            p Для детальной оценки, стоит согласовать выезд на объект инженера-замерщика для проведения расчетов и...
+                            .reviews2__more Показать полностью.
+                    .col-md-6 
+                      .reviews2__card
+                        .reviews2__img 
+                          .sliderImgReviews2 
+                            .swiper-wrapper 
+                              .swiper-slide 
+                                .video.js-dzen#vdI-RjzSyAng
+                                  img(src="img/portfolio/img1.jpg", alt="").video__preview
+                              .swiper-slide
+                                img(src="img/portfolio/img4.jpg", alt="")
+                              .swiper-slide
+                                img(src="img/portfolio/img3.jpg", alt="")
+                          .reviews2-card__pagination.swiper-pagination
+                        .reviews2__content 
+                          .reviews2__info 
+                            .reviews2__photo 
+                              img(src="img/client.jpg", alt="")
+                            .reviews2__info-content 
+                              .reviews2__name Отзыв от Алексея Медика
+                              .reviews2__items 
+                                .reviews2__items-row 
+                                  .reviews2__item 
+                                    svg(class="icon-wallet")
+                                      use(xlink:href="img/sprite.svg#wallet")
+                                    | Стоимость: 7 000 рублей
+                                  .reviews2__item 
+                                    svg(class="icon-calendar")
+                                      use(xlink:href="img/sprite.svg#calendar")
+                                    | Сроки: 1 день
+                          .reviews2__text 
+                            p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                    .col-md-6
+                      .reviews2__card
+                        .reviews2__img 
+                          .sliderImgReviews2 
+                            .swiper-wrapper 
+                              .swiper-slide 
+                                img(src="img/portfolio/img4.jpg", alt="")
+                              .swiper-slide 
+                                .video.js-dzen#vdI-RjzSyAng
+                                  img(src="img/portfolio/img1.jpg", alt="").video__preview
+                              .swiper-slide 
+                                img(src="img/portfolio/img3.jpg", alt="")
+                              .swiper-slide 
+                                img(src="img/portfolio/img2.jpg", alt="")
+                          .reviews2-card__pagination.swiper-pagination
+                        .reviews2__content 
+                          .reviews2__info 
+                            .reviews2__photo 
+                              img(src="img/client.jpg", alt="")
+                            .reviews2__info-content 
+                              .reviews2__name Отзыв от Алексея Медика
+                              .reviews2__items 
+                                .reviews2__items-row 
+                                  .reviews2__item 
+                                    svg(class="icon-wallet")
+                                      use(xlink:href="img/sprite.svg#wallet")
+                                    | Стоимость: 7 000 рублей
+                                  .reviews2__item 
+                                    svg(class="icon-calendar")
+                                      use(xlink:href="img/sprite.svg#calendar")
+                                    | Сроки: 1 день
+                          .reviews2__text 
+                            p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                            p Для детальной оценки, стоит согласовать выезд на объект инженера-замерщика для проведения расчетов и...
+                            .reviews2__more Показать полностью.
+                    .col-md-6 
+                      .reviews2__card
+                        .reviews2__img 
+                          .sliderImgReviews2 
+                            .swiper-wrapper 
+                              .swiper-slide 
+                                .video.js-dzen#vdI-RjzSyAng
+                                  img(src="img/portfolio/img1.jpg", alt="").video__preview
+                              .swiper-slide
+                                img(src="img/portfolio/img4.jpg", alt="")
+                              .swiper-slide
+                                img(src="img/portfolio/img3.jpg", alt="")
+                          .reviews2-card__pagination.swiper-pagination
+                        .reviews2__content 
+                          .reviews2__info 
+                            .reviews2__photo 
+                              img(src="img/client.jpg", alt="")
+                            .reviews2__info-content 
+                              .reviews2__name Отзыв от Алексея Медика
+                              .reviews2__items 
+                                .reviews2__items-row 
+                                  .reviews2__item 
+                                    svg(class="icon-wallet")
+                                      use(xlink:href="img/sprite.svg#wallet")
+                                    | Стоимость: 7 000 рублей
+                                  .reviews2__item 
+                                    svg(class="icon-calendar")
+                                      use(xlink:href="img/sprite.svg#calendar")
+                                    | Сроки: 1 день
+                          .reviews2__text 
+                            p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                    .col-md-6
+                      .reviews2__card
+                        .reviews2__img 
+                          .sliderImgReviews2 
+                            .swiper-wrapper 
+                              .swiper-slide 
+                                img(src="img/portfolio/img4.jpg", alt="")
+                              .swiper-slide 
+                                .video.js-dzen#vdI-RjzSyAng
+                                  img(src="img/portfolio/img1.jpg", alt="").video__preview
+                              .swiper-slide 
+                                img(src="img/portfolio/img3.jpg", alt="")
+                              .swiper-slide 
+                                img(src="img/portfolio/img2.jpg", alt="")
+                          .reviews2-card__pagination.swiper-pagination
+                        .reviews2__content 
+                          .reviews2__info 
+                            .reviews2__photo 
+                              img(src="img/client.jpg", alt="")
+                            .reviews2__info-content 
+                              .reviews2__name Отзыв от Алексея Медика
+                              .reviews2__items 
+                                .reviews2__items-row 
+                                  .reviews2__item 
+                                    svg(class="icon-wallet")
+                                      use(xlink:href="img/sprite.svg#wallet")
+                                    | Стоимость: 7 000 рублей
+                                  .reviews2__item 
+                                    svg(class="icon-calendar")
+                                      use(xlink:href="img/sprite.svg#calendar")
+                                    | Сроки: 1 день
+                          .reviews2__text 
+                            p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+                            p Для детальной оценки, стоит согласовать выезд на объект инженера-замерщика для проведения расчетов и...
+                            .reviews2__more Показать полностью.
+                    .col-md-6 
+                      .reviews2__card
+                        .reviews2__img 
+                          .sliderImgReviews2 
+                            .swiper-wrapper 
+                              .swiper-slide 
+                                .video.js-dzen#vdI-RjzSyAng
+                                  img(src="img/portfolio/img1.jpg", alt="").video__preview
+                              .swiper-slide
+                                img(src="img/portfolio/img4.jpg", alt="")
+                              .swiper-slide
+                                img(src="img/portfolio/img3.jpg", alt="")
+                          .reviews2-card__pagination.swiper-pagination
+                        .reviews2__content 
+                          .reviews2__info 
+                            .reviews2__photo 
+                              img(src="img/client.jpg", alt="")
+                            .reviews2__info-content 
+                              .reviews2__name Отзыв от Алексея Медика
+                              .reviews2__items 
+                                .reviews2__items-row 
+                                  .reviews2__item 
+                                    svg(class="icon-wallet")
+                                      use(xlink:href="img/sprite.svg#wallet")
+                                    | Стоимость: 7 000 рублей
+                                  .reviews2__item 
+                                    svg(class="icon-calendar")
+                                      use(xlink:href="img/sprite.svg#calendar")
+                                    | Сроки: 1 день
+                          .reviews2__text 
+                            p «Эко-Септик» ваш надежный партнер в создании современной системы очистки сточных вод на даче или в частном доме. В тематических вкладках электронного каталога можно ознакомиться со всем перечнем предлагаемой продукции и услуг. Предварительный расчет производится самостоятельно, с помощью функционального онлайн калькулятора. 
+
+                .portfolio-page__more 
+                  .btn.btn--big.btn--blue-border Показать еще 
+
+                .portfolio-page__pagination
+                  // pagination
+                  .pagination
+                    ul 
+                      li 
+                        a(href="#").pagination__prev.disabled
+                          svg(class="icon-arrow-long")
+                            use(xlink:href="img/sprite.svg#arrow-long")
+                      li 
+                        a(href="#").active 1
+                      li 
+                        a(href="#") 2
+                      li 
+                        a(href="#") 3
+                      li 
+                        a(href="#") 4
+                      li 
+                        span ...
+                      li 
+                        a(href="#") 12
+                      li 
+                        a(href="#").pagination__next
+                          svg(class="icon-arrow-long")
+                            use(xlink:href="img/sprite.svg#arrow-long")
+                  // /pagination
 
               .js-tabs-content(data-href="#tab_2")
               

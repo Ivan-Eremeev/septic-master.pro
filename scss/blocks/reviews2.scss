@@ -24,6 +24,7 @@
   &__img {
     height: 362px;
     flex-shrink: 0;
+    position: relative;
     img {
       display: block;
       width: 100%;
@@ -36,6 +37,12 @@
       &:after {
         display: none;
       }
+    }
+    .sliderImgReviews2 {
+      height: 100%;
+    }
+    .reviews2-card__pagination {
+      bottom: -30px;
     }
   }
   &__content {

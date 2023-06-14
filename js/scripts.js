@@ -945,7 +945,7 @@ window.onload = function () {
     }); 
   }
 
-  // Swiper | Слайдер в попап окне на странице "наши работы"
+  // Swiper | Слайдер в "отзывы 2"
   if ($('#sliderReviews2').length) {
     const sliderReviews2 = new Swiper('#sliderReviews2', {
       slidesPerView: 1.2,
@@ -970,6 +970,21 @@ window.onload = function () {
         },
       }
     });
+  }
+
+  // Swiper | Слайдер галерея в карточке отзыва
+  if ($('.sliderImgReviews2').length) {
+    const sliderWrap = Array.from(document.querySelectorAll('.reviews2__img'), n => {
+      const sliderImgReviews2 = new Swiper(n.querySelector('.sliderImgReviews2'), {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        threshold: 3,
+        pagination: {
+          el: n.querySelector('.reviews2-card__pagination'),
+          clickable: true,
+        },
+      });
+    })
   }
 
   // Select2 | Стилизация селектов
@@ -1048,7 +1063,8 @@ window.onload = function () {
         let triggers = $(this).find('.js-tabs-trigger');
         let contents = $(this).find('.js-tabs-content');
         let time = 300;
-        triggers.on('click', function () {
+        triggers.on('click', function (e) {
+          e.preventDefault();
           let trigger = $(this);
           let content = $('.js-tabs-content[data-href="' + trigger.attr('href') +'"]');
           if (!trigger.hasClass('active')) {
@@ -1355,7 +1371,6 @@ window.onload = function () {
         $(this).append($('<img src="img/play.svg" alt="Play" class="video__play">'));
       });
       $('.video__preview').on('click', function () {
-        console.log('kk');
         // создаем iframe со включенной опцией autoplay
         let wrapp = $(this).closest('.js-dzen'),
           videoId = wrapp.attr('id'),
