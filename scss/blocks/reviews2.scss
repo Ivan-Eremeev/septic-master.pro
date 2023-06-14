@@ -130,6 +130,9 @@
       right: -20px;
     }
   }
+  &__hide {
+    display: none;
+  }
   @include media-breakpoint-down(md) {
     padding-bottom: 30px;
     margin-bottom: 30px;

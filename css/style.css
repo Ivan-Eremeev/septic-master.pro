@@ -16184,6 +16184,9 @@ input[type=number]:focus {
 .reviews2__slider-arrow--next {
   right: -20px;
 }
+.reviews2__hide {
+  display: none;
+}
 @media (max-width: 768.98px) {
   .reviews2 {
     padding-bottom: 30px;

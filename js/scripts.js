@@ -1391,6 +1391,19 @@ window.onload = function () {
   };
   uploadYoutubeVideo();
 
+  // Показать еще в карточке отзыва
+  function ShowMoreTextReview() {
+    $('.reviews2__text').each(function () {
+      let currentText = $(this);
+      let btn = currentText.find('.reviews2__more');
+      let hideText = currentText.find('.reviews2__hide');
+      btn.on('click', function () {
+        hideText.show();
+      })
+    })
+  }
+  ShowMoreTextReview();
+
   // // Очистить фильтр 
   // function clearFilter() {
   //   let clearBnt = $('.js-filters-clear');
