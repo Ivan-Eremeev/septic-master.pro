@@ -1000,33 +1000,6 @@ window.onload = function () {
   // Inputmask | Маска для ввода телефона
   $('.js-input-tel  input').inputmask("+7(999)-999-99-99");
 
-  // // Air Datepicker | Календарь
-  // new AirDatepicker('#airDatepicker', {
-  //   position: 'right top',
-  // });
-
-  // // Magnific Popup | Попап окна
-  // if ($('.js-open-popup').length) {
-  //   $('.js-open-popup').magnificPopup({
-  //     mainClass: 'mfp-fade',
-  //     callbacks: {
-  //       beforeOpen: function () {
-  //         if ($('.header').hasClass('sticky')) {
-  //           let documentWidth = parseInt(document.documentElement.clientWidth);
-  //           let windowsWidth = parseInt(window.innerWidth);
-  //           let scrollbarWidth = windowsWidth - documentWidth;
-  //           $('.header').css('padding-right', scrollbarWidth);
-  //         }
-  //         $('body').addClass('lock');
-  //       },
-  //       close: function () {
-  //         $('.header').css('padding-right', 0);
-  //         $('body').removeClass('lock');
-  //       }
-  //     }
-  //   });
-  // }
-
   //  Bootstrap modal | Функции попап окон
   if ($('.modal').length) {
     let modal = $('.modal');
@@ -1048,12 +1021,12 @@ window.onload = function () {
   }
 
   //  Bootstrap modal || Попап "специальное предложение"
-  // if ($('#offerPopup').length) {
-  //   var offerPopup = new bootstrap.Modal(document.getElementById('offerPopup'));
-  //   setTimeout(function () {
-  //     offerPopup.show();
-  //   }, 5000);
-  // }
+  if ($('#offerPopup').length) {
+    var offerPopup = new bootstrap.Modal(document.getElementById('offerPopup'));
+    setTimeout(function () {
+      offerPopup.show();
+    }, 5000);
+  }
 
   // Табы
 	function tabs() {
@@ -1165,42 +1138,6 @@ window.onload = function () {
     })
   }
   dropSocial();
-
-  // // Sticky Sidebar | Липкий сайдбар
-  // if ($('.js-sticky').length) {
-  //   var stickySidebar = new StickySidebar('.js-sticky', {
-  //     topSpacing: 65,
-  //     bottomSpacing: 10,
-  //     containerSelector: false,
-  //     innerWrapperSelector: '.sidebar__inner',
-  //     resizeSensor: true,
-  //     stickyClass: 'is-affixed',
-  //     minWidth: 0
-  //   });
-  // }
-
-  // // Кнопка скролла вверх страницы
-  // function scrollUp() {
-  //   const btn = $('.js-scrollup');
-  //   $(window).scroll(function () {
-  //     btnShowFade();
-  //   });
-  //   function btnShowFade() {
-  //     if ($(this).scrollTop() > 200) {
-  //       btn.addClass('show');
-  //     } else {
-  //       btn.removeClass('show');
-  //     }
-  //   }
-  //   btnShowFade();
-  //   btn.click(function () {
-  //     $('body,html').animate({
-  //       scrollTop: 0
-  //     }, 500);
-  //     return false;
-  //   });
-  // }
-  // scrollUp();
 
   // Показать еще пункты списка
   function showMoreFilters(list, count, countMobile) {
@@ -1341,28 +1278,6 @@ window.onload = function () {
   }
   productVariants();
 
-  // // Сортировка на странице "Наши работы"
-  // function sotrPortfolioPage() {
-  //   let trigger = $('[data-portfolio-trigger]');
-  //   let item = $('[data-portfolio-controlled]');
-  //   trigger.on('click', function () {
-  //     let currentTrigger = $(this);
-  //     let currentItem = $('[data-portfolio-controlled="' + currentTrigger.data('portfolio-trigger') + '"]');
-  //     if (!currentTrigger.hasClass('active') && currentTrigger.data('portfolio-trigger') != 'all') {
-  //       trigger.removeClass('active');
-  //       currentTrigger.addClass('active');
-  //       item.hide();
-  //       currentItem.show();
-  //     }
-  //     else if (!currentTrigger.hasClass('active') && currentTrigger.data('portfolio-trigger') == 'all') {
-  //       trigger.removeClass('active');
-  //       currentTrigger.addClass('active');
-  //       item.show();
-  //     }
-  //   });
-  // }
-  // sotrPortfolioPage();
-
   // Ленивая загрузка видео с дзен
   function uploadYoutubeVideo() {
     if ($(".js-dzen").length) {
@@ -1399,119 +1314,10 @@ window.onload = function () {
       let hideText = currentText.find('.reviews2__hide');
       btn.on('click', function () {
         hideText.show();
+        $(this).hide();
       })
     })
   }
   ShowMoreTextReview();
-
-  // // Очистить фильтр 
-  // function clearFilter() {
-  //   let clearBnt = $('.js-filters-clear');
-  //   clearBnt.on('click', function () {
-  //     $(this).closest('.filters').find('input').prop('checked', false);
-  //   })
-  // }
-  // clearFilter();
-
-  // // Изменение количества товара (плюс минус)
-  // function counter(block) {
-  //   const counter = document.querySelectorAll(block);
-  //   if (counter) {
-  //     counter.forEach(element => {
-  //       const minus = element.querySelector('.js-counter-minus');
-  //       const plus = element.querySelector('.js-counter-plus');
-  //       const inputWrap = element.querySelector('.js-counter-input');
-  //       const input = inputWrap.querySelector('input');
-  //       plus.addEventListener('click', () => {
-  //         if (Number(input.value) < 999) {
-  //           input.value = Number(input.value) + 1;
-  //         }
-  //       })
-  //       minus.addEventListener('click', () => {
-  //         if (Number(input.value) > 1) {
-  //           input.value = Number(input.value) - 1;
-  //         }
-  //       })
-  //       input.addEventListener('keyup', () => {
-  //         input.value = input.value.replace(/[^\d]/g, '');
-  //       })
-  //       input.addEventListener('blur', () => {
-  //         if (input.value == '' || input.value == 0) {
-  //           input.value = 1;
-  //         }
-  //       })
-  //     });
-  //   }
-  // }
-  // counter('.js-counter');
-
-  // // noUiSlider || Ползунок выбора
-  // if (document.getElementById('noUiSlider')) {
-  //   const rangeSlider = document.getElementById('noUiSlider');
-  //   const inputMin = document.getElementById('noUiSliderMin');
-  //   const inputMax = document.getElementById('noUiSliderMax');
-  //   let min = Number(rangeSlider.dataset.min);
-  //   let max = Number(rangeSlider.dataset.max);
-  //   let nowMin = Number(rangeSlider.dataset.nowmin);
-  //   let nowMax = Number(rangeSlider.dataset.nowmax);
-  //   console.log(nowMin,nowMax);
-  //   noUiSlider.create(rangeSlider, {
-  //     start: [nowMin, nowMax],
-  //     connect: true,
-  //     step: 10,
-  //     range: {
-  //       'min': min,
-  //       'max': max
-  //     }
-  //   });
-  //   rangeSlider.noUiSlider.on('update', function (values, handle) {
-  //     if (handle) {
-  //       inputMax.value = values[handle];
-  //     } else {
-  //       inputMin.value = values[handle];
-  //     }
-  //   });
-  //   inputMin.addEventListener('change', function () {
-  //     rangeSlider.noUiSlider.set([this.value, null]);
-  //   });
-  //   inputMax.addEventListener('change', function () {
-  //     rangeSlider.noUiSlider.set([null, this.value]);
-  //   });
-  // };
-
-  // // Анимация счетчика
-  // function countNumber(block) {
-  //   block.each(function () {
-  //     var scrollTop = false,
-  //       countNumberStatus = true,
-  //       $this = $(this),
-  //       blockPosition = $this.position().top,
-  //       valUp = $this.data('val-up'),
-  //       valTo = $this.data('val-to'),
-  //       valDuration = $this.data('duration'),
-  //       valDelay = $this.data('delay');
-  //     $this.html(0);
-  //     gofunc();
-  //     $(window).scroll(function () {
-  //       gofunc();
-  //     });
-  //     function gofunc() {
-  //       scrollTop = $(window).scrollTop() + $(window).height() - 150;
-  //       if (scrollTop > blockPosition && countNumberStatus) {
-  //         setTimeout(() => {
-  //           $({ numberValue: valUp }).animate({ numberValue: valTo }, {
-  //             duration: valDuration,
-  //             easing: "swing",
-  //             step: function (val) {
-  //               $this.html(Math.ceil(val));
-  //             }
-  //           });
-  //         }, valDelay);
-  //         countNumberStatus = false;
-  //       }
-  //     }
-  //   });
-  // };
-  // countNumber($(".count-number"));
 
 }
